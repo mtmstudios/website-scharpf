@@ -1,0 +1,95 @@
+import { createFileRoute } from "@tanstack/react-router";
+import {
+  PageHero,
+  Section,
+  LeistungBlock,
+  ReferenzTeaser,
+  CtaBanner,
+} from "@/components/sections";
+
+export const Route = createFileRoute("/restaurierung/fachwerksanierung")({
+  head: () => ({
+    meta: [
+      { title: "Fachwerksanierung Esslingen – denkmalgerecht | E. Scharpf" },
+      {
+        name: "description",
+        content:
+          "Fachwerksanierung mit Schadensdiagnose, materialtreuer Instandsetzung und Denkmalschutz-Abstimmung. Historisches Fachwerk fachgerecht erhalten. E. Scharpf Esslingen.",
+      },
+    ],
+  }),
+  component: Fachwerksanierung,
+});
+
+function Fachwerksanierung() {
+  return (
+    <div>
+      <PageHero
+        eyebrow="Restaurierung & Sanierung"
+        title="Fachwerksanierung – historisches Fachwerk fachgerecht erhalten"
+        lead="Fachwerkgebäude erzählen Geschichte – und verlangen ein besonderes Fingerspitzengefühl. Von der Schadensdiagnose bis zur denkmalgerechten Instandsetzung erhalten wir Ihr historisches Fachwerk mit Präzision und Respekt vor dem Original."
+        ctaLabel="Projekt Anfragen"
+        imageNote="Fachwerk-Projektfoto: restauriertes Fachwerkhaus in der Esslinger Altstadt oder Detail freigelegtes Fachwerk."
+      />
+
+      <Section>
+        <LeistungBlock
+          title="Schadensbilder erkennen und diagnostizieren"
+          text="Fachwerkhäuser zeigen im Laufe der Jahrhunderte typische Schadensbilder: Fäulnis an Querbalken, Risse im Gefach und undichte Eindeckungen. Bevor wir Hand anlegen, kennen wir den Zustand Ihres Gebäudes genau. Unsere systematische Schadenskartierung erfasst alle Schäden – von der Fäulnis bis zur statischen Schwäche – und bildet die Basis für einen realistischen Maßnahmenplan."
+          ctaLabel="Kostenloses Erstgespräch vereinbaren"
+          bullets={[
+            "Fäulnis an Querbalken und tragenden Hölzern",
+            "Risse und Ausbrüche im Gefach",
+            "Undichte Eindeckung und Feuchteschäden",
+            "Systematische Schadenskartierung mit Befundbericht",
+          ]}
+          imageNote="Foto Schadensdiagnose: Zimmerer untersucht geschädigten Fachwerkbalken, sichtbare Fäulnis."
+        />
+      </Section>
+
+      <Section muted>
+        <LeistungBlock
+          flip
+          title="Materialtreue Instandsetzung"
+          text="Wir arbeiten ausschließlich mit historisch korrekten Materialien und Techniken. Geschädigte Balken erneuern wir in Eiche, das Gefach ergänzen wir fachgerecht und undichte Dächer decken wir in historisch korrekter Schieferdeckung neu ein. So bleibt der historische Charakter Ihres Fachwerkhauses erhalten – bei gleichzeitig dauerhaft gesunder Bausubstanz."
+          ctaLabel="Jetzt Beratungsgespräch vereinbaren"
+          bullets={[
+            "Erneuerung geschädigter Balken in Eiche",
+            "Fachgerechte Ergänzung des Gefachs",
+            "Historisch korrekte Schieferdeckung",
+            "Materialtreuer Einsatz historischer Baustoffe",
+          ]}
+          imageNote="Detailfoto Instandsetzung: neuer Eichenbalken im Fachwerk, ergänztes Gefach, Schieferdeckung."
+        />
+      </Section>
+
+      <Section>
+        <LeistungBlock
+          title="Denkmalschutz-Abstimmung & Dokumentation"
+          text="Denkmalgeschützte Fachwerkhäuser erfordern eine enge Abstimmung mit den Behörden. Wir koordinieren die Zusammenarbeit mit dem Landesdenkmalamt und der Unteren Denkmalschutzbehörde in Esslingen und dokumentieren jeden Arbeitsschritt lückenlos. So bleibt der historische Charakter gewahrt – und Sie haben alle Nachweise für Förderanträge und Abnahmen in der Hand."
+          ctaLabel="Jetzt Beratungsgespräch vereinbaren"
+          bullets={[
+            "Abstimmung mit dem Landesdenkmalamt Esslingen",
+            "Koordination mit Unterer und Oberer Denkmalschutzbehörde",
+            "Lückenlose Baudokumentation für Behörden und Förderanträge",
+            "Beratung zu Förderprogrammen für denkmalgeschützte Objekte",
+          ]}
+          imageNote="Foto Dokumentation: Bauplan und Fotodokumentation eines Fachwerk-Restaurierungsprojekts."
+        />
+      </Section>
+
+      <ReferenzTeaser
+        title="Referenzen im Bereich Restaurierung & Sanierung"
+        intro="Von der mittelalterlichen Fachwerkscheune bis zum gründerzeitlichen Stadthaus: Sehen Sie selbst, was aus einer Zusammenarbeit mit E. Scharpf entstehen kann."
+        to="/referenzen/restaurierung"
+        imageNotes={[
+          "Referenz Fachwerk 1: restauriertes Fachwerk-Stadthaus, Esslingen-Altstadt.",
+          "Referenz Fachwerk 2: erneuerte Eichenbalken und Gefach.",
+          "Referenz Fachwerk 3: Detail historisch korrekte Schieferdeckung.",
+        ]}
+      />
+
+      <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
+    </div>
+  );
+}

@@ -1,0 +1,278 @@
+import { Link } from "@tanstack/react-router";
+import { cn } from "@/lib/utils";
+import { CtaButton } from "@/components/cta-button";
+import { PlaceholderImage } from "@/components/placeholder-image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+export function Section({
+  children,
+  muted = false,
+  className,
+  id,
+}: {
+  children: React.ReactNode;
+  muted?: boolean;
+  className?: string;
+  id?: string;
+}) {
+  return (
+    <section
+      id={id}
+      className={cn(muted && "bg-secondary", "py-20 lg:py-28", className)}
+    >
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">{children}</div>
+    </section>
+  );
+}
+
+/** Split-Hero: links Text + CTA, rechts großes Projektfoto (Platzhalter). */
+export function PageHero({
+  eyebrow,
+  title,
+  lead,
+  ctaLabel,
+  ctaTo,
+  imageNote,
+}: {
+  eyebrow?: string;
+  title: string;
+  lead: string;
+  ctaLabel?: string;
+  ctaTo?: string;
+  imageNote: string;
+}) {
+  return (
+    <section className="border-b border-border bg-background">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-24">
+        <div>
+          {eyebrow && (
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              {eyebrow}
+            </p>
+          )}
+          <h1 className="font-display text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
+            {title}
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            {lead}
+          </p>
+          {ctaLabel && (
+            <div className="mt-8">
+              <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>
+            </div>
+          )}
+        </div>
+        <PlaceholderImage note={imageNote} ratio="landscape" />
+      </div>
+    </section>
+  );
+}
+
+export function SectionHeading({
+  kicker,
+  title,
+  intro,
+  center = false,
+}: {
+  kicker?: string;
+  title: string;
+  intro?: string;
+  center?: boolean;
+}) {
+  return (
+    <div className={cn("max-w-3xl", center && "mx-auto text-center")}>
+      {kicker && (
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          {kicker}
+        </p>
+      )}
+      <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+        {title}
+      </h2>
+      {intro && (
+        <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+          {intro}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/**
+ * Content-Block einer Leistungsseite: Titel, Text, optionaler CTA und
+ * Aufzählung, daneben ein Bild-Platzhalter. `flip` kehrt die Anordnung um.
+ */
+export function LeistungBlock({
+  title,
+  text,
+  ctaLabel,
+  ctaTo,
+  bullets,
+  imageNote,
+  flip = false,
+}: {
+  title: string;
+  text: string;
+  ctaLabel?: string;
+  ctaTo?: string;
+  bullets?: string[];
+  imageNote: string;
+  flip?: boolean;
+}) {
+  return (
+    <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className={cn(flip && "lg:order-2")}>
+        <h3 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
+          {title}
+        </h3>
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          {text}
+        </p>
+        {bullets && bullets.length > 0 && (
+          <ul className="mt-6 space-y-3">
+            {bullets.map((b) => (
+              <li key={b} className="flex gap-3 text-sm text-foreground/90">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-0.5 shrink-0 text-primary"
+                >
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        {ctaLabel && (
+          <div className="mt-8">
+            <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>
+          </div>
+        )}
+      </div>
+      <PlaceholderImage
+        note={imageNote}
+        ratio="landscape"
+        className={cn(flip && "lg:order-1")}
+      />
+    </div>
+  );
+}
+
+/** Werte-Banner (Mint/Salbei-Band) mit 4 Werten – wie im XD-Entwurf. */
+export function ValueBand({
+  values,
+}: {
+  values: { title: string; text: string }[];
+}) {
+  return (
+    <section className="bg-accent text-accent-foreground">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        {values.map((v) => (
+          <div key={v.title}>
+            <h3 className="font-display text-2xl font-bold">{v.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-accent-foreground/85">
+              {v.text}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/** Referenzen-Teaser mit 3 Bild-Platzhaltern. */
+export function ReferenzTeaser({
+  title,
+  intro,
+  imageNotes,
+  to = "/referenzen",
+}: {
+  title: string;
+  intro: string;
+  imageNotes: [string, string, string];
+  to?: string;
+}) {
+  return (
+    <Section muted>
+      <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+        <SectionHeading title={title} intro={intro} />
+        <Link
+          to={to}
+          className="shrink-0 text-sm font-semibold text-primary hover:underline"
+        >
+          Mehr sehen →
+        </Link>
+      </div>
+      <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        {imageNotes.map((note, i) => (
+          <PlaceholderImage key={i} note={note} ratio="landscape" />
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+/** Abschluss-CTA-Banner. `tone` = orange (default) oder mint. */
+export function CtaBanner({
+  title,
+  text,
+  ctaLabel = "Kontakt aufnehmen",
+  ctaTo = "/kontakt",
+  tone = "orange",
+}: {
+  title: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaTo?: string;
+  tone?: "orange" | "mint";
+}) {
+  const bg = tone === "orange" ? "bg-primary" : "bg-accent";
+  return (
+    <section className={cn(bg, "text-white")}>
+      <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 py-16 text-center lg:px-8">
+        <h2 className="font-display text-3xl font-bold sm:text-4xl">{title}</h2>
+        {text && (
+          <p className="max-w-2xl text-lg leading-relaxed text-white/90">{text}</p>
+        )}
+        <CtaButton to={ctaTo} variant="outline">
+          {ctaLabel}
+        </CtaButton>
+      </div>
+    </section>
+  );
+}
+
+/** FAQ-Akkordeon. */
+export function FaqSection({
+  items,
+}: {
+  items: { q: string; a: string }[];
+}) {
+  return (
+    <Accordion type="single" collapsible className="mx-auto max-w-3xl">
+      {items.map((item, i) => (
+        <AccordionItem key={i} value={`faq-${i}`}>
+          <AccordionTrigger className="text-left font-display text-lg font-bold">
+            {item.q}
+          </AccordionTrigger>
+          <AccordionContent className="text-base leading-relaxed text-muted-foreground">
+            {item.a}
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+}
