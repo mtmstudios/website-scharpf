@@ -1,5 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "../assets/hero-abstract.jpg";
 
 export const Route = createFileRoute("/")({
@@ -59,5 +58,36 @@ function Index() {
 
       {/* Mini Features */}
       <section id="mehr" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="grid</parameter>
-              </invoke>
+        <div className="grid gap-8 sm:grid-cols-3">
+          <div className="rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20"/><path d="m4.93 4.93 14.14 14.14m-14.14 0 14.14-14.14"/></svg>
+            </div>
+            <h3 className="text-lg font-semibold text-card-foreground">Einfach</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              Reduziert auf das Wesentliche. Kein Schnickschnack, keine Ablenkung.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 className="text-lg font-semibold text-card-foreground">Elegant</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              Durchdachtes Design mit Liebe zum Detail und klaren Linien.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 className="text-lg font-semibold text-card-foreground">Schnell</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              Performance, die begeistert. Keine Wartezeiten, sofort da.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
