@@ -229,7 +229,7 @@ export function ReferenzTeaser({
 export function CtaBanner({
   title,
   text,
-  ctaLabel = "Kontakt aufnehmen",
+  ctaLabel = "Kontakt",
   ctaTo = "/kontakt",
   tone = "orange",
 }: {

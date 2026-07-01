@@ -161,10 +161,7 @@ function Index() {
         </div>
       </Section>
 
-      {/* Werte-Banner (Mint) */}
-      <ValueBand values={VALUES} />
-
-      {/* Kundenstimmen */}
+      {/* Google-Bewertungen / Kundenstimmen */}
       <Section>
         <SectionHeading
           center
@@ -188,6 +185,9 @@ function Index() {
           ))}
         </div>
       </Section>
+
+      {/* Werte-Banner (Mint) */}
+      <ValueBand values={VALUES} />
 
       {/* Abschluss-CTA */}
       <CtaBanner
