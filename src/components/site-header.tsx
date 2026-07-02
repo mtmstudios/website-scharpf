@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
-import { CONTACT, MAIN_NAV, LEISTUNGEN, PRIMARY_CTA } from "@/lib/site";
+import { MAIN_NAV, LEISTUNGEN, PRIMARY_CTA } from "@/lib/site";
 
 function Wordmark() {
   // Platzhalter für das offizielle Logo (Logo-Bilddatei wird separat eingepflegt).
@@ -83,19 +83,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href={CONTACT.phoneHref}
-            className="hidden text-sm font-semibold text-foreground xl:block"
-          >
-            {CONTACT.phone}
-          </a>
-          <Link
-            to="/kontakt"
-            className="hidden items-center justify-center rounded-full bg-primary px-5 py-2.5 text-xs font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 md:inline-flex"
-          >
-            {PRIMARY_CTA}
-          </Link>
-
           {/* Mobile-Toggle */}
           <button
             type="button"

@@ -1,91 +1,70 @@
 import { Link } from "@tanstack/react-router";
-import { CONTACT, MAIN_NAV, PARTNERS } from "@/lib/site";
+import { CONTACT, PARTNERS } from "@/lib/site";
 
+// Footer exakt wie XD: oranges 3-Spalten-Band mit weißer Schrift und
+// vertikalen Trennlinien. Spalte 1: Firma/Adresse + Partner · Spalte 2: Kontakt
+// (Email/Tel/Fax) · Spalte 3: Rechts-Links + Copyright.
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Spalte 1 – Kontakt */}
-          <div>
-            <div className="font-display text-xl font-bold">{CONTACT.company}</div>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/85">
-              Holzbau & Restaurierung aus Esslingen. Seit über 80 Jahren für
-              Qualität, Nachhaltigkeit und handwerkliche Präzision.
+        <div className="grid gap-10 md:grid-cols-3 md:divide-x md:divide-primary-foreground/25">
+          {/* Spalte 1 – Firma & Partner */}
+          <div className="md:pr-10">
+            <div className="font-display text-2xl font-bold">E. Scharpf</div>
+            <p className="mt-3 text-sm text-primary-foreground/90">
+              Restaurierung · Holzbau · Holzhausbau
             </p>
-            <address className="mt-5 space-y-1 text-sm not-italic text-primary-foreground/90">
+            <address className="mt-4 space-y-1 text-sm not-italic text-primary-foreground/90">
               <div>{CONTACT.street}</div>
               <div>{CONTACT.city}</div>
-              <div className="pt-2">
-                <a href={CONTACT.phoneHref} className="hover:underline">
-                  {CONTACT.phone}
-                </a>
-              </div>
-              <div>
-                <a href={CONTACT.emailHref} className="hover:underline">
-                  {CONTACT.email}
-                </a>
-              </div>
             </address>
-          </div>
-
-          {/* Spalte 2 – Schnellnavigation */}
-          <div>
-            <div className="text-sm font-bold uppercase tracking-wider">
-              Navigation
-            </div>
-            <ul className="mt-4 space-y-2 text-sm text-primary-foreground/90">
-              {MAIN_NAV.map((item) => (
-                <li key={item.to}>
-                  <Link to={item.to} className="hover:underline">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Spalte 3 – Partner */}
-          <div>
-            <div className="text-sm font-bold uppercase tracking-wider">Partner</div>
-            <ul className="mt-4 space-y-2 text-sm text-primary-foreground/90">
+            <ul className="mt-8 space-y-2 text-sm font-medium text-primary-foreground/90">
               {PARTNERS.map((p) => (
                 <li key={p}>{p}</li>
               ))}
             </ul>
           </div>
 
-          {/* Spalte 4 – Rechtliches */}
-          <div>
-            <div className="text-sm font-bold uppercase tracking-wider">
-              Rechtliches
+          {/* Spalte 2 – Kontakt */}
+          <div className="md:px-10">
+            <div className="font-display text-xl font-bold">Kontakt</div>
+            <div className="mt-4 space-y-1 text-sm text-primary-foreground/90">
+              <div>
+                Email:{" "}
+                <a href={CONTACT.emailHref} className="hover:underline">
+                  {CONTACT.email}
+                </a>
+              </div>
+              <div>
+                Tel.:{" "}
+                <a href={CONTACT.phoneHref} className="hover:underline">
+                  0711-93 18 44 22
+                </a>
+              </div>
+              <div>Fax: 0711-93 18 44 50</div>
             </div>
-            <ul className="mt-4 space-y-2 text-sm text-primary-foreground/90">
-              <li>
-                <Link to="/datenschutz" className="hover:underline">
-                  Datenschutz
-                </Link>
-              </li>
-              <li>
-                <Link to="/impressum" className="hover:underline">
-                  Impressum
-                </Link>
-              </li>
-              <li>
-                <Link to="/agb" className="hover:underline">
-                  AGB
-                </Link>
-              </li>
-            </ul>
           </div>
-        </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-primary-foreground/20 pt-6 text-xs text-primary-foreground/80 sm:flex-row">
-          <span>
-            © {new Date().getFullYear()} {CONTACT.company} · Holzbau &
-            Restaurierung Esslingen
-          </span>
-          <span>Familienbetrieb in der dritten Generation</span>
+          {/* Spalte 3 – Rechtliches & Copyright */}
+          <div className="md:pl-10">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-primary-foreground/90">
+              <Link to="/datenschutz" className="hover:underline">
+                Datenschutz
+              </Link>
+              <span aria-hidden>|</span>
+              <Link to="/impressum" className="hover:underline">
+                Impressum
+              </Link>
+              <span aria-hidden>|</span>
+              <Link to="/kontakt" className="hover:underline">
+                Kontakt
+              </Link>
+            </div>
+            <p className="mt-4 text-sm text-primary-foreground/80">
+              Copyright © 2023 holzbau-scharpf.de
+            </p>
+          </div>
         </div>
       </div>
     </footer>

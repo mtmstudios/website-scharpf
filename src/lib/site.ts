@@ -16,8 +16,8 @@ export const CONTACT = {
 
 export const PRIMARY_CTA = "Kostenlose Projektberatung Anfordern";
 
+// Haupt-Navigation exakt wie XD (ohne "Startseite")
 export const MAIN_NAV = [
-  { label: "Startseite", to: "/" },
   { label: "Leistungen", to: "/leistungen" },
   { label: "Referenzen", to: "/referenzen" },
   { label: "Über uns", to: "/ueber-uns" },
@@ -26,40 +26,51 @@ export const MAIN_NAV = [
   { label: "Kontakt", to: "/kontakt" },
 ] as const;
 
-// Die fünf Leistungs-Kategorien (Reihenfolge = XD-Entwurf & Sitemap)
+// Die fünf Leistungs-Kategorien.
+// Nummerierung & Reihenfolge exakt wie im XD-Block "Unsere Leistungen" (Startseite):
+// 01 Holzbau · 02 Fassade · 03 Dach · 04 Restaurierung · 05 Service.
 export const LEISTUNGEN = [
   {
     nr: "01",
-    title: "Restaurierung & Sanierung",
-    to: "/restaurierung",
+    title: "Holzbau & Konstruktion",
+    to: "/holzbau",
+    bullets: ["Holzhausbau / Aufstockung", "Carport"],
     teaser:
-      "Historisches Handwerk für denkmalgerechte Erhaltung. Fachwerkgebäude restaurieren wir mit dem Wissen um Jahrhunderte alte Bautechniken.",
+      "Dachstühle, Holzkonstruktionen und Wandelemente aus unserer Werkhalle – passgenau gefertigt, terminzuverlässig montiert.",
   },
   {
     nr: "02",
-    title: "Holzbau & Konstruktion",
-    to: "/holzbau",
+    title: "Fassade & Außenbereiche",
+    to: "/fassade",
+    bullets: ["Fassaden (Holz/Trespa)", "Terrassen"],
     teaser:
-      "Dachstühle, Holzkonstruktionen und Wandelemente aus unserer Werkhalle – passgenau gefertigt, terminzuverlässig montiert.",
+      "Holzfassaden schützen, isolieren und gestalten. Langlebig, ökologisch, individuell.",
   },
   {
     nr: "03",
     title: "Dach",
     to: "/dach",
+    bullets: ["Dachgauben", "Dachfenster", "Wärmedämmung", "Klempnerarbeiten"],
     teaser:
       "Neueindeckung, Sanierung und Dämmung für jede Dachform – mit kostenloser KFW-Förderberatung.",
   },
   {
     nr: "04",
-    title: "Fassade & Außenbereiche",
-    to: "/fassade",
+    title: "Restaurierung & Sanierung",
+    to: "/restaurierung",
+    bullets: [
+      "Denkmalschutz",
+      "Schadenskartierung & Begleitung in der Denkmalsanierung",
+      "Schadstoffsanierung",
+    ],
     teaser:
-      "Holzfassaden schützen, isolieren und gestalten. Langlebig, ökologisch, individuell.",
+      "Historisches Handwerk für denkmalgerechte Erhaltung. Fachwerkgebäude restaurieren wir mit dem Wissen um Jahrhunderte alte Bautechniken.",
   },
   {
     nr: "05",
-    title: "Services & Sonstige Leistungen",
+    title: "Service & Sonstige Leistungen",
     to: "/services",
+    bullets: ["Ladekran mieten", "Ausstellung/Showroom"],
     teaser:
       "Beratung, Planung und Kleinaufträge: Wir finden eine Lösung – egal wie groß oder klein das Vorhaben ist.",
   },
@@ -70,7 +81,16 @@ export const REFERENZ_KATEGORIEN = [
   { title: "Holzbau & Konstruktion", to: "/referenzen/holzbau" },
   { title: "Dach", to: "/referenzen/dach" },
   { title: "Fassade & Außenbereiche", to: "/referenzen/fassade" },
-  { title: "Services & Sonstige Leistungen", to: "/referenzen/services" },
+  { title: "Service & Sonstige Leistungen", to: "/referenzen/services" },
 ] as const;
 
 export const PARTNERS = ["RESTORA GMBH", "ES TORE"] as const;
+
+// Rechte, vertikale Social-Icon-Leiste (wie XD): Instagram, Pinterest, Facebook, Houzz.
+// TODO: echte Profil-URLs vom Kunden einpflegen – aktuell Platzhalter.
+export const SOCIAL_LINKS = [
+  { label: "Instagram", href: "#", icon: "instagram" },
+  { label: "Pinterest", href: "#", icon: "pinterest" },
+  { label: "Facebook", href: "#", icon: "facebook" },
+  { label: "Houzz", href: "#", icon: "houzz" },
+] as const;

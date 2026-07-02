@@ -171,24 +171,25 @@ export function LeistungBlock({
   );
 }
 
-/** Werte-Banner (Mint/Salbei-Band) mit 4 Werten – wie im XD-Entwurf. */
+/**
+ * Werte-Banner (Salbei/Teal-Band #32645F) – wie im XD-Entwurf:
+ * vier zentrierte Werte-Wörter im 2×2-Raster, abgeschlossen mit orangem Streifen.
+ */
 export function ValueBand({
   values,
 }: {
-  values: { title: string; text: string }[];
+  values: { title: string }[];
 }) {
   return (
     <section className="bg-accent text-accent-foreground">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-5xl gap-x-10 gap-y-12 px-5 py-20 text-center sm:grid-cols-2 lg:px-8">
         {values.map((v) => (
-          <div key={v.title}>
-            <h3 className="font-display text-2xl font-bold">{v.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-accent-foreground/85">
-              {v.text}
-            </p>
-          </div>
+          <h3 key={v.title} className="font-display text-3xl font-bold sm:text-4xl">
+            {v.title}
+          </h3>
         ))}
       </div>
+      <div className="h-2 w-full bg-primary" />
     </section>
   );
 }

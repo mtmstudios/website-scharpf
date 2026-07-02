@@ -1,57 +1,31 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import {
-  Section,
-  SectionHeading,
-  ValueBand,
-  CtaBanner,
-} from "@/components/sections";
+import { Section, ValueBand } from "@/components/sections";
 import { LEISTUNGEN } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
+// Werte-Wörter exakt wie XD (grünes Band): Qualität · Innovation · Erfahrung · Lösungsorientiert
 const VALUES = [
-  { title: "Qualität", text: "Ausführung nach höchsten Maßstäben" },
-  {
-    title: "Innovation",
-    text: "Modernste Technik trifft traditionelles Handwerk",
-  },
-  { title: "Erfahrung", text: "Über 80 Jahre Expertise im Holzbau" },
-  {
-    title: "Lösungsorientiert",
-    text: "Wir finden den Weg – auch bei komplexen Projekten",
-  },
-];
-
-const REVIEWS = [
-  {
-    quote:
-      "Professionelle Ausführung, perfekte Kommunikation – wir sind sehr zufrieden.",
-    author: "Michael R., Esslingen",
-  },
-  {
-    quote:
-      "Für die Restaurierung unseres Fachwerkhauses genau der richtige Partner.",
-    author: "Sabine K., Stuttgart",
-  },
-  {
-    quote: "Termingerecht, sauber und top Qualität. Klare Empfehlung!",
-    author: "Thomas M., Nürtingen",
-  },
+  { title: "Qualität" },
+  { title: "Innovation" },
+  { title: "Erfahrung" },
+  { title: "Lösungsorientiert" },
 ];
 
 function Stars() {
+  // XD: vier ausgefüllte Sterne pro Google-Bewertungskarte.
   return (
-    <div className="flex gap-0.5 text-primary">
-      {Array.from({ length: 5 }).map((_, i) => (
+    <div className="flex gap-1 text-primary">
+      {Array.from({ length: 4 }).map((_, i) => (
         <svg
           key={i}
           xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -65,48 +39,46 @@ function Stars() {
 function Index() {
   return (
     <div>
-      {/* Hero */}
-      <section className="border-b border-border bg-secondary">
-        <div className="mx-auto max-w-7xl px-5 py-20 text-center lg:px-8 lg:py-28">
-          <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
+      {/* Hero – linksbündig wie XD */}
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+          <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
             Benötigen Sie eine Restaurierung, Holzbauleistungen oder
-            Dachsanierung?
+            Dachsanierung ?
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-muted-foreground">
             Wir planen und bauen Ihr Projekt – zuverlässig &amp; nachhaltig.
           </p>
-          <div className="mt-10 flex justify-center">
+          <div className="mt-8">
             <CtaButton>Kostenlose Projektberatung Anfordern</CtaButton>
           </div>
-          <div className="mt-14">
+          <div className="mt-12">
             <PlaceholderImage
-              note="Hero-Bild: großes, repräsentatives Projektfoto im Querformat – z. B. restauriertes Fachwerkhaus, Dachstuhl in der Werkhalle oder fertige Dachsanierung."
+              note="Hero-Bild (Vollbild): großes, repräsentatives Projektfoto im Querformat – z. B. restauriertes Fachwerkhaus, Dachstuhl in der Werkhalle oder fertige Dachsanierung. Im XD liegt die Überschrift auf diesem Bild."
               ratio="wide"
-              className="mx-auto max-w-5xl"
             />
           </div>
         </div>
       </section>
 
-      {/* Unternehmens-Intro */}
+      {/* Kurze Vorstellung des Unternehmens */}
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Willkommen
-            </p>
             <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
-              Meisterbetrieb aus Esslingen – seit über 80 Jahren
+              Meisterbetrieb aus Esslingen seit über 80 Jahren
             </h2>
+            <span className="mt-4 block h-1 w-24 rounded bg-[#e2be96]" />
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Seit über 80 Jahren steht E. Scharpf für handwerkliche Präzision und
-              nachhaltiges Bauen mit Holz. Als Fachbetrieb für Zimmerer- und
-              Dachdeckerarbeiten im Raum Esslingen und Stuttgart vereinen wir
-              traditionelles Handwerk mit modernster Fertigungstechnik. In unserer
-              eigenen Werkhalle fertigen wir Holzbauteile passgenau vor – für
-              planbare Termine, höchste Qualität und witterungsunabhängige Montage.
-              Vertrauen Sie dem Erfahrungsschatz von drei Generationen.
+              Wir sind ein Familienbetrieb in der dritten Generation. Mit viel
+              Erfahrung und klarem Fokus auf hochwertige und innovative
+              Zimmerarbeiten. Wir sind bekannt für versiertes Handwerk, moderne
+              Fertigung und termingerechte Ausführung.
             </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <CtaButton to="/ueber-uns">Mehr Lesen</CtaButton>
+              <CtaButton to="/ratgeber">Ratgeber</CtaButton>
+            </div>
           </div>
           <PlaceholderImage
             note="Werkhallen- oder Team-Foto: Zimmerer bei der Vorfertigung von Holzbauteilen in der eigenen Werkhalle in Esslingen."
@@ -115,86 +87,58 @@ function Index() {
         </div>
       </Section>
 
-      {/* Leistungs-Kacheln */}
+      {/* Unsere Leistungen – 01–05 mit Unterpunkten (XD-Reihenfolge) */}
       <Section muted>
-        <SectionHeading
-          center
-          kicker="Unsere Leistungen"
-          title="Alles rund um Holzbau, Dach & Restaurierung"
-        />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Unsere Leistungen
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {LEISTUNGEN.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               className="group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
             >
-              <span className="font-mono text-sm font-semibold text-primary">
-                {l.nr}
-              </span>
-              <h3 className="mt-3 font-display text-xl font-bold text-card-foreground">
-                {l.title}
+              <h3 className="font-display text-xl font-bold text-card-foreground">
+                {l.nr} {l.title}
               </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {l.teaser}
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                Mehr erfahren
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="transition-transform group-hover:translate-x-1"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </span>
+              <ul className="mt-4 space-y-1.5 text-sm text-muted-foreground">
+                {l.bullets.map((b) => (
+                  <li key={b}>- {b}</li>
+                ))}
+              </ul>
             </Link>
           ))}
         </div>
       </Section>
 
-      {/* Google-Bewertungen / Kundenstimmen */}
+      {/* Google-Bewertungen */}
       <Section>
-        <SectionHeading
-          center
-          kicker="Kundenstimmen"
-          title="Das sagen unsere Kunden"
-        />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {REVIEWS.map((r) => (
-            <figure
-              key={r.author}
-              className="flex flex-col rounded-2xl border border-border bg-card p-8"
+        <div className="mb-8">
+          <CtaButton to="/ratgeber">Ratgeber</CtaButton>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div
+              key={i}
+              className="flex flex-col justify-between rounded-2xl border border-border bg-card p-8"
             >
-              <Stars />
-              <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/90">
-                „{r.quote}"
-              </blockquote>
-              <figcaption className="mt-6 text-sm font-semibold text-muted-foreground">
-                {r.author}
-              </figcaption>
-            </figure>
+              <h3 className="font-display text-2xl font-bold text-muted-foreground/70">
+                Google Bewertung
+              </h3>
+              <div className="mt-16">
+                <Stars />
+              </div>
+            </div>
           ))}
+        </div>
+        <div className="mt-8">
+          <CtaButton to="/referenzen">Mehr Lesen</CtaButton>
         </div>
       </Section>
 
-      {/* Werte-Banner (Mint) */}
+      {/* Werte-Band (grün) – Abschluss vor dem Footer */}
       <ValueBand values={VALUES} />
-
-      {/* Abschluss-CTA */}
-      <CtaBanner
-        title="Bereit für Ihr Projekt?"
-        text="Sprechen Sie uns an – wir beraten Sie kostenlos und unverbindlich."
-        ctaLabel="Kostenlose Projektberatung Anfordern"
-      />
     </div>
   );
 }
