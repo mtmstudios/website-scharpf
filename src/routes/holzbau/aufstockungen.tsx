@@ -78,7 +78,7 @@ function Aufstockungen() {
       <ReferenzTeaser
         title="Referenzen im Bereich Holzbau & Konstruktion"
         intro="Von der Aufstockung in Esslingen bis zum schlüsselfertigen Holzhaus im Großraum Stuttgart – sehen Sie, was aus unserer Zusammenarbeit entstehen kann."
-        to="/referenzen/holzbau"
+        to="/referenzen"
         imageNotes={[
           "Referenz Holzbau 1: abgeschlossene Aufstockung in Esslingen.",
           "Referenz Holzbau 2: Teilaufstockung mit Dachausbau.",

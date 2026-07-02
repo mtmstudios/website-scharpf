@@ -1,12 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  PageHero,
-  Section,
-  SectionHeading,
-  FaqSection,
-  CtaBanner,
-} from "@/components/sections";
-import { LEISTUNGEN } from "@/lib/site";
+import { CtaButton } from "@/components/cta-button";
+import { PlaceholderImage } from "@/components/placeholder-image";
+import { Section } from "@/components/sections";
 
 export const Route = createFileRoute("/leistungen")({
   head: () => ({
@@ -15,107 +10,80 @@ export const Route = createFileRoute("/leistungen")({
       {
         name: "description",
         content:
-          "Restaurierung, Holzbau, Dach, Fassade: Das vollständige Leistungsspektrum von E. Scharpf im Großraum Esslingen und Stuttgart.",
+          "Restaurierung, Holzbau, Dach, Fassade und Service: Das vollständige Leistungsspektrum von E. Scharpf im Großraum Esslingen und Stuttgart.",
       },
     ],
   }),
   component: Leistungen,
 });
 
-const FAQ = [
-  {
-    q: "Was macht E. Scharpf?",
-    a: "E. Scharpf GmbH ist ein seit über 80 Jahren in Esslingen ansässiger Holzbau- und Restaurierungsbetrieb. Wir führen Projekte im gesamten Großraum Stuttgart aus.",
-  },
-  {
-    q: "Mit welchen Materialien arbeiten Sie?",
-    a: "Wir arbeiten bevorzugt mit ökologisch unbedenklichen, regionalen Holzsorten. Details zu Materialien und Behandlungsmethoden finden Sie in unserem Ratgeber.",
-  },
-  {
-    q: "Machen Sie auch Neubau?",
-    a: "Ja – wir realisieren Holzhäuser, Holzrahmenbauweise und Aufstockungen. Unsere eigene Werkhalle ermöglicht die Vorfertigung kompletter Wand- und Dachelemente.",
-  },
-  {
-    q: "Bieten Sie Aufstockungen an?",
-    a: "Ja. Dachgeschoss-Aufstockungen in Holzbauweise sind eine unserer Spezialitäten. Die Vorfertigung in unserer Werkhalle verkürzt die Bauzeit auf der Baustelle erheblich.",
-  },
-  {
-    q: "Welche Leistungen bietet E. Scharpf an?",
-    a: "Restaurierung, Holzbau, Dacharbeiten, Fassadengestaltung, Holzhausbau, Aufstockungen, Carport-Bau sowie Beratung und Service.",
-  },
-  {
-    q: "Machen Sie energetische Dachsanierungen?",
-    a: "Ja. Wir sanieren Ihr Dach inklusive zeitgemäßer Wärmedämmung und beraten Sie zu KFW-Förderanträgen – bis zu 20 % der Kosten können Sie zurückbekommen.",
-  },
-];
+// Kachel-Reihenfolge exakt wie XD-Hero (Leistungen auf einen Blick).
+const KATEGORIEN = [
+  { title: "Restaurierung & Sanierung", to: "/restaurierung" },
+  { title: "Holzbau & Konstruktion", to: "/holzbau" },
+  { title: "Dach", to: "/dach" },
+  { title: "Fassade & Außenbereiche", to: "/fassade" },
+  { title: "Service & Sonstige Leistungen", to: "/services" },
+] as const;
+
+// FAQ-Fragen wörtlich aus dem XD ("Haben sie Fragen zu unseren Leistungen").
+const FRAGEN = [
+  { q: "Mehr zu E.Scharpf", to: "/ratgeber" },
+  { q: "Infos zum Material", to: "/ratgeber" },
+  { q: "Macht E.Scharpf auch Neubau", to: "/ratgeber" },
+  { q: "Bieten Sie Aufstockungen an?", to: "/ratgeber" },
+  { q: "Welche Leistungen bietet E.scharpf an?", to: "/ratgeber" },
+  { q: "Macht E.Scharpf energetische Dachsanierungen?", to: "/ratgeber" },
+] as const;
 
 function Leistungen() {
   return (
     <div>
-      <PageHero
-        eyebrow="Leistungen"
-        title="Welches Projekt planen Sie?"
-        lead="Von der Dachsanierung bis zur Fachwerk-Restaurierung: Wir sind Ihr Ansprechpartner für alle Holzbau- und Zimmererarbeiten im Großraum Esslingen und Stuttgart."
-        ctaLabel="Kostenlose Projektberatung Anfordern"
-        imageNote="Übersichtsbild Leistungen: Collage oder starkes Einzelfoto, das das Spektrum von Holzbau über Dach bis Restaurierung zeigt."
-      />
-
+      {/* Leistungen auf einen Blick – 5 Kategorie-Kacheln */}
       <Section>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {LEISTUNGEN.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
-            >
-              <span className="font-mono text-sm font-semibold text-primary">
-                {l.nr}
-              </span>
-              <h3 className="mt-3 font-display text-xl font-bold text-card-foreground">
-                {l.title}
-              </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {l.teaser}
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                Mehr erfahren
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="transition-transform group-hover:translate-x-1"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </span>
+          {KATEGORIEN.map((k) => (
+            <Link key={k.to} to={k.to} className="group flex flex-col">
+              <PlaceholderImage
+                note={`Kategorie-Bild: ${k.title}`}
+                ratio="landscape"
+                className="transition-transform group-hover:-translate-y-1"
+              />
+              <h2 className="mt-4 font-display text-2xl font-bold text-foreground group-hover:text-primary">
+                {k.title}
+              </h2>
             </Link>
           ))}
         </div>
       </Section>
 
+      {/* Haben sie Fragen zu unseren Leistungen */}
       <Section muted>
-        <SectionHeading
-          center
-          kicker="Häufige Fragen"
-          title="Gut zu wissen"
-        />
-        <div className="mt-12">
-          <FaqSection items={FAQ} />
+        <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Haben sie Fragen zu unseren Leistungen
+        </h2>
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {FRAGEN.map((f) => (
+            <Link
+              key={f.q}
+              to={f.to}
+              className="rounded-xl border border-border bg-card px-5 py-4 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+            >
+              {f.q}
+            </Link>
+          ))}
         </div>
       </Section>
 
-      <CtaBanner
-        title="Sprechen Sie uns an."
-        text="Wir helfen Ihnen gerne, das richtige Leistungsangebot für Ihr Projekt zu finden."
-        ctaLabel="Kontakt aufnehmen"
-      />
+      {/* Sprechen Sie uns an */}
+      <Section>
+        <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Sprechen Sie uns an, wir helfen Ihnen gerne weiter!
+        </h2>
+        <div className="mt-8">
+          <CtaButton to="/kontakt">Kontakt</CtaButton>
+        </div>
+      </Section>
     </div>
   );
 }

@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  PageHero,
-  Section,
-  LeistungBlock,
-  CtaBanner,
-} from "@/components/sections";
+import { PlaceholderImage } from "@/components/placeholder-image";
+import { Section, LeistungBlock, CtaBanner } from "@/components/sections";
 
 export const Route = createFileRoute("/fassade/")({
   head: () => ({
@@ -23,60 +19,51 @@ export const Route = createFileRoute("/fassade/")({
 function Fassade() {
   return (
     <div>
-      <PageHero
-        eyebrow="Fassade & Außenbereiche"
-        title="Fassaden, die schützen und begeistern."
-        lead="Von der Holzfassade bis zur Terrasse – E. Scharpf gestaltet Ihre Außenbereiche ökologisch, langlebig und mit handwerklicher Präzision."
-        ctaLabel="Kostenlose Beratung anfragen"
-        imageNote="Fassaden-Projektfoto: moderne Holzfassade oder Trespa-Fassade an einem Wohnhaus."
-      />
+      {/* Titel + Intro */}
+      <Section>
+        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+          Fassade & Außenbereiche
+        </h1>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          Die Fassade ist das Gesicht Ihres Hauses – und schützt zugleich die
+          Bausubstanz. Wir gestalten und dämmen Fassaden mit langlebigen
+          Materialien und bauen Terrassen, die Ihren Außenbereich zum
+          Wohnraum machen.
+        </p>
+        <div className="mt-10">
+          <PlaceholderImage
+            note="Fassade-Hero: Holz- oder Trespa-Fassade in Gesamtansicht."
+            ratio="wide"
+          />
+        </div>
+      </Section>
 
       <Section>
         <LeistungBlock
-          title="Holzfassaden & Fassadensysteme"
-          text="Holzfassaden sind langlebig, ökologisch und individuell – sie schützen das Gebäude und setzen gestalterische Akzente. Wir realisieren drei Fassadensysteme: vorgehängte Holzfassade, Trespa-Fassade und Holzschalung – jeweils optimal abgestimmt auf Objekt, Lage und Budget."
-          bullets={[
-            "Vorgehängte Holzfassade (hinterlüftet, wartungsarm)",
-            "Trespa-Fassade (witterungsbeständig, vielfältige Optik)",
-            "Holzschalung (klassisch, individuell, ökologisch)",
-          ]}
-          imageNote="Detailfoto Fassade: Holzschalung / vorgehängte Fassade aus der Nähe."
+          title="Fassaden (Holz / Trespa)"
+          text="Ob natürliche Holzfassade oder wetterfeste Trespa-Verkleidung – wir setzen Ihre Fassade fachgerecht und langlebig um. Beide Materialien überzeugen durch Optik, Witterungsbeständigkeit und geringen Pflegeaufwand."
+          imageNote="Foto: fertige Holz- oder Trespa-Fassade im Detail."
         />
       </Section>
 
       <Section muted>
         <LeistungBlock
           flip
-          title="Ökologisch dämmen – KFW-Förderung nutzen."
-          text="Holzfaserdämmung schützt im Sommer vor Hitze, im Winter vor Kälte – und ist zu 100 % natürlich. Wir beraten Sie kostenlos zu aktuellen Förderprogrammen."
-          ctaLabel="Förderberatung anfragen"
-          bullets={[
-            "Holzfaserdämmung (ökologisch, diffusionsoffen)",
-            "WDVS Wärmedämm-Verbundsysteme",
-            "KFW-geförderte Außenwanddämmung",
-          ]}
-          imageNote="Foto Wärmedämmung: Anbringung von Holzfaserdämmung an der Außenwand."
+          title="Wärmedämmung"
+          text="Eine gedämmte Fassade senkt Ihre Heizkosten und steigert den Wohnkomfort spürbar. Wir dämmen ökologisch mit natürlichen Materialien – auf Wunsch inklusive KFW-Förderberatung."
+          imageNote="Foto: Fassadendämmung in Arbeit."
         />
       </Section>
 
       <Section>
         <LeistungBlock
-          title="Terrassen & Außenbereiche"
-          text="Eine gut geplante Terrasse verlängert den Wohnraum nach außen. Wir planen und bauen Holzterrassen, Unterkonstruktionen und Sichtschutz – passend zu Ihrem Gebäude und Garten."
-          bullets={[
-            "Holzterrassen (Douglasie, Lärche, Bangkirai)",
-            "WPC-Terrassenbeläge",
-            "Sichtschutz und Pergolen aus Holz",
-          ]}
-          imageNote="Foto Terrasse: fertige Holzterrasse mit Sichtschutz / Pergola."
+          title="Terrassen"
+          text="Eine Terrasse aus Holz oder WPC verlängert Ihren Wohnraum nach draußen. Wir planen und bauen langlebige Terrassen – auf Wunsch mit Unterkonstruktion, Überdachung und passendem Sichtschutz."
+          imageNote="Foto: fertige Holz- oder WPC-Terrasse."
         />
       </Section>
 
-      <CtaBanner
-        title="Ihr Außenbereich – neu gedacht."
-        text="Fassade, Dämmung oder Terrasse: Wir besichtigen Ihr Objekt kostenlos und erstellen Ihnen ein unverbindliches Angebot."
-        ctaLabel="Kostenlose Projektberatung Anfordern"
-      />
+      <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
     </div>
   );
 }

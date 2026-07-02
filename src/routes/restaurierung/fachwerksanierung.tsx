@@ -81,7 +81,7 @@ function Fachwerksanierung() {
       <ReferenzTeaser
         title="Referenzen im Bereich Restaurierung & Sanierung"
         intro="Von der mittelalterlichen Fachwerkscheune bis zum gründerzeitlichen Stadthaus: Sehen Sie selbst, was aus einer Zusammenarbeit mit E. Scharpf entstehen kann."
-        to="/referenzen/restaurierung"
+        to="/referenzen"
         imageNotes={[
           "Referenz Fachwerk 1: restauriertes Fachwerk-Stadthaus, Esslingen-Altstadt.",
           "Referenz Fachwerk 2: erneuerte Eichenbalken und Gefach.",

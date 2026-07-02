@@ -79,7 +79,7 @@ function Dachsanierung() {
       <ReferenzTeaser
         title="Referenzen im Bereich Dach"
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
-        to="/referenzen/dach"
+        to="/referenzen"
         imageNotes={[
           "Referenz Dach 1: energetische Dachsanierung, fertiges Ergebnis.",
           "Referenz Dach 2: Neueindeckung mit Holzfaserdämmung.",

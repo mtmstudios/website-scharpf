@@ -77,7 +77,7 @@ function Dachfenster() {
       <ReferenzTeaser
         title="Referenzen im Bereich Dach"
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
-        to="/referenzen/dach"
+        to="/referenzen"
         imageNotes={[
           "Referenz Dach 1: Dachausbau mit neuen Dachfenstern.",
           "Referenz Dach 2: Lichtband im sanierten Dach.",

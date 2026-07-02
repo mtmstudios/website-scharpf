@@ -1,13 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  PageHero,
-  Section,
-  SectionHeading,
-  ValueBand,
-  CtaBanner,
-} from "@/components/sections";
+import { createFileRoute } from "@tanstack/react-router";
+import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { CONTACT } from "@/lib/site";
+import { Section, CtaBanner } from "@/components/sections";
 
 export const Route = createFileRoute("/ueber-uns")({
   head: () => ({
@@ -23,209 +17,183 @@ export const Route = createFileRoute("/ueber-uns")({
   component: UeberUns,
 });
 
+// Team wie im XD. Namen kommen final vom Kunden – hier als Platzhalter,
+// Funktionen exakt aus dem XD übernommen.
+// XD-Namen (Referenz): Eberhard Scharpf sen., Eberhard Scharpf jun.,
+// Alexander Schwarz, Ole Schäfer, Stefan Strifler, Max Kaltmaier.
 const TEAM = [
   {
-    name: "Eberhard Scharpf sen.",
-    funktion: "Geschäftsführer / Restaurator",
-    imageNote:
-      "Portrait Eberhard Scharpf sen.: Geschäftsführer und Restaurator, freundlich, in Arbeitskleidung oder vor der Werkhalle.",
+    name: "Name folgt",
+    funktionen: ["Geschäftsführer", "Restaurator"],
   },
   {
-    name: "Eberhard Scharpf jun.",
-    funktion: "Geschäftsführer / Dipl. Ing. FH",
-    imageNote:
-      "Portrait Eberhard Scharpf jun.: Geschäftsführer und Dipl. Ing. FH, freundlich, vor Firmengelände.",
+    name: "Name folgt",
+    funktionen: ["Geschäftsführer", "Dipl Ing. (FH)"],
   },
   {
-    name: "Alexander Schwarz",
-    funktion: "Betriebsleiter",
-    imageNote:
-      "Portrait Alexander Schwarz: Betriebsleiter, in Arbeitskleidung, sachlich und zugewandt.",
+    name: "Name folgt",
+    funktionen: [
+      "Betriebsleiter",
+      "Fachtechniker Holzbau",
+      "Energieeffizienz - Experte",
+      "Zimmerermeister",
+    ],
   },
   {
-    name: "Ole Schäfer",
-    funktion: "Projektleiter",
-    imageNote:
-      "Portrait Ole Schäfer: Projektleiter, freundlich, vor Baustelle oder Werkhalle.",
+    name: "Name folgt",
+    funktionen: [
+      "Projektleiter",
+      "Zimmerermeister",
+      "Staat. Geprägt. Bautechniker",
+    ],
   },
   {
-    name: "Stefan Strifler",
-    funktion: "Projektleiter",
-    imageNote:
-      "Portrait Stefan Strifler: Projektleiter, in Arbeitskleidung, kompetenter Eindruck.",
+    name: "Name folgt",
+    funktionen: ["Projektleiter", "Zimmerermeister"],
   },
   {
-    name: "Max Kaltmaier",
-    funktion: "Zimmermeister / Restaurator",
-    imageNote:
-      "Portrait Max Kaltmaier: Zimmermeister und Restaurator, mit Werkzeug oder vor historischem Fachwerk.",
+    name: "Name folgt",
+    funktionen: ["Zimmerermeister", "Restaurator"],
   },
-];
+] as const;
 
-const WERTE = [
+// Stellenanzeigen – Texte wörtlich aus dem XD.
+const STELLEN = [
   {
-    title: "Geschichte erhalten",
-    text: "Wir bauen nicht nur Häuser – wir erhalten Geschichte und bewahren historische Bausubstanz für kommende Generationen.",
+    title: "Ausbildung",
+    text: "Du bist motiviert und suchst einen Ausbildungsplatz zum Zimmermann? Dann bewirb dich bei uns! Wir haben ein tolles Team aus innovativen, jungen Mitarbeitern und erfahrenen „alten Hasen“. Wir sind in den Bereichen Altbausanierung, Restauration und Neubau tätig. Mehr Infos zur Ausbildung findest du bei Z wie Zimmerer.",
   },
   {
-    title: "Wohnraum schaffen",
-    text: "Aus Ideen wird gebauter Raum: durchdacht, langlebig und passgenau auf die Menschen zugeschnitten, die darin leben.",
+    title: "Zimmerer Geselle / Gesellin",
+    text: "Wir suchen einen motivierten Zimmerer oder eine motivierte Zimmerin mit abgeschlossener Berufsausbildung und etwas Berufserfahrung für eine Vollzeitstelle in unserem Team. Voraussetzungen: Führerschein (mindestens Klasse B), Teamfähigkeit, Verantwortungsbewusstsein, Konfliktfähigkeit.",
   },
   {
-    title: "Handwerkliche Sorgfalt",
-    text: "In jedes Projekt stecken wir unsere handwerkliche Sorgfalt, unser Fachwissen und unsere Leidenschaft für Holz.",
+    title: "Flaschner / Klempner Geselle / Gesellin",
+    text: "Wir suchen einen Flaschner mit abgeschlossener Berufsausbildung und Berufserfahrung für eine Vollzeitstelle in unserem Team. Voraussetzungen: Führerschein (mindestens Klasse B), Selbständiges Arbeiten, Teamfähigkeit, Verantwortungsbewusstsein, Konfliktfähigkeit, Flexibilität im Aufgabenbereich.",
   },
-  {
-    title: "Verantwortung",
-    text: "Wir stehen für das, was wir tun – verlässlich, ehrlich und mit vollem Einsatz, vom ersten Gespräch bis zur Abnahme.",
-  },
-];
+] as const;
 
 function UeberUns() {
   return (
     <div>
-      <PageHero
-        eyebrow="Über uns"
-        title="Das Unternehmen"
-        lead="Seit über 75 Jahren steht E. Scharpf in Esslingen für handwerkliche Präzision, Verlässlichkeit und die Liebe zum Werkstoff Holz. Was 1946 als Familienbetrieb begann, ist heute eines der erfahrensten Holzbau- und Restaurierungsunternehmen im Großraum Stuttgart."
-        ctaLabel="Kontakt aufnehmen"
-        imageNote="Übersichtsbild Über uns: Firmengebäude, Werkhalle oder Teamfoto von E. Scharpf in Esslingen."
-      />
-
+      {/* Das Unternehmen + Geschichte (versetzt zweispaltig wie XD) */}
       <Section>
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <SectionHeading
-              kicker="Seit 1946"
-              title="Unternehmensgeschichte"
-            />
+            <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+              Das Unternehmen
+            </h1>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              E. Scharpf GmbH wurde 1946 in Esslingen am Neckar gegründet. Über
-              drei Generationen haben wir unser Handwerk verfeinert, unser Team
-              ausgebaut und unsere Leistungen erweitert – immer mit dem Anspruch,
-              Holz so einzusetzen, dass es hält, schützt und begeistert.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Heute arbeiten bei uns erfahrene Zimmerer, Dachdecker und
-              Restauratoren. Unsere eigene Werkhalle in Esslingen ermöglicht die
-              Vorfertigung ganzer Holzbauteile – ein entscheidender Vorteil für
-              Qualität, Geschwindigkeit und Planbarkeit.
+              E. Scharpf ist ein Familienbetrieb in dritter Generation aus
+              Esslingen am Neckar. Mit viel Erfahrung und klarem Fokus auf
+              hochwertige und innovative Zimmerarbeiten sind wir bekannt für
+              versiertes Handwerk, moderne Fertigung und termingerechte
+              Ausführung. Ob Restaurierung, Holzbau oder Dach – wir planen und
+              bauen Ihr Projekt zuverlässig und nachhaltig.
             </p>
           </div>
-          <PlaceholderImage
-            note="Historisches Firmenfoto oder Aufnahme der Werkhalle: zeigt drei Generationen Handwerk und die eigene Vorfertigung in Esslingen."
-            ratio="landscape"
-          />
+          <div className="lg:mt-32">
+            <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+              Geschichte
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              Wir sind ein Familienbetrieb, der 1946 von Emil Scharpf ins Leben
+              gerufen wurde. In den ersten Jahrzehnten diente ein Gelände in der
+              Haldenstraße in Oberesslingen als Firmensitz und Lagerplatz. Dieses
+              Gelände lag in einem Mischgebiet und bot schließlich keine
+              Möglichkeit mehr, den Betrieb weiter zu vergrößern. Nachdem Eberhard
+              Scharpf den Betrieb 1985 von seinem Vater übernommen hatte, suchte er
+              nach einem neuen Gelände mit Entwicklungspotential und 1989 zog das
+              Unternehmen in die Fritz-Müller-Straße 115 um, wo es bis heute
+              ansässig ist.
+            </p>
+          </div>
         </div>
       </Section>
 
+      {/* Das Team der E. Scharpf Holzbau GmbH */}
       <Section muted>
-        <SectionHeading
-          kicker="Ihre Ansprechpartner"
-          title="Unser Team"
-          intro="Hinter jedem Projekt steht ein Team aus erfahrenen Zimmerern, Dachdeckern und Restauratoren. Viele unserer Mitarbeiter sind seit mehr als zehn Jahren Teil der E. Scharpf Familie."
-        />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TEAM.map((person) => (
-            <div
-              key={person.name}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card"
-            >
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <PlaceholderImage
+            note="Teamfoto E. Scharpf: Zimmerer, Dachdecker und Restauratoren vor der Werkhalle in Esslingen."
+            ratio="landscape"
+          />
+          <div>
+            <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+              Das Team der E. Scharpf Holzbau GmbH
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              Hinter jedem Projekt steht ein eingespieltes Team aus erfahrenen
+              Zimmerern, Dachdeckern und Restauratoren. Durch fachlich top
+              ausgebildete Mitarbeiter sowie stetige interne und externe
+              Weiterbildung halten wir Ausführung und Qualität stets auf höchstem
+              Niveau – damit Sie sich in Ihrem Haus wohlfühlen.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Ihre Ansprechpartner bei uns im Büro */}
+      <Section>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Ihre Ansprechpartner bei uns im Büro
+        </h2>
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {TEAM.map((person, i) => (
+            <div key={i} className="flex flex-col">
               <PlaceholderImage
-                note={person.imageNote}
+                note={`Portrait Mitarbeiter ${i + 1} (Foto folgt vom Kunden)`}
                 ratio="portrait"
-                className="rounded-none border-0 border-b border-dashed border-border"
               />
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-lg font-bold text-card-foreground">
-                  {person.name}
-                </h3>
-                <p className="mt-1 text-sm font-semibold text-primary">
-                  {person.funktion}
-                </p>
-                <div className="mt-4 space-y-1 text-sm text-muted-foreground">
-                  <p>
-                    <a
-                      href={CONTACT.phoneHref}
-                      className="hover:text-primary hover:underline"
-                    >
-                      {CONTACT.phone}
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href={CONTACT.emailHref}
-                      className="hover:text-primary hover:underline"
-                    >
-                      {CONTACT.email}
-                    </a>
-                  </p>
-                </div>
+              <h3 className="mt-4 font-display text-lg font-bold text-foreground">
+                {person.name}
+              </h3>
+              <div className="mt-1 text-sm text-muted-foreground">
+                {person.funktionen.map((f) => (
+                  <p key={f}>{f}</p>
+                ))}
               </div>
             </div>
           ))}
         </div>
       </Section>
 
-      <Section>
-        <SectionHeading
-          center
-          kicker="Werte & Philosophie"
-          title="Wofür wir stehen"
-          intro="Wir bauen nicht nur Häuser – wir erhalten Geschichte, schaffen Wohnraum und stehen für das, was wir tun. Mit jedem Projekt stecken wir unsere handwerkliche Sorgfalt, unser Fachwissen und unsere Leidenschaft für Holz."
-        />
-      </Section>
-
-      <ValueBand values={WERTE} />
-
-      <Section>
-        <SectionHeading
-          kicker="Offene Stellen"
-          title="Werden Sie Teil des Teams"
-          intro="Wir investieren in die Zukunft – und in Menschen, die mit Leidenschaft bauen. Aktuell suchen wir Verstärkung."
-        />
-        <div className="mt-12 flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-card p-8 sm:flex-row sm:items-center">
-          <div>
-            <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
-              Vollzeit
-            </span>
-            <h3 className="mt-4 font-display text-xl font-bold text-card-foreground">
-              Zimmerer (m/w/d) – Vollzeit – Esslingen am Neckar
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Historische Fachwerkhäuser, moderne Holzkonstruktionen und präzise
-              Dacharbeiten in einem eingespielten Team – mit übertariflicher
-              Vergütung und moderner Ausstattung.
-            </p>
+      {/* Grünes Band: Finden Sie Ihren direkten Ansprechpartner */}
+      <section className="bg-accent text-accent-foreground">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+          <h2 className="max-w-2xl font-display text-3xl font-bold sm:text-4xl">
+            Finden Sie Ihren direkten Ansprechpartner
+          </h2>
+          <div className="mt-8">
+            <CtaButton to="/kontakt">Kontakt</CtaButton>
           </div>
-          <Link
-            to="/karriere"
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25"
-          >
-            Jetzt bewerben
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </Link>
+        </div>
+      </section>
+
+      {/* Wir suchen Zimmerer und Dachdecker (m/w/d) */}
+      <Section>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Wir suchen Zimmerer und Dachdecker (m/w/d)
+        </h2>
+        <div className="mt-10 space-y-10">
+          {STELLEN.map((s) => (
+            <div key={s.title}>
+              <h3 className="font-display text-xl font-bold text-foreground">
+                {s.title}
+              </h3>
+              <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted-foreground">
+                {s.text}
+              </p>
+            </div>
+          ))}
         </div>
       </Section>
 
       <CtaBanner
         title="Wollen Sie Teil unseres Teams werden?"
-        text="Wir suchen Menschen, die mit Leidenschaft bauen – und bieten dafür mehr als andere."
         ctaLabel="Jetzt bewerben"
         ctaTo="/karriere"
+        tone="mint"
       />
     </div>
   );

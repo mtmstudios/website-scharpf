@@ -1,20 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  PageHero,
-  Section,
-  LeistungBlock,
-  ReferenzTeaser,
-  CtaBanner,
-} from "@/components/sections";
+import { PlaceholderImage } from "@/components/placeholder-image";
+import { Section, LeistungBlock, CtaBanner } from "@/components/sections";
 
 export const Route = createFileRoute("/holzbau/")({
   head: () => ({
     meta: [
-      { title: "Holzbau & Konstruktion – Vorfertigung aus eigener Werkhalle" },
+      { title: "Holzbau & Konstruktion Esslingen – Holzhäuser, Aufstockung, Carport" },
       {
         name: "description",
         content:
-          "Aufstockungen, Holzhausbau und Dachstühle: E. Scharpf fertigt Holzbauteile in eigener Werkhalle vor – präzise, terminzuverlässig, im Großraum Stuttgart.",
+          "Holzhausbau, Aufstockungen, Anbauten und Carports aus einer Hand. Vorfertigung in eigener Werkhalle für kurze Bauzeiten. E. Scharpf GmbH Esslingen.",
       },
     ],
   }),
@@ -24,70 +19,51 @@ export const Route = createFileRoute("/holzbau/")({
 function Holzbau() {
   return (
     <div>
-      <PageHero
-        eyebrow="Holzbau & Konstruktion"
-        title="Holzbau mit System – vom Entwurf bis zur Montage."
-        lead="Familienbetrieb in der dritten Generation. Bekannt für versiertes Handwerk, moderne Fertigung und termingerechte Ausführung."
-        ctaLabel="Projekt besprechen"
-        imageNote="Holzbau-Projektfoto: Dachstuhl, Holzrahmenbau oder fertiges Holzhaus im Großraum Stuttgart."
-      />
+      {/* Titel + Intro */}
+      <Section>
+        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+          Holzbau & Konstruktion
+        </h1>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          Vom schlüsselfertigen Holzhaus bis zur Aufstockung: Wir planen und
+          bauen jede Holzkonstruktion aus einer Hand. In unserer eigenen
+          Werkhalle fertigen wir Wand- und Dachelemente millimetergenau vor –
+          für kurze Bauzeiten und beste Qualität auf der Baustelle.
+        </p>
+        <div className="mt-10">
+          <PlaceholderImage
+            note="Holzbau-Hero: Dachstuhl, Holzrahmenbau oder fertiges Holzhaus."
+            ratio="wide"
+          />
+        </div>
+      </Section>
 
       <Section>
         <LeistungBlock
-          title="Präzision aus der Werkhalle – Geschwindigkeit auf der Baustelle"
-          text="In unserer modernen Werkhalle in Esslingen fertigen wir Dach- und Wandelemente inklusive Dämmung und Lattung komplett vor. Montage auf der Baustelle: ein Bruchteil der üblichen Zeit, witterungsunabhängig, präzise auf den Millimeter. Für Architekten bedeutet das planbare Termine und reproduzierbare Qualität – für Bauherren weniger Wartezeit."
-          ctaLabel="Projekt anfragen"
-          bullets={[
-            "Neubau von Dachstühlen (Satteldach, Walmdach, Pultdach und mehr)",
-            "Holzrahmen- und Holztafelbau",
-            "CAD-gestützte Planung und Ausführung",
-            "Vorfertigung von Wand- und Dachelementen inkl. Dämmung, Lattung und Folien",
-          ]}
-          imageNote="Werkhallen-Foto: Vorfertigung von Wand-/Dachelementen, CNC oder Abbund."
+          title="Holzhausbau / Aufstockung / Anbauten"
+          text="Holz ist leicht, tragfähig und ökologisch – ideal für Aufstockungen, Anbauten und den kompletten Holzhausbau. Wir stocken bestehende Gebäude in Holzrahmenbauweise auf, erweitern sie durch durchdachte Anbauten und errichten Holzhäuser vom Entwurf bis zur Montage."
+          imageNote="Foto: Aufstockung in Holzbauweise oder fertiges Holzhaus."
         />
       </Section>
 
       <Section muted>
         <LeistungBlock
           flip
-          title="Aufstockungen in Holzbauweise"
-          text="Aufgrund des geringen Gewichts von Holz gibt es statisch kaum Grenzen. Unabhängig von der bisherigen Dachform kann Ihr Gebäude aufgestockt werden – in Holzrahmenbauweise, als Vollgeschoss oder Teilaufstockung. Wie Sie es wünschen."
-          ctaLabel="Aufstockung anfragen"
-          ctaTo="/holzbau/aufstockungen"
-          bullets={[
-            "Vollgeschoss-Aufstockung auf bestehendes Gebäude",
-            "Teilaufstockung und Dachausbau",
-            "Kurze Bauzeit durch Vorfertigung",
-          ]}
-          imageNote="Aufstockungs-Foto: Gebäude mit aufgesetztem Holz-Geschoss, Kran-Montage."
+          title="Carport"
+          text="Ein Carport aus Holz schützt Ihr Fahrzeug und fügt sich harmonisch in Haus und Garten ein. Wir konstruieren und montieren maßgefertigte Carports – auf Wunsch mit Geräteraum, Gründach oder Photovoltaik-Vorbereitung."
+          imageNote="Foto: fertiger Holz-Carport, freistehend oder am Haus."
         />
       </Section>
 
       <Section>
         <LeistungBlock
-          title="Holzhäuser, Anbauten & Carports"
-          text="Ob schlüsselfertiges Holzhaus, durchdachter Anbau oder eleganter Carport – wir planen und bauen Ihr Projekt aus einer Hand. Die Vorfertigung in unserer Werkhalle garantiert präzise Maße und kurze Bauzeiten."
-          ctaLabel="Kostenlose Projektberatung anfordern"
-          bullets={[
-            "Holzhausbau (schlüsselfertig oder Ausbauhaus)",
-            "Anbauten in Holzrahmenbauweise",
-            "Carport-Konstruktionen und Terrassenüberdachungen",
-            "Dachgauben – nachträglich einbaubar, mehr Raum unter der Dachschräge",
-          ]}
-          imageNote="Foto Holzhaus / Carport: fertiges Holzhaus oder moderner Holz-Carport."
+          title="Referenzen im Bereich Holzbau und Konstruktion"
+          text="Von der Aufstockung in Esslingen bis zum schlüsselfertigen Holzhaus im Großraum Stuttgart – sehen Sie unsere abgeschlossenen Holzbauprojekte."
+          ctaLabel="Mehr sehen"
+          ctaTo="/referenzen"
+          imageNote="Foto: abgeschlossenes Holzbauprojekt als Referenz."
         />
       </Section>
-
-      <ReferenzTeaser
-        title="Referenzen im Bereich Holzbau & Konstruktion"
-        intro="Von der Aufstockung in Esslingen bis zum schlüsselfertigen Holzhaus im Großraum Stuttgart – sehen Sie, was aus unserer Zusammenarbeit entstehen kann."
-        to="/referenzen/holzbau"
-        imageNotes={[
-          "Referenz Holzbau 1: Aufstockung Esslingen.",
-          "Referenz Holzbau 2: schlüsselfertiges Holzhaus.",
-          "Referenz Holzbau 3: Dachstuhl / Carport.",
-        ]}
-      />
 
       <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
     </div>
