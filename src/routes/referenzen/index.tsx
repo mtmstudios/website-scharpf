@@ -18,11 +18,11 @@ export const Route = createFileRoute("/referenzen/")({
   component: Referenzen,
 });
 
-// Vier Google-Bewertungskarten wie im XD – vier ausgefüllte Sterne pro Karte.
+// Google-Bewertungskarten – fünf Sterne passend zur 4,8-Bewertung.
 function Stars() {
   return (
     <div className="flex gap-1 text-primary">
-      {Array.from({ length: 4 }).map((_, i) => (
+      {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
           xmlns="http://www.w3.org/2000/svg"

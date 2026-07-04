@@ -4,7 +4,7 @@
 export const CONTACT = {
   company: "E. Scharpf GmbH",
   street: "Fritz-Müller-Str. 115",
-  city: "73730 Esslingen am Neckar",
+  city: "73730 Esslingen",
   phone: "0711 – 93 18 44 22",
   phoneHref: "tel:+4971193184422",
   fax: "0711 – 93 18 44 50",

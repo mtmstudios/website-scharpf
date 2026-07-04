@@ -42,6 +42,26 @@ const KATEGORIEN = [
   },
 ] as const;
 
+// Referenzen-Kategorien wie im XD (Abschnitt "Referenzen" auf der Leistungen-Seite).
+const REFERENZEN = [
+  {
+    title: "Restaurierung & Sanierung",
+    to: "/referenzen/restaurierung",
+    bild: "/fotos/scharpf_restaurierung_01.jpg",
+  },
+  {
+    title: "Holzbau & Konstruktion",
+    to: "/referenzen/holzbau",
+    bild: "/fotos/scharpf_aufstockung_02.jpg",
+  },
+  { title: "Dach", to: "/referenzen/dach", bild: "/fotos/scharpf_dachsanierung.jpg" },
+  {
+    title: "Fassade & Außenbereiche",
+    to: "/referenzen/fassade",
+    bild: "/fotos/scharpf_fassade_03.jpg",
+  },
+] as const;
+
 // FAQ-Fragen wörtlich aus dem XD ("Haben sie Fragen zu unseren Leistungen").
 const FRAGEN = [
   { q: "Mehr zu E.Scharpf", to: "/ratgeber" },
@@ -92,8 +112,30 @@ function Leistungen() {
         </div>
       </Section>
 
-      {/* Sprechen Sie uns an */}
+      {/* Referenzen */}
       <Section>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Referenzen
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {REFERENZEN.map((r) => (
+            <Link key={r.to} to={r.to} className="group flex flex-col">
+              <PlaceholderImage
+                note={`Referenzen: ${r.title}`}
+                src={r.bild}
+                ratio="landscape"
+                className="transition-transform group-hover:-translate-y-1"
+              />
+              <h3 className="mt-4 font-display text-2xl font-bold text-foreground group-hover:text-primary">
+                {r.title}
+              </h3>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      {/* Sprechen Sie uns an */}
+      <Section muted>
         <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
           Sprechen Sie uns an, wir helfen Ihnen gerne weiter!
         </h2>

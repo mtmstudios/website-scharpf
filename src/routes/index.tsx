@@ -37,10 +37,10 @@ const KUNDENSTIMMEN = [
 ];
 
 function Stars() {
-  // XD: vier ausgefüllte Sterne pro Google-Bewertungskarte.
+  // Fünf Sterne passend zur 4,8-Bewertung (Google).
   return (
     <div className="flex gap-1 text-primary">
-      {Array.from({ length: 4 }).map((_, i) => (
+      {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
           xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +69,14 @@ function Index() {
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-muted-foreground">
             Wir planen und bauen Ihr Projekt – zuverlässig &amp; nachhaltig.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-4">
             <CtaButton>Kostenlose Projektberatung Anfordern</CtaButton>
+            <Link
+              to="/ratgeber"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-transparent px-7 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/50 hover:text-primary"
+            >
+              Ratgeber
+            </Link>
           </div>
           <div className="mt-12">
             <PlaceholderImage
