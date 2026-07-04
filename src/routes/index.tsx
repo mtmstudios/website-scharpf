@@ -16,6 +16,26 @@ const VALUES = [
   { title: "Lösungsorientiert" },
 ];
 
+// Kundenstimmen – Zitate wörtlich aus dem XD (Startseite).
+const KUNDENSTIMMEN = [
+  {
+    zitat:
+      "„Sehr geehrter Herr Scharpf … wir fanden die Zusammenarbeit mit Ihnen sehr gut und Sie haben uns gut beraten. Dies haben wir auch mehrfach gegenüber unserem Bauleiter und Roto erwähnt.“",
+    quelle:
+      "Bauvorhaben: Roto Dachfenster und Zubehör 2015 – Bauherrschaft Fam. Bosselmann aus Sillenbuch",
+  },
+  {
+    zitat:
+      "„Lob und Dank an Ihre Zimmerer, die die Dachfenster eingebaut haben. Es wurde sehr sauber gearbeitet, man hat nicht gesehen, dass Handwerker da waren.“",
+    quelle: "Bauvorhaben: Dachfenster Fam. Seeker in Esslingen",
+  },
+  {
+    zitat:
+      "„Top Handwerker! Sehr gute Betreuung und Top Qualität. Scharpf Holzbau hat meine Terrasse renoviert und ist super auf meine Wünsche eingegangen. Sie konnten mich bei jeder Fragestellung sehr gut beraten. Die Terrasse sieht hervorragend aus und die Handwerker waren immer nett und kompetent. Wirklich zu empfehlen!“",
+    quelle: "Niklas Schwarz",
+  },
+];
+
 function Stars() {
   // XD: vier ausgefüllte Sterne pro Google-Bewertungskarte.
   return (
@@ -139,8 +159,34 @@ function Index() {
         </div>
       </Section>
 
-      {/* Werte-Band (grün) – Abschluss vor dem Footer */}
+      {/* Werte-Band (grün) */}
       <ValueBand values={VALUES} />
+
+      {/* Kundenstimmen – Zitate wörtlich aus dem XD */}
+      <Section muted>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Kundenstimmen
+        </h2>
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          Was unsere Kunden über die Zusammenarbeit mit E. Scharpf sagen.
+        </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {KUNDENSTIMMEN.map((k, i) => (
+            <figure
+              key={i}
+              className="flex flex-col rounded-2xl border border-border bg-card p-8"
+            >
+              <Stars />
+              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
+                {k.zitat}
+              </blockquote>
+              <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
+                {k.quelle}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </Section>
     </div>
   );
 }

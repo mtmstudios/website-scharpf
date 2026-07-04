@@ -54,7 +54,7 @@ const NEWS = [
     imageSrc: "/fotos/scharpf_dachsanierung_02.jpg",
   },
   {
-    headline: "DIE alternative VELUX Panorama Lichtlösung",
+    headline: "DIE alternativ zur Dachgaube – VELUX Panorama",
     teaser:
       "DIE alternative VELUX Panorama VELUX Lichtlösung – so entsteht ein großzügiger Kopffreiraum mit bestem Ausblick. Für ein Dachgeschoss, in dem man sich rundum wohlfühlt.",
     imageNote: "VELUX Panorama Dachfenster von innen",
@@ -83,7 +83,7 @@ const KOMPETENZEN = [
     text: "Von der Restaurierung über den Holzbau bis zur Dachsanierung: ein Überblick über unser vollständiges Leistungsspektrum.",
   },
   {
-    title: "Mehr zum Holzbau",
+    title: "Mehr zum Material",
     text: "Warum Holz? CO₂-neutral, robust, ästhetisch und regional verfügbar – die Stärken des ältesten Baustoffs der Welt.",
   },
   {

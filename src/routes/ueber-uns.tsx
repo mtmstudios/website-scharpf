@@ -61,6 +61,11 @@ const TEAM = [
     funktionen: ["Zimmerermeister", "Restaurator"],
     foto: "/fotos/scharpf_Max_Kaltmaier.jpg",
   },
+  {
+    name: "Name folgt",
+    funktionen: ["Kauffrau für Büromanagement", "Sekretariat"],
+    foto: undefined,
+  },
 ] as const;
 
 // Stellenanzeigen – Texte wörtlich aus dem XD.

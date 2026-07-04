@@ -44,7 +44,6 @@ const KATEGORIE_BILD: Record<string, string> = {
   "/referenzen/holzbau": "/fotos/scharpf_aufstockung_02.jpg",
   "/referenzen/dach": "/fotos/scharpf_dachsanierung.jpg",
   "/referenzen/fassade": "/fotos/scharpf_fassade_03.jpg",
-  "/referenzen/services": "/fotos/scharpf_ladekran.jpg",
 };
 
 function Referenzen() {

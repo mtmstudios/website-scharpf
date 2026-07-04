@@ -81,7 +81,6 @@ export const REFERENZ_KATEGORIEN = [
   { title: "Holzbau & Konstruktion", to: "/referenzen/holzbau" },
   { title: "Dach", to: "/referenzen/dach" },
   { title: "Fassade & Außenbereiche", to: "/referenzen/fassade" },
-  { title: "Service & Sonstige Leistungen", to: "/referenzen/services" },
 ] as const;
 
 export const PARTNERS = ["RESTORA GMBH", "ES TORE"] as const;

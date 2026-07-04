@@ -69,20 +69,40 @@ function Services() {
       <Section>
         <LeistungBlock
           title="Ladekran mieten"
-          text="Sie brauchen kurzfristig Hebekapazität? Mieten Sie unseren Ladekran – mit oder ohne Bedienung. Ideal für Materialtransport und Montagearbeiten. Technische Daten und Konditionen erhalten Sie auf Anfrage."
+          text="Sie brauchen kurzfristig Hebekapazität? Mieten Sie unseren Ladekran – mit oder ohne Bedienung. Ideal für Materialtransport und Montagearbeiten."
           imageNote="Ladekran von E. Scharpf im Einsatz"
           imageSrc="/fotos/scharpf_ladekran.jpg"
         />
+        <div className="mt-10">
+          <h3 className="font-display text-xl font-bold text-foreground">
+            Technische Daten:
+          </h3>
+          <ul className="mt-4 max-w-xl space-y-2 text-base leading-relaxed text-muted-foreground">
+            <li>Traglast: auf Anfrage</li>
+            <li>Maximale Ausladung: auf Anfrage</li>
+            <li>Hubhöhe: auf Anfrage</li>
+            <li>Vermietung mit oder ohne Bedienung</li>
+          </ul>
+        </div>
       </Section>
 
       <Section muted>
         <LeistungBlock
           flip
           title="Ausstellung/Showroom"
-          text="Besuchen Sie unseren Showroom und erleben Sie Materialien, Oberflächen und Lösungen zum Anfassen. Vereinbaren Sie gerne einen Termin – die aktuellen Öffnungszeiten teilen wir Ihnen auf Anfrage mit."
+          text="Besuchen Sie unseren Showroom und erleben Sie Materialien, Oberflächen und Lösungen zum Anfassen. Vereinbaren Sie gerne einen Termin und lassen Sie sich persönlich beraten."
           imageNote="Showroom / Ausstellung von E. Scharpf"
           imageSrc="/fotos/scharpf_ausstellung.jpg"
         />
+        <div className="mt-10">
+          <h3 className="font-display text-xl font-bold text-foreground">
+            Öffnungszeiten
+          </h3>
+          <div className="mt-4 space-y-1 text-base leading-relaxed text-muted-foreground">
+            <p>Montag – Freitag: 7:00 – 17:00 Uhr</p>
+            <p>sowie nach Vereinbarung</p>
+          </div>
+        </div>
       </Section>
 
       <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
