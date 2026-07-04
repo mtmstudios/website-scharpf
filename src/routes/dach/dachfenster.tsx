@@ -29,7 +29,8 @@ function Dachfenster() {
         title="Dachfenster – Licht, Wärme, Dichtheit"
         lead="Ein gut platziertes Dachfenster verwandelt einen dunklen Raum in ein helles Ambiente. Wir sind Experten in der Installation von Dachfenstern, die optimal belichtet, energetisch dämmen und dauerhaft dicht bleiben."
         ctaLabel="Dachfenster anfragen"
-        imageNote="Dachfenster-Projektfoto: heller Dachraum mit großzügig einfallendem Tageslicht durch neues Dachfenster."
+        imageNote="Heller Dachraum mit VELUX Panorama Dachfenster"
+        imageSrc="/fotos/scharpf_velux_panorame.jpg"
       />
 
       <Section>
@@ -42,7 +43,8 @@ function Dachfenster() {
             "Dachliegefenster und Lichtbänder",
             "Fachgerechter Anschluss, dauerhaft dicht",
           ]}
-          imageNote="Foto Dachfenster-Einbau: Zimmerer setzt neues Dachfenster in die Dachfläche ein."
+          imageNote="Neu eingebautes VELUX Dachfenster"
+          imageSrc="/fotos/scharpf_velux_01.jpg"
         />
       </Section>
 
@@ -56,7 +58,8 @@ function Dachfenster() {
             "Rollläden, Jalousien und Verdunkelung",
             "Sommerlicher Hitzeschutz durch Verschattung",
           ]}
-          imageNote="Foto Verschattung: Dachfenster mit außenliegendem Rollladen oder Jalousie."
+          imageNote="Dachfenster mit Verschattung"
+          imageSrc="/fotos/scharpf_velux_02.jpg"
         />
       </Section>
 
@@ -70,7 +73,8 @@ function Dachfenster() {
             "Materialien und Verglasungen zum Anfassen",
             "Persönliche Beratung vor Ort",
           ]}
-          imageNote="Foto Showroom: 330 qm Ausstellungsfläche mit verschiedenen Dachfenstern und Materialmustern."
+          imageNote="330 qm Showroom von E. Scharpf"
+          imageSrc="/fotos/scharpf_ausstellung.jpg"
         />
       </Section>
 
@@ -79,9 +83,14 @@ function Dachfenster() {
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
         to="/referenzen"
         imageNotes={[
-          "Referenz Dach 1: Dachausbau mit neuen Dachfenstern.",
-          "Referenz Dach 2: Lichtband im sanierten Dach.",
-          "Referenz Dach 3: heller Wohnraum mit Dachfenster.",
+          "Dachausbau mit neuen Dachfenstern",
+          "VELUX Dachfenster im sanierten Dach",
+          "Heller Wohnraum mit Dachfenster",
+        ]}
+        imageSrcs={[
+          "/fotos/scharpf_velux.jpg",
+          "/fotos/scharpf_velux_04.jpg",
+          "/fotos/scharpf_velux_Integra.jpg",
         ]}
       />
 

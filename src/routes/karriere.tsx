@@ -56,7 +56,8 @@ function Karriere() {
         </h1>
         <div className="mt-12">
           <PlaceholderImage
-            note="Karriere-Bild: eingespieltes Team von E. Scharpf bei der Arbeit in der Werkhalle oder auf der Baustelle."
+            note="Zimmerer von E. Scharpf bei der Vorfertigung"
+            src="/fotos/scharpf_vorfertigung_01.jpg"
             ratio="wide"
           />
         </div>

@@ -29,7 +29,8 @@ function Dachdaemmung() {
         title="Dachdämmung & KFW-Förderung – bis zu 20 % sparen"
         lead="Eine gute Dachdämmung senkt Ihre Heizkosten, schützt im Sommer vor Hitze und macht Ihr Zuhause behaglicher. Wir dämmen ökologisch mit Holzfaser und beraten Sie kostenlos zur KFW-Förderung – bis zu 20 % der Kosten können Sie zurückbekommen."
         ctaLabel="Förderberatung anfragen"
-        imageNote="Dachdämmungs-Projektfoto: Dachschräge mit eingebauter Holzfaserdämmung, im Anschnitt sichtbar."
+        imageNote="Dachsanierung mit eingebauter Holzfaserdämmung"
+        imageSrc="/fotos/scharpf_dachsanierung.jpg"
       />
 
       <Section>
@@ -42,7 +43,8 @@ function Dachdaemmung() {
             "Gesunde Bausubstanz durch Feuchteregulierung",
             "Natürliche Materialien aus jahrzehntelanger Erfahrung",
           ]}
-          imageNote="Detailfoto Holzfaserdämmung: Dämmplatten zwischen den Sparren, natürliche Holzfaserstruktur."
+          imageNote="Dachsanierung mit natürlicher Holzfaserdämmung"
+          imageSrc="/fotos/scharpf_dachsanierung_02.jpg"
         />
       </Section>
 
@@ -56,7 +58,8 @@ function Dachdaemmung() {
             "Winterlicher Wärmeschutz und weniger Heizverluste",
             "Dauerhaft niedrigere Energiekosten",
           ]}
-          imageNote="Foto Wohnkomfort: behagliches, gut gedämmtes Dachgeschoss mit Tageslicht."
+          imageNote="Helles Dachgeschoss mit VELUX Dachfenster"
+          imageSrc="/fotos/scharpf_velux_Integra.jpg"
         />
       </Section>
 
@@ -79,9 +82,14 @@ function Dachdaemmung() {
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
         to="/referenzen"
         imageNotes={[
-          "Referenz Dach 1: energetische Dachdämmung, fertiges Ergebnis.",
-          "Referenz Dach 2: Holzfaserdämmung im Detail.",
-          "Referenz Dach 3: saniertes, gedämmtes Dachgeschoss.",
+          "Energetische Dachsanierung, fertiges Ergebnis",
+          "Neu gedämmtes und eingedecktes Dach",
+          "Saniertes Dach von E. Scharpf",
+        ]}
+        imageSrcs={[
+          "/fotos/scharpf_dachsanierung.jpg",
+          "/fotos/scharpf_dachsanierung_02.jpg",
+          "/fotos/scharpf_dachdecken.jpg",
         ]}
       />
 

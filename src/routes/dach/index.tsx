@@ -32,7 +32,8 @@ function Dach() {
         </p>
         <div className="mt-10">
           <PlaceholderImage
-            note="Dach-Hero: fertig saniertes Dach, Neueindeckung oder Dachstuhl mit Gaube."
+            note="Neu eingedecktes Dach von E. Scharpf"
+            src="/fotos/scharpf_dachdecken.jpg"
             ratio="wide"
           />
         </div>
@@ -42,7 +43,8 @@ function Dach() {
         <LeistungBlock
           title="Dachgauben & Dachfenster"
           text="Mehr Licht und mehr Raum unter der Dachschräge: Wir bauen Gauben und Dachfenster nachträglich ein – für ein helles Wohngefühl und einen höheren Immobilienwert. Sämtliche Blecharbeiten stammen aus unserer eigenen Werkstatt."
-          imageNote="Foto: fertige Gaube mit Blechverkleidung und eingebautem Dachfenster."
+          imageNote="Fertige Gaube mit Dachfenster"
+          imageSrc="/fotos/scharpf_dachfenster_gaube.jpg"
         />
       </Section>
 
@@ -51,7 +53,8 @@ function Dach() {
           flip
           title="Wärmedämmung"
           text="Energetische Sanierung, Hitzeschutz im Sommer und niedrige Heizkosten im Winter: Wir dämmen Ihr Dach seit Jahrzehnten ökologisch mit Holzfaser und natürlichen Materialien – auf Wunsch inklusive KFW-Förderberatung."
-          imageNote="Foto: Dachstuhl mit ökologischer Holzfaserdämmung in Arbeit."
+          imageNote="Dachsanierung mit ökologischer Dämmung"
+          imageSrc="/fotos/scharpf_dachsanierung.jpg"
         />
       </Section>
 
@@ -59,7 +62,8 @@ function Dach() {
         <LeistungBlock
           title="Dacheindeckungen"
           text="Ob Ziegel, Schiefer oder Metall – wir decken jede Dachform fachgerecht neu ein. Dabei achten wir auf langlebige Materialien, saubere Details und eine dauerhaft dichte Ausführung."
-          imageNote="Foto: neu eingedecktes Dach in Gesamtansicht."
+          imageNote="Neu eingedecktes Dach in der Gesamtansicht"
+          imageSrc="/fotos/scharpf_dachdecken_01.jpg"
         />
       </Section>
 
@@ -68,7 +72,8 @@ function Dach() {
           flip
           title="Klempnerarbeiten"
           text="Für die umfassende Betreuung Ihres Dachprojekts haben wir eine eigene Klempnerwerkstatt: Dachrinnen, Fallrohre, Kehl- und Wandanschlussbleche in Kupfer, Zink und Aluminium – präzise gefertigt und schnell montiert."
-          imageNote="Foto: Blecharbeiten und Dachrinne in Kupfer oder Zink."
+          imageNote="Klempner- und Blecharbeiten an der Gaube"
+          imageSrc="/fotos/scharpf_dachgaube_flaschner.jpg"
         />
       </Section>
 
@@ -76,7 +81,8 @@ function Dach() {
         <LeistungBlock
           title="Dachreparaturen"
           text="Sturmschaden, undichte Stelle oder verrutschte Ziegel? Wir prüfen Ihr Dach, beheben Schäden zuverlässig und beugen Folgeschäden vor – schnell und unkompliziert."
-          imageNote="Foto: Reparatur einer schadhaften Dachstelle."
+          imageNote="Dacharbeiten und Reparatur auf der Baustelle"
+          imageSrc="/fotos/scharpf_Dacharbeiten.jpg"
         />
       </Section>
 
@@ -87,7 +93,8 @@ function Dach() {
           text="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Dachprojekte im Großraum Esslingen und Stuttgart."
           ctaLabel="Mehr sehen"
           ctaTo="/referenzen"
-          imageNote="Foto: abgeschlossenes Dachprojekt als Referenz."
+          imageNote="Abgeschlossene Dachsanierung als Referenz"
+          imageSrc="/fotos/scharpf_dachsanierung_02.jpg"
         />
       </Section>
 

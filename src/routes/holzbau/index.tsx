@@ -32,7 +32,8 @@ function Holzbau() {
         </p>
         <div className="mt-10">
           <PlaceholderImage
-            note="Holzbau-Hero: Dachstuhl, Holzrahmenbau oder fertiges Holzhaus."
+            note="Neubau in Holzbauweise von E. Scharpf"
+            src="/fotos/scharpf_neubau.jpg"
             ratio="wide"
           />
         </div>
@@ -42,7 +43,8 @@ function Holzbau() {
         <LeistungBlock
           title="Holzhausbau / Aufstockung / Anbauten"
           text="Holz ist leicht, tragfähig und ökologisch – ideal für Aufstockungen, Anbauten und den kompletten Holzhausbau. Wir stocken bestehende Gebäude in Holzrahmenbauweise auf, erweitern sie durch durchdachte Anbauten und errichten Holzhäuser vom Entwurf bis zur Montage."
-          imageNote="Foto: Aufstockung in Holzbauweise oder fertiges Holzhaus."
+          imageNote="Aufstockung in Holzbauweise"
+          imageSrc="/fotos/scharpf_Aufstockung.jpg"
         />
       </Section>
 
@@ -51,7 +53,8 @@ function Holzbau() {
           flip
           title="Carport"
           text="Ein Carport aus Holz schützt Ihr Fahrzeug und fügt sich harmonisch in Haus und Garten ein. Wir konstruieren und montieren maßgefertigte Carports – auf Wunsch mit Geräteraum, Gründach oder Photovoltaik-Vorbereitung."
-          imageNote="Foto: fertiger Holz-Carport, freistehend oder am Haus."
+          imageNote="Maßgefertigter Holz-Carport"
+          imageSrc="/fotos/scharpf_carport.jpg"
         />
       </Section>
 
@@ -61,7 +64,8 @@ function Holzbau() {
           text="Von der Aufstockung in Esslingen bis zum schlüsselfertigen Holzhaus im Großraum Stuttgart – sehen Sie unsere abgeschlossenen Holzbauprojekte."
           ctaLabel="Mehr sehen"
           ctaTo="/referenzen"
-          imageNote="Foto: abgeschlossenes Holzbauprojekt als Referenz."
+          imageNote="Abgeschlossenes Aufstockungsprojekt als Referenz"
+          imageSrc="/fotos/scharpf_aufstockung_01.jpg"
         />
       </Section>
 

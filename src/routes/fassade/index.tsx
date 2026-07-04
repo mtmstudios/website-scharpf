@@ -32,7 +32,8 @@ function Fassade() {
         </p>
         <div className="mt-10">
           <PlaceholderImage
-            note="Fassade-Hero: Holz- oder Trespa-Fassade in Gesamtansicht."
+            note="Fassade von E. Scharpf in der Gesamtansicht"
+            src="/fotos/scharpf_fassade.jpg"
             ratio="wide"
           />
         </div>
@@ -42,7 +43,8 @@ function Fassade() {
         <LeistungBlock
           title="Fassaden (Holz / Trespa)"
           text="Ob natürliche Holzfassade oder wetterfeste Trespa-Verkleidung – wir setzen Ihre Fassade fachgerecht und langlebig um. Beide Materialien überzeugen durch Optik, Witterungsbeständigkeit und geringen Pflegeaufwand."
-          imageNote="Foto: fertige Holz- oder Trespa-Fassade im Detail."
+          imageNote="Holz- bzw. Trespa-Fassade im Detail"
+          imageSrc="/fotos/scharpf_fassade_01.jpg"
         />
       </Section>
 
@@ -51,7 +53,8 @@ function Fassade() {
           flip
           title="Wärmedämmung"
           text="Eine gedämmte Fassade senkt Ihre Heizkosten und steigert den Wohnkomfort spürbar. Wir dämmen ökologisch mit natürlichen Materialien – auf Wunsch inklusive KFW-Förderberatung."
-          imageNote="Foto: Fassadendämmung in Arbeit."
+          imageNote="Gedämmte Fassade von E. Scharpf"
+          imageSrc="/fotos/scharpf_fassade_02.jpg"
         />
       </Section>
 
@@ -59,7 +62,8 @@ function Fassade() {
         <LeistungBlock
           title="Terrassen"
           text="Eine Terrasse aus Holz oder WPC verlängert Ihren Wohnraum nach draußen. Wir planen und bauen langlebige Terrassen – auf Wunsch mit Unterkonstruktion, Überdachung und passendem Sichtschutz."
-          imageNote="Foto: fertige Holz- oder WPC-Terrasse."
+          imageNote="Fertige Terrasse von E. Scharpf"
+          imageSrc="/fotos/scharpf_terrasse.jpg"
         />
       </Section>
 

@@ -32,7 +32,8 @@ function Services() {
         </p>
         <div className="mt-10">
           <PlaceholderImage
-            note="Service-Hero: Werkstatt, Ladekran oder Showroom von E. Scharpf."
+            note="Fuhrpark von E. Scharpf im Einsatz"
+            src="/fotos/scharpf_Transporter.jpg"
             ratio="wide"
           />
         </div>
@@ -50,7 +51,8 @@ function Services() {
             "Klempnerarbeiten",
             "Dachreparaturen",
           ]}
-          imageNote="Foto: Dachdeckerarbeiten auf der Baustelle."
+          imageNote="Dachdeckerarbeiten mit Gaube"
+          imageSrc="/fotos/scharpf__dachgauben.jpg"
         />
       </Section>
 
@@ -59,7 +61,8 @@ function Services() {
           flip
           title="Klempnerleistungen"
           text="In unserer eigenen Klempnerwerkstatt fertigen wir Dachrinnen, Fallrohre, Kehl- und Wandanschlussbleche in Kupfer, Zink und Aluminium – präzise gefertigt und schnell montiert."
-          imageNote="Foto: Blech- und Klempnerarbeiten in der Werkstatt."
+          imageNote="Klempnerarbeiten an der Gaube"
+          imageSrc="/fotos/scharpf_dachgaube_flaschner.jpg"
         />
       </Section>
 
@@ -67,7 +70,8 @@ function Services() {
         <LeistungBlock
           title="Ladekran mieten"
           text="Sie brauchen kurzfristig Hebekapazität? Mieten Sie unseren Ladekran – mit oder ohne Bedienung. Ideal für Materialtransport und Montagearbeiten. Technische Daten und Konditionen erhalten Sie auf Anfrage."
-          imageNote="Foto: Ladekran / LKW mit Kran im Einsatz."
+          imageNote="Ladekran von E. Scharpf im Einsatz"
+          imageSrc="/fotos/scharpf_ladekran.jpg"
         />
       </Section>
 
@@ -76,7 +80,8 @@ function Services() {
           flip
           title="Ausstellung/Showroom"
           text="Besuchen Sie unseren Showroom und erleben Sie Materialien, Oberflächen und Lösungen zum Anfassen. Vereinbaren Sie gerne einen Termin – die aktuellen Öffnungszeiten teilen wir Ihnen auf Anfrage mit."
-          imageNote="Foto: Showroom / Ausstellung von E. Scharpf."
+          imageNote="Showroom / Ausstellung von E. Scharpf"
+          imageSrc="/fotos/scharpf_ausstellung.jpg"
         />
       </Section>
 

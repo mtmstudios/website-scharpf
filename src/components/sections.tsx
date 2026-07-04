@@ -38,6 +38,7 @@ export function PageHero({
   ctaLabel,
   ctaTo,
   imageNote,
+  imageSrc,
 }: {
   eyebrow?: string;
   title: string;
@@ -45,6 +46,7 @@ export function PageHero({
   ctaLabel?: string;
   ctaTo?: string;
   imageNote: string;
+  imageSrc?: string;
 }) {
   return (
     <section className="border-b border-border bg-background">
@@ -67,7 +69,7 @@ export function PageHero({
             </div>
           )}
         </div>
-        <PlaceholderImage note={imageNote} ratio="landscape" />
+        <PlaceholderImage note={imageNote} src={imageSrc} ratio="landscape" />
       </div>
     </section>
   );
@@ -114,6 +116,7 @@ export function LeistungBlock({
   ctaTo,
   bullets,
   imageNote,
+  imageSrc,
   flip = false,
 }: {
   title: string;
@@ -122,6 +125,7 @@ export function LeistungBlock({
   ctaTo?: string;
   bullets?: string[];
   imageNote: string;
+  imageSrc?: string;
   flip?: boolean;
 }) {
   return (
@@ -164,6 +168,7 @@ export function LeistungBlock({
       </div>
       <PlaceholderImage
         note={imageNote}
+        src={imageSrc}
         ratio="landscape"
         className={cn(flip && "lg:order-1")}
       />
@@ -199,11 +204,13 @@ export function ReferenzTeaser({
   title,
   intro,
   imageNotes,
+  imageSrcs,
   to = "/referenzen",
 }: {
   title: string;
   intro: string;
   imageNotes: [string, string, string];
+  imageSrcs?: [string, string, string];
   to?: string;
 }) {
   return (
@@ -219,7 +226,12 @@ export function ReferenzTeaser({
       </div>
       <div className="mt-10 grid gap-6 sm:grid-cols-3">
         {imageNotes.map((note, i) => (
-          <PlaceholderImage key={i} note={note} ratio="landscape" />
+          <PlaceholderImage
+            key={i}
+            note={note}
+            src={imageSrcs?.[i]}
+            ratio="landscape"
+          />
         ))}
       </div>
     </Section>

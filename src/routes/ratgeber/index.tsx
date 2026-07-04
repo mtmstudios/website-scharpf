@@ -19,10 +19,22 @@ export const Route = createFileRoute("/ratgeber/")({
 
 // „Welches Projekt planen Sie" – vier Kategorie-Kacheln wie im XD.
 const KATEGORIEN = [
-  { title: "Restaurierung & Sanierung", to: "/restaurierung" },
-  { title: "Holzbau & Konstruktion", to: "/holzbau" },
-  { title: "Dach", to: "/dach" },
-  { title: "Fassade & Außenbereiche", to: "/fassade" },
+  {
+    title: "Restaurierung & Sanierung",
+    to: "/restaurierung",
+    bild: "/fotos/scharpf_restaurierung_03.jpg",
+  },
+  {
+    title: "Holzbau & Konstruktion",
+    to: "/holzbau",
+    bild: "/fotos/scharpf_dachstuhl_02.jpg",
+  },
+  { title: "Dach", to: "/dach", bild: "/fotos/scharpf_velux_panorame.jpg" },
+  {
+    title: "Fassade & Außenbereiche",
+    to: "/fassade",
+    bild: "/fotos/scharpf_balkon.jpg",
+  },
 ] as const;
 
 // News-Artikel (Headlines wörtlich aus dem XD).
@@ -31,19 +43,22 @@ const NEWS = [
     headline: "Jetzt energetisch sanieren mit einem günstigen Darlehen von der KFW",
     teaser:
       "Wer sein Dach energetisch saniert, kann von günstigen KFW-Darlehen profitieren. Wir erklären, welche Maßnahmen gefördert werden.",
-    imageNote: "News-Bild: energetische Dachsanierung mit Holzfaserdämmung.",
+    imageNote: "Energetische Dachsanierung mit Holzfaserdämmung",
+    imageSrc: "/fotos/scharpf_dachsanierung.jpg",
   },
   {
     headline: "Sorglos Dachsanierung aus einer Hand – Jetzt KFW Zuschüsse bis 20% bekommen",
     teaser:
       "Dachsanierungen und Dachumdeckungen aus einer Hand. An- bei der energetischen Sanierung werden Ihr Dach und die Wärmedämmung auf den aktuellen Stand gebracht. Wir bieten auf Wunsch die komplette Abwicklung.",
-    imageNote: "News-Bild: neu eingedecktes, gedämmtes Dach.",
+    imageNote: "Neu eingedecktes, gedämmtes Dach",
+    imageSrc: "/fotos/scharpf_dachsanierung_02.jpg",
   },
   {
     headline: "DIE alternative VELUX Panorama Lichtlösung",
     teaser:
       "DIE alternative VELUX Panorama VELUX Lichtlösung – so entsteht ein großzügiger Kopffreiraum mit bestem Ausblick. Für ein Dachgeschoss, in dem man sich rundum wohlfühlt.",
-    imageNote: "News-Bild: VELUX Panorama Dachfenster von innen.",
+    imageNote: "VELUX Panorama Dachfenster von innen",
+    imageSrc: "/fotos/scharpf_velux_panorame.jpg",
   },
 ] as const;
 
@@ -93,7 +108,8 @@ function Ratgeber() {
           {KATEGORIEN.map((k) => (
             <Link key={k.to} to={k.to} className="group flex flex-col">
               <PlaceholderImage
-                note={`Kategorie-Bild: ${k.title}`}
+                note={k.title}
+                src={k.bild}
                 ratio="landscape"
                 className="transition-transform group-hover:-translate-y-1"
               />
@@ -113,7 +129,11 @@ function Ratgeber() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {NEWS.map((n) => (
             <article key={n.headline} className="flex flex-col">
-              <PlaceholderImage note={n.imageNote} ratio="landscape" />
+              <PlaceholderImage
+                note={n.imageNote}
+                src={n.imageSrc}
+                ratio="landscape"
+              />
               <h3 className="mt-4 font-display text-lg font-bold leading-snug text-foreground">
                 {n.headline}
               </h3>
@@ -196,7 +216,8 @@ function Ratgeber() {
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <PlaceholderImage
-            note="Material-Bild: gestapelte regionale Hölzer und sichtbare Holzkonstruktion."
+            note="Sichtbare Holzkonstruktion von E. Scharpf"
+            src="/fotos/scharpf_vorfertigung_02.jpg"
             ratio="landscape"
           />
           <div>

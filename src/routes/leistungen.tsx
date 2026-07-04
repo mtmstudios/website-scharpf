@@ -19,11 +19,27 @@ export const Route = createFileRoute("/leistungen")({
 
 // Kachel-Reihenfolge exakt wie XD-Hero (Leistungen auf einen Blick).
 const KATEGORIEN = [
-  { title: "Restaurierung & Sanierung", to: "/restaurierung" },
-  { title: "Holzbau & Konstruktion", to: "/holzbau" },
-  { title: "Dach", to: "/dach" },
-  { title: "Fassade & Außenbereiche", to: "/fassade" },
-  { title: "Service & Sonstige Leistungen", to: "/services" },
+  {
+    title: "Restaurierung & Sanierung",
+    to: "/restaurierung",
+    bild: "/fotos/scharpf_restaurierung_05.jpg",
+  },
+  {
+    title: "Holzbau & Konstruktion",
+    to: "/holzbau",
+    bild: "/fotos/scharpf_neubau.jpg",
+  },
+  { title: "Dach", to: "/dach", bild: "/fotos/scharpf_dachdecken.jpg" },
+  {
+    title: "Fassade & Außenbereiche",
+    to: "/fassade",
+    bild: "/fotos/scharpf_fassade.jpg",
+  },
+  {
+    title: "Service & Sonstige Leistungen",
+    to: "/services",
+    bild: "/fotos/scharpf_ladekran.jpg",
+  },
 ] as const;
 
 // FAQ-Fragen wörtlich aus dem XD ("Haben sie Fragen zu unseren Leistungen").
@@ -45,7 +61,8 @@ function Leistungen() {
           {KATEGORIEN.map((k) => (
             <Link key={k.to} to={k.to} className="group flex flex-col">
               <PlaceholderImage
-                note={`Kategorie-Bild: ${k.title}`}
+                note={k.title}
+                src={k.bild}
                 ratio="landscape"
                 className="transition-transform group-hover:-translate-y-1"
               />

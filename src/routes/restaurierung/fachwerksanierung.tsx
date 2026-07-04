@@ -29,7 +29,8 @@ function Fachwerksanierung() {
         title="Fachwerksanierung – historisches Fachwerk fachgerecht erhalten"
         lead="Fachwerkgebäude erzählen Geschichte – und verlangen ein besonderes Fingerspitzengefühl. Von der Schadensdiagnose bis zur denkmalgerechten Instandsetzung erhalten wir Ihr historisches Fachwerk mit Präzision und Respekt vor dem Original."
         ctaLabel="Projekt Anfragen"
-        imageNote="Fachwerk-Projektfoto: restauriertes Fachwerkhaus in der Esslinger Altstadt oder Detail freigelegtes Fachwerk."
+        imageNote="Restauriertes Fachwerk von E. Scharpf"
+        imageSrc="/fotos/scharpf_fachwerksanierung.jpg"
       />
 
       <Section>
@@ -43,7 +44,8 @@ function Fachwerksanierung() {
             "Undichte Eindeckung und Feuchteschäden",
             "Systematische Schadenskartierung mit Befundbericht",
           ]}
-          imageNote="Foto Schadensdiagnose: Zimmerer untersucht geschädigten Fachwerkbalken, sichtbare Fäulnis."
+          imageNote="Untersuchung des geschädigten Fachwerks"
+          imageSrc="/fotos/scharpf_fachwerksanierung_01.jpg"
         />
       </Section>
 
@@ -59,7 +61,8 @@ function Fachwerksanierung() {
             "Historisch korrekte Schieferdeckung",
             "Materialtreuer Einsatz historischer Baustoffe",
           ]}
-          imageNote="Detailfoto Instandsetzung: neuer Eichenbalken im Fachwerk, ergänztes Gefach, Schieferdeckung."
+          imageNote="Materialtreue Instandsetzung am historischen Bau"
+          imageSrc="/fotos/scharpf_restaurierung_06.jpg"
         />
       </Section>
 
@@ -74,7 +77,8 @@ function Fachwerksanierung() {
             "Lückenlose Baudokumentation für Behörden und Förderanträge",
             "Beratung zu Förderprogrammen für denkmalgeschützte Objekte",
           ]}
-          imageNote="Foto Dokumentation: Bauplan und Fotodokumentation eines Fachwerk-Restaurierungsprojekts."
+          imageNote="Denkmalgerechte Restaurierung durch E. Scharpf"
+          imageSrc="/fotos/scharpf_restaurierung_07.jpg"
         />
       </Section>
 
@@ -83,9 +87,14 @@ function Fachwerksanierung() {
         intro="Von der mittelalterlichen Fachwerkscheune bis zum gründerzeitlichen Stadthaus: Sehen Sie selbst, was aus einer Zusammenarbeit mit E. Scharpf entstehen kann."
         to="/referenzen"
         imageNotes={[
-          "Referenz Fachwerk 1: restauriertes Fachwerk-Stadthaus, Esslingen-Altstadt.",
-          "Referenz Fachwerk 2: erneuerte Eichenbalken und Gefach.",
-          "Referenz Fachwerk 3: Detail historisch korrekte Schieferdeckung.",
+          "Restauriertes historisches Gebäude, Esslingen",
+          "Instandgesetzte historische Bausubstanz",
+          "Denkmalgerechtes Restaurierungsdetail",
+        ]}
+        imageSrcs={[
+          "/fotos/scharpf_restaurierung_08.jpg",
+          "/fotos/scharpf_restaurierung_09.jpg",
+          "/fotos/scharpf_restaurierung_10.jpg",
         ]}
       />
 

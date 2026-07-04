@@ -29,7 +29,8 @@ function Dachsanierung() {
         title="Dachsanierung – energetisch, nachhaltig, gefördert"
         lead="Energetische Sanierung, Hitzeschutz im Sommer oder Nutzung der Sonnenenergie – wir arbeiten seit Jahrzehnten ökologisch mit Holzfaserdämmung und natürlichen Materialien. Auf Wunsch übernehmen wir die KFW-Förderberatung und Antragsstellung."
         ctaLabel="Dach-Check vereinbaren"
-        imageNote="Dachsanierungs-Projektfoto: energetisch saniertes Dach mit neuer Eindeckung, im Anschnitt sichtbare Dämmung."
+        imageNote="Energetisch saniertes Dach mit neuer Eindeckung"
+        imageSrc="/fotos/scharpf_dachsanierung.jpg"
       />
 
       <Section>
@@ -43,7 +44,8 @@ function Dachsanierung() {
             "Photovoltaik-Unterdeckungen",
             "KFW-geförderte energetische Sanierung",
           ]}
-          imageNote="Foto Dachsanierung: Dachstuhl mit neuer Dämmung und Lattung, Zimmerer bei der Arbeit."
+          imageNote="Dachstuhl mit neuer Dämmung und Lattung"
+          imageSrc="/fotos/scharpf_dachdecken_01.jpg"
         />
       </Section>
 
@@ -58,7 +60,8 @@ function Dachsanierung() {
             "Sommerlicher Hitzeschutz und winterlicher Wärmeschutz",
             "Verbessertes Raumklima und niedrigere Heizkosten",
           ]}
-          imageNote="Detailfoto Holzfaserdämmung: Dämmplatten zwischen den Sparren, natürliches Material."
+          imageNote="Dachsanierung mit ökologischer Dämmung"
+          imageSrc="/fotos/scharpf_dachsanierung_02.jpg"
         />
       </Section>
 
@@ -81,9 +84,14 @@ function Dachsanierung() {
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
         to="/referenzen"
         imageNotes={[
-          "Referenz Dach 1: energetische Dachsanierung, fertiges Ergebnis.",
-          "Referenz Dach 2: Neueindeckung mit Holzfaserdämmung.",
-          "Referenz Dach 3: Detail sanierter Dachstuhl.",
+          "Energetische Dachsanierung, fertiges Ergebnis",
+          "Neueindeckung durch E. Scharpf",
+          "Sanierter Dachstuhl im Detail",
+        ]}
+        imageSrcs={[
+          "/fotos/scharpf_dachsanierung.jpg",
+          "/fotos/scharpf_dachdecken.jpg",
+          "/fotos/scharpf_dachstuhl.jpg",
         ]}
       />
 

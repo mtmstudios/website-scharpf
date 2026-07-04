@@ -29,7 +29,8 @@ function Aufstockungen() {
         title="Aufstockungen in Holzbauweise – neuer Wohnraum ohne Umzug"
         lead="Aufgrund des geringen Gewichts von Holz gibt es statisch kaum Grenzen. Unabhängig von der bisherigen Dachform kann Ihr Gebäude aufgestockt werden – in Holzrahmenbauweise, als Vollgeschoss oder Teilaufstockung. Wie Sie es wünschen."
         ctaLabel="Aufstockung anfragen"
-        imageNote="Aufstockungs-Projektfoto: Wohnhaus mit neu aufgesetztem Holzgeschoss, Kran im Hintergrund."
+        imageNote="Wohnhaus mit neu aufgesetztem Holzgeschoss"
+        imageSrc="/fotos/scharpf_Aufstockung.jpg"
       />
 
       <Section>
@@ -42,7 +43,8 @@ function Aufstockungen() {
             "Statisch kaum Grenzen, unabhängig von der Dachform",
             "Zusätzliches Geschoss meist ohne aufwendige Verstärkung",
           ]}
-          imageNote="Foto Holzkonstruktion: leichte Holzrahmen-Elemente werden auf bestehendes Gebäude aufgesetzt."
+          imageNote="Aufstockung in Holzrahmenbauweise"
+          imageSrc="/fotos/scharpf_aufstockung_01.jpg"
         />
       </Section>
 
@@ -57,7 +59,8 @@ function Aufstockungen() {
             "Teilaufstockung und Dachausbau",
             "Hochwertiger, gut gedämmter Wohnraum in Holzrahmenbauweise",
           ]}
-          imageNote="Foto fertige Aufstockung: aufgestocktes Wohnhaus mit neuem Obergeschoss, wohnfertig."
+          imageNote="Aufgestocktes Wohnhaus mit neuem Obergeschoss"
+          imageSrc="/fotos/scharpf_aufstockung_02.jpg"
         />
       </Section>
 
@@ -71,7 +74,8 @@ function Aufstockungen() {
             "Witterungsunabhängige, millimetergenaue Montage",
             "Deutlich kürzere Bauzeit auf der Baustelle",
           ]}
-          imageNote="Foto Werkhalle: Vorfertigung von Wandelementen für eine Aufstockung, CAD-präzise Fertigung."
+          imageNote="Vorfertigung von Wandelementen in der Werkhalle"
+          imageSrc="/fotos/scharpf_vorfertigung_03.jpg"
         />
       </Section>
 
@@ -80,9 +84,14 @@ function Aufstockungen() {
         intro="Von der Aufstockung in Esslingen bis zum schlüsselfertigen Holzhaus im Großraum Stuttgart – sehen Sie, was aus unserer Zusammenarbeit entstehen kann."
         to="/referenzen"
         imageNotes={[
-          "Referenz Holzbau 1: abgeschlossene Aufstockung in Esslingen.",
-          "Referenz Holzbau 2: Teilaufstockung mit Dachausbau.",
-          "Referenz Holzbau 3: Vorfertigung in der Werkhalle.",
+          "Abgeschlossene Aufstockung in Esslingen",
+          "Aufstockung mit neuem Obergeschoss",
+          "Vorfertigung in der Werkhalle",
+        ]}
+        imageSrcs={[
+          "/fotos/scharpf_aufstockung_03.jpg",
+          "/fotos/scharpf_Aufstockung.jpg",
+          "/fotos/scharpf_vorfertigung_04.jpg",
         ]}
       />
 

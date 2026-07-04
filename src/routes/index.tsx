@@ -54,7 +54,8 @@ function Index() {
           </div>
           <div className="mt-12">
             <PlaceholderImage
-              note="Hero-Bild (Vollbild): großes, repräsentatives Projektfoto im Querformat – z. B. restauriertes Fachwerkhaus, Dachstuhl in der Werkhalle oder fertige Dachsanierung. Im XD liegt die Überschrift auf diesem Bild."
+              note="Dachstuhl in der Werkhalle von E. Scharpf"
+              src="/fotos/scharpf_dachstuhl.jpg"
               ratio="wide"
             />
           </div>
@@ -81,7 +82,8 @@ function Index() {
             </div>
           </div>
           <PlaceholderImage
-            note="Werkhallen- oder Team-Foto: Zimmerer bei der Vorfertigung von Holzbauteilen in der eigenen Werkhalle in Esslingen."
+            note="Vorfertigung von Holzbauteilen in der Werkhalle in Esslingen"
+            src="/fotos/scharpf_vorfertigung.jpg"
             ratio="landscape"
           />
         </div>

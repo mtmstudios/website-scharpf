@@ -29,7 +29,8 @@ function Dachgauben() {
         title="Dachgauben – mehr Licht und Wohnraum unter dem Dach"
         lead="Mehr Raum unter der Dachschräge – Gauben können nachträglich eingebaut werden, meist beim Dachausbau oder im Zuge einer Sanierung. Gauben verbessern das Wohnerlebnis, hellen dunkle Räume auf und steigern den Immobilienwert."
         ctaLabel="Gauben-Beratung vereinbaren"
-        imageNote="Dachgauben-Projektfoto: Wohnhaus mit fertiger Gaube und Blechverkleidung, heller Wohnraum dahinter."
+        imageNote="Wohnhaus mit fertiger Gaube und Blechverkleidung"
+        imageSrc="/fotos/scharpf__dachgauben.jpg"
       />
 
       <Section>
@@ -42,7 +43,8 @@ function Dachgauben() {
             "Deutlich mehr Tageslicht im Dachgeschoss",
             "Wertsteigerung Ihrer Immobilie",
           ]}
-          imageNote="Foto Gaube innen: heller Wohnraum mit Gaubenfenster und viel Tageslicht."
+          imageNote="Gaube mit Dachfenster für viel Tageslicht"
+          imageSrc="/fotos/scharpf_dachfenster_gaube.jpg"
         />
       </Section>
 
@@ -56,7 +58,8 @@ function Dachgauben() {
             "Satteldachgaube – klassische Optik, gut belichtet",
             "Walmdachgaube – elegant, an anspruchsvolle Dächer angepasst",
           ]}
-          imageNote="Foto Gauben-Typen: Wohnhaus-Ansicht mit Schleppgaube und Satteldachgaube im Vergleich."
+          imageNote="Gaube mit Blechverkleidung an der Wange"
+          imageSrc="/fotos/scharpf_dachgaube_flaschner.jpg"
         />
       </Section>
 
@@ -70,7 +73,8 @@ function Dachgauben() {
             "Sämtliche Blecharbeiten aus eigener Werkstatt",
             "Individuelle Passform, dauerhaft dicht",
           ]}
-          imageNote="Foto Blecharbeiten Gaube: verkleidete Gaubenwange in Zink oder Kupfer, Detailaufnahme."
+          imageNote="Nachträglich eingebaute Gaube von E. Scharpf"
+          imageSrc="/fotos/scharpf__dachgauben.jpg"
         />
       </Section>
 
@@ -79,9 +83,14 @@ function Dachgauben() {
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
         to="/referenzen"
         imageNotes={[
-          "Referenz Dach 1: Gaube mit Blechverkleidung am Wohnhaus.",
-          "Referenz Dach 2: nachträglich eingebaute Schleppgaube.",
-          "Referenz Dach 3: Dachausbau mit Gaube, Innenansicht.",
+          "Gaube mit Blechverkleidung am Wohnhaus",
+          "Nachträglich eingebaute Gaube",
+          "Gaube mit Dachfenster, Innenansicht",
+        ]}
+        imageSrcs={[
+          "/fotos/scharpf_dachgaube_flaschner.jpg",
+          "/fotos/scharpf__dachgauben.jpg",
+          "/fotos/scharpf_dachfenster_gaube.jpg",
         ]}
       />
 

@@ -25,10 +25,12 @@ const TEAM = [
   {
     name: "Name folgt",
     funktionen: ["Geschäftsführer", "Restaurator"],
+    foto: "/fotos/scharpf_Senior.jpg",
   },
   {
     name: "Name folgt",
     funktionen: ["Geschäftsführer", "Dipl Ing. (FH)"],
+    foto: "/fotos/scharpf_Junior.jpg",
   },
   {
     name: "Name folgt",
@@ -38,6 +40,7 @@ const TEAM = [
       "Energieeffizienz - Experte",
       "Zimmerermeister",
     ],
+    foto: undefined,
   },
   {
     name: "Name folgt",
@@ -46,14 +49,17 @@ const TEAM = [
       "Zimmerermeister",
       "Staat. Geprägt. Bautechniker",
     ],
+    foto: undefined,
   },
   {
     name: "Name folgt",
     funktionen: ["Projektleiter", "Zimmerermeister"],
+    foto: "/fotos/scharpf_stefan_strifler.jpg",
   },
   {
     name: "Name folgt",
     funktionen: ["Zimmerermeister", "Restaurator"],
+    foto: "/fotos/scharpf_Max_Kaltmaier.jpg",
   },
 ] as const;
 
@@ -115,7 +121,8 @@ function UeberUns() {
       <Section muted>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <PlaceholderImage
-            note="Teamfoto E. Scharpf: Zimmerer, Dachdecker und Restauratoren vor der Werkhalle in Esslingen."
+            note="Firmengebäude von E. Scharpf in Esslingen"
+            src="/fotos/scharpf_firmengebaeude.jpg"
             ratio="landscape"
           />
           <div>
@@ -142,7 +149,12 @@ function UeberUns() {
           {TEAM.map((person, i) => (
             <div key={i} className="flex flex-col">
               <PlaceholderImage
-                note={`Portrait Mitarbeiter ${i + 1} (Foto folgt vom Kunden)`}
+                note={
+                  person.foto
+                    ? "Ansprechpartner bei E. Scharpf"
+                    : `Portrait Mitarbeiter ${i + 1} (Foto folgt vom Kunden)`
+                }
+                src={person.foto}
                 ratio="portrait"
               />
               <h3 className="mt-4 font-display text-lg font-bold text-foreground">

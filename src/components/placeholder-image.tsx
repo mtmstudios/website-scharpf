@@ -11,10 +11,12 @@ export function PlaceholderImage({
   note,
   className,
   ratio = "landscape",
+  src,
 }: {
   note: string;
   className?: string;
   ratio?: "landscape" | "portrait" | "square" | "wide";
+  src?: string;
 }) {
   const ratioClass = {
     landscape: "aspect-[4/3]",
@@ -22,6 +24,21 @@ export function PlaceholderImage({
     square: "aspect-square",
     wide: "aspect-[16/9]",
   }[ratio];
+
+  if (src) {
+    return (
+      <img
+        src={src}
+        alt={note}
+        loading="lazy"
+        className={cn(
+          "h-full w-full rounded-lg object-cover",
+          ratioClass,
+          className,
+        )}
+      />
+    );
+  }
 
   return (
     <div

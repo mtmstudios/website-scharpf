@@ -38,6 +38,15 @@ function Stars() {
   );
 }
 
+// Repräsentatives Foto je Referenzkategorie.
+const KATEGORIE_BILD: Record<string, string> = {
+  "/referenzen/restaurierung": "/fotos/scharpf_restaurierung_01.jpg",
+  "/referenzen/holzbau": "/fotos/scharpf_aufstockung_02.jpg",
+  "/referenzen/dach": "/fotos/scharpf_dachsanierung.jpg",
+  "/referenzen/fassade": "/fotos/scharpf_fassade_03.jpg",
+  "/referenzen/services": "/fotos/scharpf_ladekran.jpg",
+};
+
 function Referenzen() {
   return (
     <div>
@@ -54,7 +63,8 @@ function Referenzen() {
           {REFERENZ_KATEGORIEN.map((k) => (
             <Link key={k.to} to={k.to} className="group flex flex-col">
               <PlaceholderImage
-                note={`Referenzkategorie: ${k.title}`}
+                note={`Referenzen: ${k.title}`}
+                src={KATEGORIE_BILD[k.to]}
                 ratio="landscape"
                 className="transition-transform group-hover:-translate-y-1"
               />
