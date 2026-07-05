@@ -4,15 +4,16 @@ import { cn } from "@/lib/utils";
 import { MAIN_NAV, LEISTUNGEN, PRIMARY_CTA } from "@/lib/site";
 
 function Wordmark() {
-  // Platzhalter für das offizielle Logo (Logo-Bilddatei wird separat eingepflegt).
+  // Offizielles E. Scharpf Logo (ES-Hausmarke + Wortmarke).
   return (
-    <Link to="/" className="flex flex-col leading-none">
-      <span className="font-display text-2xl font-bold tracking-tight text-foreground">
-        E. Scharpf
-      </span>
-      <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-        Holzbau · Restaurierung
-      </span>
+    <Link to="/" className="flex items-center" aria-label="E. Scharpf – Startseite">
+      <img
+        src="/logo.png"
+        alt="E. Scharpf – Holzbau · Restaurierung"
+        width={404}
+        height={91}
+        className="h-11 w-auto"
+      />
     </Link>
   );
 }
