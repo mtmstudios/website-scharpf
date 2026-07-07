@@ -50,6 +50,12 @@ export function PageHero({
 }) {
   return (
     <section className="border-b border-border bg-background">
+      {/* Holz-Trenner: durchgängiges Design-Element aus dem XD (Naturholz + Balkenschuh). */}
+      <div
+        aria-hidden
+        className="h-24 w-full bg-cover bg-center lg:h-32"
+        style={{ backgroundImage: "url(/fotos/holz-trenner.jpg)" }}
+      />
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-24">
         <div>
           {eyebrow && (
