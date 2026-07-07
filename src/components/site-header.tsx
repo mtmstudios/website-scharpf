@@ -8,11 +8,11 @@ function Wordmark() {
   return (
     <Link to="/" className="flex items-center" aria-label="E. Scharpf – Startseite">
       <img
-        src="/logo.png"
-        alt="E. Scharpf – Holzbau · Restaurierung"
-        width={404}
-        height={91}
-        className="h-11 w-auto"
+        src="/logo.svg"
+        alt="E. Scharpf – Holzbau & Restaurierung"
+        width={439}
+        height={119}
+        className="h-12 w-auto"
       />
     </Link>
   );

@@ -79,11 +79,18 @@ function Index() {
             </Link>
           </div>
           <div className="mt-12">
-            <PlaceholderImage
-              note="Dachstuhl in der Werkhalle von E. Scharpf"
-              src="/fotos/scharpf_dachstuhl.jpg"
-              ratio="wide"
-            />
+            <video
+              className="aspect-video h-full w-full rounded-lg object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/fotos/scharpf_dachstuhl.jpg"
+              aria-label="E. Scharpf – Holzbau &amp; Restaurierung"
+            >
+              <source src="/videos/hero.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
