@@ -9,38 +9,358 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UeberUnsRouteImport } from './routes/ueber-uns'
+import { Route as LeistungenRouteImport } from './routes/leistungen'
+import { Route as KarriereRouteImport } from './routes/karriere'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
+import { Route as AgbRouteImport } from './routes/agb'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as RestaurierungIndexRouteImport } from './routes/restaurierung/index'
+import { Route as ReferenzenIndexRouteImport } from './routes/referenzen/index'
+import { Route as RatgeberIndexRouteImport } from './routes/ratgeber/index'
+import { Route as KontaktIndexRouteImport } from './routes/kontakt/index'
+import { Route as HolzbauIndexRouteImport } from './routes/holzbau/index'
+import { Route as FassadeIndexRouteImport } from './routes/fassade/index'
+import { Route as DachIndexRouteImport } from './routes/dach/index'
+import { Route as RestaurierungFachwerksanierungRouteImport } from './routes/restaurierung/fachwerksanierung'
+import { Route as KontaktDankeRouteImport } from './routes/kontakt/danke'
+import { Route as HolzbauAufstockungenRouteImport } from './routes/holzbau/aufstockungen'
+import { Route as DachDachsanierungRouteImport } from './routes/dach/dachsanierung'
+import { Route as DachDachgaubenRouteImport } from './routes/dach/dachgauben'
+import { Route as DachDachfensterRouteImport } from './routes/dach/dachfenster'
+import { Route as DachDachdaemmungRouteImport } from './routes/dach/dachdaemmung'
 
+const UeberUnsRoute = UeberUnsRouteImport.update({
+  id: '/ueber-uns',
+  path: '/ueber-uns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeistungenRoute = LeistungenRouteImport.update({
+  id: '/leistungen',
+  path: '/leistungen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KarriereRoute = KarriereRouteImport.update({
+  id: '/karriere',
+  path: '/karriere',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgbRoute = AgbRouteImport.update({
+  id: '/agb',
+  path: '/agb',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurierungIndexRoute = RestaurierungIndexRouteImport.update({
+  id: '/restaurierung/',
+  path: '/restaurierung/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferenzenIndexRoute = ReferenzenIndexRouteImport.update({
+  id: '/referenzen/',
+  path: '/referenzen/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RatgeberIndexRoute = RatgeberIndexRouteImport.update({
+  id: '/ratgeber/',
+  path: '/ratgeber/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktIndexRoute = KontaktIndexRouteImport.update({
+  id: '/kontakt/',
+  path: '/kontakt/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HolzbauIndexRoute = HolzbauIndexRouteImport.update({
+  id: '/holzbau/',
+  path: '/holzbau/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FassadeIndexRoute = FassadeIndexRouteImport.update({
+  id: '/fassade/',
+  path: '/fassade/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DachIndexRoute = DachIndexRouteImport.update({
+  id: '/dach/',
+  path: '/dach/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurierungFachwerksanierungRoute =
+  RestaurierungFachwerksanierungRouteImport.update({
+    id: '/restaurierung/fachwerksanierung',
+    path: '/restaurierung/fachwerksanierung',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KontaktDankeRoute = KontaktDankeRouteImport.update({
+  id: '/kontakt/danke',
+  path: '/kontakt/danke',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HolzbauAufstockungenRoute = HolzbauAufstockungenRouteImport.update({
+  id: '/holzbau/aufstockungen',
+  path: '/holzbau/aufstockungen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DachDachsanierungRoute = DachDachsanierungRouteImport.update({
+  id: '/dach/dachsanierung',
+  path: '/dach/dachsanierung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DachDachgaubenRoute = DachDachgaubenRouteImport.update({
+  id: '/dach/dachgauben',
+  path: '/dach/dachgauben',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DachDachfensterRoute = DachDachfensterRouteImport.update({
+  id: '/dach/dachfenster',
+  path: '/dach/dachfenster',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DachDachdaemmungRoute = DachDachdaemmungRouteImport.update({
+  id: '/dach/dachdaemmung',
+  path: '/dach/dachdaemmung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
+  '/leistungen': typeof LeistungenRoute
+  '/ueber-uns': typeof UeberUnsRoute
+  '/dach/dachdaemmung': typeof DachDachdaemmungRoute
+  '/dach/dachfenster': typeof DachDachfensterRoute
+  '/dach/dachgauben': typeof DachDachgaubenRoute
+  '/dach/dachsanierung': typeof DachDachsanierungRoute
+  '/holzbau/aufstockungen': typeof HolzbauAufstockungenRoute
+  '/kontakt/danke': typeof KontaktDankeRoute
+  '/restaurierung/fachwerksanierung': typeof RestaurierungFachwerksanierungRoute
+  '/dach/': typeof DachIndexRoute
+  '/fassade/': typeof FassadeIndexRoute
+  '/holzbau/': typeof HolzbauIndexRoute
+  '/kontakt/': typeof KontaktIndexRoute
+  '/ratgeber/': typeof RatgeberIndexRoute
+  '/referenzen/': typeof ReferenzenIndexRoute
+  '/restaurierung/': typeof RestaurierungIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
+  '/leistungen': typeof LeistungenRoute
+  '/ueber-uns': typeof UeberUnsRoute
+  '/dach/dachdaemmung': typeof DachDachdaemmungRoute
+  '/dach/dachfenster': typeof DachDachfensterRoute
+  '/dach/dachgauben': typeof DachDachgaubenRoute
+  '/dach/dachsanierung': typeof DachDachsanierungRoute
+  '/holzbau/aufstockungen': typeof HolzbauAufstockungenRoute
+  '/kontakt/danke': typeof KontaktDankeRoute
+  '/restaurierung/fachwerksanierung': typeof RestaurierungFachwerksanierungRoute
+  '/dach': typeof DachIndexRoute
+  '/fassade': typeof FassadeIndexRoute
+  '/holzbau': typeof HolzbauIndexRoute
+  '/kontakt': typeof KontaktIndexRoute
+  '/ratgeber': typeof RatgeberIndexRoute
+  '/referenzen': typeof ReferenzenIndexRoute
+  '/restaurierung': typeof RestaurierungIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/karriere': typeof KarriereRoute
+  '/leistungen': typeof LeistungenRoute
+  '/ueber-uns': typeof UeberUnsRoute
+  '/dach/dachdaemmung': typeof DachDachdaemmungRoute
+  '/dach/dachfenster': typeof DachDachfensterRoute
+  '/dach/dachgauben': typeof DachDachgaubenRoute
+  '/dach/dachsanierung': typeof DachDachsanierungRoute
+  '/holzbau/aufstockungen': typeof HolzbauAufstockungenRoute
+  '/kontakt/danke': typeof KontaktDankeRoute
+  '/restaurierung/fachwerksanierung': typeof RestaurierungFachwerksanierungRoute
+  '/dach/': typeof DachIndexRoute
+  '/fassade/': typeof FassadeIndexRoute
+  '/holzbau/': typeof HolzbauIndexRoute
+  '/kontakt/': typeof KontaktIndexRoute
+  '/ratgeber/': typeof RatgeberIndexRoute
+  '/referenzen/': typeof ReferenzenIndexRoute
+  '/restaurierung/': typeof RestaurierungIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/agb'
+    | '/datenschutz'
+    | '/impressum'
+    | '/karriere'
+    | '/leistungen'
+    | '/ueber-uns'
+    | '/dach/dachdaemmung'
+    | '/dach/dachfenster'
+    | '/dach/dachgauben'
+    | '/dach/dachsanierung'
+    | '/holzbau/aufstockungen'
+    | '/kontakt/danke'
+    | '/restaurierung/fachwerksanierung'
+    | '/dach/'
+    | '/fassade/'
+    | '/holzbau/'
+    | '/kontakt/'
+    | '/ratgeber/'
+    | '/referenzen/'
+    | '/restaurierung/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/agb'
+    | '/datenschutz'
+    | '/impressum'
+    | '/karriere'
+    | '/leistungen'
+    | '/ueber-uns'
+    | '/dach/dachdaemmung'
+    | '/dach/dachfenster'
+    | '/dach/dachgauben'
+    | '/dach/dachsanierung'
+    | '/holzbau/aufstockungen'
+    | '/kontakt/danke'
+    | '/restaurierung/fachwerksanierung'
+    | '/dach'
+    | '/fassade'
+    | '/holzbau'
+    | '/kontakt'
+    | '/ratgeber'
+    | '/referenzen'
+    | '/restaurierung'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/agb'
+    | '/datenschutz'
+    | '/impressum'
+    | '/karriere'
+    | '/leistungen'
+    | '/ueber-uns'
+    | '/dach/dachdaemmung'
+    | '/dach/dachfenster'
+    | '/dach/dachgauben'
+    | '/dach/dachsanierung'
+    | '/holzbau/aufstockungen'
+    | '/kontakt/danke'
+    | '/restaurierung/fachwerksanierung'
+    | '/dach/'
+    | '/fassade/'
+    | '/holzbau/'
+    | '/kontakt/'
+    | '/ratgeber/'
+    | '/referenzen/'
+    | '/restaurierung/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgbRoute: typeof AgbRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  ImpressumRoute: typeof ImpressumRoute
+  KarriereRoute: typeof KarriereRoute
+  LeistungenRoute: typeof LeistungenRoute
+  UeberUnsRoute: typeof UeberUnsRoute
+  DachDachdaemmungRoute: typeof DachDachdaemmungRoute
+  DachDachfensterRoute: typeof DachDachfensterRoute
+  DachDachgaubenRoute: typeof DachDachgaubenRoute
+  DachDachsanierungRoute: typeof DachDachsanierungRoute
+  HolzbauAufstockungenRoute: typeof HolzbauAufstockungenRoute
+  KontaktDankeRoute: typeof KontaktDankeRoute
+  RestaurierungFachwerksanierungRoute: typeof RestaurierungFachwerksanierungRoute
+  DachIndexRoute: typeof DachIndexRoute
+  FassadeIndexRoute: typeof FassadeIndexRoute
+  HolzbauIndexRoute: typeof HolzbauIndexRoute
+  KontaktIndexRoute: typeof KontaktIndexRoute
+  RatgeberIndexRoute: typeof RatgeberIndexRoute
+  ReferenzenIndexRoute: typeof ReferenzenIndexRoute
+  RestaurierungIndexRoute: typeof RestaurierungIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ueber-uns': {
+      id: '/ueber-uns'
+      path: '/ueber-uns'
+      fullPath: '/ueber-uns'
+      preLoaderRoute: typeof UeberUnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leistungen': {
+      id: '/leistungen'
+      path: '/leistungen'
+      fullPath: '/leistungen'
+      preLoaderRoute: typeof LeistungenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/karriere': {
+      id: '/karriere'
+      path: '/karriere'
+      fullPath: '/karriere'
+      preLoaderRoute: typeof KarriereRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agb': {
+      id: '/agb'
+      path: '/agb'
+      fullPath: '/agb'
+      preLoaderRoute: typeof AgbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +368,137 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurierung/': {
+      id: '/restaurierung/'
+      path: '/restaurierung'
+      fullPath: '/restaurierung/'
+      preLoaderRoute: typeof RestaurierungIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referenzen/': {
+      id: '/referenzen/'
+      path: '/referenzen'
+      fullPath: '/referenzen/'
+      preLoaderRoute: typeof ReferenzenIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ratgeber/': {
+      id: '/ratgeber/'
+      path: '/ratgeber'
+      fullPath: '/ratgeber/'
+      preLoaderRoute: typeof RatgeberIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt/': {
+      id: '/kontakt/'
+      path: '/kontakt'
+      fullPath: '/kontakt/'
+      preLoaderRoute: typeof KontaktIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/holzbau/': {
+      id: '/holzbau/'
+      path: '/holzbau'
+      fullPath: '/holzbau/'
+      preLoaderRoute: typeof HolzbauIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fassade/': {
+      id: '/fassade/'
+      path: '/fassade'
+      fullPath: '/fassade/'
+      preLoaderRoute: typeof FassadeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dach/': {
+      id: '/dach/'
+      path: '/dach'
+      fullPath: '/dach/'
+      preLoaderRoute: typeof DachIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurierung/fachwerksanierung': {
+      id: '/restaurierung/fachwerksanierung'
+      path: '/restaurierung/fachwerksanierung'
+      fullPath: '/restaurierung/fachwerksanierung'
+      preLoaderRoute: typeof RestaurierungFachwerksanierungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt/danke': {
+      id: '/kontakt/danke'
+      path: '/kontakt/danke'
+      fullPath: '/kontakt/danke'
+      preLoaderRoute: typeof KontaktDankeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/holzbau/aufstockungen': {
+      id: '/holzbau/aufstockungen'
+      path: '/holzbau/aufstockungen'
+      fullPath: '/holzbau/aufstockungen'
+      preLoaderRoute: typeof HolzbauAufstockungenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dach/dachsanierung': {
+      id: '/dach/dachsanierung'
+      path: '/dach/dachsanierung'
+      fullPath: '/dach/dachsanierung'
+      preLoaderRoute: typeof DachDachsanierungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dach/dachgauben': {
+      id: '/dach/dachgauben'
+      path: '/dach/dachgauben'
+      fullPath: '/dach/dachgauben'
+      preLoaderRoute: typeof DachDachgaubenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dach/dachfenster': {
+      id: '/dach/dachfenster'
+      path: '/dach/dachfenster'
+      fullPath: '/dach/dachfenster'
+      preLoaderRoute: typeof DachDachfensterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dach/dachdaemmung': {
+      id: '/dach/dachdaemmung'
+      path: '/dach/dachdaemmung'
+      fullPath: '/dach/dachdaemmung'
+      preLoaderRoute: typeof DachDachdaemmungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgbRoute: AgbRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  ImpressumRoute: ImpressumRoute,
+  KarriereRoute: KarriereRoute,
+  LeistungenRoute: LeistungenRoute,
+  UeberUnsRoute: UeberUnsRoute,
+  DachDachdaemmungRoute: DachDachdaemmungRoute,
+  DachDachfensterRoute: DachDachfensterRoute,
+  DachDachgaubenRoute: DachDachgaubenRoute,
+  DachDachsanierungRoute: DachDachsanierungRoute,
+  HolzbauAufstockungenRoute: HolzbauAufstockungenRoute,
+  KontaktDankeRoute: KontaktDankeRoute,
+  RestaurierungFachwerksanierungRoute: RestaurierungFachwerksanierungRoute,
+  DachIndexRoute: DachIndexRoute,
+  FassadeIndexRoute: FassadeIndexRoute,
+  HolzbauIndexRoute: HolzbauIndexRoute,
+  KontaktIndexRoute: KontaktIndexRoute,
+  RatgeberIndexRoute: RatgeberIndexRoute,
+  ReferenzenIndexRoute: ReferenzenIndexRoute,
+  RestaurierungIndexRoute: RestaurierungIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
