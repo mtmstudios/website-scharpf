@@ -3,6 +3,7 @@ import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, ValueBand } from "@/components/sections";
 import { LEISTUNGEN } from "@/lib/site";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
