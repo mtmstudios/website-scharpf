@@ -73,7 +73,7 @@ function Index() {
           poster="/fotos/scharpf_dachstuhl.jpg"
           aria-label="E. Scharpf – Holzbau &amp; Restaurierung"
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src={heroVideo.url} type="video/mp4" />
         </video>
         {/* Abdunkelungs-Overlay für Lesbarkeit */}
         <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
