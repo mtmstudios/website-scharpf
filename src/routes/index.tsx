@@ -3,6 +3,7 @@ import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, ValueBand } from "@/components/sections";
 import { LEISTUNGEN } from "@/lib/site";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -72,7 +73,7 @@ function Index() {
           poster="/fotos/scharpf_dachstuhl.jpg"
           aria-label="E. Scharpf – Holzbau &amp; Restaurierung"
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src={heroVideo.url} type="video/mp4" />
         </video>
         {/* Abdunkelungs-Overlay für Lesbarkeit */}
         <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
