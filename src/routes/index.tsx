@@ -59,38 +59,40 @@ function Stars() {
 function Index() {
   return (
     <div>
-      {/* Hero – linksbündig wie XD */}
-      <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
-          <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
+      {/* Hero – Video im Hintergrund, Text darüber */}
+      <section className="relative overflow-hidden border-b border-border">
+        {/* Hintergrund-Video */}
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/fotos/scharpf_dachstuhl.jpg"
+          aria-label="E. Scharpf – Holzbau &amp; Restaurierung"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        {/* Abdunkelungs-Overlay für Lesbarkeit */}
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
+        {/* Inhalt */}
+        <div className="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
+          <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
             Benötigen Sie eine Restaurierung, Holzbauleistungen oder
             Dachsanierung ?
           </h1>
-          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/90">
             Wir planen und bauen Ihr Projekt – zuverlässig &amp; nachhaltig.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <CtaButton>Kostenlose Projektberatung Anfordern</CtaButton>
             <Link
               to="/ratgeber"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-transparent px-7 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/50 hover:text-primary"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/70 hover:bg-white/20"
             >
               Ratgeber
             </Link>
-          </div>
-          <div className="mt-12">
-            <video
-              className="aspect-video h-full w-full rounded-lg object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="/fotos/scharpf_dachstuhl.jpg"
-              aria-label="E. Scharpf – Holzbau &amp; Restaurierung"
-            >
-              <source src="/videos/hero.mp4" type="video/mp4" />
-            </video>
           </div>
         </div>
       </section>
