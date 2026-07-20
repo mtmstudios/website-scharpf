@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { Section } from "@/components/sections";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { Section, TrustRow } from "@/components/sections";
+import { ProjektQuiz } from "@/components/projekt-quiz";
 import { CONTACT } from "@/lib/site";
+import { submitLead } from "@/lib/submit-lead";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/kontakt/")({
@@ -11,19 +13,21 @@ export const Route = createFileRoute("/kontakt/")({
       {
         name: "description",
         content:
-          "Rufen Sie uns an oder schreiben Sie uns – Fritz-Müller-Str. 115, 73730 Esslingen am Neckar. Telefon 0711-93 18 44 22.",
+          "Rufen Sie uns an oder schreiben Sie uns – wir melden uns innerhalb von 24 Stunden. Fritz-Müller-Str. 115, 73730 Esslingen am Neckar.",
       },
     ],
   }),
   component: Kontakt,
 });
 
+// Leistungs-Dropdown wie im B612-Konzept (inkl. Karriere für Bewerbungen).
 const LEISTUNG_OPTIONS = [
-  "Restaurierung & Sanierung",
-  "Holzbau & Konstruktion",
+  "Restaurierung",
+  "Holzbau",
   "Dach",
-  "Fassade & Außenbereiche",
-  "Service & Sonstige Leistungen",
+  "Fassade",
+  "Karriere",
+  "Sonstiges",
 ] as const;
 
 const inputClass =
@@ -39,23 +43,42 @@ function Kontakt() {
     email: "",
     message: "",
   });
+  const [datenschutz, setDatenschutz] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    navigate({ to: "/kontakt/danke" });
+    setSending(true);
+    try {
+      await submitLead("kontaktformular", {
+        name: form.name,
+        telefon: form.phone,
+        leistung: form.leistung,
+        email: form.email,
+        nachricht: form.message,
+      });
+    } finally {
+      setSending(false);
+      navigate({ to: "/kontakt/danke" });
+    }
   }
 
   return (
     <div>
-      {/* Kontakt – Titel + Kontaktdaten */}
+      {/* Hero + Kontaktdaten */}
       <Section>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Kontakt
+          Starten wir Ihr Projekt.
         </h1>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:max-w-2xl">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          Rufen Sie uns an, schreiben Sie uns – oder nutzen Sie einfach das
+          Formular. Wir melden uns innerhalb von 24 Stunden.
+        </p>
+        <div className="mt-10 grid gap-8 sm:grid-cols-3 lg:max-w-4xl">
           <div className="text-base text-muted-foreground">
-            <p>{CONTACT.street}</p>
-            <p>{CONTACT.city}</p>
+            <p className="font-semibold text-foreground">Adresse</p>
+            <p className="mt-1">{CONTACT.street}</p>
+            <p>{CONTACT.city} am Neckar</p>
           </div>
           <div className="space-y-4 text-base">
             <div>
@@ -77,11 +100,33 @@ function Kontakt() {
               </a>
             </div>
           </div>
+          <div className="text-base">
+            <p className="font-semibold text-foreground">Öffnungszeiten</p>
+            <p className="mt-1 text-muted-foreground">{CONTACT.hours}</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Fax: {CONTACT.fax}
+            </p>
+          </div>
+        </div>
+        <TrustRow className="mt-10 justify-start" />
+      </Section>
+
+      {/* Projekt-Quiz – geführter 4-Schritte-Funnel (B612-Konzept) */}
+      <Section muted id="projekt-quiz" className="pt-14">
+        <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+          Projekt anfragen
+        </h2>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          In vier Schritten zur kostenlosen Projektberatung – wählen Sie
+          einfach aus, worum es geht.
+        </p>
+        <div className="mt-8 max-w-3xl">
+          <ProjektQuiz />
         </div>
       </Section>
 
-      {/* Kontaktformular */}
-      <Section muted className="pt-0">
+      {/* Klassisches Kontaktformular */}
+      <Section>
         <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Kontaktformular
         </h2>
@@ -98,17 +143,18 @@ function Kontakt() {
                 setForm((f) => ({ ...f, name: e.target.value }))
               }
               className={inputClass}
-              placeholder="Name"
+              placeholder="Name *"
               aria-label="Name"
             />
             <input
               type="tel"
+              required
               value={form.phone}
               onChange={(e) =>
                 setForm((f) => ({ ...f, phone: e.target.value }))
               }
               className={inputClass}
-              placeholder="Telefon"
+              placeholder="Telefon *"
               aria-label="Telefon"
             />
             <select
@@ -134,8 +180,8 @@ function Kontakt() {
                 setForm((f) => ({ ...f, email: e.target.value }))
               }
               className={inputClass}
-              placeholder="Email"
-              aria-label="Email"
+              placeholder="E-Mail *"
+              aria-label="E-Mail"
             />
           </div>
           <textarea
@@ -148,14 +194,51 @@ function Kontakt() {
             aria-label="Ihre Nachricht"
           />
           <div className="lg:col-span-2">
+            <label className="flex items-start gap-3 text-sm text-muted-foreground">
+              <input
+                type="checkbox"
+                required
+                checked={datenschutz}
+                onChange={(e) => setDatenschutz(e.target.checked)}
+                className="mt-0.5 h-4 w-4 shrink-0 accent-primary"
+              />
+              <span>
+                Ich habe die{" "}
+                <Link
+                  to="/datenschutz"
+                  className="text-primary hover:underline"
+                >
+                  Datenschutzerklärung
+                </Link>{" "}
+                gelesen und stimme der Verarbeitung meiner Daten zu. *
+              </span>
+            </label>
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              disabled={sending}
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-60"
             >
-              Absenden
+              {sending ? "Wird gesendet …" : "Formular absenden"}
             </button>
           </div>
         </form>
+      </Section>
+
+      {/* Anfahrt – Google Maps */}
+      <Section muted>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          So finden Sie uns
+        </h2>
+        <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+          <iframe
+            title="Anfahrt E. Scharpf GmbH, Fritz-Müller-Str. 115, 73730 Esslingen"
+            src="https://www.google.com/maps?q=E.+Scharpf+GmbH,+Fritz-M%C3%BCller-Str.+115,+73730+Esslingen&output=embed"
+            className="h-[400px] w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
       </Section>
 
       {/* Newsletter */}
@@ -163,6 +246,9 @@ function Kontakt() {
         <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Newsletter
         </h2>
+        <p className="mt-4 max-w-xl text-base text-muted-foreground">
+          Bleiben Sie informiert – jetzt Newsletter abonnieren.
+        </p>
         <form
           onSubmit={(e) => e.preventDefault()}
           className="mt-8 flex max-w-xl flex-col gap-4 sm:flex-row"

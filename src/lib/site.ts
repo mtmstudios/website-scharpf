@@ -81,6 +81,39 @@ export const REFERENZ_KATEGORIEN = [
   { title: "Holzbau & Konstruktion", to: "/referenzen/holzbau" },
   { title: "Dach", to: "/referenzen/dach" },
   { title: "Fassade & Außenbereiche", to: "/referenzen/fassade" },
+  { title: "Service & Sonstige Leistungen", to: "/referenzen/services" },
+] as const;
+
+// Ziel-Endpoint für Kontaktformular & Projekt-Quiz (n8n-Webhook).
+// TODO: Webhook-URL eintragen, sobald der n8n-Workflow für Scharpf steht –
+// bis dahin wird die Anfrage nur clientseitig bestätigt (Danke-Seite).
+export const FORM_ENDPOINT = "";
+
+// Google-Bewertungen – Platzhalter-Zitate aus dem B612-Konzept.
+// TODO: durch echte, kuratierte Google-Rezensionen ersetzen.
+export const GOOGLE_BEWERTUNGEN = [
+  {
+    zitat:
+      "„Professionelle Ausführung, perfekte Kommunikation – wir sind sehr zufrieden.“",
+    name: "Michael R., Esslingen",
+  },
+  {
+    zitat:
+      "„Für die Restaurierung unseres Fachwerkhauses genau der richtige Partner.“",
+    name: "Sabine K., Stuttgart",
+  },
+  {
+    zitat: "„Termingerecht, sauber und top Qualität. Klare Empfehlung!“",
+    name: "Thomas M., Nürtingen",
+  },
+] as const;
+
+// Vertrauenssignale vor CTAs (B612-Konzept, Abschnitt 5).
+export const TRUST_SIGNALE = [
+  "80 Jahre Erfahrung – 3 Generationen",
+  "Meisterbetrieb – Handwerkskammer Stuttgart",
+  "VELUX-Partner",
+  "120+ Referenzprojekte",
 ] as const;
 
 export const PARTNERS = ["RESTORA GMBH", "ES TORE"] as const;

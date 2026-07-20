@@ -1,9 +1,13 @@
-import { SOCIAL_LINKS } from "@/lib/site";
+import { Link } from "@tanstack/react-router";
+import { PRIMARY_CTA, SOCIAL_LINKS } from "@/lib/site";
 
 /**
- * Vertikale Social-Icon-Leiste am rechten Bildschirmrand (wie XD-Entwurf):
- * Instagram · Pinterest · Facebook · Houzz. Ab Tablet sichtbar –
- * auf dem Smartphone übernimmt die MobileStickyBar.
+ * Rechter Bildschirmrand, ab Tablet sichtbar – auf dem Smartphone übernimmt
+ * die MobileStickyBar. Zwei Elemente:
+ * 1. Floating-CTA "Kostenlose Projektberatung Anfordern" (B612-Konzept:
+ *    primäre CTA, immer sichtbar, führt zum Kontaktformular)
+ * 2. Vertikale Social-Icon-Leiste (wie XD-Entwurf): Instagram · Pinterest ·
+ *    Facebook · Houzz.
  */
 function Icon({ name }: { name: string }) {
   const common = {
@@ -47,19 +51,30 @@ function Icon({ name }: { name: string }) {
 
 export function FloatingCta() {
   return (
-    <div className="fixed right-3 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-4 md:flex">
-      {SOCIAL_LINKS.map((s) => (
-        <a
-          key={s.label}
-          href={s.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={s.label}
-          className="text-primary drop-shadow-md transition-colors hover:text-primary/80"
-        >
-          <Icon name={s.icon} />
-        </a>
-      ))}
-    </div>
+    <>
+      {/* Primäre CTA – am rechten Rand fixierter, vertikaler Button */}
+      <Link
+        to="/kontakt"
+        className="fixed right-0 top-1/4 z-30 hidden rounded-l-lg bg-primary px-2.5 py-5 text-sm font-semibold text-primary-foreground shadow-lg transition-colors [writing-mode:vertical-rl] hover:bg-primary/90 md:block"
+      >
+        {PRIMARY_CTA}
+      </Link>
+
+      {/* Social-Icon-Leiste darunter */}
+      <div className="fixed right-3 top-2/3 z-30 hidden -translate-y-1/2 flex-col items-center gap-4 md:flex">
+        {SOCIAL_LINKS.map((s) => (
+          <a
+            key={s.label}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={s.label}
+            className="text-primary drop-shadow-md transition-colors hover:text-primary/80"
+          >
+            <Icon name={s.icon} />
+          </a>
+        ))}
+      </div>
+    </>
   );
 }

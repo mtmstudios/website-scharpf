@@ -1,9 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section } from "@/components/sections";
 
-export const Route = createFileRoute("/karriere")({
+export const Route = createFileRoute("/karriere/")({
   head: () => ({
     meta: [
       { title: "Zimmerer & Dachdecker Jobs Esslingen – E. Scharpf GmbH" },
@@ -46,14 +46,44 @@ const ANFORDERUNGEN = [
   "Du arbeitest präzise und mit einem hohen Qualitätsbewusstsein.",
 ] as const;
 
+// Job-Selektor (B612-Konzept 4.11): Kacheln führen zu den Job-Landingpages.
+const STELLEN = [
+  { label: "Zimmerer (m/w/d)", to: "/karriere/zimmerer" },
+  { label: "Dachdecker (m/w/d)", to: "/karriere/dachdecker" },
+  { label: "Ausbildung Zimmermann", to: "/karriere/zimmermann-ausbildung" },
+  { label: "Ausbildung Dachdecker", to: "/karriere/dachdecker-ausbildung" },
+  { label: "Bauhelfer (m/w/d)", to: "/karriere/bauhelfer" },
+] as const;
+
 function Karriere() {
   return (
     <div>
       {/* Deine Wunschstelle bei uns */}
       <Section>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Deine Wunschstelle bei uns
+          Deine Wunschstelle bei uns.
         </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          Ob Dachdecker, Zimmerer oder Bauhelfer: Wir suchen Menschen, die mit
+          Leidenschaft bauen – und bieten dafür mehr als andere.
+        </p>
+        <div className="mt-8">
+          <CtaButton to="/kontakt">Jetzt bewerben</CtaButton>
+        </div>
+
+        {/* Job-Selektor */}
+        <div className="mt-12 flex flex-wrap gap-3">
+          {STELLEN.map((s) => (
+            <Link
+              key={s.to}
+              to={s.to}
+              className="rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {s.label}
+            </Link>
+          ))}
+        </div>
+
         <div className="mt-12">
           <PlaceholderImage
             note="Zimmerer von E. Scharpf bei der Vorfertigung"

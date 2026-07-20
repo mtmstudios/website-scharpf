@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section, LeistungBlock, CtaBanner } from "@/components/sections";
+import {
+  PageHero,
+  Section,
+  LeistungBlock,
+  CtaBanner,
+} from "@/components/sections";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
@@ -9,47 +13,37 @@ export const Route = createFileRoute("/services/")({
       {
         name: "description",
         content:
-          "Dachdeckerarbeiten, Klempnerleistungen aus eigener Werkstatt, Ladekran zum Mieten und Showroom. E. Scharpf GmbH Esslingen – alles aus einer Hand.",
+          "Dachdeckerarbeiten, Klempnerleistungen aus eigener Werkstatt, Ladekran und 330 qm Showroom. E. Scharpf GmbH Esslingen – alles aus einer Hand.",
       },
     ],
   }),
   component: Services,
 });
 
+// Texte: B612 E_Scharpf_Website_Texte.docx, Abschnitt 7 (Services & Sonstige Leistungen).
 function Services() {
   return (
     <div>
-      {/* Titel + Intro */}
-      <Section>
-        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Service & Sonstige Leistungen
-        </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Über Holzbau und Restaurierung hinaus bieten wir Ihnen ein
-          umfassendes Leistungsspektrum aus einer Hand – von Dachdecker- und
-          Klempnerarbeiten über die Ladekran-Vermietung bis zu unserem
-          Showroom.
-        </p>
-        <div className="mt-10">
-          <PlaceholderImage
-            note="Fuhrpark von E. Scharpf im Einsatz"
-            src="/fotos/scharpf_Transporter.jpg"
-            ratio="wide"
-          />
-        </div>
-      </Section>
+      <PageHero
+        eyebrow="Leistungen"
+        title="Mehr als Holzbau – Ihr Rundum-Partner."
+        lead="Von Dachdecker- und Klempnerarbeiten über Schwertransporte bis zum Ausstellungsbesuch: E. Scharpf bietet das vollständige Leistungsspektrum rund um Dach, Fassade und Holz."
+        ctaLabel="Leistung anfragen"
+        imageNote="Fuhrpark von E. Scharpf im Einsatz"
+        imageSrc="/fotos/scharpf_Transporter.jpg"
+      />
 
       <Section>
         <LeistungBlock
           title="Dachdeckerleistungen"
-          text="Rund ums Dach bieten wir Ihnen alle Gewerke aus einer Hand:"
+          text="Ob Reparatur, Neueindeckung oder Sanierung: Unser erfahrenes Dachdeckerteam übernimmt alle Arbeiten rund um die Dacheindeckung – schnell, fachgerecht und dauerhaft dicht."
+          ctaLabel="Anfragen"
+          moreTo="/dach"
+          moreLabel="Alle Dach-Leistungen →"
           bullets={[
-            "Dachgauben",
-            "Dachfenster",
-            "Wärmedämmung",
-            "Dacheindeckungen",
-            "Klempnerarbeiten",
-            "Dachreparaturen",
+            "Neueindeckungen in Ziegel, Schiefer und Bitumen",
+            "Dachreparaturen und Notabdichtungen",
+            "Flachdachabdichtungen",
           ]}
           imageNote="Dachdeckerarbeiten mit Gaube"
           imageSrc="/fotos/scharpf__dachgauben.jpg"
@@ -59,8 +53,16 @@ function Services() {
       <Section muted>
         <LeistungBlock
           flip
-          title="Klempnerleistungen"
-          text="In unserer eigenen Klempnerwerkstatt fertigen wir Dachrinnen, Fallrohre, Kehl- und Wandanschlussbleche in Kupfer, Zink und Aluminium – präzise gefertigt und schnell montiert."
+          title="Eigene Klempnerwerkstatt – alles aus einer Hand."
+          text="Statt Fremdvergabe produzieren wir Blechprofile in unserer eigenen Werkstatt. Das spart Zeit, reduziert Koordinationsaufwand und sichert gleichbleibende Qualität."
+          ctaLabel="Anfragen"
+          moreTo="/dach/klempnerarbeiten"
+          moreLabel="Mehr zu Klempnerarbeiten →"
+          bullets={[
+            "Dachrinnen, Fallrohre und Ablaufsysteme",
+            "Wandanschlüsse, Kehlbleche, Ortgangprofile",
+            "Sonderanfertigungen auf Maß",
+          ]}
           imageNote="Klempnerarbeiten an der Gaube"
           imageSrc="/fotos/scharpf_dachgaube_flaschner.jpg"
         />
@@ -69,43 +71,43 @@ function Services() {
       <Section>
         <LeistungBlock
           title="Ladekran mieten"
-          text="Sie brauchen kurzfristig Hebekapazität? Mieten Sie unseren Ladekran – mit oder ohne Bedienung. Ideal für Materialtransport und Montagearbeiten."
+          text="Für Transport und Montage schwerer Bauteile steht unser Ladekran zur Verfügung – auch für externe Aufträge und Einzeltransporte anfragbar."
+          ctaLabel="Ladekran anfragen"
+          moreTo="/services/ladekran"
+          moreLabel="Mehr zum Ladekran →"
+          bullets={[
+            "Einsatz auf engen Baustellen und in Innenstadtlagen",
+            "Buchung mit Fahrer und Einweisung",
+            "Anfrage direkt über Kontaktformular oder Telefon",
+          ]}
           imageNote="Ladekran von E. Scharpf im Einsatz"
           imageSrc="/fotos/scharpf_ladekran.jpg"
         />
-        <div className="mt-10">
-          <h3 className="font-display text-xl font-bold text-foreground">
-            Technische Daten:
-          </h3>
-          <ul className="mt-4 max-w-xl space-y-2 text-base leading-relaxed text-muted-foreground">
-            <li>Traglast: auf Anfrage</li>
-            <li>Maximale Ausladung: auf Anfrage</li>
-            <li>Hubhöhe: auf Anfrage</li>
-            <li>Vermietung mit oder ohne Bedienung</li>
-          </ul>
-        </div>
       </Section>
 
       <Section muted>
         <LeistungBlock
           flip
-          title="Ausstellung/Showroom"
-          text="Besuchen Sie unseren Showroom und erleben Sie Materialien, Oberflächen und Lösungen zum Anfassen. Vereinbaren Sie gerne einen Termin und lassen Sie sich persönlich beraten."
+          title="Überzeugen Sie sich selbst – im Showroom."
+          text="330 qm Holz zum Anfassen: Kommen Sie vorbei und lassen Sie sich von unseren Materialien und Ausführungen inspirieren. Dachfenster, Fassadenproben, Holzmuster – alles live erleben."
+          ctaLabel="Termin vereinbaren"
+          moreTo="/services/showroom"
+          moreLabel="Mehr zum Showroom →"
+          bullets={[
+            "Fassadenmuster in verschiedenen Holzarten und Oberflächen",
+            "Dachfenster-Ausstellung mit VELUX-Partner-Exponaten",
+            "Persönliche Beratung – ohne Voranmeldung oder nach Termin",
+          ]}
           imageNote="Showroom / Ausstellung von E. Scharpf"
           imageSrc="/fotos/scharpf_ausstellung.jpg"
         />
-        <div className="mt-10">
-          <h3 className="font-display text-xl font-bold text-foreground">
-            Öffnungszeiten
-          </h3>
-          <div className="mt-4 space-y-1 text-base leading-relaxed text-muted-foreground">
-            <p>Montag – Freitag: 7:00 – 17:00 Uhr</p>
-            <p>sowie nach Vereinbarung</p>
-          </div>
-        </div>
       </Section>
 
-      <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
+      <CtaBanner
+        title="Noch Fragen? Wir sind für Sie da."
+        text="Ob Dachdeckerarbeiten, Klempnern oder ein Besuch in unserem Showroom – sprechen Sie uns einfach an."
+        ctaLabel="Kostenlose Projektberatung Anfordern"
+      />
     </div>
   );
 }

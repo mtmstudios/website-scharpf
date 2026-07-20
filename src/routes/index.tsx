@@ -4,11 +4,21 @@ import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, ValueBand } from "@/components/sections";
 import { ScrollCta } from "@/components/scroll-cta";
-import { LEISTUNGEN } from "@/lib/site";
+import { GOOGLE_BEWERTUNGEN, LEISTUNGEN } from "@/lib/site";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import carportIllustration from "@/assets/carport-illustration.png.asset.json";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "E. Scharpf GmbH – Holzbau & Restaurierung Esslingen" },
+      {
+        name: "description",
+        content:
+          "Zimmerer & Dachdecker aus Esslingen. Restaurierung, Holzbau, Dach und Fassade – zuverlässig, nachhaltig, seit über 80 Jahren. Jetzt Beratung anfordern.",
+      },
+    ],
+  }),
   component: Index,
 });
 
@@ -176,24 +186,26 @@ function Index() {
         </div>
       </Section>
 
-      {/* Google-Bewertungen */}
+      {/* Google-Bewertungen – Platzhalter-Zitate aus dem B612-Konzept.
+          TODO: durch echte, kuratierte Google-Rezensionen ersetzen. */}
       <Section>
-        <div className="mb-8">
-          <CtaButton to="/ratgeber">Ratgeber</CtaButton>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div
-              key={i}
-              className="flex flex-col justify-between rounded-2xl border border-border bg-card p-8"
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Das sagen unsere Kunden auf Google
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {GOOGLE_BEWERTUNGEN.map((b) => (
+            <figure
+              key={b.name}
+              className="flex flex-col rounded-2xl border border-border bg-card p-8"
             >
-              <h3 className="font-display text-2xl font-bold text-muted-foreground/70">
-                Google Bewertung
-              </h3>
-              <div className="mt-16">
-                <Stars />
-              </div>
-            </div>
+              <Stars />
+              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
+                {b.zitat}
+              </blockquote>
+              <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
+                {b.name}
+              </figcaption>
+            </figure>
           ))}
         </div>
         <div className="mt-8">

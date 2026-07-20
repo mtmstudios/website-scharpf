@@ -124,6 +124,8 @@ export function LeistungBlock({
   imageNote,
   imageSrc,
   flip = false,
+  moreTo,
+  moreLabel = "Mehr erfahren →",
 }: {
   title: string;
   text: string;
@@ -133,6 +135,9 @@ export function LeistungBlock({
   imageNote: string;
   imageSrc?: string;
   flip?: boolean;
+  /** Optionaler sekundärer Link zur vertiefenden Unterseite (interne Verlinkung). */
+  moreTo?: string;
+  moreLabel?: string;
 }) {
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -166,9 +171,17 @@ export function LeistungBlock({
             ))}
           </ul>
         )}
-        {ctaLabel && (
-          <div className="mt-8">
-            <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>
+        {(ctaLabel || moreTo) && (
+          <div className="mt-8 flex flex-wrap items-center gap-6">
+            {ctaLabel && <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>}
+            {moreTo && (
+              <Link
+                to={moreTo}
+                className="text-sm font-semibold text-primary hover:underline"
+              >
+                {moreLabel}
+              </Link>
+            )}
           </div>
         )}
       </div>
@@ -282,6 +295,46 @@ export function ReferenzTeaser({
   );
 }
 
+import { TRUST_SIGNALE } from "@/lib/site";
+
+/**
+ * Kompakte Vertrauenssignale (B612-Konzept, Abschnitt 5): erscheinen direkt
+ * über CTA-Bannern und Formularen – Icons mit kurzem Label, ohne Ablenkung.
+ */
+export function TrustRow({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        "flex flex-wrap items-center justify-center gap-x-8 gap-y-3",
+        className,
+      )}
+    >
+      {TRUST_SIGNALE.map((t) => (
+        <div
+          key={t}
+          className="flex items-center gap-2 text-sm font-medium text-muted-foreground"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="shrink-0 text-primary"
+          >
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+          <span>{t}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 /** Abschluss-CTA-Banner. `tone` = orange (default) oder mint. */
 export function CtaBanner({
   title,
@@ -289,26 +342,37 @@ export function CtaBanner({
   ctaLabel = "Kontakt",
   ctaTo = "/kontakt",
   tone = "orange",
+  trust = true,
 }: {
   title: string;
   text?: string;
   ctaLabel?: string;
   ctaTo?: string;
   tone?: "orange" | "mint";
+  trust?: boolean;
 }) {
   const bg = tone === "orange" ? "bg-primary" : "bg-accent";
   return (
-    <section className={cn(bg, "text-white")}>
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 py-16 text-center lg:px-8">
-        <h2 className="font-display text-3xl font-bold sm:text-4xl">{title}</h2>
-        {text && (
-          <p className="max-w-2xl text-lg leading-relaxed text-white/90">{text}</p>
-        )}
-        <CtaButton to={ctaTo} variant="outline">
-          {ctaLabel}
-        </CtaButton>
-      </div>
-    </section>
+    <>
+      {trust && (
+        <div className="border-t border-border bg-background py-6">
+          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+            <TrustRow />
+          </div>
+        </div>
+      )}
+      <section className={cn(bg, "text-white")}>
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 py-16 text-center lg:px-8">
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">{title}</h2>
+          {text && (
+            <p className="max-w-2xl text-lg leading-relaxed text-white/90">{text}</p>
+          )}
+          <CtaButton to={ctaTo} variant="outline">
+            {ctaLabel}
+          </CtaButton>
+        </div>
+      </section>
+    </>
   );
 }
 

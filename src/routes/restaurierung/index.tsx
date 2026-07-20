@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section, LeistungBlock, CtaBanner } from "@/components/sections";
+import {
+  PageHero,
+  Section,
+  LeistungBlock,
+  ReferenzTeaser,
+  CtaBanner,
+} from "@/components/sections";
 
 export const Route = createFileRoute("/restaurierung/")({
   head: () => ({
@@ -16,33 +21,32 @@ export const Route = createFileRoute("/restaurierung/")({
   component: Restaurierung,
 });
 
+// Texte: B612 E_Scharpf_Website_Texte.docx, Abschnitt 3 (Restaurierung & Sanierung).
 function Restaurierung() {
   return (
     <div>
-      {/* Titel + Intro */}
-      <Section>
-        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Restaurierung & Sanierung
-        </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Historische Bausubstanz zu erhalten, ist Handwerk und
-          Verantwortung zugleich. Als Fachbetrieb für Denkmalpflege
-          restaurieren und sanieren wir Fachwerk und historische Gebäude
-          fachgerecht – in enger Abstimmung mit dem Landesdenkmalamt.
-        </p>
-        <div className="mt-10">
-          <PlaceholderImage
-            note="Restauriertes historisches Gebäude von E. Scharpf"
-            src="/fotos/scharpf_restaurierung.jpg"
-            ratio="wide"
-          />
-        </div>
-      </Section>
+      <PageHero
+        eyebrow="Leistungen"
+        title="Restaurierung & Sanierung"
+        lead="Historische Holzbausubstanz fachgerecht erhalten – von der Schadensdiagnose bis zur denkmalgerechten Ausführung. Wir kennen die Anforderungen des Denkmalschutzes und erfüllen sie mit Präzision und Respekt vor dem Original."
+        ctaLabel="Projekt Anfragen"
+        imageNote="Restauriertes historisches Gebäude von E. Scharpf"
+        imageSrc="/fotos/scharpf_restaurierung.jpg"
+      />
 
       <Section>
         <LeistungBlock
           title="Denkmalschutz"
-          text="Denkmalgeschützte Gebäude erfordern besonderes Wissen und traditionelle Techniken. Wir erhalten historische Bausubstanz denkmalgerecht, arbeiten mit passenden Materialien und stimmen jeden Schritt mit den Behörden ab."
+          text="Denkmalgeschützte Gebäude erfordern besonderes Fingerspitzengefühl. Wir arbeiten ausschließlich mit historisch korrekten Materialien und Techniken, stimmen uns eng mit den zuständigen Denkmalschutzbehörden ab und dokumentieren jeden Arbeitsschritt lückenlos. So bleibt der historische Charakter Ihres Gebäudes erhalten – und Sie haben alle Nachweise für Förderanträge und Behördenabnahmen in der Hand."
+          ctaLabel="Jetzt Beratungsgespräch vereinbaren"
+          moreTo="/restaurierung/denkmalschutz"
+          moreLabel="Mehr zum Denkmalschutz →"
+          bullets={[
+            "Abstimmung mit Unterer und Oberer Denkmalschutzbehörde",
+            "Materialtreuer Einsatz historischer Baustoffe (Eichenbalken, Schiefer, historische Ziegel)",
+            "Lückenlose Baudokumentation für Behörden und Förderanträge",
+            "Beratung zu Förderprogrammen für denkmalgeschützte Objekte",
+          ]}
           imageNote="Denkmalgerechte Fachwerksanierung"
           imageSrc="/fotos/scharpf_fachwerksanierung.jpg"
         />
@@ -52,22 +56,37 @@ function Restaurierung() {
         <LeistungBlock
           flip
           title="Schadenskartierung & Begleitung in der Denkmalsanierung"
-          text="Vor jeder Sanierung steht die genaue Analyse: Wir kartieren Schäden am historischen Bestand, dokumentieren lückenlos und begleiten Ihr Projekt von der Bestandsaufnahme bis zur fertigen Sanierung – als verlässlicher Partner an Ihrer Seite."
+          text="Bevor wir Hand anlegen, kennen wir den Zustand Ihres Gebäudes genau. Unsere systematische Schadenskartierung erfasst alle Schadensbilder – von Fäulnis und Schimmel bis zu statischen Schwächen. Auf dieser Basis erstellen wir einen realistischen Maßnahmenplan, begleiten Sie durch alle Behördenabstimmungen und koordinieren sämtliche Gewerke bis zur Fertigstellung."
+          ctaLabel="Kostenloses Erstgespräch vereinbaren"
+          moreTo="/restaurierung/schadenskartierung"
+          moreLabel="Mehr zur Schadenskartierung →"
+          bullets={[
+            "Systematische Bestandsaufnahme und Schadenserfassung vor Ort",
+            "Fotodokumentation und schriftlicher Befundbericht",
+            "Maßnahmenplan mit Kostenschätzung und Zeitplan",
+            "Begleitung der gesamten Sanierung als Koordinator aller Gewerke",
+            "Abnahmedokumentation für Denkmalschutz und Eigentümer",
+          ]}
           imageNote="Bestandsaufnahme an historischer Bausubstanz"
           imageSrc="/fotos/scharpf_restaurierung_02.jpg"
         />
       </Section>
 
-      <Section>
-        <LeistungBlock
-          title="Referenzen im Bereich Restaurierung & Sanierung"
-          text="Von der Fachwerksanierung bis zur denkmalgerechten Restaurierung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
-          ctaLabel="Mehr sehen"
-          ctaTo="/referenzen"
-          imageNote="Abgeschlossenes Restaurierungsprojekt als Referenz"
-          imageSrc="/fotos/scharpf_restaurierung_04.jpg"
-        />
-      </Section>
+      <ReferenzTeaser
+        title="Referenzen im Bereich Restaurierung & Sanierung"
+        intro="Von der mittelalterlichen Fachwerkscheune bis zum gründerzeitlichen Stadthaus: Sehen Sie selbst, was aus einer Zusammenarbeit mit E. Scharpf entstehen kann."
+        to="/referenzen/restaurierung"
+        imageNotes={[
+          "Restauriertes Fachwerkhaus",
+          "Historischer Dachstuhl nach der Restaurierung",
+          "Saniertes historisches Stadthaus",
+        ]}
+        imageSrcs={[
+          "/fotos/scharpf_fachwerksanierung_01.jpg",
+          "/fotos/scharpf_restaurierung_08.jpg",
+          "/fotos/scharpf_restaurierung_12.jpg",
+        ]}
+      />
 
       <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
     </div>

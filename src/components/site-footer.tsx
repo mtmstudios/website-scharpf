@@ -38,7 +38,8 @@ export function SiteFooter() {
           <div className="md:pr-10">
             <div className="font-display text-2xl font-bold">E. Scharpf</div>
             <p className="mt-3 text-sm text-primary-foreground/90">
-              Restaurierung · Holzbau · Holzhausbau
+              Holzbau &amp; Restaurierung aus Esslingen. Seit über 80 Jahren
+              für Qualität, Nachhaltigkeit und handwerkliche Präzision.
             </p>
             <address className="mt-4 space-y-1 text-sm not-italic text-primary-foreground/90">
               <div>{CONTACT.street}</div>
@@ -82,6 +83,10 @@ export function SiteFooter() {
                 Impressum
               </Link>
               <span aria-hidden>|</span>
+              <Link to="/agb" className="hover:underline">
+                AGB
+              </Link>
+              <span aria-hidden>|</span>
               <Link to="/kontakt" className="hover:underline">
                 Kontakt
               </Link>
@@ -113,7 +118,7 @@ export function SiteFooter() {
               ))}
             </div>
             <p className="mt-4 text-sm text-primary-foreground/80">
-              Copyright © 2023 holzbau-scharpf.de
+              Copyright © {new Date().getFullYear()} E. Scharpf GmbH
             </p>
           </div>
         </div>

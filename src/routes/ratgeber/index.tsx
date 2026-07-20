@@ -37,7 +37,8 @@ const KATEGORIEN = [
   },
 ] as const;
 
-// News-Artikel (Headlines wörtlich aus dem XD).
+// News-Artikel (Headlines wörtlich aus dem XD) – verlinkt auf die passenden
+// Ratgeber-Artikel.
 const NEWS = [
   {
     headline: "Jetzt energetisch sanieren mit einem günstigen Darlehen von der KFW",
@@ -45,13 +46,15 @@ const NEWS = [
       "Wer sein Dach energetisch saniert, kann von günstigen KFW-Darlehen profitieren. Wir erklären, welche Maßnahmen gefördert werden.",
     imageNote: "Energetische Dachsanierung mit Holzfaserdämmung",
     imageSrc: "/fotos/scharpf_dachsanierung.jpg",
+    to: "/ratgeber/kfw-dachsanierung",
   },
   {
     headline: "Sorglos Dachsanierung aus einer Hand – Jetzt KFW Zuschüsse bis 20% bekommen",
     teaser:
-      "Dachsanierungen und Dachumdeckungen aus einer Hand. An- bei der energetischen Sanierung werden Ihr Dach und die Wärmedämmung auf den aktuellen Stand gebracht. Wir bieten auf Wunsch die komplette Abwicklung.",
+      "Dachsanierungen und Dachumdeckungen aus einer Hand. Bei der energetischen Sanierung werden Ihr Dach und die Wärmedämmung auf den aktuellen Stand gebracht. Wir bieten auf Wunsch die komplette Abwicklung.",
     imageNote: "Neu eingedecktes, gedämmtes Dach",
     imageSrc: "/fotos/scharpf_dachsanierung_02.jpg",
+    to: "/ratgeber/kfw-dachsanierung",
   },
   {
     headline: "DIE alternativ zur Dachgaube – VELUX Panorama",
@@ -59,6 +62,42 @@ const NEWS = [
       "DIE alternative VELUX Panorama VELUX Lichtlösung – so entsteht ein großzügiger Kopffreiraum mit bestem Ausblick. Für ein Dachgeschoss, in dem man sich rundum wohlfühlt.",
     imageNote: "VELUX Panorama Dachfenster von innen",
     imageSrc: "/fotos/scharpf_velux_panorame.jpg",
+    to: "/ratgeber/dachgauben-einbauen",
+  },
+] as const;
+
+// Ratgeber-Artikel zur Erstveröffentlichung (B612-Konzept, Abschnitt 11).
+const ARTIKEL = [
+  {
+    headline:
+      "KFW-Förderung Dachsanierung: Was wird gefördert und wie hoch ist der Zuschuss?",
+    to: "/ratgeber/kfw-dachsanierung",
+    imageSrc: "/fotos/scharpf_dachsanierung.jpg",
+    imageNote: "Energetische Dachsanierung",
+  },
+  {
+    headline: "Holzfassaden: Welches System passt zu meinem Gebäude?",
+    to: "/ratgeber/holzfassaden",
+    imageSrc: "/fotos/scharpf_fassade_01.jpg",
+    imageNote: "Holzfassade im Detail",
+  },
+  {
+    headline: "Denkmalschutz: Was Eigentümer wissen müssen, bevor sie sanieren.",
+    to: "/ratgeber/denkmalschutz",
+    imageSrc: "/fotos/scharpf_fachwerksanierung.jpg",
+    imageNote: "Denkmalgerecht saniertes Fachwerkhaus",
+  },
+  {
+    headline: "Dachgauben nachträglich einbauen – so geht es und das kostet es.",
+    to: "/ratgeber/dachgauben-einbauen",
+    imageSrc: "/fotos/scharpf__dachgauben.jpg",
+    imageNote: "Nachträglich eingebaute Dachgauben",
+  },
+  {
+    headline: "Warum Holz? Die Stärken des ältesten Baustoffs der Welt.",
+    to: "/ratgeber/holz-als-baustoff",
+    imageSrc: "/fotos/scharpf_vorfertigung_02.jpg",
+    imageNote: "Sichtbare Holzkonstruktion",
   },
 ] as const;
 
@@ -77,22 +116,27 @@ const KOMPETENZEN = [
   {
     title: "Qualifikationen & Zertifikate",
     text: "Meisterbetrieb, Fachbetrieb für Denkmalpflege und geprüfte Qualifikationen im Holzbau – für versiertes Handwerk und termingerechte Ausführung.",
+    to: "/referenzen",
   },
   {
     title: "Interessantes zu Leistungen",
     text: "Von der Restaurierung über den Holzbau bis zur Dachsanierung: ein Überblick über unser vollständiges Leistungsspektrum.",
+    to: "/leistungen",
   },
   {
     title: "Mehr zum Material",
     text: "Warum Holz? CO₂-neutral, robust, ästhetisch und regional verfügbar – die Stärken des ältesten Baustoffs der Welt.",
+    to: "/ratgeber/holz-als-baustoff",
   },
   {
     title: "Mehr zu unseren Partnern",
     text: "Starke Partner für starke Projekte: Wir arbeiten mit RESTORA GmbH und ES Tore zusammen.",
+    to: "/ueber-uns",
   },
   {
     title: "Engagement für Denkmalschutz",
     text: "Historisches Handwerk für denkmalgerechte Erhaltung – in enger Abstimmung mit dem Landesdenkmalamt.",
+    to: "/ratgeber/denkmalschutz",
   },
 ] as const;
 
@@ -141,12 +185,41 @@ function Ratgeber() {
                 {n.teaser}
               </p>
               <Link
-                to="/ratgeber"
+                to={n.to}
                 className="mt-4 text-sm font-semibold text-primary hover:underline"
               >
                 Mehr lesen
               </Link>
             </article>
+          ))}
+        </div>
+      </Section>
+
+      {/* Ratgeber-Artikel (B612: 5 Artikel zur Erstveröffentlichung) */}
+      <Section>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Wissen rund ums Bauen mit Holz.
+        </h2>
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          KFW-Förderungen, Materialwissen, Denkmalschutz-Tipps: Hier finden
+          Sie fundierte Antworten von echten Holzbau-Experten.
+        </p>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {ARTIKEL.map((a) => (
+            <Link key={a.to} to={a.to} className="group flex flex-col">
+              <PlaceholderImage
+                note={a.imageNote}
+                src={a.imageSrc}
+                ratio="landscape"
+                className="transition-transform group-hover:-translate-y-1"
+              />
+              <h3 className="mt-4 font-display text-lg font-bold leading-snug text-foreground group-hover:text-primary">
+                {a.headline}
+              </h3>
+              <span className="mt-3 text-sm font-semibold text-primary">
+                Weiterlesen →
+              </span>
+            </Link>
           ))}
         </div>
       </Section>
@@ -202,7 +275,7 @@ function Ratgeber() {
                 {k.text}
               </p>
               <Link
-                to="/ratgeber"
+                to={k.to}
                 className="mt-4 text-sm font-semibold text-primary hover:underline"
               >
                 Mehr lesen

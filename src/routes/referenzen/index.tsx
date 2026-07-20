@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section } from "@/components/sections";
-import { REFERENZ_KATEGORIEN } from "@/lib/site";
+import { GOOGLE_BEWERTUNGEN, REFERENZ_KATEGORIEN } from "@/lib/site";
 
 export const Route = createFileRoute("/referenzen/")({
   head: () => ({
@@ -44,6 +44,7 @@ const KATEGORIE_BILD: Record<string, string> = {
   "/referenzen/holzbau": "/fotos/scharpf_aufstockung_02.jpg",
   "/referenzen/dach": "/fotos/scharpf_dachsanierung.jpg",
   "/referenzen/fassade": "/fotos/scharpf_fassade_03.jpg",
+  "/referenzen/services": "/fotos/scharpf_ladekran.jpg",
 };
 
 function Referenzen() {
@@ -74,7 +75,7 @@ function Referenzen() {
           ))}
         </div>
         <div className="mt-10">
-          <CtaButton to="/karriere">Jetzt bewerben</CtaButton>
+          <CtaButton to="/kontakt">Kostenlose Projektberatung Anfordern</CtaButton>
         </div>
       </Section>
 
@@ -83,26 +84,21 @@ function Referenzen() {
         <h2 className="max-w-3xl font-display text-3xl font-bold text-foreground sm:text-4xl">
           120+ Projekte im Raum Esslingen, 4,8 Kundenzufriedenheit
         </h2>
-        <p className="mt-6 text-sm text-muted-foreground">
-          google: Online Bewertungen
-        </p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div
-              key={i}
-              className="flex flex-col justify-between rounded-2xl border border-border bg-card p-8"
+          {GOOGLE_BEWERTUNGEN.map((b) => (
+            <figure
+              key={b.name}
+              className="flex flex-col rounded-2xl border border-border bg-card p-8"
             >
-              <h3 className="font-display text-2xl font-bold text-muted-foreground/70">
-                Google Bewertung
-              </h3>
-              <div className="mt-16">
-                <Stars />
-              </div>
-            </div>
+              <Stars />
+              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
+                {b.zitat}
+              </blockquote>
+              <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
+                {b.name}
+              </figcaption>
+            </figure>
           ))}
-        </div>
-        <div className="mt-8">
-          <CtaButton to="/kontakt">Uns bewerten</CtaButton>
         </div>
       </Section>
 
