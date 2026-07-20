@@ -51,14 +51,14 @@ export function ScrollCta({
     >
       <span
         className={cn(
-          "flex h-12 w-12 items-center justify-center rounded-full bg-primary transition-all duration-500 ease-out md:h-14 md:w-14",
+          "flex h-14 w-14 items-center justify-center rounded-full bg-primary transition-all duration-500 ease-out md:h-16 md:w-16",
           hovered && "scale-105"
         )}
       >
         <img
           src={sawIcon.url}
           alt="Säge"
-          className="h-6 w-6 md:h-7 md:w-7 invert"
+          className="h-8 w-8 md:h-9 md:w-9 invert"
         />
       </span>
       <span
