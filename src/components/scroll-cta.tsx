@@ -1,32 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
+import sawIcon from "@/assets/saw-icon.png.asset.json";
 
 /**
  * Beobachtet den Hero-CTA und zeigt beim Herunterscrollen ein kleines
  * Säge-Icon als Floating-Button unten rechts in der Website-Orange.
  */
-function SawIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      {/* Sägeblatt-Zähne */}
-      <path d="M4 6h11" />
-      <path d="M15 6v8l-3-2-3 2-3-2-3 2V6" />
-      {/* Sägegriff */}
-      <path d="M4 14h4a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H4" />
-      <path d="M12 16h7a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-7" />
-    </svg>
-  );
-}
 
 export function ScrollCta({
   heroCtaRef,
@@ -75,7 +55,11 @@ export function ScrollCta({
           hovered && "scale-105"
         )}
       >
-        <SawIcon className="h-6 w-6 md:h-7 md:w-7" />
+        <img
+          src={sawIcon.url}
+          alt="Säge"
+          className="h-6 w-6 md:h-7 md:w-7 invert"
+        />
       </span>
       <span
         className={cn(
