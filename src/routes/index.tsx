@@ -6,6 +6,7 @@ import { Section, ValueBand } from "@/components/sections";
 import { ScrollCta } from "@/components/scroll-cta";
 import { LEISTUNGEN } from "@/lib/site";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import carportIllustration from "@/assets/carport-illustration.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
