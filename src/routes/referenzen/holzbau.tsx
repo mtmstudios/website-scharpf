@@ -57,6 +57,7 @@ function Page() {
       titel="Referenzen Holzbau & Konstruktion"
       einleitung="Von der Aufstockung in Esslingen bis zum schlüsselfertigen Holzhaus im Großraum Stuttgart – sehen Sie, was aus unserer Zusammenarbeit entstehen kann."
       projekte={PROJEKTE}
+      illustrationSrc="/illustrationen/dachstuhl-weiss.png"
     />
   );
 }

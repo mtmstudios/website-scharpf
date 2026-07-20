@@ -23,11 +23,13 @@ export function ReferenzKategorieSeite({
   titel,
   einleitung,
   projekte,
+  illustrationSrc,
 }: {
   aktiv: string;
   titel: string;
   einleitung: string;
   projekte: ReferenzProjekt[];
+  illustrationSrc?: string;
 }) {
   return (
     <div>
@@ -92,7 +94,10 @@ export function ReferenzKategorieSeite({
         </Section>
       ))}
 
-      <CtaBanner title="Haben Sie Fragen zu einer Referenz?" />
+      <CtaBanner
+        title="Haben Sie Fragen zu einer Referenz?"
+        illustrationSrc={illustrationSrc}
+      />
     </div>
   );
 }

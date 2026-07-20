@@ -335,7 +335,11 @@ export function TrustRow({ className }: { className?: string }) {
   );
 }
 
-/** Abschluss-CTA-Banner. `tone` = orange (default) oder mint. */
+/**
+ * Abschluss-CTA-Banner. `tone` = orange (default) oder mint.
+ * `illustrationSrc`: weiße Linien-Illustration (B612/Franz Scholz), dekorativ
+ * am rechten Rand des Bands – wie im Konzept "dekoratives Detail rechts".
+ */
 export function CtaBanner({
   title,
   text,
@@ -343,6 +347,7 @@ export function CtaBanner({
   ctaTo = "/kontakt",
   tone = "orange",
   trust = true,
+  illustrationSrc,
 }: {
   title: string;
   text?: string;
@@ -350,6 +355,7 @@ export function CtaBanner({
   ctaTo?: string;
   tone?: "orange" | "mint";
   trust?: boolean;
+  illustrationSrc?: string;
 }) {
   const bg = tone === "orange" ? "bg-primary" : "bg-accent";
   return (
@@ -361,8 +367,16 @@ export function CtaBanner({
           </div>
         </div>
       )}
-      <section className={cn(bg, "text-white")}>
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 py-16 text-center lg:px-8">
+      <section className={cn(bg, "relative overflow-hidden text-white")}>
+        {illustrationSrc && (
+          <img
+            src={illustrationSrc}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -right-6 bottom-0 hidden h-[140%] w-auto max-w-none opacity-25 lg:block"
+          />
+        )}
+        <div className="relative mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 py-16 text-center lg:px-8">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">{title}</h2>
           {text && (
             <p className="max-w-2xl text-lg leading-relaxed text-white/90">{text}</p>

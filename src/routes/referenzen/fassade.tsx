@@ -57,6 +57,7 @@ function Page() {
       titel="Referenzen Fassade & Außenbereiche"
       einleitung="Holzfassaden, Terrassengestaltungen und Wärmedämm-Verbundsysteme: Arbeiten, die sich durch Qualität und Langlebigkeit auszeichnen."
       projekte={PROJEKTE}
+      illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
     />
   );
 }

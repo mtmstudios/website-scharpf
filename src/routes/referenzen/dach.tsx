@@ -57,6 +57,7 @@ function Page() {
       titel="Referenzen Dach"
       einleitung="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
       projekte={PROJEKTE}
+      illustrationSrc="/illustrationen/dachstuhl-weiss.png"
     />
   );
 }

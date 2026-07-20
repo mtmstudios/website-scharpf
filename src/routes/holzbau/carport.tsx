@@ -65,7 +65,7 @@ function Carport() {
         ]}
       />
 
-      <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
+      <CtaBanner illustrationSrc="/illustrationen/carport-weiss.png" title="Wollen Sie ein vergleichbares Projekt anfragen?" />
     </div>
   );
 }

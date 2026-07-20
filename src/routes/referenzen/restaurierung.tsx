@@ -58,6 +58,7 @@ function Page() {
       titel="Referenzen Restaurierung & Sanierung"
       einleitung="Jedes Projekt hat seine eigene Geschichte – und sein eigenes Material. Sehen Sie, wie wir historische Gebäude mit handwerklichem Fingerspitzengefühl und Respekt vor dem Original neu zum Leben erweckt haben."
       projekte={PROJEKTE}
+      illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
     />
   );
 }

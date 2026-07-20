@@ -50,6 +50,7 @@ function Page() {
       titel="Referenzen Service & Sonstige Leistungen"
       einleitung="Klempnerarbeiten, Dachdeckerei und Sondertransporte – Leistungen, die zeigen, wie breit unser Spektrum wirklich ist."
       projekte={PROJEKTE}
+      illustrationSrc="/illustrationen/carport-weiss.png"
     />
   );
 }
