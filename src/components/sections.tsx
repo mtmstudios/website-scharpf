@@ -212,22 +212,22 @@ export function ValueBand({
             <h3
               className="font-display text-4xl font-bold tracking-wide sm:text-5xl"
               style={{
-                color: "#2a1305",
+                color: "#1a0a02",
                 textShadow:
-                  "0 1px 0 rgba(255,190,120,0.2), 0 0 14px rgba(0,0,0,0.6), inset 0 0 4px rgba(0,0,0,0.8)",
-                WebkitTextStroke: "0.6px rgba(20,8,0,0.6)",
+                  "0 1px 0 rgba(255,220,180,0.35), 0 2px 4px rgba(0,0,0,0.45), 0 0 10px rgba(0,0,0,0.25)",
+                WebkitTextStroke: "0.5px rgba(60,30,10,0.35)",
                 filter:
-                  "drop-shadow(0 0 6px rgba(0,0,0,0.65)) drop-shadow(0 1px 0 rgba(255,170,90,0.18))",
+                  "drop-shadow(0 1px 0 rgba(255,210,160,0.25)) drop-shadow(0 2px 3px rgba(0,0,0,0.5))",
               }}
             >
               {v.title}
             </h3>
             {v.text && (
               <p
-                className="mt-4 max-w-xs text-base leading-relaxed sm:text-lg"
+                className="mt-4 max-w-xs text-base font-semibold leading-relaxed sm:text-lg"
                 style={{
-                  color: "#f2d9b8",
-                  textShadow: "0 1px 2px rgba(0,0,0,0.85)",
+                  color: "#2d1508",
+                  textShadow: "0 1px 0 rgba(255,230,200,0.5), 0 1px 3px rgba(0,0,0,0.25)",
                 }}
               >
                 {v.text}
