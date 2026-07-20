@@ -134,32 +134,45 @@ function Index() {
       </Section>
 
       {/* Unsere Leistungen – 01–05 mit Unterpunkten (XD-Reihenfolge) */}
-      <Section muted>
-        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Unsere Leistungen
-        </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {LEISTUNGEN.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="group flex min-h-[180px] flex-col rounded-2xl border-2 border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl"
-            >
-              <h3 className="font-display text-xl font-bold text-card-foreground">
-                {l.nr} {l.title}
-              </h3>
-              <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
-                {l.bullets.map((b) => (
-                  <li key={b}>- {b}</li>
-                ))}
-              </ul>
-              <div className="overflow-hidden opacity-0 max-h-0 transition-all duration-300 group-hover:mt-4 group-hover:max-h-60 group-hover:opacity-100">
-                <p className="text-base leading-relaxed text-muted-foreground">
-                  {l.teaser}
-                </p>
-              </div>
-            </Link>
-          ))}
+      <Section muted className="relative overflow-hidden">
+        {/* Dekorative Carport-Illustration, transparent hinter und über den Boxen */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-1/2 z-10 -translate-y-1/2"
+        >
+          <img
+            src={carportIllustration.url}
+            alt=""
+            className="mx-auto w-full max-w-6xl opacity-15 mix-blend-multiply dark:mix-blend-screen"
+          />
+        </div>
+        <div className="relative z-0">
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+            Unsere Leistungen
+          </h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {LEISTUNGEN.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="group relative z-0 flex min-h-[180px] flex-col rounded-2xl border-2 border-border bg-card/85 p-8 backdrop-blur-[2px] transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl"
+              >
+                <h3 className="font-display text-xl font-bold text-card-foreground">
+                  {l.nr} {l.title}
+                </h3>
+                <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
+                  {l.bullets.map((b) => (
+                    <li key={b}>- {b}</li>
+                  ))}
+                </ul>
+                <div className="overflow-hidden opacity-0 max-h-0 transition-all duration-300 group-hover:mt-4 group-hover:max-h-60 group-hover:opacity-100">
+                  <p className="text-base leading-relaxed text-muted-foreground">
+                    {l.teaser}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </Section>
 
