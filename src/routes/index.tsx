@@ -97,7 +97,7 @@ function Index() {
         <div className="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
           <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
             Benötigen Sie eine Restaurierung, Holzbauleistungen oder
-            Dachsanierung ?
+            Dachsanierung?
           </h1>
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/90">
             Wir planen und bauen Ihr Projekt – zuverlässig &amp; nachhaltig.
