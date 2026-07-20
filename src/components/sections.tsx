@@ -186,21 +186,57 @@ export function LeistungBlock({
  * Werte-Banner (Salbei/Teal-Band #32645F) – wie im XD-Entwurf:
  * vier zentrierte Werte-Wörter im 2×2-Raster, abgeschlossen mit orangem Streifen.
  */
+import woodTexture from "@/assets/wood-texture.jpg";
+
 export function ValueBand({
   values,
 }: {
-  values: { title: string }[];
+  values: { title: string; text?: string }[];
 }) {
   return (
-    <section className="bg-accent text-accent-foreground">
-      <div className="mx-auto grid max-w-5xl gap-x-10 gap-y-12 px-5 py-20 text-center sm:grid-cols-2 lg:px-8">
+    <section className="relative overflow-hidden">
+      {/* Rustikaler Holzhintergrund */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${woodTexture})` }}
+      />
+      {/* Vignette + Wärme */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.55)_100%)]"
+      />
+      <div className="relative mx-auto grid max-w-6xl gap-x-12 gap-y-14 px-5 py-24 text-center sm:grid-cols-2 lg:px-8">
         {values.map((v) => (
-          <h3 key={v.title} className="font-display text-3xl font-bold sm:text-4xl">
-            {v.title}
-          </h3>
+          <div key={v.title} className="flex flex-col items-center">
+            <h3
+              className="font-display text-4xl font-bold tracking-wide sm:text-5xl"
+              style={{
+                color: "#2a1305",
+                textShadow:
+                  "0 1px 0 rgba(255,190,120,0.2), 0 0 14px rgba(0,0,0,0.6), inset 0 0 4px rgba(0,0,0,0.8)",
+                WebkitTextStroke: "0.6px rgba(20,8,0,0.6)",
+                filter:
+                  "drop-shadow(0 0 6px rgba(0,0,0,0.65)) drop-shadow(0 1px 0 rgba(255,170,90,0.18))",
+              }}
+            >
+              {v.title}
+            </h3>
+            {v.text && (
+              <p
+                className="mt-4 max-w-xs text-base leading-relaxed sm:text-lg"
+                style={{
+                  color: "#f2d9b8",
+                  textShadow: "0 1px 2px rgba(0,0,0,0.85)",
+                }}
+              >
+                {v.text}
+              </p>
+            )}
+          </div>
         ))}
       </div>
-      <div className="h-2 w-full bg-primary" />
+      <div className="relative h-2 w-full bg-primary" />
     </section>
   );
 }
