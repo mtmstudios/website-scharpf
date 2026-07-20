@@ -36,15 +36,15 @@ export const LEISTUNGEN = [
     to: "/holzbau",
     bullets: ["Holzhausbau / Aufstockung", "Carport"],
     teaser:
-      "Dachstühle, Holzkonstruktionen und Wandelemente aus unserer Werkhalle – passgenau gefertigt, terminzuverlässig montiert.",
+      "Dachstühle, Holzkonstruktionen und Wandelemente aus unserer Werkhalle - passgenau gefertigt, terminzuverlässig montiert.",
   },
   {
     nr: "02",
-    title: "Fassade & Außenbereiche",
+    title: "Fassade & Aussenbereiche",
     to: "/fassade",
     bullets: ["Fassaden (Holz/Trespa)", "Terrassen"],
     teaser:
-      "Holzfassaden schützen, isolieren und gestalten. Langlebig, ökologisch, individuell.",
+      "Holzfassaden schuetzen, isolieren und gestalten. Langlebig, ökologisch, individuell.",
   },
   {
     nr: "03",
@@ -52,7 +52,7 @@ export const LEISTUNGEN = [
     to: "/dach",
     bullets: ["Dachgauben", "Dachfenster", "Wärmedämmung", "Klempnerarbeiten"],
     teaser:
-      "Neueindeckung, Sanierung und Dämmung für jede Dachform – mit kostenloser KFW-Förderberatung.",
+      "Neueindeckung, Sanierung und Dämmung für jede Dachform - mit KFW-Förderberatung inklusive.",
   },
   {
     nr: "04",
@@ -72,7 +72,7 @@ export const LEISTUNGEN = [
     to: "/services",
     bullets: ["Ladekran mieten", "Ausstellung/Showroom"],
     teaser:
-      "Beratung, Planung und Kleinaufträge: Wir finden eine Lösung – egal wie groß oder klein das Vorhaben ist.",
+      "Beratung, Planung und Kleinaufträge: Wir finden eine Lösung, egal wie gross oder klein das Vorhaben ist.",
   },
 ] as const;
 
