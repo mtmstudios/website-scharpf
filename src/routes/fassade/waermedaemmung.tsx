@@ -25,7 +25,7 @@ function Waermedaemmung() {
   return (
     <div>
       <PageHero
-        illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
+        illustrationSrc="/illustrationen/fachwerkhaus-band-weiss.png"
         eyebrow="Fassade & Außenbereiche"
         title="Ökologisch dämmen – KFW-Förderung nutzen."
         lead="Gut gedämmte Fassaden senken Heizkosten, verbessern das Raumklima und werten das Gebäude nachhaltig auf. Unsere ökologischen Dämmlösungen sind auf Langlebigkeit und bauphysikalische Korrektheit ausgelegt."

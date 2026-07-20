@@ -25,7 +25,7 @@ function Denkmalschutz() {
   return (
     <div>
       <PageHero
-        illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
+        illustrationSrc="/illustrationen/fachwerkhaus-band-weiss.png"
         eyebrow="Restaurierung & Sanierung"
         title="Denkmalgerechte Sanierung mit Behörden-Expertise"
         lead="Denkmalgeschützte Gebäude erfordern besonderes Fingerspitzengefühl. Wir arbeiten ausschließlich mit historisch korrekten Materialien und Techniken, stimmen uns eng mit den zuständigen Denkmalschutzbehörden ab und dokumentieren jeden Arbeitsschritt lückenlos."

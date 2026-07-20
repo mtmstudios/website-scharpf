@@ -26,7 +26,7 @@ function Restaurierung() {
   return (
     <div>
       <PageHero
-        illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
+        illustrationSrc="/illustrationen/fachwerkhaus-band-weiss.png"
         eyebrow="Leistungen"
         title="Restaurierung & Sanierung"
         lead="Historische Holzbausubstanz fachgerecht erhalten – von der Schadensdiagnose bis zur denkmalgerechten Ausführung. Wir kennen die Anforderungen des Denkmalschutzes und erfüllen sie mit Präzision und Respekt vor dem Original."

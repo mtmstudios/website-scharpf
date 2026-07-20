@@ -25,7 +25,7 @@ function Holzhausbau() {
   return (
     <div>
       <PageHero
-        illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
+        illustrationSrc="/illustrationen/fachwerkhaus-band-weiss.png"
         eyebrow="Holzbau & Konstruktion"
         title="Ihr Holzhaus – geplant, vorgefertigt, montiert"
         lead="Ob schlüsselfertiges Holzhaus oder Ausbauhaus: Wir planen und bauen Ihr Zuhause aus einer Hand. Die Vorfertigung in unserer Werkhalle garantiert präzise Maße, kurze Bauzeiten und ein Ergebnis, das dauerhaft überzeugt."
