@@ -11,10 +11,10 @@ export const Route = createFileRoute("/")({
 
 // Werte-Wörter exakt wie XD (grünes Band): Qualität · Innovation · Erfahrung · Lösungsorientiert
 const VALUES = [
-  { title: "Qualität" },
-  { title: "Innovation" },
-  { title: "Erfahrung" },
-  { title: "Lösungsorientiert" },
+  { title: "Qualität", text: "Ausführung nach höchsten Maßstäben" },
+  { title: "Innovation", text: "Modernste Technik trifft traditionelles Handwerk" },
+  { title: "Erfahrung", text: "Über 80 Jahre Expertise im Holzbau" },
+  { title: "Lösungsorientiert", text: "Wir finden den Weg, auch bei komplexen Projekten" },
 ];
 
 // Kundenstimmen – Zitate wörtlich aus dem XD (Startseite).
