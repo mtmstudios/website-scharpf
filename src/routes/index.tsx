@@ -142,16 +142,21 @@ function Index() {
             <Link
               key={l.to}
               to={l.to}
-              className="group flex flex-col rounded-2xl border-2 border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl"
+              className="group flex min-h-[180px] flex-col rounded-2xl border-2 border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl"
             >
               <h3 className="font-display text-xl font-bold text-card-foreground">
                 {l.nr} {l.title}
               </h3>
-              <ul className="mt-4 space-y-1.5 text-sm text-muted-foreground">
-                {l.bullets.map((b) => (
-                  <li key={b}>- {b}</li>
-                ))}
-              </ul>
+              <div className="overflow-hidden opacity-0 max-h-0 transition-all duration-300 group-hover:mt-4 group-hover:max-h-60 group-hover:opacity-100">
+                <p className="text-base leading-relaxed text-muted-foreground">
+                  {l.teaser}
+                </p>
+                <ul className="mt-4 space-y-1.5 text-sm text-muted-foreground">
+                  {l.bullets.map((b) => (
+                    <li key={b}>- {b}</li>
+                  ))}
+                </ul>
+              </div>
             </Link>
           ))}
         </div>
