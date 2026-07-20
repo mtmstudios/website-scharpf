@@ -25,6 +25,7 @@ function Terrasse() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/carport-weiss.png"
         eyebrow="Fassade & Außenbereiche"
         title="Terrassen, die den Wohnraum verlängern"
         lead="Eine gut geplante Terrasse erweitert Ihren Wohnraum nach draußen. E. Scharpf plant und baut Terrassen in Holz und Holzverbundwerkstoffen – passend zur Architektur Ihres Hauses und mit Fokus auf Langlebigkeit und Pflegefreundlichkeit."

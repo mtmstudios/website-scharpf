@@ -25,6 +25,7 @@ function Dachgauben() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Dach"
         title="Dachgauben – mehr Licht und Wohnraum unter dem Dach"
         lead="Mehr Raum unter der Dachschräge – Gauben können nachträglich eingebaut werden, meist beim Dachausbau oder im Zuge einer Sanierung. Gauben verbessern das Wohnerlebnis, hellen dunkle Räume auf und steigern den Immobilienwert."

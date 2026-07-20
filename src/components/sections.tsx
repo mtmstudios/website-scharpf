@@ -30,7 +30,11 @@ export function Section({
   );
 }
 
-/** Split-Hero: links Text + CTA, rechts großes Projektfoto (Platzhalter). */
+/**
+ * Split-Hero: links Text + CTA, rechts großes Projektfoto (Platzhalter).
+ * `illustrationSrc`: weiße B612-Linien-Illustration, dekorativ auf dem
+ * Holz-Trenner platziert.
+ */
 export function PageHero({
   eyebrow,
   title,
@@ -39,6 +43,7 @@ export function PageHero({
   ctaTo,
   imageNote,
   imageSrc,
+  illustrationSrc,
 }: {
   eyebrow?: string;
   title: string;
@@ -47,15 +52,24 @@ export function PageHero({
   ctaTo?: string;
   imageNote: string;
   imageSrc?: string;
+  illustrationSrc?: string;
 }) {
   return (
     <section className="border-b border-border bg-background">
-      {/* Holz-Trenner: durchgängiges Design-Element aus dem XD (Naturholz + Balkenschuh). */}
+      {/* Holz-Trenner: durchgängiges Design-Element aus dem XD (Naturholz). */}
       <div
         aria-hidden
-        className="h-24 w-full bg-cover bg-center lg:h-32"
+        className="relative h-24 w-full overflow-hidden bg-cover bg-center lg:h-32"
         style={{ backgroundImage: "url(/fotos/holz-trenner.jpg)" }}
-      />
+      >
+        {illustrationSrc && (
+          <img
+            src={illustrationSrc}
+            alt=""
+            className="pointer-events-none absolute bottom-0 right-8 h-[92%] w-auto max-w-none drop-shadow-sm lg:right-16"
+          />
+        )}
+      </div>
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-24">
         <div>
           {eyebrow && (

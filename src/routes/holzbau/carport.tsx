@@ -25,6 +25,7 @@ function Carport() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/carport-weiss.png"
         eyebrow="Holzbau & Konstruktion"
         title="Carports aus Holz – maßgefertigt statt von der Stange"
         lead="Ein Carport aus Holz schützt Ihr Fahrzeug und fügt sich harmonisch in Haus und Garten ein. Wir konstruieren und montieren maßgefertigte Carports – geplant vom Zimmerermeister, gefertigt in unserer Werkhalle."

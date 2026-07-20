@@ -25,6 +25,7 @@ function Dachdaemmung() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Dach"
         title="Dachdämmung & KFW-Förderung – bis zu 20 % sparen"
         lead="Eine gute Dachdämmung senkt Ihre Heizkosten, schützt im Sommer vor Hitze und macht Ihr Zuhause behaglicher. Wir dämmen ökologisch mit Holzfaser und beraten Sie kostenlos zur KFW-Förderung – bis zu 20 % der Kosten können Sie zurückbekommen."

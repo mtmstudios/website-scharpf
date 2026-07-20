@@ -25,6 +25,7 @@ function Aufstockungen() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Holzbau & Konstruktion"
         title="Aufstockungen in Holzbauweise – neuer Wohnraum ohne Umzug"
         lead="Aufgrund des geringen Gewichts von Holz gibt es statisch kaum Grenzen. Unabhängig von der bisherigen Dachform kann Ihr Gebäude aufgestockt werden – in Holzrahmenbauweise, als Vollgeschoss oder Teilaufstockung. Wie Sie es wünschen."

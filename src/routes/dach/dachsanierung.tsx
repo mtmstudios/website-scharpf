@@ -25,6 +25,7 @@ function Dachsanierung() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Dach"
         title="Dachsanierung – energetisch, nachhaltig, gefördert"
         lead="Energetische Sanierung, Hitzeschutz im Sommer oder Nutzung der Sonnenenergie – wir arbeiten seit Jahrzehnten ökologisch mit Holzfaserdämmung und natürlichen Materialien. Auf Wunsch übernehmen wir die KFW-Förderberatung und Antragsstellung."

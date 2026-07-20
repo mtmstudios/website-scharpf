@@ -25,6 +25,7 @@ function Holzfassade() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
         eyebrow="Fassade & Außenbereiche"
         title="Holzfassaden – Schutz, der gestaltet"
         lead="Holzfassaden sind mehr als Wetterschutz – sie sind ein Statement für nachhaltiges, ästhetisches Bauen. Wir fertigen und montieren Holzfassaden in verschiedenen Systemen, abgestimmt auf Ihr Gebäude und Ihren Stil."

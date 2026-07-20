@@ -25,6 +25,7 @@ function Schadenskartierung() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
         eyebrow="Restaurierung & Sanierung"
         title="Schadenskartierung – erst verstehen, dann sanieren"
         lead="Bevor wir Hand anlegen, kennen wir den Zustand Ihres Gebäudes genau. Unsere systematische Schadenskartierung erfasst alle Schadensbilder – von Fäulnis und Schimmel bis zu statischen Schwächen."

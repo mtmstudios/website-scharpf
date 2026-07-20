@@ -25,6 +25,7 @@ function Fachwerksanierung() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
         eyebrow="Restaurierung & Sanierung"
         title="Fachwerksanierung – historisches Fachwerk fachgerecht erhalten"
         lead="Fachwerkgebäude erzählen Geschichte – und verlangen ein besonderes Fingerspitzengefühl. Von der Schadensdiagnose bis zur denkmalgerechten Instandsetzung erhalten wir Ihr historisches Fachwerk mit Präzision und Respekt vor dem Original."

@@ -25,6 +25,7 @@ function Showroom() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Service & Sonstige Leistungen"
         title="Ausstellung & Showroom – 330 qm Holzkompetenz"
         lead="Unser 330 qm großer Showroom in Esslingen zeigt Ihnen auf Augenhöhe, was modernes Holzbauen bedeutet: Fassadenmuster, Terrassenholz, Dachfenster-Exponate, Dämmmaterialien und fertige Referenzobjekte."

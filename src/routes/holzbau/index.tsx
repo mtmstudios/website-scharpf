@@ -26,6 +26,7 @@ function Holzbau() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Leistungen"
         title="Holzbau mit System – vom Entwurf bis zur Montage."
         lead="Familienbetrieb in der dritten Generation. Bekannt für versiertes Handwerk, moderne Fertigung und termingerechte Ausführung."

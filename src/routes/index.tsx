@@ -145,10 +145,12 @@ function Index() {
 
       {/* Unsere Leistungen – 01–05 mit Unterpunkten (XD-Reihenfolge) */}
       <Section muted className="relative overflow-hidden">
-        {/* Dekorative Carport-Illustration, transparent hinter und über den Boxen */}
+        {/* Dekorative Carport-Illustration, transparent hinter und über den Boxen.
+            Fester Top-Abstand statt vertikaler Zentrierung – sonst verschiebt
+            sich die Illustration, wenn die Kacheln beim Hover aufklappen. */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-1/2 z-10 -translate-y-1/2"
+          className="pointer-events-none absolute inset-x-0 top-36 z-10"
         >
           <img
             src={carportIllustration.url}

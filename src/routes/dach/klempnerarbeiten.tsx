@@ -25,6 +25,7 @@ function Klempnerarbeiten() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Dach"
         title="Klempnerarbeiten aus eigener Werkstatt"
         lead="Für eine umfassende Betreuung Ihres Dachprojekts haben wir eine eigene Klempnerwerkstatt. Individuelle Blecharbeiten, präzise Passform, schnelle Montage – alles aus einer Hand."

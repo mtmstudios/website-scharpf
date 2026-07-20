@@ -25,6 +25,7 @@ function Dachstuhl() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/dachstuhl-weiss.png"
         eyebrow="Holzbau & Konstruktion"
         title="Dachstühle vom Zimmerermeister"
         lead="Ob Neubau oder Erneuerung: Wir planen, fertigen und errichten Dachstühle für jede Dachform – CAD-gestützt geplant und in unserer Werkhalle in Esslingen präzise vorgefertigt."

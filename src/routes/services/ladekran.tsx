@@ -25,6 +25,7 @@ function Ladekran() {
   return (
     <div>
       <PageHero
+        illustrationSrc="/illustrationen/carport-weiss.png"
         eyebrow="Service & Sonstige Leistungen"
         title="Ladekran mieten – präzise Hebekraft für Ihre Baustelle"
         lead="Für Projekte, bei denen schwere Lasten präzise positioniert werden müssen, steht unser Ladekran zur Verfügung – für eigene Baustellen und als Dienstleistung für externe Partner."
