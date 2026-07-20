@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useRef } from "react";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, ValueBand } from "@/components/sections";
+import { ScrollCta } from "@/components/scroll-cta";
 import { LEISTUNGEN } from "@/lib/site";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
@@ -58,6 +60,8 @@ function Stars() {
 }
 
 function Index() {
+  const heroCtaRef = useRef<HTMLDivElement>(null);
+
   return (
     <div>
       {/* Hero – Video im Hintergrund, Text darüber */}
@@ -88,7 +92,9 @@ function Index() {
             Wir planen und bauen Ihr Projekt – zuverlässig &amp; nachhaltig.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <CtaButton>Kostenlose Projektberatung Anfordern</CtaButton>
+            <div ref={heroCtaRef}>
+              <CtaButton>Kostenlose Projektberatung Anfordern</CtaButton>
+            </div>
             <Link
               to="/ratgeber"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/70 hover:bg-white/20"
@@ -204,6 +210,8 @@ function Index() {
           ))}
         </div>
       </Section>
+
+      <ScrollCta heroCtaRef={heroCtaRef} />
     </div>
   );
 }
