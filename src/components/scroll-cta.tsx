@@ -3,10 +3,10 @@ import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 
 /**
- * Beobachtet den Hero-CTA und verwandelt ihn beim Herunterscrollen elegant
- * in ein seitliches Floating-Icon (Hammer + Fragezeichen) in der Website-Orange.
+ * Beobachtet den Hero-CTA und zeigt beim Herunterscrollen ein kleines
+ * Säge-Icon als Floating-Button unten rechts in der Website-Orange.
  */
-function HammerQuestionIcon({ className }: { className?: string }) {
+function SawIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,14 +18,12 @@ function HammerQuestionIcon({ className }: { className?: string }) {
       strokeLinejoin="round"
       className={className}
     >
-      {/* Hammerstiel */}
-      <path d="M7.5 14.5 13 9" />
-      {/* Hammerkopf */}
-      <path d="m13 9 2-2a1.5 1.5 0 0 1 2.12 0l1.76 1.76a1.5 1.5 0 0 1 0 2.12l-2 2" />
-      <path d="M11.5 10.5 13 9" />
-      {/* Fragezeichen */}
-      <path d="M5 19c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2Z" />
-      <path d="M7 15V9" />
+      {/* Sägeblatt-Zähne */}
+      <path d="M4 6h11" />
+      <path d="M15 6v8l-3-2-3 2-3-2-3 2V6" />
+      {/* Sägegriff */}
+      <path d="M4 14h4a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H4" />
+      <path d="M12 16h7a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-7" />
     </svg>
   );
 }
@@ -48,7 +46,7 @@ export function ScrollCta({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Sobald der Hero-CTA nicht mehr sichtbar ist, erscheint das Side-Icon
+        // Sobald der Hero-CTA nicht mehr sichtbar ist, erscheint der Floating-Button
         setVisible(!entry.isIntersecting);
       },
       { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
@@ -63,7 +61,7 @@ export function ScrollCta({
       to={to}
       aria-label={label}
       className={cn(
-        "fixed right-5 bottom-5 z-50 flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-xl shadow-black/20 transition-all duration-500 ease-out md:right-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2",
+        "fixed right-5 bottom-5 z-50 flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-xl shadow-black/20 transition-all duration-500 ease-out md:right-8",
         visible
           ? "opacity-100 scale-100 pointer-events-auto"
           : "opacity-0 scale-90 pointer-events-none"
@@ -77,7 +75,7 @@ export function ScrollCta({
           hovered && "scale-105"
         )}
       >
-        <HammerQuestionIcon className="h-6 w-6 md:h-7 md:w-7" />
+        <SawIcon className="h-6 w-6 md:h-7 md:w-7" />
       </span>
       <span
         className={cn(
