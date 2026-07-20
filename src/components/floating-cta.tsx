@@ -55,7 +55,7 @@ export function FloatingCta() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={s.label}
-          className="text-foreground/70 transition-colors hover:text-primary"
+          className="text-primary drop-shadow-md transition-colors hover:text-primary/80"
         >
           <Icon name={s.icon} />
         </a>
