@@ -145,12 +145,13 @@ function Index() {
 
       {/* Unsere Leistungen – 01–05 mit Unterpunkten (XD-Reihenfolge) */}
       <Section muted className="relative overflow-hidden">
-        {/* Dekorative Carport-Illustration, transparent hinter und über den Boxen.
-            Fester Top-Abstand statt vertikaler Zentrierung – sonst verschiebt
-            sich die Illustration, wenn die Kacheln beim Hover aufklappen. */}
+        {/* Dekorative Carport-Illustration – nur auf Desktop als Overlay hinter
+            dem 2-spaltigen Grid. Auf Mobil (gestapelte Kacheln) läge sie sonst
+            nur hinter der ersten Kachel; dort steht sie stattdessen als eigenes
+            Element unter den Kacheln (siehe unten). */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-36 z-10"
+          className="pointer-events-none absolute inset-x-0 top-36 z-10 hidden md:block"
         >
           <img
             src={carportIllustration.url}
@@ -185,6 +186,16 @@ function Index() {
               </Link>
             ))}
           </div>
+
+          {/* Mobil: Carport-Illustration als eigenständiges Deko-Element
+              unter den Kacheln – volle Breite, kein Overlap. Lokales Asset,
+              damit es überall (Dev + Prod) identisch rendert. */}
+          <img
+            src="/illustrationen/carport-dunkel.png"
+            alt=""
+            aria-hidden
+            className="mx-auto mt-12 w-full max-w-md opacity-40 md:hidden"
+          />
         </div>
       </Section>
 
