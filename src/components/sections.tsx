@@ -206,11 +206,11 @@ export function ValueBand({
         aria-hidden
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.55)_100%)]"
       />
-      <div className="relative mx-auto grid max-w-6xl gap-x-12 gap-y-14 px-5 py-24 text-center sm:grid-cols-2 lg:px-8">
+      <div className="relative mx-auto grid max-w-6xl gap-x-12 gap-y-10 px-8 py-16 text-center sm:grid-cols-2 sm:gap-y-14 sm:py-24 lg:px-8">
         {values.map((v) => (
           <div key={v.title} className="flex flex-col items-center">
             <h3
-              className="font-display text-4xl font-bold tracking-wide sm:text-5xl"
+              className="font-display text-2xl font-bold tracking-wide sm:text-5xl"
               style={{
                 color: "#1a0a02",
                 textShadow:
@@ -224,10 +224,11 @@ export function ValueBand({
             </h3>
             {v.text && (
               <p
-                className="mt-4 max-w-xs text-base font-semibold leading-relaxed sm:text-lg"
+                className="font-display mt-3 max-w-xs text-sm font-medium leading-relaxed sm:mt-4 sm:text-base"
                 style={{
-                  color: "#2d1508",
-                  textShadow: "0 1px 0 rgba(255,230,200,0.5), 0 1px 3px rgba(0,0,0,0.25)",
+                  color: "#ffffff",
+                  textShadow:
+                    "0 1px 2px rgba(0,0,0,0.7), 0 2px 6px rgba(0,0,0,0.55)",
                 }}
               >
                 {v.text}
@@ -236,6 +237,7 @@ export function ValueBand({
           </div>
         ))}
       </div>
+
       <div className="relative h-2 w-full bg-primary" />
     </section>
   );
