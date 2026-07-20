@@ -55,7 +55,11 @@ export function ScrollCta({
           hovered && "scale-105"
         )}
       >
-        <SawIcon className="h-6 w-6 md:h-7 md:w-7" />
+        <img
+          src={sawIcon.url}
+          alt="Säge"
+          className="h-6 w-6 md:h-7 md:w-7 invert"
+        />
       </span>
       <span
         className={cn(
