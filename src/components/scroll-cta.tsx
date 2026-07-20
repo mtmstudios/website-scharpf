@@ -41,7 +41,7 @@ export function ScrollCta({
       to={to}
       aria-label={label}
       className={cn(
-        "fixed right-5 bottom-20 z-50 flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-xl shadow-black/20 transition-all duration-500 ease-out md:bottom-8 md:right-8",
+        "fixed right-5 bottom-24 z-50 flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-xl shadow-black/20 transition-all duration-500 ease-out md:bottom-8 md:right-8",
         visible
           ? "opacity-100 scale-100 pointer-events-auto"
           : "opacity-0 scale-90 pointer-events-none"
