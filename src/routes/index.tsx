@@ -136,7 +136,7 @@ function Index() {
             <Link
               key={l.to}
               to={l.to}
-              className="group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
+              className="group flex flex-col rounded-2xl border-2 border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl"
             >
               <h3 className="font-display text-xl font-bold text-card-foreground">
                 {l.nr} {l.title}
