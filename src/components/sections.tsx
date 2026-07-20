@@ -63,10 +63,12 @@ export function PageHero({
         style={{ backgroundImage: "url(/fotos/holz-trenner.jpg)" }}
       >
         {illustrationSrc && (
+          // Dunkle Variante auf dem hellen Holz – deutlich lesbarer als weiß,
+          // wirkt wie eine aufs Holz gestempelte Konstruktionszeichnung.
           <img
-            src={illustrationSrc}
+            src={illustrationSrc.replace("-weiss", "-dunkel")}
             alt=""
-            className="pointer-events-none absolute bottom-0 right-8 h-[92%] w-auto max-w-none drop-shadow-sm lg:right-16"
+            className="pointer-events-none absolute bottom-0 right-8 h-[92%] w-auto max-w-none opacity-70 lg:right-16"
           />
         )}
       </div>
