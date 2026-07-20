@@ -32,7 +32,9 @@ const SOCIAL_ICONS: Record<string, React.ReactNode> = {
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+      {/* Extra Abstand unten auf Mobil, damit die Sticky-Bar (< md) die
+          Copyright-Zeile nicht überdeckt. */}
+      <div className="mx-auto max-w-7xl px-5 pb-28 pt-16 md:py-16 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3 md:divide-x md:divide-primary-foreground/25">
           {/* Spalte 1 – Firma & Partner */}
           <div className="md:pr-10">
