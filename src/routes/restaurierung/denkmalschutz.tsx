@@ -32,7 +32,13 @@ function Denkmalschutz() {
         ctaLabel="Erstgespräch vereinbaren"
         imageNote="Denkmalgeschütztes Fachwerkgebäude nach der Sanierung"
         imageSrc="/fotos/scharpf_fachwerksanierung.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Restaurierung & Sanierung", to: "/restaurierung" },
+          { label: "Denkmalschutz" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock
