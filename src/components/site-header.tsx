@@ -10,8 +10,8 @@ function Wordmark() {
       <img
         src="/logo.svg"
         alt="E. Scharpf – Holzbau & Restaurierung"
-        width={439}
-        height={119}
+        width={361}
+        height={62}
         className="h-18 w-auto"
       />
     </Link>
