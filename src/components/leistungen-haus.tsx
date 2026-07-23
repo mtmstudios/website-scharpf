@@ -16,10 +16,13 @@ type FocusKey = (typeof LEISTUNGEN)[number]["to"];
 // Abgestimmt auf Musterhaus_3d (Carport links, Terrasse rechts,
 // offener Dachstuhl links oben, Dach mit Gauben rechts oben).
 const FOCUS: Record<string, { x: number; y: number; zoom: number }> = {
-  "/holzbau": { x: 21, y: 60, zoom: 1.85 }, // Carport
-  "/fassade": { x: 74, y: 66, zoom: 1.8 }, // Terrasse + Fassade
-  "/dach": { x: 62, y: 26, zoom: 1.75 }, // Dachfläche + Gauben
-  "/restaurierung": { x: 28, y: 23, zoom: 1.95 }, // offener Dachstuhl
+  // Zoom bewusst <=1.65: Die Zeichnung liegt als Raster in nativer Auflösung
+  // vor – stärkeres Zoomen würde über die Quellauflösung hinaus vergrößern
+  // und die feinen Linien weich machen.
+  "/holzbau": { x: 21, y: 60, zoom: 1.6 }, // Carport
+  "/fassade": { x: 74, y: 66, zoom: 1.55 }, // Terrasse + Fassade
+  "/dach": { x: 62, y: 26, zoom: 1.55 }, // Dachfläche + Gauben
+  "/restaurierung": { x: 28, y: 23, zoom: 1.65 }, // offener Dachstuhl
   "/services": { x: 50, y: 50, zoom: 1 }, // Gesamtansicht
 };
 
@@ -135,7 +138,7 @@ export function LeistungenHaus() {
                   }}
                 >
                   <img
-                    src="/illustrationen/musterhaus-3d.svg"
+                    src="/illustrationen/musterhaus-3d.webp"
                     alt="3D-Zeichnung eines Holzhauses mit Carport, Terrasse, Gauben und offenem Dachstuhl"
                     className="h-full w-full select-none"
                     draggable={false}
