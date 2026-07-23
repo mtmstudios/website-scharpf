@@ -240,8 +240,8 @@ export function ValueBand({
         {values.map((v) => (
           <div key={v.title} className="flex flex-col items-center">
             <h3
-              className="text-2xl font-bold tracking-wide sm:text-4xl"
-              style={{ color: "#1f1105", fontFamily: "var(--font-sans)" }}
+              className="font-display text-2xl font-bold tracking-wide sm:text-4xl"
+              style={{ color: "#1f1105" }}
             >
               {v.title}
             </h3>
