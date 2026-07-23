@@ -74,23 +74,8 @@ export function PageHero({
 }) {
   return (
     <section className="border-b border-border bg-background">
-      {/* Holz-Trenner: durchgängiges Design-Element aus dem XD (Naturholz). */}
-      <div
-        aria-hidden
-        className="relative h-24 w-full overflow-hidden bg-cover bg-center lg:h-32"
-        style={{ backgroundImage: "url(/fotos/holz-trenner.jpg)" }}
-      >
-        {illustrationSrc && (
-          // Dunkle Variante auf dem hellen Holz – deutlich lesbarer als weiß,
-          // wirkt wie eine aufs Holz gestempelte Konstruktionszeichnung.
-          <img
-            src={illustrationSrc.replace("-weiss", "-dunkel")}
-            alt=""
-            className="pointer-events-none absolute bottom-0 right-8 h-[92%] w-auto max-w-none opacity-70 lg:right-16"
-          />
-        )}
-      </div>
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-24">
+      <CategoryBar title={eyebrow || "Leistungen"} color="#2D635C" />
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-14">
         <div>
           {eyebrow && (
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
