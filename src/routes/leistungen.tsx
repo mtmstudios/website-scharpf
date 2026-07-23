@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section } from "@/components/sections";
+import { Section, CategoryBar } from "@/components/sections";
 
 export const Route = createFileRoute("/leistungen")({
   head: () => ({
