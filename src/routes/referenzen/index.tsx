@@ -50,7 +50,7 @@ const KATEGORIE_BILD: Record<string, string> = {
 function Referenzen() {
   return (
     <div>
-      <CategoryBar title="Referenzen" color="#8F2B2A" />
+      <CategoryBar breadcrumbs={[{ label: "Referenzen" }]} color="#8F2B2A" />
 
       {/* Kategorie-Kacheln (2×2 im XD) */}
       <Section className="pt-10 lg:pt-14">
