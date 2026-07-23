@@ -75,6 +75,8 @@ const FRAGEN = [
 function Leistungen() {
   return (
     <div>
+      <CategoryBar title="Leistungen" color="#2D635C" />
+
       {/* Leistungen auf einen Blick – 5 Kategorie-Kacheln */}
       <Section>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
