@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section, CtaBanner } from "@/components/sections";
+import { Section, CtaBanner, CategoryBar } from "@/components/sections";
 
 export const Route = createFileRoute("/ueber-uns")({
   head: () => ({
