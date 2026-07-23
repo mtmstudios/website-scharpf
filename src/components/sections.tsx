@@ -30,73 +30,76 @@ export function Section({
   );
 }
 
+export type Crumb = { label: string; to?: string };
+
 /**
  * Farbige Kategorie-Leiste am Anfang einer Unterseite. Ersetzt die frühere
- * Holz-Trenner-Leiste. Höhe analog (h-24 lg:h-32), Titel linksbündig in der
- * Display-Schrift, schwarz.
+ * Holz-Trenner-Leiste. Enthält den Linktree (Breadcrumb) direkt im farbigen
+ * Kasten und ersetzt den bisherigen reinen Titeltext.
  */
-export function CategoryBar({ title, color }: { title: string; color: string }) {
+export function CategoryBar({
+  title,
+  breadcrumbs,
+  color,
+}: {
+  title?: string;
+  breadcrumbs?: Crumb[];
+  color: string;
+}) {
+  const items = breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : title ? [{ label: title }] : [];
   return (
     <div className="w-full" style={{ backgroundColor: color }}>
       <div className="mx-auto flex h-16 max-w-7xl items-center px-5 lg:h-20 lg:px-8">
-        <span className="font-display text-lg font-bold tracking-tight text-black sm:text-xl">
-          {title}
-        </span>
+        <nav aria-label="Breadcrumb">
+          <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-black/90 sm:text-base">
+            {items.map((item, index) => {
+              const isLast = index === items.length - 1;
+              return (
+                <li key={`${item.label}-${index}`} className="flex items-center gap-2">
+                  {index > 0 && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      className="opacity-70"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  )}
+                  {isLast || !item.to ? (
+                    <span
+                      className={cn(
+                        "font-display font-bold tracking-tight text-black",
+                        isLast && "text-base sm:text-lg"
+                      )}
+                    >
+                      {item.label}
+                    </span>
+                  ) : (
+                    <Link
+                      to={item.to}
+                      className="font-display font-bold tracking-tight text-black transition-colors hover:underline"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
       </div>
     </div>
   );
 }
 
-/**
- * Breadcrumb / Linktree-Leiste unterhalb der Kategorie-Leiste.
- * Zeigt die Hierarchie als klickbare Links, z. B.:
- * Leistungen > Holzbau & Konstruktion > Dachstühle
- */
-export type Crumb = { label: string; to?: string };
-
-export function LinkTree({ items }: { items: Crumb[] }) {
-  return (
-    <nav aria-label="Breadcrumb" className="w-full border-b border-border bg-background">
-      <ol className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-5 py-3 text-sm text-muted-foreground lg:px-8">
-        {items.map((item, index) => {
-          const isLast = index === items.length - 1;
-          return (
-            <li key={`${item.label}-${index}`} className="flex items-center gap-2">
-              {index > 0 && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              )}
-              {isLast || !item.to ? (
-                <span className={cn("font-medium", isLast && "text-foreground")}>
-                  {item.label}
-                </span>
-              ) : (
-                <Link
-                  to={item.to}
-                  className="font-medium transition-colors hover:text-primary"
-                >
-                  {item.label}
-                </Link>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-    </nav>
-  );
-}
 
 
 
