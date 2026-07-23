@@ -32,7 +32,13 @@ function Dachsanierung() {
         ctaLabel="Dach-Check vereinbaren"
         imageNote="Energetisch saniertes Dach mit neuer Eindeckung"
         imageSrc="/fotos/scharpf_dachsanierung.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Dach", to: "/dach" },
+          { label: "Dachsanierung" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

@@ -32,7 +32,13 @@ function Dachfenster() {
         ctaLabel="Dachfenster anfragen"
         imageNote="Heller Dachraum mit VELUX Panorama Dachfenster"
         imageSrc="/fotos/scharpf_velux_panorame.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Dach", to: "/dach" },
+          { label: "Dachfenster" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock
