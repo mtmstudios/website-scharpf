@@ -32,7 +32,13 @@ function Holzhausbau() {
         ctaLabel="Kostenlose Projektberatung Anfordern"
         imageNote="Neubau in Holzbauweise von E. Scharpf"
         imageSrc="/fotos/scharpf_neubau.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Holzbau & Konstruktion", to: "/holzbau" },
+          { label: "Holzhäuser" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

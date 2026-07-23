@@ -32,7 +32,13 @@ function Carport() {
         ctaLabel="Carport anfragen"
         imageNote="Maßgefertigter Holz-Carport"
         imageSrc="/fotos/scharpf_carport.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Holzbau & Konstruktion", to: "/holzbau" },
+          { label: "Carports" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock
