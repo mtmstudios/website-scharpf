@@ -87,6 +87,8 @@ const STELLEN = [
 function UeberUns() {
   return (
     <div>
+      <CategoryBar title="Über uns" color="#A68B7A" />
+
       {/* Das Unternehmen + Geschichte (versetzt zweispaltig wie XD) */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
