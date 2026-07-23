@@ -32,7 +32,13 @@ function Klempnerarbeiten() {
         ctaLabel="Klempnerarbeiten anfragen"
         imageNote="Blechverkleidete Gaube aus eigener Klempnerwerkstatt"
         imageSrc="/fotos/scharpf_dachgaube_flaschner.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Dach", to: "/dach" },
+          { label: "Klempnerarbeiten" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock
