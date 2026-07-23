@@ -32,7 +32,13 @@ function Fachwerksanierung() {
         ctaLabel="Projekt Anfragen"
         imageNote="Restauriertes Fachwerk von E. Scharpf"
         imageSrc="/fotos/scharpf_fachwerksanierung.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Restaurierung & Sanierung", to: "/restaurierung" },
+          { label: "Fachwerksanierung" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

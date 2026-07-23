@@ -34,7 +34,12 @@ function Dach() {
         ctaLabel="Jetzt Dach-Check vereinbaren"
         imageNote="Neu eingedecktes Dach von E. Scharpf"
         imageSrc="/fotos/scharpf_dachdecken.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Dach" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

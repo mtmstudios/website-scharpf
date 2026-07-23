@@ -32,7 +32,13 @@ function Dachgauben() {
         ctaLabel="Gauben-Beratung vereinbaren"
         imageNote="Wohnhaus mit fertiger Gaube und Blechverkleidung"
         imageSrc="/fotos/scharpf__dachgauben.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Dach", to: "/dach" },
+          { label: "Dachgauben" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

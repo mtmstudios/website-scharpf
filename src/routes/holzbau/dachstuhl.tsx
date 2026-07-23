@@ -32,7 +32,13 @@ function Dachstuhl() {
         ctaLabel="Anfrage stellen"
         imageNote="Neu errichteter Dachstuhl"
         imageSrc="/fotos/scharpf_dachstuhl.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Holzbau & Konstruktion", to: "/holzbau" },
+          { label: "Dachstühle" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

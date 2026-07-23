@@ -32,7 +32,13 @@ function Showroom() {
         ctaLabel="Termin vereinbaren"
         imageNote="Showroom mit Dachfenster-Ausstellung"
         imageSrc="/fotos/scharpf_ausstellung.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Service & Sonstige Leistungen", to: "/services" },
+          { label: "Showroom" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

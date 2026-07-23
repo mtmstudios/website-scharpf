@@ -32,7 +32,13 @@ function Waermedaemmung() {
         ctaLabel="Förderberatung anfragen"
         imageNote="Gedämmte Fassade von E. Scharpf"
         imageSrc="/fotos/scharpf_fassade_02.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Fassade & Außenbereiche", to: "/fassade" },
+          { label: "Wärmedämmung" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

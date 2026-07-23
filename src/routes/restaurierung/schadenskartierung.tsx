@@ -32,7 +32,13 @@ function Schadenskartierung() {
         ctaLabel="Termin anfragen"
         imageNote="Bestandsaufnahme an historischer Bausubstanz"
         imageSrc="/fotos/scharpf_restaurierung_02.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Restaurierung & Sanierung", to: "/restaurierung" },
+          { label: "Schadenskartierung" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

@@ -32,7 +32,13 @@ function Dachdaemmung() {
         ctaLabel="Förderberatung anfragen"
         imageNote="Dachsanierung mit eingebauter Holzfaserdämmung"
         imageSrc="/fotos/scharpf_dachsanierung.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Dach", to: "/dach" },
+          { label: "Dachdämmung" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

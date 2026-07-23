@@ -33,7 +33,12 @@ function Holzbau() {
         ctaLabel="Projekt besprechen"
         imageNote="Neubau in Holzbauweise von E. Scharpf"
         imageSrc="/fotos/scharpf_neubau.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Holzbau & Konstruktion" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

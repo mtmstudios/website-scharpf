@@ -33,7 +33,12 @@ function Restaurierung() {
         ctaLabel="Projekt Anfragen"
         imageNote="Restauriertes historisches Gebäude von E. Scharpf"
         imageSrc="/fotos/scharpf_restaurierung.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Restaurierung & Sanierung" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

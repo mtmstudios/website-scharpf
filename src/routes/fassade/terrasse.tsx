@@ -32,7 +32,13 @@ function Terrasse() {
         ctaLabel="Terrasse anfragen"
         imageNote="Fertige Holzterrasse von E. Scharpf"
         imageSrc="/fotos/scharpf_terrasse.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Fassade & Außenbereiche", to: "/fassade" },
+          { label: "Terrassen" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

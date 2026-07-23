@@ -32,7 +32,13 @@ function Aufstockungen() {
         ctaLabel="Aufstockung anfragen"
         imageNote="Wohnhaus mit neu aufgesetztem Holzgeschoss"
         imageSrc="/fotos/scharpf_Aufstockung.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Holzbau & Konstruktion", to: "/holzbau" },
+          { label: "Aufstockungen" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

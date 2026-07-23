@@ -32,7 +32,12 @@ function Services() {
         ctaLabel="Leistung anfragen"
         imageNote="Fuhrpark von E. Scharpf im Einsatz"
         imageSrc="/fotos/scharpf_Transporter.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Service & Sonstige Leistungen" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

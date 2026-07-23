@@ -40,12 +40,64 @@ export function CategoryBar({ title, color }: { title: string; color: string }) 
     <div className="w-full" style={{ backgroundColor: color }}>
       <div className="mx-auto flex h-16 max-w-7xl items-center px-5 lg:h-20 lg:px-8">
         <span className="font-display text-lg font-bold tracking-tight text-black sm:text-xl">
-          {title}{title === "Leistungen" ? " >\u00a0" : ""}
+          {title}
         </span>
       </div>
     </div>
   );
 }
+
+/**
+ * Breadcrumb / Linktree-Leiste unterhalb der Kategorie-Leiste.
+ * Zeigt die Hierarchie als klickbare Links, z. B.:
+ * Leistungen > Holzbau & Konstruktion > Dachstühle
+ */
+export type Crumb = { label: string; to?: string };
+
+export function LinkTree({ items }: { items: Crumb[] }) {
+  return (
+    <nav aria-label="Breadcrumb" className="w-full border-b border-border bg-background">
+      <ol className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-5 py-3 text-sm text-muted-foreground lg:px-8">
+        {items.map((item, index) => {
+          const isLast = index === items.length - 1;
+          return (
+            <li key={`${item.label}-${index}`} className="flex items-center gap-2">
+              {index > 0 && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              )}
+              {isLast || !item.to ? (
+                <span className={cn("font-medium", isLast && "text-foreground")}>
+                  {item.label}
+                </span>
+              ) : (
+                <Link
+                  to={item.to}
+                  className="font-medium transition-colors hover:text-primary"
+                >
+                  {item.label}
+                </Link>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+  );
+}
+
 
 
 /**
@@ -62,6 +114,7 @@ export function PageHero({
   imageNote,
   imageSrc,
   illustrationSrc,
+  breadcrumbs,
 }: {
   eyebrow?: string;
   title: string;
@@ -71,10 +124,12 @@ export function PageHero({
   imageNote: string;
   imageSrc?: string;
   illustrationSrc?: string;
+  breadcrumbs?: Crumb[];
 }) {
   return (
     <section className="border-b border-border bg-background">
       <CategoryBar title={eyebrow || "Leistungen"} color="#2D635C" />
+      {breadcrumbs && breadcrumbs.length > 0 && <LinkTree items={breadcrumbs} />}
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-14">
         <div>
           {eyebrow && (
@@ -99,6 +154,7 @@ export function PageHero({
     </section>
   );
 }
+
 
 export function SectionHeading({
   kicker,
