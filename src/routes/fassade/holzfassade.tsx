@@ -32,7 +32,13 @@ function Holzfassade() {
         ctaLabel="Beratung anfragen"
         imageNote="Holzfassade in warmer Holzoptik"
         imageSrc="/fotos/scharpf_fassade_01.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Fassade & Außenbereiche", to: "/fassade" },
+          { label: "Holzfassaden" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock

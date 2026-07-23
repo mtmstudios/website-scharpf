@@ -32,7 +32,13 @@ function Ladekran() {
         ctaLabel="Ladekran anfragen"
         imageNote="Ladekran von E. Scharpf im Einsatz"
         imageSrc="/fotos/scharpf_ladekran.jpg"
+        breadcrumbs={[
+          { label: "Leistungen", to: "/leistungen" },
+          { label: "Service & Sonstige Leistungen", to: "/services" },
+          { label: "Ladekran" },
+        ]}
       />
+
 
       <Section>
         <LeistungBlock
