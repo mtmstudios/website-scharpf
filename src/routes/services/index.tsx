@@ -26,7 +26,7 @@ function Services() {
     <div>
       <PageHero
         illustrationSrc="/illustrationen/carport-weiss.png"
-        eyebrow="Leistungen"
+        eyebrow=""
         title="Mehr als Holzbau – Ihr Rundum-Partner."
         lead="Von Dachdecker- und Klempnerarbeiten über Schwertransporte bis zum Ausstellungsbesuch: E. Scharpf bietet das vollständige Leistungsspektrum rund um Dach, Fassade und Holz."
         ctaLabel="Leistung anfragen"

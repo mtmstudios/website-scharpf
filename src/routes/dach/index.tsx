@@ -28,7 +28,7 @@ function Dach() {
     <div>
       <PageHero
         illustrationSrc="/illustrationen/dachstuhl-weiss.png"
-        eyebrow="Leistungen"
+        eyebrow=""
         title="Ihr Dachprojekt, in sehr guten Händen."
         lead="Familienbetrieb in der dritten Generation – für hochwertige, innovative Zimmerarbeiten. Neueindeckung, Sanierung oder Dämmung: Wir finden die passende Lösung für Ihr Dach."
         ctaLabel="Jetzt Dach-Check vereinbaren"
