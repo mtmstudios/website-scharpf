@@ -146,7 +146,7 @@ function Ratgeber() {
       <CategoryBar title="Ratgeber" color="#A8D5C1" />
 
       {/* Welches Projekt planen Sie – 4 Kategorie-Kacheln */}
-      <Section>
+      <Section className="pt-10 lg:pt-14">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Welches Projekt planen Sie
         </h1>

@@ -90,7 +90,7 @@ function UeberUns() {
       <CategoryBar title="Über uns" color="#A68B7A" />
 
       {/* Das Unternehmen + Geschichte (versetzt zweispaltig wie XD) */}
-      <Section>
+      <Section className="pt-10 lg:pt-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">

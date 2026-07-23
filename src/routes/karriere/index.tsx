@@ -61,7 +61,7 @@ function Karriere() {
       <CategoryBar title="Karriere" color="#E6DCC4" />
 
       {/* Deine Wunschstelle bei uns */}
-      <Section>
+      <Section className="pt-10 lg:pt-14">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Deine Wunschstelle bei uns.
         </h1>
