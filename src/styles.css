@@ -21,6 +21,39 @@
     Arial, sans-serif;
   --font-display: "Aleo", Georgia, "Times New Roman", serif;
 
+  /*
+   * Typo-Skala: bewusst nur DREI Schriftgrößen auf der ganzen Website.
+   *   Klein       0.875rem (14px)  – Labels, Chips, Buttons, Meta
+   *   Fließtext   1.0625rem (17px) – aller Lauftext
+   *   Überschrift fluid 28→42px    – alle Headings (eine Größe, skaliert
+   *                                  weich mit der Viewport-Breite)
+   * Alle text-*-Utilities werden hier zentral auf diese drei Stufen
+   * abgebildet – text-xl rendert also wie text-base usw. Neue Größen
+   * bitte NICHT hinzufügen, Hierarchie über Gewicht/Farbe/Font lösen.
+   */
+  --text-xs: 0.875rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.65;
+  --text-lg: 1.0625rem;
+  --text-lg--line-height: 1.65;
+  --text-xl: 1.0625rem;
+  --text-xl--line-height: 1.65;
+  --text-2xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-2xl--line-height: 1.2;
+  --text-3xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-3xl--line-height: 1.2;
+  --text-4xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-4xl--line-height: 1.2;
+  --text-5xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-5xl--line-height: 1.2;
+  --text-6xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-6xl--line-height: 1.2;
+  --text-7xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-7xl--line-height: 1.2;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
