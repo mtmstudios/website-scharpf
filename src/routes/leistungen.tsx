@@ -75,7 +75,7 @@ const FRAGEN = [
 function Leistungen() {
   return (
     <div>
-      <CategoryBar title="Leistungen" color="#2D635C" />
+      <CategoryBar breadcrumbs={[{ label: "Leistungen" }]} color="#2D635C" />
 
       {/* Leistungen auf einen Blick – 5 Kategorie-Kacheln */}
       <Section className="pt-10 lg:pt-14">

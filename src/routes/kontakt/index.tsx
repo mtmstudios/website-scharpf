@@ -65,7 +65,7 @@ function Kontakt() {
 
   return (
     <div>
-      <CategoryBar title="Kontakt" color="#DD5A1A" />
+      <CategoryBar breadcrumbs={[{ label: "Kontakt" }]} color="#DD5A1A" />
 
       {/* Hero + Kontaktdaten */}
       <Section className="pt-10 lg:pt-14">

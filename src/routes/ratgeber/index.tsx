@@ -143,7 +143,7 @@ const KOMPETENZEN = [
 function Ratgeber() {
   return (
     <div>
-      <CategoryBar title="Ratgeber" color="#A8D5C1" />
+      <CategoryBar breadcrumbs={[{ label: "Ratgeber" }]} color="#A8D5C1" />
 
       {/* Welches Projekt planen Sie – 4 Kategorie-Kacheln */}
       <Section className="pt-10 lg:pt-14">

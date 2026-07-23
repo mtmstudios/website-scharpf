@@ -58,7 +58,7 @@ const STELLEN = [
 function Karriere() {
   return (
     <div>
-      <CategoryBar title="Karriere" color="#E6DCC4" />
+      <CategoryBar breadcrumbs={[{ label: "Karriere" }]} color="#E6DCC4" />
 
       {/* Deine Wunschstelle bei uns */}
       <Section className="pt-10 lg:pt-14">

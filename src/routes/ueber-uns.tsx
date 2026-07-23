@@ -87,7 +87,7 @@ const STELLEN = [
 function UeberUns() {
   return (
     <div>
-      <CategoryBar title="Über uns" color="#A68B7A" />
+      <CategoryBar breadcrumbs={[{ label: "Über uns" }]} color="#A68B7A" />
 
       {/* Das Unternehmen + Geschichte (versetzt zweispaltig wie XD) */}
       <Section className="pt-10 lg:pt-14">
