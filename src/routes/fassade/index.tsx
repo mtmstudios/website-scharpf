@@ -27,7 +27,7 @@ function Fassade() {
     <div>
       <PageHero
         illustrationSrc="/illustrationen/fachwerkhaus-band-weiss.png"
-        eyebrow="Leistungen"
+        eyebrow=""
         title="Fassaden, die schützen und begeistern."
         lead="Von der Holzfassade bis zur Terrasse – E. Scharpf gestaltet Ihre Außenbereiche ökologisch, langlebig und mit handwerklicher Präzision."
         ctaLabel="Kostenlose Beratung anfragen"
