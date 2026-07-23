@@ -51,7 +51,7 @@ export function CategoryBar({
     <div className="w-full" style={{ backgroundColor: color }}>
       <div className="mx-auto flex h-16 max-w-7xl items-center px-5 lg:h-20 lg:px-8">
         <nav aria-label="Breadcrumb">
-          <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-black/90 sm:text-base">
+          <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-white/90 sm:text-base">
             {items.map((item, index) => {
               const isLast = index === items.length - 1;
               return (
@@ -68,7 +68,7 @@ export function CategoryBar({
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       aria-hidden="true"
-                      className="opacity-70"
+                      className="opacity-80"
                     >
                       <path d="m9 18 6-6-6-6" />
                     </svg>
@@ -76,7 +76,7 @@ export function CategoryBar({
                   {isLast || !item.to ? (
                     <span
                       className={cn(
-                        "font-display font-bold tracking-tight text-black",
+                        "font-display font-bold tracking-tight text-white",
                         isLast && "text-base sm:text-lg"
                       )}
                     >
@@ -85,7 +85,7 @@ export function CategoryBar({
                   ) : (
                     <Link
                       to={item.to}
-                      className="font-display font-bold tracking-tight text-black transition-colors hover:underline"
+                      className="font-display font-bold tracking-tight text-white transition-colors hover:underline"
                     >
                       {item.label}
                     </Link>
