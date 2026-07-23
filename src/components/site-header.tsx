@@ -34,7 +34,7 @@ export function SiteHeader() {
               <div key={item.to} className="group relative">
                 <Link
                   to={item.to}
-                  className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                  className="flex items-center gap-1 rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-primary"
                   activeProps={{ className: "text-primary" }}
                 >
                   {item.label}
@@ -59,9 +59,9 @@ export function SiteHeader() {
                       <Link
                         key={l.to}
                         to={l.to}
-                        className="flex items-baseline gap-3 px-4 py-3 text-sm text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
+                        className="flex items-baseline gap-3 px-4 py-3 text-base text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
                       >
-                        <span className="font-mono text-xs text-primary">
+                        <span className="font-mono text-sm text-primary">
                           {l.nr}
                         </span>
                         {l.title}
@@ -74,7 +74,7 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                className="rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-primary"
                 activeProps={{ className: "text-primary" }}
               >
                 {item.label}
@@ -122,7 +122,7 @@ export function SiteHeader() {
                   <button
                     type="button"
                     onClick={() => setLeistOpen((v) => !v)}
-                    className="flex w-full items-center justify-between py-3 text-base font-medium text-foreground"
+                    className="flex w-full items-center justify-between py-3 text-lg font-medium text-foreground"
                   >
                     Leistungen
                     <svg
@@ -145,7 +145,7 @@ export function SiteHeader() {
                       <Link
                         to="/leistungen"
                         onClick={() => setMobileOpen(false)}
-                        className="block py-2 text-sm font-medium text-primary"
+                        className="block py-2 text-base font-medium text-primary"
                       >
                         Alle Leistungen
                       </Link>
@@ -154,7 +154,7 @@ export function SiteHeader() {
                           key={l.to}
                           to={l.to}
                           onClick={() => setMobileOpen(false)}
-                          className="block py-2 text-sm text-foreground/80"
+                          className="block py-2 text-base text-foreground/80"
                         >
                           {l.title}
                         </Link>
@@ -167,7 +167,7 @@ export function SiteHeader() {
                   key={item.to}
                   to={item.to}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-3 text-base font-medium text-foreground"
+                  className="block py-3 text-lg font-medium text-foreground"
                   activeProps={{ className: "text-primary" }}
                 >
                   {item.label}
@@ -177,7 +177,7 @@ export function SiteHeader() {
             <Link
               to="/kontakt"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
             >
               {PRIMARY_CTA}
             </Link>
