@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section } from "@/components/sections";
+import { Section, CategoryBar } from "@/components/sections";
 
 export const Route = createFileRoute("/ratgeber/")({
   head: () => ({
@@ -143,6 +143,8 @@ const KOMPETENZEN = [
 function Ratgeber() {
   return (
     <div>
+      <CategoryBar title="Ratgeber" color="#A8D5C1" />
+
       {/* Welches Projekt planen Sie – 4 Kategorie-Kacheln */}
       <Section>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">

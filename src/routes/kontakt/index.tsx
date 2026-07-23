@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { Section, TrustRow } from "@/components/sections";
+import { Section, TrustRow, CategoryBar } from "@/components/sections";
 import { ProjektQuiz } from "@/components/projekt-quiz";
 import { CONTACT } from "@/lib/site";
 import { submitLead } from "@/lib/submit-lead";
@@ -65,6 +65,8 @@ function Kontakt() {
 
   return (
     <div>
+      <CategoryBar title="Kontakt" color="#DD5A1A" />
+
       {/* Hero + Kontaktdaten */}
       <Section>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">

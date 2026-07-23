@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section, CtaBanner } from "@/components/sections";
+import { Section, CtaBanner, CategoryBar } from "@/components/sections";
 
 export const Route = createFileRoute("/ueber-uns")({
   head: () => ({
@@ -87,6 +87,8 @@ const STELLEN = [
 function UeberUns() {
   return (
     <div>
+      <CategoryBar title="Über uns" color="#A68B7A" />
+
       {/* Das Unternehmen + Geschichte (versetzt zweispaltig wie XD) */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">

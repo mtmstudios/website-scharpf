@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section } from "@/components/sections";
+import { Section, CategoryBar } from "@/components/sections";
 import { GOOGLE_BEWERTUNGEN, REFERENZ_KATEGORIEN } from "@/lib/site";
 
 export const Route = createFileRoute("/referenzen/")({
@@ -50,6 +50,8 @@ const KATEGORIE_BILD: Record<string, string> = {
 function Referenzen() {
   return (
     <div>
+      <CategoryBar title="Referenzen" color="#8F2B2A" />
+
       {/* Titel */}
       <Section>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section } from "@/components/sections";
+import { Section, CategoryBar } from "@/components/sections";
 
 export const Route = createFileRoute("/karriere/")({
   head: () => ({
@@ -58,6 +58,8 @@ const STELLEN = [
 function Karriere() {
   return (
     <div>
+      <CategoryBar title="Karriere" color="#E6DCC4" />
+
       {/* Deine Wunschstelle bei uns */}
       <Section>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
