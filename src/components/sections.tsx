@@ -230,35 +230,25 @@ export function ValueBand({
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${woodTexture})` }}
       />
-      {/* Vignette + Wärme */}
+      {/* Dezente Vignette für etwas Tiefe – hell gehalten, damit das
+          Fichtenholz hell bleibt und der dunkle Text gut lesbar ist. */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.55)_100%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.15)_100%)]"
       />
       <div className="relative mx-auto grid max-w-6xl gap-x-12 gap-y-10 px-8 py-16 text-center sm:grid-cols-2 sm:gap-y-14 sm:py-24 lg:px-8">
         {values.map((v) => (
           <div key={v.title} className="flex flex-col items-center">
             <h3
-              className="font-display text-2xl font-bold tracking-wide sm:text-5xl"
-              style={{
-                color: "#1a0a02",
-                textShadow:
-                  "0 1px 0 rgba(255,220,180,0.35), 0 2px 4px rgba(0,0,0,0.45), 0 0 10px rgba(0,0,0,0.25)",
-                WebkitTextStroke: "0.5px rgba(60,30,10,0.35)",
-                filter:
-                  "drop-shadow(0 1px 0 rgba(255,210,160,0.25)) drop-shadow(0 2px 3px rgba(0,0,0,0.5))",
-              }}
+              className="text-2xl font-bold tracking-wide sm:text-4xl"
+              style={{ color: "#1f1105", fontFamily: "var(--font-sans)" }}
             >
               {v.title}
             </h3>
             {v.text && (
               <p
-                className="font-display mt-3 max-w-xs text-sm font-medium leading-relaxed sm:mt-4 sm:text-base"
-                style={{
-                  color: "#ffffff",
-                  textShadow:
-                    "0 1px 2px rgba(0,0,0,0.7), 0 2px 6px rgba(0,0,0,0.55)",
-                }}
+                className="mt-3 max-w-xs text-sm font-medium leading-relaxed sm:mt-4 sm:text-base"
+                style={{ color: "#3a2817" }}
               >
                 {v.text}
               </p>
