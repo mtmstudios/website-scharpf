@@ -114,6 +114,7 @@ export function PageHero({
   imageNote,
   imageSrc,
   illustrationSrc,
+  breadcrumbs,
 }: {
   eyebrow?: string;
   title: string;
@@ -123,10 +124,12 @@ export function PageHero({
   imageNote: string;
   imageSrc?: string;
   illustrationSrc?: string;
+  breadcrumbs?: Crumb[];
 }) {
   return (
     <section className="border-b border-border bg-background">
       <CategoryBar title={eyebrow || "Leistungen"} color="#2D635C" />
+      {breadcrumbs && breadcrumbs.length > 0 && <LinkTree items={breadcrumbs} />}
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-14">
         <div>
           {eyebrow && (
@@ -151,6 +154,7 @@ export function PageHero({
     </section>
   );
 }
+
 
 export function SectionHeading({
   kicker,
