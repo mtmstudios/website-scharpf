@@ -65,6 +65,8 @@ function Kontakt() {
 
   return (
     <div>
+      <CategoryBar title="Kontakt" color="#DD5A1A" />
+
       {/* Hero + Kontaktdaten */}
       <Section>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
