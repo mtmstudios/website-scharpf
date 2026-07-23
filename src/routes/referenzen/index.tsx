@@ -52,15 +52,8 @@ function Referenzen() {
     <div>
       <CategoryBar title="Referenzen" color="#8F2B2A" />
 
-      {/* Titel */}
-      <Section>
-        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
-          Referenzen
-        </h1>
-      </Section>
-
       {/* Kategorie-Kacheln (2×2 im XD) */}
-      <Section className="pt-0">
+      <Section className="pt-10 lg:pt-14">
         <div className="grid gap-6 md:grid-cols-2">
           {REFERENZ_KATEGORIEN.map((k) => (
             <Link key={k.to} to={k.to} className="group flex flex-col">
