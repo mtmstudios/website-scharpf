@@ -12,7 +12,7 @@ function Wordmark() {
         alt="E. Scharpf – Holzbau & Restaurierung"
         width={439}
         height={119}
-        className="h-12 w-auto"
+        className="h-14 w-auto"
       />
     </Link>
   );
