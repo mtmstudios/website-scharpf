@@ -131,9 +131,12 @@ export function PageHero({
 }) {
   return (
     <section className="border-b border-border bg-background">
-      <CategoryBar title={eyebrow || "Leistungen"} color="#2D635C" />
-      {breadcrumbs && breadcrumbs.length > 0 && <LinkTree items={breadcrumbs} />}
+      <CategoryBar
+        breadcrumbs={breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : [{ label: eyebrow || title }]}
+        color="#2D635C"
+      />
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-14">
+
         <div>
           {eyebrow && (
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
