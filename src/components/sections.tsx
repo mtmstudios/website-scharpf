@@ -38,11 +38,10 @@ export function Section({
 export function CategoryBar({ title, color }: { title: string; color: string }) {
   return (
     <div className="w-full" style={{ backgroundColor: color }}>
-      <div className="mx-auto flex h-24 max-w-7xl items-center px-5 lg:h-32 lg:px-8">
-        <span className="font-display text-2xl font-bold tracking-tight text-black sm:text-3xl">
+      <div className="mx-auto flex h-16 max-w-7xl items-center px-5 lg:h-20 lg:px-8">
+        <span className="font-display text-lg font-bold tracking-tight text-black sm:text-xl">
           {title}
         </span>
-
       </div>
     </div>
   );
