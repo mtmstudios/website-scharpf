@@ -31,6 +31,24 @@ export function Section({
 }
 
 /**
+ * Farbige Kategorie-Leiste am Anfang einer Unterseite. Ersetzt die frühere
+ * Holz-Trenner-Leiste. Höhe analog (h-24 lg:h-32), Titel linksbündig in der
+ * Display-Schrift, schwarz.
+ */
+export function CategoryBar({ title, color }: { title: string; color: string }) {
+  return (
+    <div className="w-full" style={{ backgroundColor: color }}>
+      <div className="mx-auto flex h-24 max-w-7xl items-center px-5 lg:h-32 lg:px-8">
+        <h1 className="font-display text-2xl font-bold tracking-tight text-black sm:text-3xl">
+          {title}
+        </h1>
+      </div>
+    </div>
+  );
+}
+
+
+/**
  * Split-Hero: links Text + CTA, rechts großes Projektfoto (Platzhalter).
  * `illustrationSrc`: weiße B612-Linien-Illustration, dekorativ auf dem
  * Holz-Trenner platziert.
