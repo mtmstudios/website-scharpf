@@ -49,7 +49,7 @@ export function CategoryBar({
   const items = breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : title ? [{ label: title }] : [];
   return (
     <div className="w-full" style={{ backgroundColor: color }}>
-      <div className="mx-auto flex h-12 max-w-7xl items-center px-5 lg:px-8">
+      <div className="mx-auto flex min-h-12 max-w-7xl items-center px-5 lg:px-8">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-white/90 sm:text-base">
             {items.map((item, index) => {
