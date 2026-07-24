@@ -54,7 +54,7 @@ const TEAM = [
   {
     name: "Stefan Strifler",
     funktionen: ["Projektleiter", "Zimmerermeister"],
-    foto: "/fotos/team/scharpf_stefan_strifler.jpg",
+    foto: "/__l5e/assets-v1/03c2f4a6-fd1e-426b-a41f-74f5456160a1/scharpf_stefan_strifler.jpg",
   },
   {
     name: "Max Kaltmaier",
