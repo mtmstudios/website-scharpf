@@ -11,7 +11,8 @@ import sawIcon from "@/assets/saw-icon.png.asset.json";
 export function ScrollCta({
   heroCtaRef,
   to = "/kontakt",
-  label = "Kostenlose Beratung anfordern",
+  label = "Beratung anfordern",
+
 }: {
   heroCtaRef: React.RefObject<HTMLElement | null>;
   to?: string;
@@ -51,24 +52,25 @@ export function ScrollCta({
     >
       <span
         className={cn(
-          "flex h-14 w-14 items-center justify-center rounded-full bg-primary transition-all duration-500 ease-out md:h-16 md:w-16",
+          "flex h-12 w-12 items-center justify-center rounded-full bg-primary transition-all duration-500 ease-out md:h-14 md:w-14",
           hovered && "scale-105"
         )}
       >
         <img
           src={sawIcon.url}
           alt="Säge"
-          className="h-8 w-8 md:h-9 md:w-9 invert"
+          className="h-7 w-7 md:h-8 md:w-8 invert"
         />
       </span>
       <span
         className={cn(
           "max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold transition-all duration-500 ease-out pr-0",
-          hovered && "max-w-[16rem] pr-5"
+          hovered && "max-w-[12rem] pr-5"
         )}
       >
         {label}
       </span>
+
     </Link>
   );
 }

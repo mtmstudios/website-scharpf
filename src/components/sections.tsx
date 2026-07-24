@@ -145,7 +145,7 @@ export function PageHero({
               {eyebrow}
             </p>
           )}
-          <h1 className="font-display text-[1.64025rem] font-bold leading-[1.1] text-foreground sm:text-[2.187rem] lg:text-[2.73375rem]">
+          <h1 className="font-display text-[1.50903rem] font-bold leading-[1.1] text-foreground sm:text-[2.01204rem] lg:text-[2.51505rem]">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -426,11 +426,13 @@ export function CtaBanner({
   text?: string;
   ctaLabel?: string;
   ctaTo?: string;
-  tone?: "orange" | "mint";
+  tone?: "orange" | "mint" | "wood";
   trust?: boolean;
   illustrationSrc?: string;
 }) {
-  const bg = tone === "orange" ? "bg-primary" : "bg-accent";
+  const bg =
+    tone === "orange" ? "bg-primary" : tone === "mint" ? "bg-accent" : "";
+  const isWood = tone === "wood";
   return (
     <>
       {trust && (
@@ -441,6 +443,19 @@ export function CtaBanner({
         </div>
       )}
       <section className={cn(bg, "relative overflow-hidden text-white")}>
+        {isWood && (
+          <>
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${woodTexture})` }}
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.25)_100%)]"
+            />
+          </>
+        )}
         {illustrationSrc && (
           <img
             src={illustrationSrc}
@@ -450,11 +465,24 @@ export function CtaBanner({
           />
         )}
         <div className="relative mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 py-16 text-center lg:px-8">
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">{title}</h2>
+          <h2
+            className="font-display text-3xl font-bold sm:text-4xl"
+            style={isWood ? { color: "#1f1105" } : undefined}
+          >
+            {title}
+          </h2>
           {text && (
-            <p className="max-w-2xl text-lg leading-relaxed text-white/90">{text}</p>
+            <p
+              className={cn(
+                "max-w-2xl text-lg leading-relaxed",
+                isWood ? "" : "text-white/90"
+              )}
+              style={isWood ? { color: "#3a2817" } : undefined}
+            >
+              {text}
+            </p>
           )}
-          <CtaButton to={ctaTo} variant="outline">
+          <CtaButton to={ctaTo} variant={isWood ? "solid" : "outline"}>
             {ctaLabel}
           </CtaButton>
         </div>
@@ -462,6 +490,7 @@ export function CtaBanner({
     </>
   );
 }
+
 
 /** FAQ-Akkordeon. */
 export function FaqSection({

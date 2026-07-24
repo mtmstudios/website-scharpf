@@ -110,11 +110,12 @@
   --primary: oklch(0.6694 0.1819 44.22); /* #EC671E Orange */
   --primary-foreground: oklch(1 0 0);
 
-  --secondary: oklch(0.9659 0.0079 73.74); /* #F7F3EE Cream */
+  --secondary: oklch(0.9176 0.011 73.74); /* Cream 5% dunkler */
   --secondary-foreground: oklch(0.1998 0.002 106.58);
 
-  --muted: oklch(0.9659 0.0079 73.74); /* #F7F3EE Cream */
+  --muted: oklch(0.9176 0.011 73.74); /* Cream 5% dunkler */
   --muted-foreground: oklch(0.4878 0.0283 67.08); /* #6B5D4F warm gray */
+
 
   --accent: oklch(0.4668 0.0549 187.02); /* #32645F Mint/Salbei */
   --accent-foreground: oklch(1 0 0);
