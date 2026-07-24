@@ -452,8 +452,13 @@ export function CtaBanner({
           <>
             <div
               aria-hidden
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${woodTexture})` }}
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${woodTexture})`,
+                backgroundSize: "200% auto",
+                backgroundPosition: "left center",
+                backgroundRepeat: "no-repeat",
+              }}
             />
             <div
               aria-hidden
