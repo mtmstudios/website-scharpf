@@ -145,7 +145,7 @@ export function PageHero({
               {eyebrow}
             </p>
           )}
-          <h1 className="font-display text-[1.64025rem] font-bold leading-[1.1] text-foreground sm:text-[2.187rem] lg:text-[2.73375rem]">
+          <h1 className="font-display text-[1.50903rem] font-bold leading-[1.1] text-foreground sm:text-[2.01204rem] lg:text-[2.51505rem]">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
