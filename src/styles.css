@@ -41,17 +41,17 @@
   --text-lg--line-height: 1.65;
   --text-xl: 1.0625rem;
   --text-xl--line-height: 1.65;
-  --text-2xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-2xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
   --text-2xl--line-height: 1.2;
-  --text-3xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-3xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
   --text-3xl--line-height: 1.2;
-  --text-4xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-4xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
   --text-4xl--line-height: 1.2;
-  --text-5xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-5xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
   --text-5xl--line-height: 1.2;
-  --text-6xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-6xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
   --text-6xl--line-height: 1.2;
-  --text-7xl: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-7xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
   --text-7xl--line-height: 1.2;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -110,10 +110,10 @@
   --primary: oklch(0.6694 0.1819 44.22); /* #EC671E Orange */
   --primary-foreground: oklch(1 0 0);
 
-  --secondary: oklch(0.9176 0.011 73.74); /* Cream 5% dunkler */
+  --secondary: oklch(0.945 0.011 73.74); /* Cream ~3% heller */
   --secondary-foreground: oklch(0.1998 0.002 106.58);
 
-  --muted: oklch(0.9176 0.011 73.74); /* Cream 5% dunkler */
+  --muted: oklch(0.945 0.011 73.74); /* Cream ~3% heller */
   --muted-foreground: oklch(0.4878 0.0283 67.08); /* #6B5D4F warm gray */
 
 

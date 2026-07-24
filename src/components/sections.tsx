@@ -24,7 +24,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn(muted && "bg-secondary", "py-12 lg:py-[4.5rem]", className)}
+      className={cn(muted && "bg-secondary", "py-11 lg:py-[4.125rem]", className)}
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">{children}</div>
     </section>
@@ -137,7 +137,7 @@ export function PageHero({
         breadcrumbs={breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : [{ label: eyebrow || title }]}
         color="#2D635C"
       />
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-14">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-9 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-20 lg:pt-12">
 
         <div>
           {eyebrow && (
@@ -145,7 +145,7 @@ export function PageHero({
               {eyebrow}
             </p>
           )}
-          <h1 className="font-display text-[1.50903rem] font-bold leading-[1.1] text-foreground sm:text-[2.01204rem] lg:text-[2.51505rem]">
+          <h1 className="font-display text-[1.38831rem] font-bold leading-[1.1] text-foreground sm:text-[1.85108rem] lg:text-[2.31385rem]">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
