@@ -137,7 +137,7 @@ export function PageHero({
         breadcrumbs={breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : [{ label: eyebrow || title }]}
         color="#2D635C"
       />
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-9 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-20 lg:pt-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-20 lg:pt-6">
 
         <div>
           {eyebrow && (

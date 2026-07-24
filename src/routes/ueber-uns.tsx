@@ -86,7 +86,7 @@ function UeberUns() {
       <CategoryBar breadcrumbs={[{ label: "Über uns" }]} color="#A68B7A" />
 
       {/* Das Unternehmen mit Firmengebäude + Geschichte darunter */}
-      <Section className="pt-10 lg:pt-14">
+      <Section className="pt-6 lg:pt-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-10 lg:space-y-14">
             <div>

@@ -54,7 +54,7 @@ function Referenzen() {
       <CategoryBar breadcrumbs={[{ label: "Referenzen" }]} color="#8F2B2A" />
 
       {/* Kategorie-Kacheln (2×2 im XD) */}
-      <Section className="pt-10 lg:pt-14">
+      <Section className="pt-6 lg:pt-6">
         <div className="grid gap-6 md:grid-cols-2">
           {REFERENZ_KATEGORIEN.map((k) => (
             <Link key={k.to} to={k.to} className="group flex flex-col">
