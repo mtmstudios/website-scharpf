@@ -456,7 +456,7 @@ export function CtaBanner({
               style={{
                 backgroundImage: `url(${woodTexture})`,
                 backgroundSize: "cover",
-                backgroundPosition: "0% center",
+                backgroundPosition: "0% 85%",
                 backgroundRepeat: "no-repeat",
               }}
             />
