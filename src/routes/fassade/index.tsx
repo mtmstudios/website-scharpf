@@ -7,6 +7,7 @@ import {
   CtaBanner,
 } from "@/components/sections";
 import fassadeHeroAsset from "@/assets/scharpf_fassade_03.jpg.asset.json";
+import vorfertigungAsset from "@/assets/scharpf_vorfertigung.jpg.asset.json";
 
 export const Route = createFileRoute("/fassade/")({
   head: () => ({
@@ -71,8 +72,8 @@ function Fassade() {
             "WDVS Wärmedämm-Verbundsysteme",
             "KFW-geförderte Außenwanddämmung",
           ]}
-          imageNote="Gedämmte Fassade von E. Scharpf"
-          imageSrc="/fotos/scharpf_fassade_02.jpg"
+          imageNote="Vorfertigung einer gedämmten Holzkonstruktion"
+          imageSrc={vorfertigungAsset.url}
         />
       </Section>
 
