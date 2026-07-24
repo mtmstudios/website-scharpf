@@ -7,6 +7,7 @@ import { ScrollCta } from "@/components/scroll-cta";
 import { LeistungenHaus } from "@/components/leistungen-haus";
 import { GOOGLE_BEWERTUNGEN } from "@/lib/site";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import restaurierungImage from "@/assets/scharpf_restaurierung_12.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
