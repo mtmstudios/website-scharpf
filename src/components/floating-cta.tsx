@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { PRIMARY_CTA, SOCIAL_LINKS } from "@/lib/site";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 /**
  * Rechter Bildschirmrand, ab Tablet sichtbar – auf dem Smartphone übernimmt
