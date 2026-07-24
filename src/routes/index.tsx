@@ -91,8 +91,8 @@ function Index() {
           <source src={heroVideo.url} type="video/mp4" />
         </video>
         {/* Abdunkelungs-Overlay für Lesbarkeit */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40" aria-hidden="true" />
-        <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/50 to-black/30" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/15" aria-hidden="true" />
         {/* Inhalt */}
         <div className="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
           <h1 className="max-w-4xl font-display text-[1.0121rem] font-bold leading-[1.1] text-white sm:text-[1.3495rem] lg:text-[1.6868rem]">
