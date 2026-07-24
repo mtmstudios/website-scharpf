@@ -137,8 +137,8 @@ function Index() {
             </div>
           </div>
           <PlaceholderImage
-            note="Vorfertigung von Holzbauteilen in der Werkhalle in Esslingen"
-            src="/fotos/scharpf_vorfertigung.jpg"
+            note="Historisches Gebäude in Esslingen – Referenz für denkmalgerechte Restaurierung"
+            src={restaurierungImage.url}
             ratio="landscape"
           />
         </div>
