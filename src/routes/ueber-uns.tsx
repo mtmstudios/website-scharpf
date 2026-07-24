@@ -23,17 +23,17 @@ export const Route = createFileRoute("/ueber-uns")({
 // Alexander Schwarz, Ole Schäfer, Stefan Strifler, Max Kaltmaier.
 const TEAM = [
   {
-    name: "Name folgt",
+    name: "Eberhard Scharpf sen.",
     funktionen: ["Geschäftsführer", "Restaurator"],
     foto: "/fotos/team/scharpf_Senior.jpg",
   },
   {
-    name: "Name folgt",
+    name: "Eberhard Scharpf jun.",
     funktionen: ["Geschäftsführer", "Dipl Ing. (FH)"],
     foto: "/fotos/team/scharpf_Junior.jpg",
   },
   {
-    name: "Name folgt",
+    name: "Alexander Schwarz",
     funktionen: [
       "Betriebsleiter",
       "Fachtechniker Holzbau",
@@ -43,7 +43,7 @@ const TEAM = [
     foto: undefined,
   },
   {
-    name: "Name folgt",
+    name: "Ole Schäfer",
     funktionen: [
       "Projektleiter",
       "Zimmerermeister",
@@ -52,12 +52,12 @@ const TEAM = [
     foto: undefined,
   },
   {
-    name: "Name folgt",
+    name: "Stefan Strifler",
     funktionen: ["Projektleiter", "Zimmerermeister"],
     foto: "/fotos/team/scharpf_stefan_strifler.jpg",
   },
   {
-    name: "Name folgt",
+    name: "Max Kaltmaier",
     funktionen: ["Zimmerermeister", "Restaurator"],
     foto: "/fotos/team/scharpf_Max_Kaltmaier.jpg",
   },
