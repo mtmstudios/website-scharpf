@@ -212,8 +212,9 @@ function UeberUns() {
         title="Wollen Sie Teil unseres Teams werden?"
         ctaLabel="Jetzt bewerben"
         ctaTo="/karriere"
-        tone="mint"
+        tone="wood"
       />
+
     </div>
   );
 }

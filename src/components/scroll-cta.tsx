@@ -11,7 +11,8 @@ import sawIcon from "@/assets/saw-icon.png.asset.json";
 export function ScrollCta({
   heroCtaRef,
   to = "/kontakt",
-  label = "Kostenlose Beratung anfordern",
+  label = "Beratung anfordern",
+
 }: {
   heroCtaRef: React.RefObject<HTMLElement | null>;
   to?: string;
