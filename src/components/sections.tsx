@@ -487,9 +487,11 @@ export function CtaBanner({
           </CtaButton>
         </div>
       </section>
+      {isWood && <div className="h-2 w-full bg-primary" />}
     </>
   );
 }
+
 
 
 /** FAQ-Akkordeon. */
