@@ -8,6 +8,7 @@ import {
 } from "@/components/sections";
 import fassadeHeroAsset from "@/assets/scharpf_fassade_03.jpg.asset.json";
 import vorfertigungAsset from "@/assets/scharpf_vorfertigung.jpg.asset.json";
+import fassade02Asset from "@/assets/scharpf_fassade_02.jpg.asset.json";
 
 export const Route = createFileRoute("/fassade/")({
   head: () => ({
@@ -105,7 +106,7 @@ function Fassade() {
         ]}
         imageSrcs={[
           "/fotos/scharpf_fassade_01.jpg",
-          "/fotos/scharpf_fassade_03.jpg",
+          fassade02Asset.url,
           "/fotos/scharpf_terrasse.jpg",
         ]}
       />
