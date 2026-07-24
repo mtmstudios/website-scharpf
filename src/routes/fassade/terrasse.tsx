@@ -74,6 +74,7 @@ function Terrasse() {
       />
 
       <CtaBanner
+        tone="wood"
         title="Ihr Außenbereich – neu gedacht."
         text="Wir besichtigen Ihr Objekt kostenlos und erstellen Ihnen ein unverbindliches Angebot."
         ctaLabel="Kostenlose Projektberatung Anfordern"

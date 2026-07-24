@@ -109,6 +109,7 @@ function Fassade() {
       />
 
       <CtaBanner
+        tone="wood"
         title="Ihr Außenbereich – neu gedacht."
         text="Fassade, Dämmung oder Terrasse: Wir besichtigen Ihr Objekt kostenlos und erstellen Ihnen ein unverbindliches Angebot."
         ctaLabel="Kostenlose Projektberatung Anfordern"

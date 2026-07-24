@@ -95,6 +95,7 @@ export function ReferenzKategorieSeite({
       ))}
 
       <CtaBanner
+        tone="wood"
         title="Haben Sie Fragen zu einer Referenz?"
         illustrationSrc={illustrationSrc}
       />
