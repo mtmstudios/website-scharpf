@@ -49,7 +49,7 @@ const TEAM = [
       "Zimmerermeister",
       "Staat. Geprägt. Bautechniker",
     ],
-    foto: undefined,
+    foto: "/__l5e/assets-v1/1296445b-3b3a-4ad4-8f69-f5f86fb1b5f2/scharpf_Ole_Schäfer.jpg",
   },
   {
     name: "Stefan Strifler",
