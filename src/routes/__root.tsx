@@ -16,6 +16,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { FloatingCta } from "@/components/floating-cta";
 import { MobileStickyBar } from "@/components/mobile-sticky-bar";
 import { CookieBanner } from "@/components/cookie-banner";
+import { CategoryProvider } from "@/lib/category-context";
+import { FooterCategoryBar } from "@/components/footer-category-bar";
 
 function NotFoundComponent() {
   return (
@@ -148,17 +150,20 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col bg-background">
-        <SiteHeader />
-        <main className="flex-1 pb-16 md:pb-0">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
-        <SiteFooter />
-      </div>
-      <FloatingCta />
-      <MobileStickyBar />
-      <CookieBanner />
+      <CategoryProvider>
+        <div className="flex min-h-screen flex-col bg-background">
+          <SiteHeader />
+          <main className="flex-1 pb-16 md:pb-0">
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </main>
+          <FooterCategoryBar />
+          <SiteFooter />
+        </div>
+        <FloatingCta />
+        <MobileStickyBar />
+        <CookieBanner />
+      </CategoryProvider>
     </QueryClientProvider>
   );
 }
