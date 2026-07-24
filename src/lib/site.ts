@@ -14,7 +14,7 @@ export const CONTACT = {
   hours: "Mo–Fr 7:00–17:00 Uhr",
 } as const;
 
-export const PRIMARY_CTA = "Kostenlose Projektberatung Anfordern";
+export const PRIMARY_CTA = "Kostenlose Beratung Anfordern";
 
 // Haupt-Navigation exakt wie XD (ohne "Startseite")
 export const MAIN_NAV = [
