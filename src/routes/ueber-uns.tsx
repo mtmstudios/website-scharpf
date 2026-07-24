@@ -88,18 +88,36 @@ function UeberUns() {
       {/* Das Unternehmen mit Firmengebäude + Geschichte darunter */}
       <Section className="pt-10 lg:pt-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-              Das Unternehmen
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              E. Scharpf ist ein Familienbetrieb in dritter Generation aus
-              Esslingen am Neckar. Mit viel Erfahrung und klarem Fokus auf
-              hochwertige und innovative Zimmerarbeiten sind wir bekannt für
-              versiertes Handwerk, moderne Fertigung und termingerechte
-              Ausführung. Ob Restaurierung, Holzbau oder Dach – wir planen und
-              bauen Ihr Projekt zuverlässig und nachhaltig.
-            </p>
+          <div className="space-y-10 lg:space-y-14">
+            <div>
+              <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+                Das Unternehmen
+              </h1>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                E. Scharpf ist ein Familienbetrieb in dritter Generation aus
+                Esslingen am Neckar. Mit viel Erfahrung und klarem Fokus auf
+                hochwertige und innovative Zimmerarbeiten sind wir bekannt für
+                versiertes Handwerk, moderne Fertigung und termingerechte
+                Ausführung. Ob Restaurierung, Holzbau oder Dach – wir planen und
+                bauen Ihr Projekt zuverlässig und nachhaltig.
+              </p>
+            </div>
+            <div>
+              <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+                Geschichte
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                Wir sind ein Familienbetrieb, der 1946 von Emil Scharpf ins Leben
+                gerufen wurde. In den ersten Jahrzehnten diente ein Gelände in der
+                Haldenstraße in Oberesslingen als Firmensitz und Lagerplatz. Dieses
+                Gelände lag in einem Mischgebiet und bot schließlich keine
+                Möglichkeit mehr, den Betrieb weiter zu vergrößern. Nachdem Eberhard
+                Scharpf den Betrieb 1985 von seinem Vater übernommen hatte, suchte er
+                nach einem neuen Gelände mit Entwicklungspotential und 1989 zog das
+                Unternehmen in die Fritz-Müller-Straße 115 um, wo es bis heute
+                ansässig ist.
+              </p>
+            </div>
           </div>
           <div>
             <img
@@ -109,23 +127,6 @@ function UeberUns() {
               className="w-full rounded-lg object-cover aspect-[4/3]"
             />
           </div>
-        </div>
-
-        <div className="mt-12 lg:mt-16">
-          <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-            Geschichte
-          </h2>
-          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            Wir sind ein Familienbetrieb, der 1946 von Emil Scharpf ins Leben
-            gerufen wurde. In den ersten Jahrzehnten diente ein Gelände in der
-            Haldenstraße in Oberesslingen als Firmensitz und Lagerplatz. Dieses
-            Gelände lag in einem Mischgebiet und bot schließlich keine
-            Möglichkeit mehr, den Betrieb weiter zu vergrößern. Nachdem Eberhard
-            Scharpf den Betrieb 1985 von seinem Vater übernommen hatte, suchte er
-            nach einem neuen Gelände mit Entwicklungspotential und 1989 zog das
-            Unternehmen in die Fritz-Müller-Straße 115 um, wo es bis heute
-            ansässig ist.
-          </p>
         </div>
       </Section>
 
@@ -183,17 +184,14 @@ function UeberUns() {
         </div>
       </Section>
 
-      {/* Grünes Band: Finden Sie Ihren direkten Ansprechpartner */}
-      <section className="bg-accent text-accent-foreground">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-          <h2 className="max-w-2xl font-display text-3xl font-bold sm:text-4xl">
-            Finden Sie Ihren direkten Ansprechpartner
-          </h2>
-          <div className="mt-8">
-            <CtaButton to="/kontakt">Kontakt</CtaButton>
-          </div>
-        </div>
-      </section>
+      {/* Holzband: Finden Sie Ihren direkten Ansprechpartner */}
+      <CtaBanner
+        title="Finden Sie Ihren direkten Ansprechpartner"
+        ctaLabel="Kontakt"
+        ctaTo="/kontakt"
+        tone="wood"
+        trust={false}
+      />
 
       {/* Wir suchen Zimmerer und Dachdecker (m/w/d) */}
       <Section>
