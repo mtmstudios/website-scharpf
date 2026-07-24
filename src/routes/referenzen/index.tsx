@@ -3,6 +3,7 @@ import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar, CtaBanner } from "@/components/sections";
 import { GOOGLE_BEWERTUNGEN, REFERENZ_KATEGORIEN } from "@/lib/site";
+import zertifikateAsset from "@/assets/scharpf_Zertifikate.jpg.asset.json";
 
 export const Route = createFileRoute("/referenzen/")({
   head: () => ({
@@ -107,14 +108,12 @@ function Referenzen() {
           Qualifikationen im Holzbau: Unsere Zertifikate stehen für versiertes
           Handwerk, moderne Fertigung und termingerechte Ausführung.
         </p>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <PlaceholderImage
-              key={i}
-              note={`Zertifikat / Urkunde ${i + 1}`}
-              ratio="portrait"
-            />
-          ))}
+        <div className="mt-10">
+          <img
+            src={zertifikateAsset.url}
+            alt="Qualifikationen & Zertifikate"
+            className="w-full rounded-lg bg-white object-contain shadow-sm"
+          />
         </div>
       </Section>
 
