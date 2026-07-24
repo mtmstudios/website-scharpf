@@ -24,7 +24,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn(muted && "bg-secondary", "py-20 lg:py-28", className)}
+      className={cn(muted && "bg-secondary", "py-12 lg:py-[4.5rem]", className)}
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">{children}</div>
     </section>
@@ -145,7 +145,7 @@ export function PageHero({
               {eyebrow}
             </p>
           )}
-          <h1 className="font-display text-[1.8225rem] font-bold leading-[1.1] text-foreground sm:text-[2.43rem] lg:text-[3.0375rem]">
+          <h1 className="font-display text-[1.64025rem] font-bold leading-[1.1] text-foreground sm:text-[2.187rem] lg:text-[2.73375rem]">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
