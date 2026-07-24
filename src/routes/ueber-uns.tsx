@@ -91,7 +91,7 @@ function UeberUns() {
           <div className="space-y-10 lg:space-y-14">
             <div>
               <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-                Das Unternehmen
+                Unser Unternehmen
               </h1>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">
                 E. Scharpf ist ein Familienbetrieb in dritter Generation aus
