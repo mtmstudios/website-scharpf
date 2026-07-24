@@ -217,6 +217,8 @@ function UeberUns() {
         ctaLabel="Jetzt bewerben"
         ctaTo="/karriere"
         tone="wood"
+        woodFlip
+
       />
 
     </div>
