@@ -95,7 +95,7 @@ function Index() {
         <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
         {/* Inhalt */}
         <div className="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
-          <h1 className="max-w-4xl font-display text-[1.1245rem] font-bold leading-[1.1] text-white sm:text-[1.4994rem] lg:text-[1.8742rem]">
+          <h1 className="max-w-4xl font-display text-[1.0121rem] font-bold leading-[1.1] text-white sm:text-[1.3495rem] lg:text-[1.6868rem]">
             Benötigen Sie eine Restaurierung, Holzbauleistungen oder
             Dachsanierung?
           </h1>
