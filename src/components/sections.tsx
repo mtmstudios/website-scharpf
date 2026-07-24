@@ -298,7 +298,7 @@ export function ValueBand({
         style={{
           backgroundImage: `url(${woodTexture})`,
           backgroundSize: "cover",
-          backgroundPosition: "0% center",
+          backgroundPosition: "0% 85%",
           backgroundRepeat: "no-repeat",
         }}
       />
@@ -426,6 +426,7 @@ export function CtaBanner({
   tone = "orange",
   trust = true,
   illustrationSrc,
+  woodFlip = false,
 }: {
   title: string;
   text?: string;
@@ -434,6 +435,7 @@ export function CtaBanner({
   tone?: "orange" | "mint" | "wood";
   trust?: boolean;
   illustrationSrc?: string;
+  woodFlip?: boolean;
 }) {
   const bg =
     tone === "orange" ? "bg-primary" : tone === "mint" ? "bg-accent" : "";
@@ -456,8 +458,9 @@ export function CtaBanner({
               style={{
                 backgroundImage: `url(${woodTexture})`,
                 backgroundSize: "cover",
-                backgroundPosition: "0% center",
+                backgroundPosition: woodFlip ? "100% 15%" : "0% 85%",
                 backgroundRepeat: "no-repeat",
+                transform: woodFlip ? "scaleX(-1)" : undefined,
               }}
             />
             <div
