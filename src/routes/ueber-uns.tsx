@@ -85,7 +85,7 @@ function UeberUns() {
     <div>
       <CategoryBar breadcrumbs={[{ label: "Über uns" }]} color="#A68B7A" />
 
-      {/* Das Unternehmen + Geschichte (versetzt zweispaltig wie XD) */}
+      {/* Das Unternehmen mit Firmengebäude + Geschichte darunter */}
       <Section className="pt-10 lg:pt-14">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -102,21 +102,30 @@ function UeberUns() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-              Geschichte
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Wir sind ein Familienbetrieb, der 1946 von Emil Scharpf ins Leben
-              gerufen wurde. In den ersten Jahrzehnten diente ein Gelände in der
-              Haldenstraße in Oberesslingen als Firmensitz und Lagerplatz. Dieses
-              Gelände lag in einem Mischgebiet und bot schließlich keine
-              Möglichkeit mehr, den Betrieb weiter zu vergrößern. Nachdem Eberhard
-              Scharpf den Betrieb 1985 von seinem Vater übernommen hatte, suchte er
-              nach einem neuen Gelände mit Entwicklungspotential und 1989 zog das
-              Unternehmen in die Fritz-Müller-Straße 115 um, wo es bis heute
-              ansässig ist.
-            </p>
+            <img
+              src={firmengebaeudeAsset.url}
+              alt="Firmengebäude der E. Scharpf Holzbau GmbH"
+              loading="lazy"
+              className="w-full rounded-lg object-cover aspect-[4/3]"
+            />
           </div>
+        </div>
+
+        <div className="mt-12 lg:mt-16">
+          <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+            Geschichte
+          </h2>
+          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+            Wir sind ein Familienbetrieb, der 1946 von Emil Scharpf ins Leben
+            gerufen wurde. In den ersten Jahrzehnten diente ein Gelände in der
+            Haldenstraße in Oberesslingen als Firmensitz und Lagerplatz. Dieses
+            Gelände lag in einem Mischgebiet und bot schließlich keine
+            Möglichkeit mehr, den Betrieb weiter zu vergrößern. Nachdem Eberhard
+            Scharpf den Betrieb 1985 von seinem Vater übernommen hatte, suchte er
+            nach einem neuen Gelände mit Entwicklungspotential und 1989 zog das
+            Unternehmen in die Fritz-Müller-Straße 115 um, wo es bis heute
+            ansässig ist.
+          </p>
         </div>
       </Section>
 
