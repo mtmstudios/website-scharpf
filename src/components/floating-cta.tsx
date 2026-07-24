@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { PRIMARY_CTA, SOCIAL_LINKS } from "@/lib/site";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 /**
  * Rechter Bildschirmrand, ab Tablet sichtbar – auf dem Smartphone übernimmt
@@ -57,9 +57,9 @@ export function FloatingCta() {
       {/* Primäre CTA – horizontal lesbarer Pill-Button am Rand */}
       <Link
         to="/kontakt"
-        className="rounded-l-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90"
+        className="rounded-l-lg bg-primary px-3 py-2.5 text-xs font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90"
       >
-        {PRIMARY_CTA}
+        Beratung anfordern
       </Link>
 
       {/* Social-Icon-Leiste – horizontal */}
