@@ -89,8 +89,8 @@ function Karriere() {
 
         <div className="mt-12">
           <PlaceholderImage
-            note="Zimmerer von E. Scharpf bei der Vorfertigung"
-            src="/fotos/scharpf_vorfertigung_01.jpg"
+            note="Team von E. Scharpf"
+            src={gruppenbildAsset.url}
             ratio="wide"
           />
         </div>
