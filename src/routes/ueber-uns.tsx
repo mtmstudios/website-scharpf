@@ -40,7 +40,7 @@ const TEAM = [
       "Energieeffizienz - Experte",
       "Zimmerermeister",
     ],
-    foto: "/__l5e/assets-v1/9af5cb90-6df5-4642-ac90-2f4bd73c2996/scharpf_Alexander_Schwarz.jpg",
+    foto: "/__l5e/assets-v1/acb8b87e-3e92-4b1e-810e-07547f57fb00/scharpf_Alexander_Schwarz-2.jpg",
   },
   {
     name: "Ole Schäfer",
