@@ -106,7 +106,7 @@ function Fassade() {
         ]}
         imageSrcs={[
           "/fotos/scharpf_fassade_01.jpg",
-          "/fotos/scharpf_fassade_03.jpg",
+          fassade02Asset.url,
           "/fotos/scharpf_terrasse.jpg",
         ]}
       />
