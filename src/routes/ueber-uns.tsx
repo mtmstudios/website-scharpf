@@ -124,7 +124,7 @@ function UeberUns() {
               src={firmengebaeudeAsset.url}
               alt="Firmengebäude der E. Scharpf Holzbau GmbH"
               loading="lazy"
-              className="h-full w-[125%] max-w-none object-cover object-left"
+              className="h-full w-[108%] max-w-none object-cover object-left"
             />
           </div>
 
