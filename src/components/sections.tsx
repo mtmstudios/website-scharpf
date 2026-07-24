@@ -294,8 +294,13 @@ export function ValueBand({
       {/* Rustikaler Holzhintergrund */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${woodTexture})` }}
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${woodTexture})`,
+          backgroundSize: "200% auto",
+          backgroundPosition: "left center",
+          backgroundRepeat: "no-repeat",
+        }}
       />
       {/* Dezente Vignette für etwas Tiefe – hell gehalten, damit das
           Fichtenholz hell bleibt und der dunkle Text gut lesbar ist. */}
