@@ -229,18 +229,23 @@ export function LeistungenHaus() {
                     type="button"
                     onClick={() => setActive(isActive ? null : l.to)}
                     aria-expanded={isActive}
-                    className="flex w-full cursor-pointer items-center gap-4 px-5 py-4 text-left"
+                    className="flex w-full cursor-pointer items-start gap-4 px-5 py-4 text-left"
                   >
                     <span
                       className={cn(
-                        "font-mono text-sm font-bold transition-colors",
+                        "mt-1 font-mono text-sm font-bold transition-colors",
                         isActive ? "text-primary" : "text-muted-foreground",
                       )}
                     >
                       {l.nr}
                     </span>
-                    <span className="font-display flex-1 text-lg font-bold text-card-foreground">
-                      {l.title}
+                    <span className="flex-1">
+                      <span className="font-display block text-lg font-bold text-card-foreground">
+                        {l.title}
+                      </span>
+                      <span className="mt-1 block text-sm text-muted-foreground">
+                        {l.bullets.join(" / ")}
+                      </span>
                     </span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +258,7 @@ export function LeistungenHaus() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       className={cn(
-                        "shrink-0 text-primary transition-transform duration-300",
+                        "mt-1.5 shrink-0 text-primary transition-transform duration-300",
                         isActive && "rotate-180",
                       )}
                     >
@@ -275,16 +280,6 @@ export function LeistungenHaus() {
                         <p className="text-sm leading-relaxed text-muted-foreground">
                           {l.teaser}
                         </p>
-                        <ul className="mt-3 flex flex-wrap gap-2">
-                          {l.bullets.map((b) => (
-                            <li
-                              key={b}
-                              className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-                            >
-                              {b}
-                            </li>
-                          ))}
-                        </ul>
                         <Link
                           to={l.to}
                           className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
