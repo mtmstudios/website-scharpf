@@ -50,10 +50,10 @@ export function CategoryBar({
   const items = breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : title ? [{ label: title }] : [];
   useRegisterCategory({ breadcrumbs, title, color });
   return (
-    <div className="w-full" style={{ backgroundColor: color }}>
+    <div className="w-full bg-background">
       <div className="mx-auto flex min-h-12 max-w-7xl items-center px-5 lg:px-8">
         <nav aria-label="Breadcrumb">
-          <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-white/90 sm:text-base">
+          <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-foreground sm:text-base">
             {items.map((item, index) => {
               const isLast = index === items.length - 1;
               return (
@@ -70,7 +70,7 @@ export function CategoryBar({
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       aria-hidden="true"
-                      className="opacity-80"
+                      className="opacity-70"
                     >
                       <path d="m9 18 6-6-6-6" />
                     </svg>
@@ -78,7 +78,7 @@ export function CategoryBar({
                   {isLast || !item.to ? (
                     <span
                       className={cn(
-                        "font-display font-bold tracking-tight text-white",
+                        "font-display font-bold tracking-tight text-foreground",
                         isLast && "text-base sm:text-lg"
                       )}
                     >
@@ -87,7 +87,7 @@ export function CategoryBar({
                   ) : (
                     <Link
                       to={item.to}
-                      className="font-display font-bold tracking-tight text-white transition-colors hover:underline"
+                      className="font-display font-bold tracking-tight text-foreground transition-colors hover:underline"
                     >
                       {item.label}
                     </Link>
@@ -145,7 +145,7 @@ export function PageHero({
               {eyebrow}
             </p>
           )}
-          <h1 className="font-display text-[1.0121rem] font-bold leading-[1.1] text-foreground sm:text-[1.3495rem] lg:text-[1.6868rem]">
+          <h1 className="font-display text-[0.9109rem] font-bold leading-[1.1] text-foreground sm:text-[1.2146rem] lg:text-[1.5181rem]">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -324,7 +324,7 @@ export function ValueBand({
         ))}
       </div>
 
-      <div className="relative h-2 w-full bg-primary" />
+      <div className="relative h-1 w-full bg-primary" />
     </section>
   );
 }
