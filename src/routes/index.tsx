@@ -95,7 +95,7 @@ function Index() {
         <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
         {/* Inhalt */}
         <div className="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
-          <h1 className="max-w-4xl font-display text-[2.025rem] font-bold leading-[1.1] text-white sm:text-[2.7rem] lg:text-[3.375rem]">
+          <h1 className="max-w-4xl font-display text-[1.8225rem] font-bold leading-[1.1] text-white sm:text-[2.43rem] lg:text-[3.0375rem]">
             Benötigen Sie eine Restaurierung, Holzbauleistungen oder
             Dachsanierung?
           </h1>
@@ -104,7 +104,7 @@ function Index() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <div ref={heroCtaRef}>
-              <CtaButton>Kostenlose Projektberatung Anfordern</CtaButton>
+              <CtaButton>Kostenlose Beratung Anfordern</CtaButton>
             </div>
             <Link
               to="/ratgeber"

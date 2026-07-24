@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useRegisterCategory } from "@/lib/category-context";
 
 export function Section({
   children,
@@ -47,6 +48,7 @@ export function CategoryBar({
   color: string;
 }) {
   const items = breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : title ? [{ label: title }] : [];
+  useRegisterCategory({ breadcrumbs, title, color });
   return (
     <div className="w-full" style={{ backgroundColor: color }}>
       <div className="mx-auto flex min-h-12 max-w-7xl items-center px-5 lg:px-8">
@@ -143,7 +145,7 @@ export function PageHero({
               {eyebrow}
             </p>
           )}
-          <h1 className="font-display text-[2.025rem] font-bold leading-[1.1] text-foreground sm:text-[2.7rem] lg:text-[3.375rem]">
+          <h1 className="font-display text-[1.8225rem] font-bold leading-[1.1] text-foreground sm:text-[2.43rem] lg:text-[3.0375rem]">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">

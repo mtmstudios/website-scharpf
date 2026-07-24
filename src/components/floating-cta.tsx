@@ -51,19 +51,19 @@ function Icon({ name }: { name: string }) {
 
 export function FloatingCta() {
   return (
-    // Eine gemeinsame, vertikal zentrierte Spalte am rechten Rand –
-    // CTA und Social-Icons können sich so nie überlappen.
-    <div className="fixed right-0 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-5 md:flex">
-      {/* Primäre CTA – vertikaler Button */}
+    // Rechter Bildschirmrand, vertikal zentriert – horizontal lesbarer Pill-Button
+    // mit darunter angeordneten Social-Icons in einer Reihe.
+    <div className="fixed right-0 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-4 md:flex">
+      {/* Primäre CTA – horizontal lesbarer Pill-Button am Rand */}
       <Link
         to="/kontakt"
-        className="rounded-l-lg bg-primary px-2.5 py-5 text-sm font-semibold text-primary-foreground shadow-lg transition-colors [writing-mode:vertical-rl] hover:bg-primary/90"
+        className="rounded-l-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90"
       >
         {PRIMARY_CTA}
       </Link>
 
-      {/* Social-Icon-Leiste darunter */}
-      <div className="flex flex-col items-center gap-4 pr-3">
+      {/* Social-Icon-Leiste – horizontal */}
+      <div className="flex flex-row items-center gap-4 pr-3">
         {SOCIAL_LINKS.map((s) => (
           <a
             key={s.label}
