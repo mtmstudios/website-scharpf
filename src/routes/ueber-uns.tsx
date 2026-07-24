@@ -126,11 +126,12 @@ function UeberUns() {
 
       {/* Das Team der E. Scharpf Holzbau GmbH */}
       <Section muted>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <PlaceholderImage
-            note="Firmengebäude von E. Scharpf in Esslingen"
-            src="/fotos/scharpf_firmengebaeude.jpg"
-            ratio="landscape"
+        <div className="space-y-10">
+          <img
+            src="/__l5e/assets-v1/9e49800e-2c10-402a-bb76-f9dc8e2be5e2/scharpf_gruppenbild-2.jpg"
+            alt="Das Team der E. Scharpf Holzbau GmbH"
+            loading="lazy"
+            className="w-full rounded-lg object-cover aspect-[16/9]"
           />
           <div>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
