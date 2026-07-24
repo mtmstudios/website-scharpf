@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
+import gruppenbildAsset from "@/assets/scharpf_gruppenbild.jpg.asset.json";
 
 export const Route = createFileRoute("/karriere/")({
   head: () => ({
