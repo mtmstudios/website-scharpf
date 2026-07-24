@@ -42,35 +42,26 @@ export function ScrollCta({
       to={to}
       aria-label={label}
       className={cn(
-        "fixed right-5 bottom-32 z-50 flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-xl shadow-black/20 transition-all duration-500 ease-out md:bottom-8 md:right-8",
+        "fixed right-5 bottom-32 z-50 flex items-center gap-2 rounded-full bg-primary py-1.5 pl-1.5 pr-5 text-primary-foreground shadow-xl shadow-black/20 transition-all duration-500 ease-out md:bottom-8 md:right-8",
         visible
           ? "opacity-100 scale-100 pointer-events-auto"
-          : "opacity-0 scale-90 pointer-events-none"
+          : "opacity-0 scale-90 pointer-events-none",
+        hovered && "scale-105"
       )}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <span
-        className={cn(
-          "flex h-12 w-12 items-center justify-center rounded-full bg-primary transition-all duration-500 ease-out md:h-14 md:w-14",
-          hovered && "scale-105"
-        )}
-      >
+      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary md:h-11 md:w-11">
         <img
           src={sawIcon.url}
           alt="Säge"
-          className="h-7 w-7 md:h-8 md:w-8 invert"
+          className="h-6 w-6 md:h-7 md:w-7 invert"
         />
       </span>
-      <span
-        className={cn(
-          "max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold transition-all duration-500 ease-out pr-0",
-          hovered && "max-w-[12rem] pr-5"
-        )}
-      >
+      <span className="whitespace-nowrap text-sm font-semibold">
         {label}
       </span>
-
     </Link>
+
   );
 }
