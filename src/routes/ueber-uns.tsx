@@ -59,7 +59,7 @@ const TEAM = [
   {
     name: "Max Kaltmaier",
     funktionen: ["Zimmerermeister", "Restaurator"],
-    foto: "/fotos/team/scharpf_Max_Kaltmaier.jpg",
+    foto: "/__l5e/assets-v1/aa079ec6-ca9d-42a9-97ee-e5e4a5e1ff65/scharpf_Max_Kaltmaier.jpg",
   },
   {
     name: "Name folgt",
