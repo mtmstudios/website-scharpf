@@ -25,12 +25,12 @@ const TEAM = [
   {
     name: "Name folgt",
     funktionen: ["Geschäftsführer", "Restaurator"],
-    foto: "/fotos/scharpf_Senior.jpg",
+    foto: "/fotos/team/scharpf_Senior.jpg",
   },
   {
     name: "Name folgt",
     funktionen: ["Geschäftsführer", "Dipl Ing. (FH)"],
-    foto: "/fotos/scharpf_Junior.jpg",
+    foto: "/fotos/team/scharpf_Junior.jpg",
   },
   {
     name: "Name folgt",
@@ -54,12 +54,12 @@ const TEAM = [
   {
     name: "Name folgt",
     funktionen: ["Projektleiter", "Zimmerermeister"],
-    foto: "/fotos/scharpf_stefan_strifler.jpg",
+    foto: "/fotos/team/scharpf_stefan_strifler.jpg",
   },
   {
     name: "Name folgt",
     funktionen: ["Zimmerermeister", "Restaurator"],
-    foto: "/fotos/scharpf_Max_Kaltmaier.jpg",
+    foto: "/fotos/team/scharpf_Max_Kaltmaier.jpg",
   },
   {
     name: "Name folgt",
