@@ -33,7 +33,7 @@ function Fassade() {
         lead="Von der Holzfassade bis zur Terrasse – E. Scharpf gestaltet Ihre Außenbereiche ökologisch, langlebig und mit handwerklicher Präzision."
         ctaLabel="Kostenlose Beratung anfragen"
         imageNote="Holzfassade in warmer Holzoptik"
-        imageSrc="/fotos/scharpf_fassade.jpg"
+        imageSrc={fassadeHeroAsset.url}
         breadcrumbs={[
           { label: "Leistungen", to: "/leistungen" },
           { label: "Fassade & Außenbereiche" },
