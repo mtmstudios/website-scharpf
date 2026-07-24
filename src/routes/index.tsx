@@ -124,7 +124,7 @@ function Index() {
             <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
               Meisterbetrieb aus Esslingen seit über 80 Jahren
             </h2>
-            <span className="mt-4 block h-1 w-24 rounded bg-[#e2be96]" />
+            <span className="mt-4 block h-1 w-24 rounded bg-primary" />
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Wir sind ein Familienbetrieb in der dritten Generation. Mit viel
               Erfahrung und klarem Fokus auf hochwertige und innovative

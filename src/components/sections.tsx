@@ -487,7 +487,7 @@ export function CtaBanner({
           </CtaButton>
         </div>
       </section>
-      {isWood && <div className="h-2 w-full bg-primary" />}
+      {isWood && <div className="h-1 w-full bg-primary" />}
     </>
   );
 }
