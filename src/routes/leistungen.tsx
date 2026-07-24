@@ -99,7 +99,7 @@ function Leistungen() {
       {/* Haben sie Fragen zu unseren Leistungen */}
       <Section muted>
         <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Haben sie Fragen zu unseren Leistungen
+          Haben sie Fragen zu unseren Leistungen?
         </h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {FRAGEN.map((f) => (
