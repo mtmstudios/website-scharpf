@@ -105,7 +105,7 @@ function UeberUns() {
               bauen Ihr Projekt zuverlässig und nachhaltig.
             </p>
           </div>
-          <div className="lg:mt-32">
+          <div>
             <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
               Geschichte
             </h2>
