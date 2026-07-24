@@ -64,7 +64,7 @@ function Karriere() {
       {/* Deine Wunschstelle bei uns */}
       <Section className="pt-10 lg:pt-14">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Deine Wunschstelle bei uns.
+          Werden Sie Teil unseres Teams
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           Ob Dachdecker, Zimmerer oder Bauhelfer: Wir suchen Menschen, die mit
