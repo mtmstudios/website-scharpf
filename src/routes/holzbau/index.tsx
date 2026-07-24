@@ -110,7 +110,7 @@ function Holzbau() {
         ]}
       />
 
-      <CtaBanner illustrationSrc="/illustrationen/dachstuhl-weiss.png" title="Wollen Sie ein vergleichbares Projekt anfragen?" />
+      <CtaBanner tone="wood" illustrationSrc="/illustrationen/dachstuhl-weiss.png" title="Wollen Sie ein vergleichbares Projekt anfragen?" />
     </div>
   );
 }
