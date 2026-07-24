@@ -78,7 +78,7 @@ function Leistungen() {
       <CategoryBar breadcrumbs={[{ label: "Leistungen" }]} color="#2D635C" />
 
       {/* Leistungen auf einen Blick – 5 Kategorie-Kacheln */}
-      <Section className="pt-10 lg:pt-14">
+      <Section className="pt-6 lg:pt-6">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {KATEGORIEN.map((k) => (
             <Link key={k.to} to={k.to} className="group flex flex-col">

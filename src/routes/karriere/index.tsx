@@ -62,7 +62,7 @@ function Karriere() {
       <CategoryBar breadcrumbs={[{ label: "Karriere" }]} color="#E6DCC4" />
 
       {/* Deine Wunschstelle bei uns */}
-      <Section className="pt-10 lg:pt-14">
+      <Section className="pt-6 lg:pt-6">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Werden Sie Teil unseres Teams
         </h1>

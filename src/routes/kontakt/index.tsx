@@ -68,7 +68,7 @@ function Kontakt() {
       <CategoryBar breadcrumbs={[{ label: "Kontakt" }]} color="#DD5A1A" />
 
       {/* Hero + Kontaktdaten */}
-      <Section className="pt-10 lg:pt-14">
+      <Section className="pt-6 lg:pt-6">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Starten wir Ihr Projekt.
         </h1>
