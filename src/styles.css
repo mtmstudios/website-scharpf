@@ -41,17 +41,17 @@
   --text-lg--line-height: 1.65;
   --text-xl: 1.0625rem;
   --text-xl--line-height: 1.65;
-  --text-2xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
+  --text-2xl: clamp(1.449rem, 1.1178rem + 1.4076vw, 2.1735rem);
   --text-2xl--line-height: 1.2;
-  --text-3xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
+  --text-3xl: clamp(1.449rem, 1.1178rem + 1.4076vw, 2.1735rem);
   --text-3xl--line-height: 1.2;
-  --text-4xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
+  --text-4xl: clamp(1.449rem, 1.1178rem + 1.4076vw, 2.1735rem);
   --text-4xl--line-height: 1.2;
-  --text-5xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
+  --text-5xl: clamp(1.449rem, 1.1178rem + 1.4076vw, 2.1735rem);
   --text-5xl--line-height: 1.2;
-  --text-6xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
+  --text-6xl: clamp(1.449rem, 1.1178rem + 1.4076vw, 2.1735rem);
   --text-6xl--line-height: 1.2;
-  --text-7xl: clamp(1.61rem, 1.242rem + 1.564vw, 2.415rem);
+  --text-7xl: clamp(1.449rem, 1.1178rem + 1.4076vw, 2.1735rem);
   --text-7xl--line-height: 1.2;
 
   --radius-sm: calc(var(--radius) - 4px);
