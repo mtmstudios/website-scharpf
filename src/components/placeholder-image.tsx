@@ -32,7 +32,7 @@ export function PlaceholderImage({
         alt={note}
         loading="lazy"
         className={cn(
-          "h-full w-full rounded-lg object-cover",
+          "w-full rounded-lg object-cover",
           ratioClass,
           className,
         )}
