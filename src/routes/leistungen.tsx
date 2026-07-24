@@ -137,14 +137,12 @@ function Leistungen() {
       </Section>
 
       {/* Sprechen Sie uns an */}
-      <Section muted>
-        <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Sprechen Sie uns an, wir helfen Ihnen gerne weiter!
-        </h2>
-        <div className="mt-8">
-          <CtaButton to="/kontakt">Kontakt</CtaButton>
-        </div>
-      </Section>
+      <CtaBanner
+        tone="wood"
+        title="Sprechen Sie uns an, wir helfen Ihnen gerne weiter!"
+        ctaLabel="Kontakt"
+        ctaTo="/kontakt"
+      />
     </div>
   );
 }
