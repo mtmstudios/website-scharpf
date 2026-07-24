@@ -10,7 +10,7 @@ export function FooterCategoryBar() {
   const { value } = useCategory();
   if (!value) return null;
   return (
-    <div className="relative w-full" style={{ backgroundColor: value.color }}>
+    <div className="relative w-full border-t border-border bg-background">
       <CategoryBar
         breadcrumbs={value.breadcrumbs}
         title={value.title}
@@ -22,7 +22,7 @@ export function FooterCategoryBar() {
           typeof window !== "undefined" &&
           window.scrollTo({ top: 0, behavior: "smooth" })
         }
-        className="absolute inset-y-0 right-0 flex items-center gap-2 px-5 text-sm font-semibold text-white transition-opacity hover:opacity-80 lg:px-8"
+        className="absolute inset-y-0 right-0 flex items-center gap-2 px-5 text-sm font-semibold text-foreground transition-opacity hover:opacity-70 lg:px-8"
         aria-label="Nach oben"
       >
         <span className="hidden sm:inline">Nach oben</span>
