@@ -298,7 +298,7 @@ export function ValueBand({
         style={{
           backgroundImage: `url(${woodTexture})`,
           backgroundSize: "cover",
-          backgroundPosition: "0% center",
+          backgroundPosition: "0% 85%",
           backgroundRepeat: "no-repeat",
         }}
       />
