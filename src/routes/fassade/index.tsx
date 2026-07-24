@@ -6,6 +6,7 @@ import {
   ReferenzTeaser,
   CtaBanner,
 } from "@/components/sections";
+import fassadeHeroAsset from "@/assets/scharpf_fassade_03.jpg.asset.json";
 
 export const Route = createFileRoute("/fassade/")({
   head: () => ({
