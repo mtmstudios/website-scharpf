@@ -72,8 +72,8 @@ function Fassade() {
             "WDVS Wärmedämm-Verbundsysteme",
             "KFW-geförderte Außenwanddämmung",
           ]}
-          imageNote="Gedämmte Fassade von E. Scharpf"
-          imageSrc="/fotos/scharpf_fassade_02.jpg"
+          imageNote="Vorfertigung einer gedämmten Holzkonstruktion"
+          imageSrc={vorfertigungAsset.url}
         />
       </Section>
 
