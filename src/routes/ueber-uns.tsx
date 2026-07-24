@@ -119,12 +119,12 @@ function UeberUns() {
               </p>
             </div>
           </div>
-          <div className="overflow-hidden rounded-lg">
+          <div className="overflow-hidden rounded-lg aspect-[4/3]">
             <img
               src={firmengebaeudeAsset.url}
               alt="Firmengebäude der E. Scharpf Holzbau GmbH"
               loading="lazy"
-              className="h-auto w-full object-contain"
+              className="h-full w-[125%] max-w-none object-cover object-left"
             />
           </div>
 
