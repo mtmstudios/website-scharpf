@@ -180,38 +180,40 @@ function Index() {
       <ValueBand values={VALUES} />
 
       {/* Kundenstimmen – Zitate wörtlich aus dem XD */}
-      <Section muted>
-        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Kundenstimmen
-        </h2>
-        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Was unsere Kunden über die Zusammenarbeit mit E. Scharpf sagen.
-        </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {KUNDENSTIMMEN.map((k, i) => (
-            <figure
-              key={i}
-              className="flex flex-col rounded-2xl border border-border bg-card p-8"
-            >
-              <Stars />
-              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
-                {k.zitat}
-              </blockquote>
-              <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
-                {k.quelle}
-              </figcaption>
-            </figure>
-          ))}
+      <section
+        className="relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem]"
+        style={{
+          backgroundImage: `url(${fachwerkhausAsset.url})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left center",
+          backgroundSize: "auto 70%",
+        }}
+      >
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+            Kundenstimmen
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            Was unsere Kunden über die Zusammenarbeit mit E. Scharpf sagen.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {KUNDENSTIMMEN.map((k, i) => (
+              <figure
+                key={i}
+                className="flex flex-col rounded-2xl border border-border bg-card p-8"
+              >
+                <Stars />
+                <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
+                  {k.zitat}
+                </blockquote>
+                <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
+                  {k.quelle}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
-        <div className="mt-16 -mx-4 h-64 overflow-hidden sm:-mx-6 sm:h-80 lg:-mx-8 lg:h-96">
-          <img
-            src={fachwerkhausAsset.url}
-            alt="Illustration Fachwerkhaus"
-            loading="lazy"
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
-      </Section>
+      </section>
 
       <ScrollCta heroCtaRef={heroCtaRef} />
     </div>
