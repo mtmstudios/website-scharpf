@@ -8,6 +8,7 @@ import { LeistungenHaus } from "@/components/leistungen-haus";
 import { GOOGLE_BEWERTUNGEN } from "@/lib/site";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import restaurierungImage from "@/assets/scharpf_restaurierung_12.jpg.asset.json";
+import fachwerkhausAsset from "@/assets/fachwerkhaus.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -201,6 +202,14 @@ function Index() {
               </figcaption>
             </figure>
           ))}
+        </div>
+        <div className="mt-16 -mx-4 h-64 overflow-hidden sm:-mx-6 sm:h-80 lg:-mx-8 lg:h-96">
+          <img
+            src={fachwerkhausAsset.url}
+            alt="Illustration Fachwerkhaus"
+            loading="lazy"
+            className="h-full w-full object-cover object-center"
+          />
         </div>
       </Section>
 
