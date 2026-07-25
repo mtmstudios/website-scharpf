@@ -104,7 +104,7 @@ function Leistungen() {
           backgroundImage: `url(${dachstuhlAsset.url})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "left center",
-          backgroundSize: "auto 330%",
+          backgroundSize: "auto 165%",
         }}
       >
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
