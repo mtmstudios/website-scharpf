@@ -4,6 +4,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar, CtaBanner } from "@/components/sections";
 import { GOOGLE_BEWERTUNGEN, REFERENZ_KATEGORIEN } from "@/lib/site";
 import zertifikateAsset from "@/assets/scharpf_Zertifikate.jpg.asset.json";
+import carportAsset from "@/assets/carport-line.png.asset.json";
 
 export const Route = createFileRoute("/referenzen/")({
   head: () => ({
