@@ -98,22 +98,33 @@ function Leistungen() {
       </Section>
 
       {/* Haben sie Fragen zu unseren Leistungen */}
-      <Section muted>
-        <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Haben sie Fragen zu unseren Leistungen?
-        </h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {FRAGEN.map((f) => (
-            <Link
-              key={f.q}
-              to={f.to}
-              className="rounded-xl border border-border bg-card px-5 py-4 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
-            >
-              {f.q}
-            </Link>
-          ))}
+      <section
+        className="relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem]"
+        style={{
+          backgroundImage: `url(${dachstuhlAsset.url})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left center",
+          backgroundSize: "auto 330%",
+        }}
+      >
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+          <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
+            Haben sie Fragen zu unseren Leistungen?
+          </h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {FRAGEN.map((f) => (
+              <Link
+                key={f.q}
+                to={f.to}
+                className="rounded-xl border border-border bg-card px-5 py-4 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              >
+                {f.q}
+              </Link>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
+
 
       {/* Referenzen */}
       <Section>
