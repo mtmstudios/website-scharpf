@@ -115,7 +115,7 @@ function Karriere() {
           <p>
             Wir bieten dir abwechslungsreiche Aufgaben im Neubau, in der
             Sanierung und besonders in der Restaurierung historischer Gebäude.
-            Bei uns sicherst du den Erhalt traditioneller Bausubstanz und setzt
+            Bei uns sicherst Du den Erhalt traditioneller Bausubstanz und setzt
             zugleich modernste Technik für neue Bauprojekte ein. Dabei
             arbeitest du mit ökologisch unbedenklichen Materialien, unterstützt
             von einem starken Team, das Qualität und Präzision großschreibt.
