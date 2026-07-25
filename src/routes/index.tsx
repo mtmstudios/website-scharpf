@@ -203,6 +203,14 @@ function Index() {
             </figure>
           ))}
         </div>
+        <div className="mt-16 -mx-4 h-64 overflow-hidden sm:-mx-6 sm:h-80 lg:-mx-8 lg:h-96">
+          <img
+            src={fachwerkhausAsset.url}
+            alt="Illustration Fachwerkhaus"
+            loading="lazy"
+            className="h-full w-full object-cover object-center"
+          />
+        </div>
       </Section>
 
       <ScrollCta heroCtaRef={heroCtaRef} />
