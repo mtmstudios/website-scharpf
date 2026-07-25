@@ -186,7 +186,7 @@ function Index() {
           backgroundImage: `url(${fachwerkhausAsset.url})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "left center",
-          backgroundSize: "auto 127%",
+          backgroundSize: "auto 254%",
         }}
       >
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
