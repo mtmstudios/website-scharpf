@@ -214,12 +214,11 @@ function UeberUns() {
       </Section>
 
       <CtaBanner
-        title="Wollen Sie Teil unseres Teams werden?"
+        title="Willst Du Teil unseres Teams werden?"
         ctaLabel="Jetzt bewerben"
         ctaTo="/karriere"
         tone="wood"
         woodFlip
-
       />
 
     </div>
