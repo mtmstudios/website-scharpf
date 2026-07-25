@@ -4,6 +4,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar, CtaBanner } from "@/components/sections";
 import { GOOGLE_BEWERTUNGEN, REFERENZ_KATEGORIEN } from "@/lib/site";
 import zertifikateAsset from "@/assets/scharpf_Zertifikate.jpg.asset.json";
+import carportAsset from "@/assets/carport-line.png.asset.json";
 
 export const Route = createFileRoute("/referenzen/")({
   head: () => ({
@@ -76,27 +77,37 @@ function Referenzen() {
       </Section>
 
       {/* Kennzahlen + Google-Bewertungen */}
-      <Section muted>
-        <h2 className="max-w-3xl font-display text-3xl font-bold text-foreground sm:text-4xl">
-          120+ Projekte im Raum Esslingen, 4,8 Kundenzufriedenheit
-        </h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {GOOGLE_BEWERTUNGEN.map((b) => (
-            <figure
-              key={b.name}
-              className="flex flex-col rounded-2xl border border-border bg-card p-8"
-            >
-              <Stars />
-              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
-                {b.zitat}
-              </blockquote>
-              <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
-                {b.name}
-              </figcaption>
-            </figure>
-          ))}
+      <section
+        className="relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem]"
+        style={{
+          backgroundImage: `url(${carportAsset.url})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left top",
+          backgroundSize: "auto 126.225%",
+        }}
+      >
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+          <h2 className="max-w-3xl font-display text-3xl font-bold text-foreground sm:text-4xl">
+            120+ Projekte im Raum Esslingen, 4,8 Kundenzufriedenheit
+          </h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {GOOGLE_BEWERTUNGEN.map((b) => (
+              <figure
+                key={b.name}
+                className="flex flex-col rounded-2xl border border-border bg-card p-8"
+              >
+                <Stars />
+                <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
+                  {b.zitat}
+                </blockquote>
+                <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
+                  {b.name}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Qualifikationen & Zertifikate */}
       <Section>
