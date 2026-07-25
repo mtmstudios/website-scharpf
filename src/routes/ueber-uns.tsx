@@ -142,7 +142,7 @@ function UeberUns() {
           />
           <div>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              Das Team der E. Scharpf Holzbau GmbH
+              Unser Team – die Scharpf Holzbau GmbH
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               Hinter jedem Projekt steht ein eingespieltes Team aus erfahrenen
