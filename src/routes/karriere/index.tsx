@@ -64,7 +64,7 @@ function Karriere() {
       {/* Deine Wunschstelle bei uns */}
       <Section className="pt-6 lg:pt-6">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Werden Sie Teil unseres Teams
+          Werde Teil unseres Teams
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           Ob Dachdecker, Zimmerer oder Bauhelfer: Wir suchen Menschen, die mit
@@ -99,7 +99,7 @@ function Karriere() {
       {/* Beschreibung deiner Stelle */}
       <Section muted className="pt-0">
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Beschreibung Ihrer Stelle:
+          Stellenbeschreibung:
         </h2>
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
           <p>
@@ -115,7 +115,7 @@ function Karriere() {
           <p>
             Wir bieten dir abwechslungsreiche Aufgaben im Neubau, in der
             Sanierung und besonders in der Restaurierung historischer Gebäude.
-            Bei uns sicherst du den Erhalt traditioneller Bausubstanz und setzt
+            Bei uns sicherst Du den Erhalt traditioneller Bausubstanz und setzt
             zugleich modernste Technik für neue Bauprojekte ein. Dabei
             arbeitest du mit ökologisch unbedenklichen Materialien, unterstützt
             von einem starken Team, das Qualität und Präzision großschreibt.
