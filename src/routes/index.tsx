@@ -8,6 +8,7 @@ import { LeistungenHaus } from "@/components/leistungen-haus";
 import { GOOGLE_BEWERTUNGEN } from "@/lib/site";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import restaurierungImage from "@/assets/scharpf_restaurierung_12.jpg.asset.json";
+import fachwerkhausAsset from "@/assets/fachwerkhaus.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
