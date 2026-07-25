@@ -103,7 +103,7 @@ function Leistungen() {
         style={{
           backgroundImage: `url(${dachstuhlAsset.url})`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "left center",
+          backgroundPosition: "left top",
           backgroundSize: "auto 165%",
         }}
       >
