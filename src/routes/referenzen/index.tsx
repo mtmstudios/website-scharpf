@@ -82,8 +82,8 @@ function Referenzen() {
         style={{
           backgroundImage: `url(${carportAsset.url})`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "left center",
-          backgroundSize: "auto 92.018025%",
+          backgroundPosition: "center center",
+          backgroundSize: "auto 101.2198275%",
         }}
       >
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
