@@ -104,7 +104,7 @@ function UeberUns() {
             </div>
             <div>
               <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-                Geschichte
+                Die Geschichte des Meisterbetriebes
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">
                 Wir sind ein Familienbetrieb, der 1946 von Emil Scharpf ins Leben
