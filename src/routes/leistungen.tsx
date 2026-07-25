@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar, CtaBanner } from "@/components/sections";
+import dachstuhlAsset from "@/assets/dachstuhl-line.png.asset.json";
 
 export const Route = createFileRoute("/leistungen")({
   head: () => ({
