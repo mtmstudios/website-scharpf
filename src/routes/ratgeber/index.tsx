@@ -307,7 +307,7 @@ function Ratgeber() {
           />
           <div>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-              Material
+              Materialwissen & Erfahrung
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               Der Baustoff für die Generationen – warum? Das erfahren Sie hier.
