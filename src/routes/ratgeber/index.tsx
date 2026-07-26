@@ -173,7 +173,7 @@ function Ratgeber() {
       {/* News */}
       <Section muted>
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          News
+          Wissenswertes
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {NEWS.map((n) => (
