@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
+import dachdeckenAsset from "@/assets/scharpf_dachdecken_01.jpg.asset.json";
 
 export const Route = createFileRoute("/ratgeber/")({
   head: () => ({
@@ -72,8 +73,8 @@ const ARTIKEL = [
     headline:
       "KFW-Förderung Dachsanierung: Was wird gefördert und wie hoch ist der Zuschuss?",
     to: "/ratgeber/kfw-dachsanierung",
-    imageSrc: "/fotos/scharpf_dachsanierung.jpg",
-    imageNote: "Energetische Dachsanierung",
+    imageSrc: dachdeckenAsset.url,
+    imageNote: "Dachdeckerarbeiten am Ziegeldach",
   },
   {
     headline: "Holzfassaden: Welches System passt zu meinem Gebäude?",
