@@ -38,7 +38,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-3 md:divide-x md:divide-primary-foreground/25">
           {/* Spalte 1 – Firma & Partner */}
           <div className="md:pr-10">
-            <div className="font-display text-2xl font-bold">E. Scharpf</div>
+            <div className="font-display text-base font-bold">E. Scharpf</div>
             <p className="mt-3 text-sm text-primary-foreground/90">
               Holzbau &amp; Restaurierung aus Esslingen. Seit über 80 Jahren
               für Qualität, Nachhaltigkeit und handwerkliche Präzision.
@@ -56,8 +56,8 @@ export function SiteFooter() {
 
           {/* Spalte 2 – Kontakt */}
           <div className="md:px-10">
-            <div className="font-display text-xl font-bold">Kontakt</div>
-            <div className="mt-4 space-y-1 text-sm text-primary-foreground/90">
+            <div className="font-display text-base font-bold">Kontakt</div>
+            <div className="mt-3 space-y-1 text-sm text-primary-foreground/90">
               <div>
                 Email:{" "}
                 <a href={CONTACT.emailHref} className="hover:underline">
@@ -76,7 +76,8 @@ export function SiteFooter() {
 
           {/* Spalte 3 – Rechtliches & Copyright */}
           <div className="md:pl-10">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-primary-foreground/90">
+            <div className="font-display text-base font-bold">Rechtliches</div>
+            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-primary-foreground/90">
               <Link to="/datenschutz" className="hover:underline">
                 Datenschutz
               </Link>
