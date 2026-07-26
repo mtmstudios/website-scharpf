@@ -12,11 +12,13 @@ export function PlaceholderImage({
   className,
   ratio = "landscape",
   src,
+  style,
 }: {
   note: string;
   className?: string;
   ratio?: "landscape" | "portrait" | "square" | "wide";
   src?: string;
+  style?: React.CSSProperties;
 }) {
   const ratioClass = {
     landscape: "aspect-[4/3]",
@@ -31,6 +33,7 @@ export function PlaceholderImage({
         src={src}
         alt={note}
         loading="lazy"
+        style={style}
         className={cn(
           "w-full rounded-lg object-cover",
           ratioClass,
