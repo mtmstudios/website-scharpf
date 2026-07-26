@@ -217,7 +217,7 @@ function Ratgeber() {
                 className="transition-transform group-hover:-translate-y-1"
                 style={
                   a.headline.includes("KFW-Förderung")
-                    ? { objectPosition: "65% center" }
+                    ? { objectPosition: "25% center" }
                     : undefined
                 }
               />
