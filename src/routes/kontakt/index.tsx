@@ -121,10 +121,10 @@ function Kontakt() {
       >
         {/* Fachwerkhaus – gespiegelt und rechtsbündig auf dem hellbraunen Banner */}
         <div
-          className="pointer-events-none absolute inset-y-0 left-1/2 right-0 origin-right bg-no-repeat"
+          className="pointer-events-none absolute inset-0 bg-no-repeat"
           style={{
             backgroundImage: `url(${fachwerkhausAsset.url})`,
-            backgroundPosition: "right center",
+            backgroundPosition: "left center",
             backgroundSize: "auto 330%",
             transform: "scaleX(-1)",
           }}
