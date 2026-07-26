@@ -76,7 +76,8 @@ export function SiteFooter() {
 
           {/* Spalte 3 – Rechtliches & Copyright */}
           <div className="md:pl-10">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-primary-foreground/90">
+            <div className="font-display text-base font-bold">Rechtliches</div>
+            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-primary-foreground/90">
               <Link to="/datenschutz" className="hover:underline">
                 Datenschutz
               </Link>
