@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { RatgeberArtikel } from "@/components/ratgeber-artikel";
+import holzAsset from "@/assets/scharpf_restaurierung_02.jpg.asset.json";
 
 export const Route = createFileRoute("/ratgeber/holz-als-baustoff")({
   head: () => ({
@@ -20,8 +21,8 @@ function Page() {
     <RatgeberArtikel
       titel="Warum Holz? Die Stärken des ältesten Baustoffs der Welt."
       teaser="Holz ist CO₂-neutral, robust, ästhetisch und regional verfügbar. Was spricht dafür, was dagegen – und wann ist Holz die richtige Wahl?"
-      imageSrc="/fotos/scharpf_vorfertigung_02.jpg"
-      imageNote="Sichtbare Holzkonstruktion von E. Scharpf"
+      imageSrc={holzAsset.url}
+      imageNote="Historische Holzkonstruktion im Dachstuhl"
       ctaLabel="Beratung anfragen"
     >
       <h2>Holz speichert CO₂ – dauerhaft</h2>

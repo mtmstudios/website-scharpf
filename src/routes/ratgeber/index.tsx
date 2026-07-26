@@ -4,6 +4,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
 import dachdeckenAsset from "@/assets/scharpf_dachdecken_01.jpg.asset.json";
 import fassade03Asset from "@/assets/scharpf_fassade_03-2.jpg.asset.json";
+import holzAsset from "@/assets/scharpf_restaurierung_02.jpg.asset.json";
 
 export const Route = createFileRoute("/ratgeber/")({
   head: () => ({
@@ -98,8 +99,8 @@ const ARTIKEL = [
   {
     headline: "Warum Holz? Die Stärken des ältesten Baustoffs der Welt.",
     to: "/ratgeber/holz-als-baustoff",
-    imageSrc: "/fotos/scharpf_vorfertigung_02.jpg",
-    imageNote: "Sichtbare Holzkonstruktion",
+    imageSrc: holzAsset.url,
+    imageNote: "Historische Holzkonstruktion im Dachstuhl",
   },
 ] as const;
 
