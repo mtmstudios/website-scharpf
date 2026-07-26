@@ -99,8 +99,8 @@ const ARTIKEL = [
   {
     headline: "Warum Holz? Die Stärken des ältesten Baustoffs der Welt.",
     to: "/ratgeber/holz-als-baustoff",
-    imageSrc: "/fotos/scharpf_vorfertigung_02.jpg",
-    imageNote: "Sichtbare Holzkonstruktion",
+    imageSrc: holzAsset.url,
+    imageNote: "Historische Holzkonstruktion im Dachstuhl",
   },
 ] as const;
 
