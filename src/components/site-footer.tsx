@@ -56,8 +56,8 @@ export function SiteFooter() {
 
           {/* Spalte 2 – Kontakt */}
           <div className="md:px-10">
-            <div className="font-display text-xl font-bold">Kontakt</div>
-            <div className="mt-4 space-y-1 text-sm text-primary-foreground/90">
+            <div className="font-display text-base font-bold">Kontakt</div>
+            <div className="mt-3 space-y-1 text-sm text-primary-foreground/90">
               <div>
                 Email:{" "}
                 <a href={CONTACT.emailHref} className="hover:underline">
