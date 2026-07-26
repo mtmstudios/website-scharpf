@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { RatgeberArtikel } from "@/components/ratgeber-artikel";
+import holzAsset from "@/assets/scharpf_restaurierung_02.jpg.asset.json";
 
 export const Route = createFileRoute("/ratgeber/holz-als-baustoff")({
   head: () => ({

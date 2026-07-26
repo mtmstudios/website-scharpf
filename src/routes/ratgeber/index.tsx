@@ -4,6 +4,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
 import dachdeckenAsset from "@/assets/scharpf_dachdecken_01.jpg.asset.json";
 import fassade03Asset from "@/assets/scharpf_fassade_03-2.jpg.asset.json";
+import holzAsset from "@/assets/scharpf_restaurierung_02.jpg.asset.json";
 
 export const Route = createFileRoute("/ratgeber/")({
   head: () => ({
