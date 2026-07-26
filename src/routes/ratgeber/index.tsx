@@ -239,7 +239,7 @@ function Ratgeber() {
       {/* FAQs */}
       <Section>
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          FAQs
+          Was wir öfter gefragt werden
         </h2>
         <div className="mt-8 flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4">
           <svg
