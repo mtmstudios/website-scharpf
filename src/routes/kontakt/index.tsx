@@ -121,11 +121,12 @@ function Kontakt() {
       >
         {/* Fachwerkhaus – gespiegelt und rechtsbündig auf dem hellbraunen Banner */}
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-full origin-right scale-x-[-1] bg-no-repeat opacity-25"
+          className="pointer-events-none absolute inset-y-0 right-0 w-full origin-right bg-no-repeat opacity-25"
           style={{
             backgroundImage: `url(${fachwerkhausAsset.url})`,
             backgroundPosition: "right center",
             backgroundSize: "auto 330%",
+            transform: "scaleX(-1)",
           }}
           aria-hidden="true"
         />
