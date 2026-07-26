@@ -38,7 +38,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-3 md:divide-x md:divide-primary-foreground/25">
           {/* Spalte 1 – Firma & Partner */}
           <div className="md:pr-10">
-            <div className="font-display text-2xl font-bold">E. Scharpf</div>
+            <div className="font-display text-base font-bold">E. Scharpf</div>
             <p className="mt-3 text-sm text-primary-foreground/90">
               Holzbau &amp; Restaurierung aus Esslingen. Seit über 80 Jahren
               für Qualität, Nachhaltigkeit und handwerkliche Präzision.
