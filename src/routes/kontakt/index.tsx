@@ -5,6 +5,7 @@ import { ProjektQuiz } from "@/components/projekt-quiz";
 import { CONTACT } from "@/lib/site";
 import { submitLead } from "@/lib/submit-lead";
 import { cn } from "@/lib/utils";
+import fachwerkhausAsset from "@/assets/fachwerkhaus.png.asset.json";
 
 export const Route = createFileRoute("/kontakt/")({
   head: () => ({
