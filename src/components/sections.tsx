@@ -308,9 +308,9 @@ export function ValueBand({
         aria-hidden
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.15)_100%)]"
       />
-      <div className="relative mx-auto grid max-w-6xl gap-x-12 gap-y-10 px-8 py-16 text-center sm:grid-cols-2 sm:gap-y-14 sm:py-24 lg:px-8">
+      <div className="relative mx-auto grid max-w-6xl gap-x-12 gap-y-10 px-8 py-16 text-left sm:grid-cols-2 sm:gap-y-14 sm:py-24 lg:px-8">
         {values.map((v) => (
-          <div key={v.title} className="flex flex-col items-center">
+          <div key={v.title} className="flex flex-col items-start">
             <h3
               className="font-display text-2xl font-bold tracking-wide sm:text-4xl"
               style={{ color: "#1f1105" }}
