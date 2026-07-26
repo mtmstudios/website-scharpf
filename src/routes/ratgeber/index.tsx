@@ -151,7 +151,7 @@ function Ratgeber() {
       {/* Welches Projekt planen Sie – 4 Kategorie-Kacheln */}
       <Section className="pt-6 lg:pt-6">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Welches Projekt planen Sie
+          Welches Projekt interessiert Sie?
         </h1>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {KATEGORIEN.map((k) => (
