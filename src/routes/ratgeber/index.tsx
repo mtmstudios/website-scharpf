@@ -3,6 +3,7 @@ import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
 import dachdeckenAsset from "@/assets/scharpf_dachdecken_01.jpg.asset.json";
+import fassade03Asset from "@/assets/scharpf_fassade_03-2.jpg.asset.json";
 
 export const Route = createFileRoute("/ratgeber/")({
   head: () => ({
@@ -79,7 +80,7 @@ const ARTIKEL = [
   {
     headline: "Holzfassaden: Welches System passt zu meinem Gebäude?",
     to: "/ratgeber/holzfassaden",
-    imageSrc: "/fotos/scharpf_fassade_01.jpg",
+    imageSrc: fassade03Asset.url,
     imageNote: "Holzfassade im Detail",
   },
   {
@@ -218,7 +219,9 @@ function Ratgeber() {
                 style={
                   a.headline.includes("KFW-Förderung")
                     ? { objectPosition: "0% center" }
-                    : undefined
+                    : a.headline.includes("Holzfassaden")
+                      ? { objectPosition: "85% center" }
+                      : undefined
                 }
               />
               <h3 className="mt-4 font-display text-lg font-bold leading-snug text-foreground group-hover:text-primary">
