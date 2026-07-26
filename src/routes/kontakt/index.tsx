@@ -5,6 +5,7 @@ import { ProjektQuiz } from "@/components/projekt-quiz";
 import { CONTACT } from "@/lib/site";
 import { submitLead } from "@/lib/submit-lead";
 import { cn } from "@/lib/utils";
+import fachwerkhausAsset from "@/assets/fachwerkhaus.png.asset.json";
 
 export const Route = createFileRoute("/kontakt/")({
   head: () => ({
@@ -114,18 +115,34 @@ function Kontakt() {
       </Section>
 
       {/* Projekt-Quiz – geführter 4-Schritte-Funnel (B612-Konzept) */}
-      <Section muted id="projekt-quiz" className="pt-14">
-        <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Projekt anfragen
-        </h2>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          In vier Schritten zur kostenlosen Projektberatung – wählen Sie
-          einfach aus, worum es geht.
-        </p>
-        <div className="mt-8 max-w-3xl">
-          <ProjektQuiz />
+      <section
+        id="projekt-quiz"
+        className="relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem] pt-14"
+      >
+        {/* Fachwerkhaus – gespiegelt und rechtsbündig auf dem hellbraunen Banner */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-no-repeat"
+          style={{
+            backgroundImage: `url(${fachwerkhausAsset.url})`,
+            backgroundPosition: "left center",
+            backgroundSize: "auto 330%",
+            transform: "scaleX(-1)",
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
+          <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+            Projekt anfragen
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            In vier Schritten zur kostenlosen Projektberatung – wählen Sie
+            einfach aus, worum es geht.
+          </p>
+          <div className="mt-8 max-w-3xl">
+            <ProjektQuiz />
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Klassisches Kontaktformular */}
       <Section>
