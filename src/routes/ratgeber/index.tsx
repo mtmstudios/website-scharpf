@@ -209,12 +209,17 @@ function Ratgeber() {
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ARTIKEL.map((a) => (
-            <Link key={a.to} to={a.to} className="group flex flex-col">
+          <Link key={a.to} to={a.to} className="group flex flex-col">
               <PlaceholderImage
                 note={a.imageNote}
                 src={a.imageSrc}
                 ratio="landscape"
                 className="transition-transform group-hover:-translate-y-1"
+                style={
+                  a.headline.includes("KFW-Förderung")
+                    ? { objectPosition: "65% center" }
+                    : undefined
+                }
               />
               <h3 className="mt-4 font-display text-lg font-bold leading-snug text-foreground group-hover:text-primary">
                 {a.headline}
