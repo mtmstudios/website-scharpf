@@ -160,6 +160,7 @@ export function BewerbungsButton({
           type="button"
           className={cn(
             "inline-flex rounded-full px-7 py-3.5 text-sm font-semibold transition-all focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+            "h-auto min-h-12",
             variant === "solid"
               ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25"
               : "border border-primary-foreground/80 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground",
@@ -201,6 +202,9 @@ export function BewerbungsButton({
                   <DialogPrimitive.Title className="font-display text-2xl font-bold text-foreground">
                     In 60 Sekunden bewerben
                   </DialogPrimitive.Title>
+                  <DialogPrimitive.Description className="sr-only">
+                    Kurzbewerbung für offene Stellen bei E. Scharpf in zwei Schritten.
+                  </DialogPrimitive.Description>
                   <span className="shrink-0 text-sm text-muted-foreground">Schritt {step}/2</span>
                 </div>
                 <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-border" aria-hidden="true">
