@@ -8,6 +8,9 @@ import { cn } from "@/lib/utils";
 import fachwerkhausAsset from "@/assets/fachwerkhaus.png.asset.json";
 
 export const Route = createFileRoute("/kontakt/")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    anliegen: search.anliegen === "bewerbung" ? ("bewerbung" as const) : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Kontakt – E. Scharpf GmbH | Holzbau & Restaurierung" },
@@ -36,11 +39,13 @@ const inputClass =
 
 function Kontakt() {
   const navigate = useNavigate();
+  const { anliegen } = Route.useSearch();
+  const istBewerbung = anliegen === "bewerbung";
 
   const [form, setForm] = useState({
     name: "",
     phone: "",
-    leistung: "",
+    leistung: istBewerbung ? "Karriere" : "",
     email: "",
     message: "",
   });
@@ -66,16 +71,24 @@ function Kontakt() {
 
   return (
     <div>
-      <CategoryBar breadcrumbs={[{ label: "Kontakt" }]} color="#DD5A1A" />
+      <CategoryBar
+        breadcrumbs={
+          istBewerbung
+            ? [{ label: "Karriere", to: "/karriere" }, { label: "Bewerbung" }]
+            : [{ label: "Kontakt" }]
+        }
+        color="#DD5A1A"
+      />
 
       {/* Hero + Kontaktdaten */}
       <Section className="pt-6 lg:pt-6">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Starten wir Ihr Projekt.
+          {istBewerbung ? "Bewirb dich bei uns." : "Starten wir Ihr Projekt."}
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Rufen Sie uns an, schreiben Sie uns – oder nutzen Sie einfach das
-          Formular. Wir melden uns innerhalb von 24 Stunden.
+          {istBewerbung
+            ? "Schick uns deine Bewerbung – formlos per E-Mail oder über das Formular unten. Wir melden uns innerhalb von 24 Stunden."
+            : "Rufen Sie uns an, schreiben Sie uns – oder nutzen Sie einfach das Formular. Wir melden uns innerhalb von 24 Stunden."}
         </p>
         <div className="mt-10 grid gap-8 sm:grid-cols-3 lg:max-w-4xl">
           <div className="text-base text-muted-foreground">
@@ -115,6 +128,7 @@ function Kontakt() {
       </Section>
 
       {/* Projekt-Quiz – geführter 4-Schritte-Funnel (B612-Konzept) */}
+      {!istBewerbung && (
       <section
         id="projekt-quiz"
         className="relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem] pt-14"
@@ -143,11 +157,12 @@ function Kontakt() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Klassisches Kontaktformular */}
       <Section>
         <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
-          Kontaktformular
+          {istBewerbung ? "Bewerbungsformular" : "Kontaktformular"}
         </h2>
         <form
           onSubmit={handleSubmit}

@@ -39,8 +39,21 @@ const CAMERA_MS = 1100;
 
 export function LeistungenHaus() {
   const [active, setActive] = useState<FocusKey | null>(null);
+  // Auf Mobilgeräten ist das Haus rein statisch (keine Hotspots, kein Zoom/Tilt).
+  const [interaktiv, setInteraktiv] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const tiltRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const apply = () => {
+      setInteraktiv(mq.matches);
+      if (!mq.matches) setActive(null);
+    };
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
 
   // Scroll-getriebene 3D-Neigung (Entrance + sanfter Parallax-Drift).
   useEffect(() => {
@@ -50,7 +63,7 @@ export function LeistungenHaus() {
     const tilt = tiltRef.current;
     const section = sectionRef.current;
     if (!tilt || !section) return;
-    if (reduce) {
+    if (reduce || !interaktiv) {
       tilt.style.transform = "none";
       tilt.style.opacity = "1";
       return;
@@ -101,9 +114,9 @@ export function LeistungenHaus() {
       running = false;
       io.disconnect();
     };
-  }, []);
+  }, [interaktiv]);
 
-  const focus = active ? FOCUS[active] : FOCUS["/services"];
+  const focus = interaktiv && active ? FOCUS[active] : FOCUS["/services"];
   const zoomed = focus.zoom > 1.01;
 
   return (
@@ -116,8 +129,8 @@ export function LeistungenHaus() {
           Unsere Leistungen
         </h2>
         <p className="mt-3 max-w-2xl text-base text-muted-foreground">
-          Ein Haus, alle Gewerke: Wählen Sie eine Leistung – oder tippen Sie
-          direkt auf einen Bereich des Hauses.
+          Ein Haus, alle Gewerke: Wählen Sie eine Leistung aus der Liste
+          <span className="hidden lg:inline"> – oder klicken Sie direkt auf einen Bereich des Hauses</span>.
         </p>
 
         <div className="mt-10 grid items-center gap-10 lg:grid-cols-[3fr_2fr] lg:gap-16">
@@ -144,7 +157,7 @@ export function LeistungenHaus() {
                     draggable={false}
                   />
                   {/* Hotspots – wandern mit dem Bild, bleiben aber gleich groß */}
-                  {HOTSPOTS.map((h) => {
+                  {interaktiv && HOTSPOTS.map((h) => {
                     const isActive = active === h.to;
                     return (
                       <button
@@ -182,6 +195,7 @@ export function LeistungenHaus() {
                 </div>
 
                 {/* Zoom zurücksetzen */}
+                {interaktiv && (
                 <button
                   type="button"
                   onClick={() => setActive(null)}
@@ -207,6 +221,7 @@ export function LeistungenHaus() {
                   </svg>
                   Gesamtansicht
                 </button>
+                )}
               </div>
             </div>
           </div>

@@ -8,11 +8,13 @@ import { cn } from "@/lib/utils";
 export function CtaButton({
   children,
   to = "/kontakt",
+  search,
   variant = "solid",
   className,
 }: {
   children: React.ReactNode;
   to?: string;
+  search?: Record<string, string>;
   variant?: "solid" | "outline";
   className?: string;
 }) {
@@ -24,7 +26,7 @@ export function CtaButton({
       : "border border-white/80 bg-transparent text-white hover:bg-white hover:text-foreground";
 
   return (
-    <Link to={to} className={cn(base, styles, className)}>
+    <Link to={to} search={search as never} className={cn(base, styles, className)}>
       {children}
       <svg
         xmlns="http://www.w3.org/2000/svg"

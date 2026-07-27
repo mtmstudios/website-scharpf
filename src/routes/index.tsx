@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, ValueBand } from "@/components/sections";
-import { ScrollCta } from "@/components/scroll-cta";
 import { LeistungenHaus } from "@/components/leistungen-haus";
 import { TestimonialCarousel } from "@/components/testimonial-carousel";
 import { GOOGLE_BEWERTUNGEN } from "@/lib/site";
@@ -173,8 +172,6 @@ function Index() {
           </div>
         </div>
       </section>
-
-      <ScrollCta heroCtaRef={heroCtaRef} />
     </div>
   );
 }
