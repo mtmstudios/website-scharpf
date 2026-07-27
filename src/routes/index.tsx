@@ -180,15 +180,27 @@ function Index() {
       <ValueBand values={VALUES} />
 
       {/* Kundenstimmen – Zitate wörtlich aus dem XD */}
-      <section
-        className="relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem]"
-        style={{
-          backgroundImage: `url(${fachwerkhausAsset.url})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "left center",
-          backgroundSize: "auto 330%",
-        }}
-      >
+      <section className="kundenstimmen-bg relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem]">
+        <style>{`
+          .kundenstimmen-bg {
+            background-image: url(${fachwerkhausAsset.url});
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: auto 140%;
+          }
+          @media (min-width: 640px) {
+            .kundenstimmen-bg { background-size: auto 170%; }
+          }
+          @media (min-width: 768px) {
+            .kundenstimmen-bg { background-size: auto 210%; }
+          }
+          @media (min-width: 1024px) {
+            .kundenstimmen-bg { background-size: auto 260%; }
+          }
+          @media (min-width: 1280px) {
+            .kundenstimmen-bg { background-size: auto 330%; }
+          }
+        `}</style>
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             Kundenstimmen
