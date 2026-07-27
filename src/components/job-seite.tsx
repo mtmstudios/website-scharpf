@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { CtaButton } from "@/components/cta-button";
+import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CtaBanner } from "@/components/sections";
 
@@ -77,7 +77,7 @@ export function JobSeite({
           {lead}
         </p>
         <div className="mt-8">
-          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
+          <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
         </div>
         <div className="mt-12">
           <PlaceholderImage note={imageNote} src={imageSrc} ratio="wide" />
@@ -127,7 +127,7 @@ export function JobSeite({
           ))}
         </ul>
         <div className="mt-10">
-          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
+          <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
         </div>
       </Section>
 

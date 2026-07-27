@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CtaButton } from "@/components/cta-button";
+import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
 import gruppenbildAsset from "@/assets/scharpf_gruppenbild_hochzeit.jpg.asset.json";
@@ -72,7 +72,7 @@ function Karriere() {
           Leidenschaft bauen – und bieten dafür mehr als andere.
         </p>
         <div className="mt-8">
-          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
+          <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
         </div>
 
         {/* Job-Selektor als Kachel-Clickthrough */}
@@ -202,7 +202,7 @@ function Karriere() {
           ))}
         </ul>
         <div className="mt-10">
-          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
+          <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
         </div>
       </Section>
     </div>
