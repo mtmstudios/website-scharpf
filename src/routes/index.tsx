@@ -136,33 +136,6 @@ function Index() {
           mit dem passenden Gebäudeteil verknüpft (Kamera-Zoom bei Klick). */}
       <LeistungenHaus />
 
-      {/* Google-Bewertungen – Platzhalter-Zitate aus dem B612-Konzept.
-          TODO: durch echte, kuratierte Google-Rezensionen ersetzen. */}
-      <Section>
-        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Das sagen unsere Kunden auf Google
-        </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {GOOGLE_BEWERTUNGEN.map((b) => (
-            <figure
-              key={b.name}
-              className="flex flex-col rounded-2xl border border-border bg-card p-8"
-            >
-              <Stars />
-              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
-                {b.zitat}
-              </blockquote>
-              <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
-                {b.name}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="mt-8">
-          <CtaButton to="/referenzen">Mehr Lesen</CtaButton>
-        </div>
-      </Section>
-
       {/* Werte-Band (grün) */}
       <ValueBand values={VALUES} />
 
