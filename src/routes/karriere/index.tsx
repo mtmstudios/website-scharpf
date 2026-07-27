@@ -74,15 +74,33 @@ function Karriere() {
           <CtaButton to="/kontakt">Jetzt bewerben</CtaButton>
         </div>
 
-        {/* Job-Selektor */}
-        <div className="mt-12 flex flex-wrap gap-3">
+        {/* Job-Selektor als Kachel-Clickthrough */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {STELLEN.map((s) => (
             <Link
               key={s.to}
               to={s.to}
-              className="rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="group flex items-center justify-between rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:border-primary hover:shadow-md"
             >
-              {s.label}
+              <span className="font-display text-lg font-bold text-foreground transition-colors group-hover:text-primary">
+                {s.label}
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="shrink-0 text-muted-foreground transition-colors group-hover:text-primary"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </Link>
           ))}
         </div>
