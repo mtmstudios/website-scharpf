@@ -77,7 +77,7 @@ export function JobSeite({
           {lead}
         </p>
         <div className="mt-8">
-          <CtaButton to="/kontakt">Jetzt bewerben</CtaButton>
+          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
         </div>
         <div className="mt-12">
           <PlaceholderImage note={imageNote} src={imageSrc} ratio="wide" />
@@ -127,14 +127,15 @@ export function JobSeite({
           ))}
         </ul>
         <div className="mt-10">
-          <CtaButton to="/kontakt">Jetzt bewerben</CtaButton>
+          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
         </div>
       </Section>
 
       <CtaBanner
         title="Klingt nach dir?"
-        text="Dann schreib uns einfach – formlos per E-Mail oder über das Formular. Wir melden uns schnell."
+        text="Dann schreib uns einfach – formlos per E-Mail oder über das Bewerbungsformular. Wir melden uns schnell."
         ctaLabel="Jetzt bewerben"
+        ctaSearch={{ anliegen: "bewerbung" }}
       />
     </div>
   );

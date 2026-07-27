@@ -423,6 +423,7 @@ export function CtaBanner({
   text,
   ctaLabel = "Kontakt",
   ctaTo = "/kontakt",
+  ctaSearch,
   tone = "orange",
   trust = true,
   illustrationSrc,
@@ -432,6 +433,7 @@ export function CtaBanner({
   text?: string;
   ctaLabel?: string;
   ctaTo?: string;
+  ctaSearch?: Record<string, string>;
   tone?: "orange" | "mint" | "wood";
   trust?: boolean;
   illustrationSrc?: string;
@@ -495,7 +497,7 @@ export function CtaBanner({
               {text}
             </p>
           )}
-          <CtaButton to={ctaTo} variant={isWood ? "solid" : "outline"}>
+          <CtaButton to={ctaTo} search={ctaSearch} variant={isWood ? "solid" : "outline"}>
             {ctaLabel}
           </CtaButton>
         </div>
