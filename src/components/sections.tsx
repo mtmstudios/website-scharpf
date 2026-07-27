@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { CtaButton } from "@/components/cta-button";
+import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import {
   Accordion,
@@ -442,6 +443,7 @@ export function CtaBanner({
   const bg =
     tone === "orange" ? "bg-primary" : tone === "mint" ? "bg-accent" : "";
   const isWood = tone === "wood";
+  const isApplicationCta = ctaSearch?.anliegen === "bewerbung";
   return (
     <>
       {trust && (
@@ -497,9 +499,13 @@ export function CtaBanner({
               {text}
             </p>
           )}
-          <CtaButton to={ctaTo} search={ctaSearch} variant={isWood ? "solid" : "outline"}>
-            {ctaLabel}
-          </CtaButton>
+          {isApplicationCta ? (
+            <BewerbungsButton variant={isWood ? "solid" : "outline"}>{ctaLabel}</BewerbungsButton>
+          ) : (
+            <CtaButton to={ctaTo} search={ctaSearch} variant={isWood ? "solid" : "outline"}>
+              {ctaLabel}
+            </CtaButton>
+          )}
         </div>
       </section>
       {isWood && <div className="h-1 w-full bg-primary" />}
