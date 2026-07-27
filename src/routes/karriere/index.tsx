@@ -66,6 +66,7 @@ function Karriere() {
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Werde Teil unseres Teams
         </h1>
+        <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           Ob Dachdecker, Zimmerer oder Bauhelfer: Wir suchen Menschen, die mit
           Leidenschaft bauen – und bieten dafür mehr als andere.
