@@ -139,7 +139,7 @@ function Index() {
       {/* Werte-Band (grün) */}
       <ValueBand values={VALUES} />
 
-      {/* Kundenstimmen – Zitate wörtlich aus dem XD */}
+      {/* Kundenstimmen & Google-Rezensionen – kombiniertes Karussell nach dem Holz-Banner */}
       <section className="kundenstimmen-bg relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem]">
         <style>{`
           .kundenstimmen-bg {
@@ -163,26 +163,13 @@ function Index() {
         `}</style>
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Kundenstimmen
+            Das sagen unsere Kunden
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Was unsere Kunden über die Zusammenarbeit mit E. Scharpf sagen.
+            Erfahrungen aus Google-Rezensionen und persönlichen Kundenstimmen.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {KUNDENSTIMMEN.map((k, i) => (
-              <figure
-                key={i}
-                className="flex flex-col rounded-2xl border border-border bg-card p-8"
-              >
-                <Stars />
-                <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
-                  {k.zitat}
-                </blockquote>
-                <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
-                  {k.quelle}
-                </figcaption>
-              </figure>
-            ))}
+          <div className="mt-10">
+            <TestimonialCarousel items={TESTIMONIALS} />
           </div>
         </div>
       </section>
