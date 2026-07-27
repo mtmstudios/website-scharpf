@@ -5,6 +5,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, ValueBand } from "@/components/sections";
 import { ScrollCta } from "@/components/scroll-cta";
 import { LeistungenHaus } from "@/components/leistungen-haus";
+import { TestimonialCarousel } from "@/components/testimonial-carousel";
 import { GOOGLE_BEWERTUNGEN } from "@/lib/site";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import restaurierungImage from "@/assets/scharpf_restaurierung_12.jpg.asset.json";
@@ -52,25 +53,11 @@ const KUNDENSTIMMEN = [
   },
 ];
 
-function Stars() {
-  // Fünf Sterne passend zur 4,8-Bewertung (Google).
-  return (
-    <div className="flex gap-1 text-primary">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <svg
-          key={i}
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
+// Kundenstimmen + Google-Bewertungen zusammengefasst für das Karussell.
+const TESTIMONIALS = [
+  ...GOOGLE_BEWERTUNGEN.map((b) => ({ zitat: b.zitat, quelle: b.name })),
+  ...KUNDENSTIMMEN.map((k) => ({ zitat: k.zitat, quelle: k.quelle })),
+];
 
 function Index() {
   const heroCtaRef = useRef<HTMLDivElement>(null);
@@ -149,37 +136,10 @@ function Index() {
           mit dem passenden Gebäudeteil verknüpft (Kamera-Zoom bei Klick). */}
       <LeistungenHaus />
 
-      {/* Google-Bewertungen – Platzhalter-Zitate aus dem B612-Konzept.
-          TODO: durch echte, kuratierte Google-Rezensionen ersetzen. */}
-      <Section>
-        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Das sagen unsere Kunden auf Google
-        </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {GOOGLE_BEWERTUNGEN.map((b) => (
-            <figure
-              key={b.name}
-              className="flex flex-col rounded-2xl border border-border bg-card p-8"
-            >
-              <Stars />
-              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
-                {b.zitat}
-              </blockquote>
-              <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
-                {b.name}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="mt-8">
-          <CtaButton to="/referenzen">Mehr Lesen</CtaButton>
-        </div>
-      </Section>
-
       {/* Werte-Band (grün) */}
       <ValueBand values={VALUES} />
 
-      {/* Kundenstimmen – Zitate wörtlich aus dem XD */}
+      {/* Kundenstimmen & Google-Rezensionen – kombiniertes Karussell nach dem Holz-Banner */}
       <section className="kundenstimmen-bg relative overflow-hidden bg-secondary py-11 lg:py-[4.125rem]">
         <style>{`
           .kundenstimmen-bg {
@@ -203,26 +163,13 @@ function Index() {
         `}</style>
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Kundenstimmen
+            Das sagen unsere Kunden
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Was unsere Kunden über die Zusammenarbeit mit E. Scharpf sagen.
+            Erfahrungen aus Google-Rezensionen und persönlichen Kundenstimmen.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {KUNDENSTIMMEN.map((k, i) => (
-              <figure
-                key={i}
-                className="flex flex-col rounded-2xl border border-border bg-card p-8"
-              >
-                <Stars />
-                <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
-                  {k.zitat}
-                </blockquote>
-                <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
-                  {k.quelle}
-                </figcaption>
-              </figure>
-            ))}
+          <div className="mt-10">
+            <TestimonialCarousel items={TESTIMONIALS} />
           </div>
         </div>
       </section>
