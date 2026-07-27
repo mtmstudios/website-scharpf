@@ -72,7 +72,7 @@ function Karriere() {
           Leidenschaft bauen – und bieten dafür mehr als andere.
         </p>
         <div className="mt-8">
-          <CtaButton to="/kontakt">Jetzt bewerben</CtaButton>
+          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
         </div>
 
         {/* Job-Selektor als Kachel-Clickthrough */}
@@ -202,7 +202,7 @@ function Karriere() {
           ))}
         </ul>
         <div className="mt-10">
-          <CtaButton to="/kontakt">Jetzt bewerben</CtaButton>
+          <CtaButton to="/kontakt" search={{ anliegen: "bewerbung" }}>Jetzt bewerben</CtaButton>
         </div>
       </Section>
     </div>

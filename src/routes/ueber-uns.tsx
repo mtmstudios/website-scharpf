@@ -217,6 +217,7 @@ function UeberUns() {
       <CtaBanner
         title="Willst Du Teil unseres Teams werden?"
         ctaLabel="Jetzt bewerben"
+        ctaSearch={{ anliegen: "bewerbung" }}
         ctaTo="/karriere"
         tone="wood"
         woodFlip
