@@ -93,6 +93,7 @@ function UeberUns() {
               <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
                 Unser Unternehmen
               </h1>
+              <span className="mt-4 block h-1 w-24 rounded bg-primary" />
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">
                 E. Scharpf ist ein Familienbetrieb in dritter Generation aus
                 Esslingen am Neckar. Mit viel Erfahrung und klarem Fokus auf

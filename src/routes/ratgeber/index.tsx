@@ -175,6 +175,7 @@ function Ratgeber() {
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
           Wissenswertes
         </h2>
+        <span className="mt-4 block h-1 w-24 rounded bg-primary" />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {NEWS.map((n) => (
             <article key={n.headline} className="flex flex-col">
