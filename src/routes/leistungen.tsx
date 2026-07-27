@@ -131,6 +131,7 @@ function Leistungen() {
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
           Referenzen
         </h2>
+        <span className="mt-4 block h-1 w-24 rounded bg-primary" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {REFERENZEN.map((r) => (
             <Link key={r.to} to={r.to} className="group flex flex-col">
