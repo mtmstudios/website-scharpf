@@ -269,7 +269,7 @@ export function LeistungBlock({
           </ul>
         )}
         {(ctaLabel || secondaryCtaLabel || moreTo) && (
-          <div className="mt-8 flex flex-wrap items-center gap-6">
+          <div className="mt-8 flex flex-wrap items-start gap-6">
             <div className="flex flex-col items-start gap-3">
               {ctaLabel && <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>}
               {secondaryCtaLabel && (
@@ -281,7 +281,7 @@ export function LeistungBlock({
             {moreTo && (
               <Link
                 to={moreTo}
-                className="text-sm font-semibold text-primary hover:underline"
+                className="text-sm font-semibold text-primary hover:underline py-3.5"
               >
                 {moreLabel}
               </Link>
