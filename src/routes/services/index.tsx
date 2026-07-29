@@ -110,6 +110,7 @@ function Services() {
       </Section>
 
       <CtaBanner
+        tone="wood"
         title="Noch Fragen? Wir sind für Sie da."
         text="Ob Dachdeckerarbeiten, Klempnern oder ein Besuch in unserem Showroom – sprechen Sie uns einfach an."
         ctaLabel="Kostenlose Projektberatung Anfordern"
