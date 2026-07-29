@@ -94,7 +94,7 @@ function Restaurierung() {
         ]}
       />
 
-      <CtaBanner illustrationSrc="/illustrationen/fachwerkhaus-weiss.png" title="Wollen Sie ein vergleichbares Projekt anfragen?" />
+      <CtaBanner tone="wood" illustrationSrc="/illustrationen/fachwerkhaus-weiss.png" title="Wollen Sie ein vergleichbares Projekt anfragen?" />
     </div>
   );
 }
