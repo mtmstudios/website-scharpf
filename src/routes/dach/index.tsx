@@ -31,7 +31,6 @@ function Dach() {
         eyebrow=""
         title="Ihr Dachprojekt, in sehr guten Händen."
         lead="Familienbetrieb in der dritten Generation – für hochwertige, innovative Zimmerarbeiten. Neueindeckung, Sanierung oder Dämmung: Wir finden die passende Lösung für Ihr Dach."
-        ctaLabel="Jetzt Dach-Check vereinbaren"
         imageNote="Neu eingedecktes Dach von E. Scharpf"
         imageSrc="/fotos/scharpf_dachdecken.jpg"
         breadcrumbs={[
