@@ -213,6 +213,8 @@ export function LeistungBlock({
   text,
   ctaLabel,
   ctaTo,
+  secondaryCtaLabel,
+  secondaryCtaTo,
   bullets,
   imageNote,
   imageSrc,
@@ -224,6 +226,8 @@ export function LeistungBlock({
   text: string;
   ctaLabel?: string;
   ctaTo?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaTo?: string;
   bullets?: string[];
   imageNote: string;
   imageSrc?: string;
@@ -264,9 +268,16 @@ export function LeistungBlock({
             ))}
           </ul>
         )}
-        {(ctaLabel || moreTo) && (
+        {(ctaLabel || secondaryCtaLabel || moreTo) && (
           <div className="mt-8 flex flex-wrap items-center gap-6">
-            {ctaLabel && <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>}
+            <div className="flex flex-col items-start gap-3">
+              {ctaLabel && <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>}
+              {secondaryCtaLabel && (
+                <CtaButton to={secondaryCtaTo} variant="outline">
+                  {secondaryCtaLabel}
+                </CtaButton>
+              )}
+            </div>
             {moreTo && (
               <Link
                 to={moreTo}

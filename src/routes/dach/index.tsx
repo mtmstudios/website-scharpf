@@ -65,6 +65,8 @@ function Dach() {
           title="Dachfenster"
           text="Ein gut platziertes Dachfenster verwandelt einen dunklen Raum in ein helles Ambiente. Wir sind Experten in der Installation von Dachfenstern, die optimal belichten, energetisch dämmen und dauerhaft dicht bleiben."
           ctaLabel="Dachfenster anfragen"
+          secondaryCtaLabel="Velux Dachfensterkonfigurator"
+          secondaryCtaTo="/dach/dachfenster"
           moreTo="/dach/dachfenster"
           moreLabel="Mehr zu Dachfenstern →"
           bullets={[
