@@ -297,12 +297,15 @@ export function LeistungenHaus() {
                           {l.teaser}
                         </p>
                         <div className="mt-5 flex flex-wrap items-center gap-3">
-                          <CtaButton
-                            to="/dach/dachfenster"
-                            className="px-5 py-2.5 text-xs"
-                          >
-                            Velux Dachfensterkonfigurator
-                          </CtaButton>
+                          {l.to === "/dach" && (
+                            <CtaButton
+                              to="/dach/dachfenster"
+                              className="px-5 py-2.5 text-xs"
+                            >
+                              Velux Dachfensterkonfigurator
+                            </CtaButton>
+                          )}
+
                           <Link
                             to={l.to}
                             className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
