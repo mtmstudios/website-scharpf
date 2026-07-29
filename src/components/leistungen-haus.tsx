@@ -295,25 +295,33 @@ export function LeistungenHaus() {
                         <p className="text-sm leading-relaxed text-muted-foreground">
                           {l.teaser}
                         </p>
-                        <Link
-                          to={l.to}
-                          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-                        >
-                          Zur Leistung
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                        <div className="mt-5 flex flex-wrap items-center gap-3">
+                          <CtaButton
+                            to="/kontakt"
+                            className="px-5 py-2.5 text-xs"
                           >
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                          </svg>
-                        </Link>
+                            Beratung anfordern
+                          </CtaButton>
+                          <Link
+                            to={l.to}
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                          >
+                            Zur Leistung
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="15"
+                              height="15"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
