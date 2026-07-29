@@ -44,13 +44,7 @@ export function ReferenzKategorieSeite({
       />
 
       <Section className="pt-6 lg:pt-6">
-        <Link
-          to="/referenzen"
-          className="text-sm font-semibold text-muted-foreground hover:text-primary"
-        >
-          ← Alle Referenzen
-        </Link>
-        <h1 className="mt-4 font-display text-4xl font-bold text-foreground sm:text-5xl">
+        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           {titel}
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
