@@ -298,10 +298,10 @@ export function LeistungenHaus() {
                         </p>
                         <div className="mt-5 flex flex-wrap items-center gap-3">
                           <CtaButton
-                            to="/kontakt"
+                            to="/dach/dachfenster"
                             className="px-5 py-2.5 text-xs"
                           >
-                            Beratung anfordern
+                            Velux Dachfensterkonfigurator
                           </CtaButton>
                           <Link
                             to={l.to}
