@@ -76,7 +76,7 @@ function Dach() {
             "Dachliegefenster und Lichtbänder",
           ]}
           imageNote="Dachfenster mit viel Tageslicht von innen"
-          imageSrc="/fotos/scharpf_velux.jpg"
+          imageSrc="/__l5e/assets-v1/4427f4f1-4f77-40fd-b954-13df95719498/scharpf_velux_integra.jpg"
         />
       </Section>
 
