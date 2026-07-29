@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { CtaButton } from "@/components/cta-button";
 import { cn } from "@/lib/utils";
 import { LEISTUNGEN } from "@/lib/site";
 
