@@ -273,7 +273,7 @@ export function LeistungBlock({
             <div className="flex flex-col items-start gap-3">
               {ctaLabel && <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>}
               {secondaryCtaLabel && (
-                <CtaButton to={secondaryCtaTo} variant="outline">
+                <CtaButton to={secondaryCtaTo} variant="solid">
                   {secondaryCtaLabel}
                 </CtaButton>
               )}
