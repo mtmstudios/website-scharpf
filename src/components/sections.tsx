@@ -117,6 +117,8 @@ export function PageHero({
   lead,
   ctaLabel,
   ctaTo,
+  secondaryCtaLabel,
+  secondaryCtaTo,
   imageNote,
   imageSrc,
   illustrationSrc,
@@ -127,6 +129,8 @@ export function PageHero({
   lead: string;
   ctaLabel?: string;
   ctaTo?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaTo?: string;
   imageNote: string;
   imageSrc?: string;
   illustrationSrc?: string;
@@ -152,9 +156,14 @@ export function PageHero({
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
             {lead}
           </p>
-          {ctaLabel && (
-            <div className="mt-8">
-              <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>
+          {(ctaLabel || secondaryCtaLabel) && (
+            <div className="mt-8 flex flex-col items-start gap-3">
+              {ctaLabel && <CtaButton to={ctaTo}>{ctaLabel}</CtaButton>}
+              {secondaryCtaLabel && (
+                <CtaButton to={secondaryCtaTo} variant="outline">
+                  {secondaryCtaLabel}
+                </CtaButton>
+              )}
             </div>
           )}
         </div>
