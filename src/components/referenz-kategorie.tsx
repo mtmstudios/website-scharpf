@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Section, CtaBanner } from "@/components/sections";
+import { Section, CtaBanner, CategoryBar } from "@/components/sections";
 import { REFERENZ_KATEGORIEN } from "@/lib/site";
 
 export type ReferenzProjekt = {
@@ -31,9 +31,19 @@ export function ReferenzKategorieSeite({
   projekte: ReferenzProjekt[];
   illustrationSrc?: string;
 }) {
+  const aktivTitel =
+    REFERENZ_KATEGORIEN.find((k) => k.to === aktiv)?.title ?? titel;
   return (
     <div>
-      <Section>
+      <CategoryBar
+        breadcrumbs={[
+          { label: "Referenzen", to: "/referenzen" },
+          { label: aktivTitel },
+        ]}
+        color="#8F2B2A"
+      />
+
+      <Section className="pt-6 lg:pt-6">
         <Link
           to="/referenzen"
           className="text-sm font-semibold text-muted-foreground hover:text-primary"
