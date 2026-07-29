@@ -44,7 +44,7 @@ function Dach() {
         <LeistungBlock
           title="Dachsanierungen"
           text="Energetische Sanierung, Hitzeschutz im Sommer oder Nutzung der Sonnenenergie – wir arbeiten seit Jahrzehnten ökologisch mit Holzfaserdämmung und natürlichen Materialien. Auf Wunsch übernehmen wir die KFW-Förderberatung und Antragsstellung."
-          ctaLabel="Dach-Check vereinbaren"
+          ctaLabel="Jetzt Dachcheck vereinbaren"
           moreTo="/dach/dachsanierung"
           moreLabel="Mehr zur Dachsanierung →"
           bullets={[
