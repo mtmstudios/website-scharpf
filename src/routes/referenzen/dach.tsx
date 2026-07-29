@@ -38,7 +38,7 @@ const PROJEKTE: ReferenzProjekt[] = [
     titel: "Dachfenster-Einbau mit Panorama-Wirkung",
     tag: "Dach",
     text: "Großzügige Dachfenster verwandeln das Dachgeschoss in einen hellen Wohnraum – energetisch optimiert verglast und dauerhaft dicht eingebaut.",
-    imageSrc: "/fotos/scharpf_velux.jpg",
+    imageSrc: "/__l5e/assets-v1/3d8f8294-f967-47e3-a2c7-0c9cb9e81eaa/scharpf_velux_02.jpg",
     imageNote: "Eingebaute Velux-Dachfenster von innen",
   },
   {
