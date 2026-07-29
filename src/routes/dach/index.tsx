@@ -31,7 +31,6 @@ function Dach() {
         eyebrow=""
         title="Ihr Dachprojekt, in sehr guten Händen."
         lead="Familienbetrieb in der dritten Generation – für hochwertige, innovative Zimmerarbeiten. Neueindeckung, Sanierung oder Dämmung: Wir finden die passende Lösung für Ihr Dach."
-        ctaLabel="Jetzt Dach-Check vereinbaren"
         imageNote="Neu eingedecktes Dach von E. Scharpf"
         imageSrc="/fotos/scharpf_dachdecken.jpg"
         breadcrumbs={[
@@ -45,7 +44,7 @@ function Dach() {
         <LeistungBlock
           title="Dachsanierungen"
           text="Energetische Sanierung, Hitzeschutz im Sommer oder Nutzung der Sonnenenergie – wir arbeiten seit Jahrzehnten ökologisch mit Holzfaserdämmung und natürlichen Materialien. Auf Wunsch übernehmen wir die KFW-Förderberatung und Antragsstellung."
-          ctaLabel="Dach-Check vereinbaren"
+          ctaLabel="Jetzt Dachcheck vereinbaren"
           moreTo="/dach/dachsanierung"
           moreLabel="Mehr zur Dachsanierung →"
           bullets={[
