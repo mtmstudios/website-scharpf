@@ -103,7 +103,7 @@ function Dachfenster() {
         ]}
       />
 
-      <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
+      <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" tone="wood" />
     </div>
   );
 }
