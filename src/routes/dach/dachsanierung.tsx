@@ -102,7 +102,7 @@ function Dachsanierung() {
         ]}
       />
 
-      <CtaBanner illustrationSrc="/illustrationen/dachstuhl-weiss.png" title="Wollen Sie ein vergleichbares Projekt anfragen?" />
+      <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" tone="wood" />
     </div>
   );
 }
