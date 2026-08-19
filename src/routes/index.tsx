@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef } from "react";
+import { TerminButtons } from "@/components/termin-buttons";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, ValueBand } from "@/components/sections";
@@ -94,6 +95,7 @@ function Index() {
             <div ref={heroCtaRef}>
               <CtaButton>Kostenlose Beratung Anfordern</CtaButton>
             </div>
+            <TerminButtons />
             <Link
               to="/ratgeber"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/70 hover:bg-white/20"

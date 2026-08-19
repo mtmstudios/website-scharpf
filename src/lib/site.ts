@@ -16,6 +16,25 @@ export const CONTACT = {
 
 export const PRIMARY_CTA = "Kostenlose Beratung Anfordern";
 
+/**
+ * Externe Tools und Terminbuchung.
+ *
+ * Alle drei URLs stammen von der alten Seite holzbau-scharpf.de (ausgelesen
+ * am 19.08.2026) und sind damit exakt die, die E. Scharpf zurückhaben wollte:
+ * - Der VELUX-Konfigurator lag dort hinter dem Borlabs-Cookie-Blocker, deshalb
+ *   war er im Quelltext nicht direkt sichtbar. Die `id` ist die VELUX-
+ *   Partnernummer der E. Scharpf GmbH – sie muss beim Einbetten erhalten
+ *   bleiben, sonst laufen die Leads nicht auf den Betrieb.
+ * - Beide Calendly-Links standen auf der alten Startseite.
+ */
+export const EXTERNE_LINKS = {
+  veluxKonfigurator:
+    "https://dachfensterkonfigurator.velux.de/konfigurator?embed=true&id=10081282",
+  terminDachfensterBeratung:
+    "https://calendly.com/ausstellunges/dachfenster-beratung",
+  terminPlanungsgespraech: "https://calendly.com/a-schwarz__/60min",
+} as const;
+
 // Haupt-Navigation exakt wie XD (ohne "Startseite")
 export const MAIN_NAV = [
   { label: "Leistungen", to: "/leistungen" },
@@ -120,9 +139,25 @@ export const PARTNERS = ["RESTORA GMBH", "ES TORE"] as const;
 
 // Rechte, vertikale Social-Icon-Leiste (wie XD): Instagram, Pinterest, Facebook, Houzz.
 // TODO: echte Profil-URLs vom Kunden einpflegen – aktuell Platzhalter.
-export const SOCIAL_LINKS = [
-  { label: "Instagram", href: "#", icon: "instagram" },
-  { label: "Pinterest", href: "#", icon: "pinterest" },
-  { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "Houzz", href: "#", icon: "houzz" },
+/**
+ * Social-Profile. Facebook stammt aus der offiziellen E-Mail-Signatur der
+ * E. Scharpf GmbH.
+ *
+ * TODO(Scharpf): Instagram, Pinterest und Houzz sind uns nicht bekannt und
+ * auf holzbau-scharpf.de nicht verlinkt. Sobald die Profile vorliegen, hier
+ * eintragen – bis dahin werden die Icons bewusst nicht gerendert, statt auf
+ * "#" zu zeigen (das waren zuvor 8 tote Links pro Seite: 4 im Footer und
+ * 4 in der schwebenden CTA-Leiste).
+ */
+const ALLE_SOCIAL_LINKS = [
+  { label: "Instagram", href: "", icon: "instagram" },
+  { label: "Pinterest", href: "", icon: "pinterest" },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/E-Scharpf-Holzbau-207747759323041/",
+    icon: "facebook",
+  },
+  { label: "Houzz", href: "", icon: "houzz" },
 ] as const;
+
+export const SOCIAL_LINKS = ALLE_SOCIAL_LINKS.filter((s) => s.href.length > 0);

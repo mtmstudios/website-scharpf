@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Section, TrustRow, CategoryBar } from "@/components/sections";
 import { ProjektQuiz } from "@/components/projekt-quiz";
+import { TerminKarte, hatTermine } from "@/components/termin-buttons";
 import { CONTACT } from "@/lib/site";
 import { submitLead } from "@/lib/submit-lead";
 import { cn } from "@/lib/utils";
@@ -152,8 +153,16 @@ function Kontakt() {
             In vier Schritten zur kostenlosen Projektberatung – wählen Sie
             einfach aus, worum es geht.
           </p>
-          <div className="mt-8 max-w-3xl">
+          <div
+            className={cn(
+              "mt-8 grid items-start gap-8",
+              hatTermine()
+                ? "lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]"
+                : "max-w-3xl",
+            )}
+          >
             <ProjektQuiz />
+            <TerminKarte />
           </div>
         </div>
       </section>
