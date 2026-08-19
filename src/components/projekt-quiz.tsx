@@ -20,18 +20,33 @@ const SCHRITTE = [
       "Carport",
       "Sonstiges",
     ],
+    hinweis: null,
+    optional: false,
   },
   {
     frage: "Um welchen Gebäudetyp handelt es sich?",
     key: "gebaeudetyp",
     optionen: ["Einfamilienhaus", "Mehrfamilienhaus", "Gewerbeobjekt", "Denkmal"],
+    hinweis: null,
+    optional: false,
   },
   {
     frage: "Wie groß ist Ihr Projekt ungefähr?",
     key: "projektgroesse",
-    optionen: ["unter 20.000 €", "20.000–50.000 €", "über 50.000 €"],
+    optionen: [
+      "unter 20.000 €",
+      "20.000–50.000 €",
+      "über 50.000 €",
+      "Weiß ich noch nicht",
+    ],
+    hinweis:
+      "Nur eine grobe Einschätzung – kein verbindliches Budget. Welche Förderungen und Zuschüsse für Sie infrage kommen, klären wir im Gespräch.",
+    optional: true,
   },
 ] as const;
+
+/** Antworten, die in der Zusammenfassung nicht angezeigt werden. */
+const OHNE_ANGABE = ["Keine Angabe", "Weiß ich noch nicht"];
 
 const inputClass =
   "flex h-12 w-full rounded-md border border-border bg-background px-4 py-2 text-base transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
@@ -94,6 +109,11 @@ export function ProjektQuiz() {
           <h3 className="font-display text-2xl font-bold text-foreground">
             {SCHRITTE[schritt].frage}
           </h3>
+          {SCHRITTE[schritt].hinweis && (
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+              {SCHRITTE[schritt].hinweis}
+            </p>
+          )}
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {SCHRITTE[schritt].optionen.map((opt) => (
               <button
@@ -106,15 +126,26 @@ export function ProjektQuiz() {
               </button>
             ))}
           </div>
-          {schritt > 0 && (
-            <button
-              type="button"
-              onClick={() => setSchritt((s) => s - 1)}
-              className="mt-6 text-sm font-semibold text-muted-foreground hover:text-primary"
-            >
-              ← Zurück
-            </button>
-          )}
+          <div className="mt-6 flex items-center gap-6">
+            {schritt > 0 && (
+              <button
+                type="button"
+                onClick={() => setSchritt((s) => s - 1)}
+                className="text-sm font-semibold text-muted-foreground hover:text-primary"
+              >
+                ← Zurück
+              </button>
+            )}
+            {SCHRITTE[schritt].optional && (
+              <button
+                type="button"
+                onClick={() => waehle(SCHRITTE[schritt].key, "Keine Angabe")}
+                className="text-sm font-semibold text-muted-foreground hover:text-primary"
+              >
+                Überspringen →
+              </button>
+            )}
+          </div>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="mt-6">
@@ -122,8 +153,13 @@ export function ProjektQuiz() {
             Wie erreichen wir Sie?
           </h3>
           <p className="mt-2 text-sm text-muted-foreground">
-            {antworten.projektart} · {antworten.gebaeudetyp} ·{" "}
-            {antworten.projektgroesse}
+            {[
+              antworten.projektart,
+              antworten.gebaeudetyp,
+              antworten.projektgroesse,
+            ]
+              .filter((wert) => wert && !OHNE_ANGABE.includes(wert))
+              .join(" · ")}
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <input
