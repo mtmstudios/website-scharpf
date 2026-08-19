@@ -6,6 +6,7 @@ import {
   ReferenzTeaser,
   CtaBanner,
 } from "@/components/sections";
+import { VeluxKonfigurator } from "@/components/velux-konfigurator";
 
 export const Route = createFileRoute("/dach/dachfenster")({
   head: () => ({
@@ -31,7 +32,7 @@ function Dachfenster() {
         lead="Ein gut platziertes Dachfenster verwandelt einen dunklen Raum in ein helles Ambiente. Wir sind Experten in der Installation von Dachfenstern, die optimal belichtet, energetisch dämmen und dauerhaft dicht bleiben."
         ctaLabel="Dachfenster anfragen"
         secondaryCtaLabel="Velux Dachfensterkonfigurator"
-        secondaryCtaTo="#"
+        secondaryCtaTo="#konfigurator"
         imageNote="Heller Dachraum mit VELUX Panorama Dachfenster"
         imageSrc="/fotos/scharpf_velux_panorame.jpg"
         breadcrumbs={[
@@ -41,6 +42,10 @@ function Dachfenster() {
         ]}
       />
 
+
+      <Section id="konfigurator">
+        <VeluxKonfigurator />
+      </Section>
 
       <Section>
         <LeistungBlock
