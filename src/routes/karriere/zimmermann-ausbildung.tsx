@@ -30,8 +30,8 @@ function Page() {
         "Motivation, Zuverlässigkeit und Teamgeist",
         "Schwindelfreiheit von Vorteil",
       ]}
-      imageSrc="/fotos/scharpf_vorfertigung_03.jpg"
-      imageNote="Ausbildung in der Werkhalle von E. Scharpf"
+      imageSrc="/fotos/scharpf_karriere_zimmermann_ausbildung.jpg"
+      imageNote="Auszubildender beim Anreißen eines Sparrens"
     />
   );
 }

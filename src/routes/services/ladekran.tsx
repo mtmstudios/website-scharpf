@@ -30,8 +30,8 @@ function Ladekran() {
         title="Ladekran mieten – präzise Hebekraft für Ihre Baustelle"
         lead="Für Projekte, bei denen schwere Lasten präzise positioniert werden müssen, steht unser Ladekran zur Verfügung – für eigene Baustellen und als Dienstleistung für externe Partner."
         ctaLabel="Ladekran anfragen"
-        imageNote="Ladekran von E. Scharpf im Einsatz"
-        imageSrc="/fotos/scharpf_ladekran.jpg"
+        imageNote="Unser Ladekran: Mercedes Actros mit FASSI-Ladekran"
+        imageSrc="/fotos/scharpf_ladekran_neu.jpg"
         breadcrumbs={[
           { label: "Leistungen", to: "/leistungen" },
           { label: "Service & Sonstige Leistungen", to: "/services" },
@@ -51,8 +51,8 @@ function Ladekran() {
             "Buchung mit Fahrer und Einweisung",
             "Anfrage direkt über Kontaktformular oder Telefon",
           ]}
-          imageNote="Ladekran beim Heben von Bauteilen"
-          imageSrc="/fotos/scharpf_Transporter.jpg"
+          imageNote="Ladekran hebt ein vorgefertigtes Dachelement über das Haus"
+          imageSrc="/fotos/scharpf_ladekran_einsatz.jpg"
         />
         <p className="mt-8 text-base text-muted-foreground">
           Direkt anfragen: Telefon{" "}

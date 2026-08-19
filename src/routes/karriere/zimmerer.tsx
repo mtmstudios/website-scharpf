@@ -31,8 +31,8 @@ function Page() {
         "Führerschein Klasse B",
         "Erfahrung in Holzbau und Restaurierung von Vorteil, aber kein Muss",
       ]}
-      imageSrc="/fotos/scharpf_vorfertigung_01.jpg"
-      imageNote="Zimmerer von E. Scharpf bei der Vorfertigung"
+      imageSrc="/fotos/scharpf_karriere_zimmerer.jpg"
+      imageNote="Zimmerer von E. Scharpf beim Aufmaß auf dem Dach"
     />
   );
 }

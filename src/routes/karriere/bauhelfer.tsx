@@ -30,8 +30,8 @@ function Page() {
         "Führerschein Klasse B von Vorteil",
         "Deutschkenntnisse für die Verständigung auf der Baustelle",
       ]}
-      imageSrc="/fotos/scharpf_Transporter.jpg"
-      imageNote="Baustellenteam von E. Scharpf"
+      imageSrc="/fotos/scharpf_karriere_bauhelfer.jpg"
+      imageNote="Zuschnitt mit der Handkreissäge auf der Baustelle"
     />
   );
 }
