@@ -45,6 +45,7 @@ import { Route as KarriereZimmererRouteImport } from './routes/karriere/zimmerer
 import { Route as KarriereDachdeckerAusbildungRouteImport } from './routes/karriere/dachdecker-ausbildung'
 import { Route as KarriereDachdeckerRouteImport } from './routes/karriere/dachdecker'
 import { Route as KarriereBauhelferRouteImport } from './routes/karriere/bauhelfer'
+import { Route as KarriereKlempnerRouteImport } from './routes/karriere/klempner'
 import { Route as HolzbauHolzhausbauRouteImport } from './routes/holzbau/holzhausbau'
 import { Route as HolzbauDachstuhlRouteImport } from './routes/holzbau/dachstuhl'
 import { Route as HolzbauCarportRouteImport } from './routes/holzbau/carport'
@@ -245,6 +246,11 @@ const KarriereBauhelferRoute = KarriereBauhelferRouteImport.update({
   path: '/karriere/bauhelfer',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KarriereKlempnerRoute = KarriereKlempnerRouteImport.update({
+  id: '/karriere/klempner',
+  path: '/karriere/klempner',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HolzbauHolzhausbauRoute = HolzbauHolzhausbauRouteImport.update({
   id: '/holzbau/holzhausbau',
   path: '/holzbau/holzhausbau',
@@ -326,6 +332,7 @@ export interface FileRoutesByFullPath {
   '/holzbau/dachstuhl': typeof HolzbauDachstuhlRoute
   '/holzbau/holzhausbau': typeof HolzbauHolzhausbauRoute
   '/karriere/bauhelfer': typeof KarriereBauhelferRoute
+  '/karriere/klempner': typeof KarriereKlempnerRoute
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
@@ -376,6 +383,7 @@ export interface FileRoutesByTo {
   '/holzbau/dachstuhl': typeof HolzbauDachstuhlRoute
   '/holzbau/holzhausbau': typeof HolzbauHolzhausbauRoute
   '/karriere/bauhelfer': typeof KarriereBauhelferRoute
+  '/karriere/klempner': typeof KarriereKlempnerRoute
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
@@ -427,6 +435,7 @@ export interface FileRoutesById {
   '/holzbau/dachstuhl': typeof HolzbauDachstuhlRoute
   '/holzbau/holzhausbau': typeof HolzbauHolzhausbauRoute
   '/karriere/bauhelfer': typeof KarriereBauhelferRoute
+  '/karriere/klempner': typeof KarriereKlempnerRoute
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
@@ -479,6 +488,7 @@ export interface FileRouteTypes {
     | '/holzbau/dachstuhl'
     | '/holzbau/holzhausbau'
     | '/karriere/bauhelfer'
+    | '/karriere/klempner'
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
     | '/karriere/zimmerer'
@@ -529,6 +539,7 @@ export interface FileRouteTypes {
     | '/holzbau/dachstuhl'
     | '/holzbau/holzhausbau'
     | '/karriere/bauhelfer'
+    | '/karriere/klempner'
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
     | '/karriere/zimmerer'
@@ -579,6 +590,7 @@ export interface FileRouteTypes {
     | '/holzbau/dachstuhl'
     | '/holzbau/holzhausbau'
     | '/karriere/bauhelfer'
+    | '/karriere/klempner'
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
     | '/karriere/zimmerer'
@@ -630,6 +642,7 @@ export interface RootRouteChildren {
   HolzbauDachstuhlRoute: typeof HolzbauDachstuhlRoute
   HolzbauHolzhausbauRoute: typeof HolzbauHolzhausbauRoute
   KarriereBauhelferRoute: typeof KarriereBauhelferRoute
+  KarriereKlempnerRoute: typeof KarriereKlempnerRoute
   KarriereDachdeckerRoute: typeof KarriereDachdeckerRoute
   KarriereDachdeckerAusbildungRoute: typeof KarriereDachdeckerAusbildungRoute
   KarriereZimmererRoute: typeof KarriereZimmererRoute
@@ -915,6 +928,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KarriereBauhelferRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/karriere/klempner': {
+      id: '/karriere/klempner'
+      path: '/karriere/klempner'
+      fullPath: '/karriere/klempner'
+      preLoaderRoute: typeof KarriereKlempnerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/holzbau/holzhausbau': {
       id: '/holzbau/holzhausbau'
       path: '/holzbau/holzhausbau'
@@ -1022,6 +1042,7 @@ const rootRouteChildren: RootRouteChildren = {
   HolzbauDachstuhlRoute: HolzbauDachstuhlRoute,
   HolzbauHolzhausbauRoute: HolzbauHolzhausbauRoute,
   KarriereBauhelferRoute: KarriereBauhelferRoute,
+  KarriereKlempnerRoute: KarriereKlempnerRoute,
   KarriereDachdeckerRoute: KarriereDachdeckerRoute,
   KarriereDachdeckerAusbildungRoute: KarriereDachdeckerAusbildungRoute,
   KarriereZimmererRoute: KarriereZimmererRoute,
