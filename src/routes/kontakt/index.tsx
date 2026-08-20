@@ -145,7 +145,7 @@ function Kontakt() {
           }}
           aria-hidden="true"
         />
-        <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-seite px-5 lg:px-8">
           <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
             Projekt anfragen
           </h2>

@@ -86,7 +86,7 @@ function Referenzen() {
           backgroundSize: "auto 101.2198275%",
         }}
       >
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="relative mx-auto max-w-seite px-5 lg:px-8">
           <h2 className="max-w-3xl font-display text-3xl font-bold text-foreground sm:text-4xl">
             120+ Projekte im Raum Esslingen, 4,8 Kundenzufriedenheit
           </h2>

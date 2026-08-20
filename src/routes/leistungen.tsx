@@ -107,7 +107,7 @@ function Leistungen() {
           backgroundSize: "auto 126.225%",
         }}
       >
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="relative mx-auto max-w-seite px-5 lg:px-8">
           <h2 className="max-w-2xl font-display text-3xl font-bold text-foreground sm:text-4xl">
             Haben sie Fragen zu unseren Leistungen?
           </h2>

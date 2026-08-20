@@ -24,7 +24,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
+      <div className="mx-auto flex h-[84px] max-w-seite items-center justify-between gap-6 px-5 lg:px-8">
         <Wordmark />
 
         {/* Desktop-Navigation */}
@@ -115,7 +115,7 @@ export function SiteHeader() {
       {/* Mobile-Navigation */}
       {mobileOpen && (
         <div className="border-t border-border bg-background lg:hidden">
-          <nav className="mx-auto max-w-7xl px-5 py-4">
+          <nav className="mx-auto max-w-seite px-5 py-4">
             {MAIN_NAV.map((item) =>
               item.label === "Leistungen" ? (
                 <div key={item.to}>

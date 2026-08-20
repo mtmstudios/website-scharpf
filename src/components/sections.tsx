@@ -27,7 +27,7 @@ export function Section({
       id={id}
       className={cn(muted && "bg-secondary", "py-11 lg:py-[4.125rem]", className)}
     >
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">{children}</div>
+      <div className="mx-auto max-w-seite px-5 lg:px-8">{children}</div>
     </section>
   );
 }
@@ -52,7 +52,7 @@ export function CategoryBar({
   useRegisterCategory({ breadcrumbs, title, color });
   return (
     <div className="w-full bg-background">
-      <div className="mx-auto flex min-h-12 max-w-7xl items-center px-5 lg:px-8">
+      <div className="mx-auto flex min-h-12 max-w-seite items-center px-5 lg:px-8">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-foreground sm:text-base">
             {items.map((item, index) => {
@@ -142,7 +142,7 @@ export function PageHero({
         breadcrumbs={breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : [{ label: eyebrow || title }]}
         color="#2D635C"
       />
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-20 lg:pt-6">
+      <div className="mx-auto grid max-w-seite items-center gap-12 px-5 pb-14 pt-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-20 lg:pt-6">
 
         <div>
           {eyebrow && (
@@ -468,7 +468,7 @@ export function CtaBanner({
     <>
       {trust && (
         <div className="border-t border-border bg-background py-6">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mx-auto max-w-seite px-5 lg:px-8">
             <TrustRow />
           </div>
         </div>

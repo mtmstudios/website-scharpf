@@ -83,7 +83,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/40 to-black/20" aria-hidden="true" />
         <div className="absolute inset-0 bg-black/5" aria-hidden="true" />
         {/* Inhalt */}
-        <div className="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
+        <div className="relative z-10 mx-auto max-w-seite px-5 py-24 lg:px-8 lg:py-36">
           <h1 className="max-w-4xl font-display text-[0.9109rem] font-bold leading-[1.1] text-white sm:text-[1.2146rem] lg:text-[1.5181rem]">
             Benötigen Sie eine Restaurierung, Holzbauleistungen oder
             Dachsanierung?
@@ -162,7 +162,7 @@ function Index() {
             .kundenstimmen-bg { background-size: auto 330%; }
           }
         `}</style>
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="relative mx-auto max-w-seite px-5 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             Das sagen unsere Kunden
           </h2>

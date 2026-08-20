@@ -125,7 +125,7 @@ export function LeistungenHaus() {
       ref={sectionRef}
       className="border-b border-border bg-secondary/50"
     >
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-seite px-5 py-16 lg:px-8 lg:py-24">
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
           Unsere Leistungen
         </h2>
