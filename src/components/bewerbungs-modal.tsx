@@ -137,7 +137,7 @@ export function BewerbungsButton({
 
     setSending(true);
     try {
-      await submitLead("kontaktformular", {
+      await submitLead("bewerbung", {
         name: parsed.data.name,
         telefon: parsed.data.phone,
         email: parsed.data.email,

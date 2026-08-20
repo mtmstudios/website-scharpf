@@ -103,10 +103,19 @@ export const REFERENZ_KATEGORIEN = [
   { title: "Service & Sonstige Leistungen", to: "/referenzen/services" },
 ] as const;
 
-// Ziel-Endpoint für Kontaktformular & Projekt-Quiz (n8n-Webhook).
-// TODO: Webhook-URL eintragen, sobald der n8n-Workflow für Scharpf steht –
-// bis dahin wird die Anfrage nur clientseitig bestätigt (Danke-Seite).
-export const FORM_ENDPOINT = "";
+/**
+ * n8n-Webhook für alle drei Formulare: Kontaktformular, Projekt-Quiz und
+ * Bewerbung. Unterschieden wird im Workflow über das Feld `quelle`.
+ *
+ * Workflow: "E. Scharpf — Website Formulare"
+ * Quelle:   ~/Desktop/MTM Studios/n8n/E. Scharpf Holzbau/
+ *
+ * Greift erst, wenn der Workflow in n8n importiert UND aktiviert ist. Vorher
+ * antwortet n8n mit 404 – die Formulare zeigen dann trotzdem die Danke-Seite,
+ * die Anfrage geht aber verloren. Vor dem Livegang also prüfen.
+ */
+export const FORM_ENDPOINT =
+  "https://mtmstudios.app.n8n.cloud/webhook/scharpf-formular";
 
 // Google-Bewertungen – Platzhalter-Zitate aus dem B612-Konzept.
 // TODO: durch echte, kuratierte Google-Rezensionen ersetzen.
