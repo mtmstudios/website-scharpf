@@ -137,7 +137,7 @@ export function LeistungenHaus() {
         <div className="mt-10 grid items-center gap-10 lg:grid-cols-[3fr_2fr] lg:gap-16">
           {/* Haus-Bühne */}
           <div style={{ perspective: "1400px" }}>
-            <div ref={tiltRef} style={{ willChange: "transform, opacity" }}>
+            <div ref={tiltRef} className="mx-auto w-4/5" style={{ willChange: "transform, opacity" }}>
               <div className="relative aspect-[1061/683] overflow-hidden">
                 {/* Kamera: zoomt/schwenkt auf den gewählten Gebäudeteil */}
                 <div
