@@ -56,7 +56,7 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
       const width = window.innerWidth;
       if (width < 768) setVisibleCount(1);
       else if (width < 1024) setVisibleCount(2);
-      else setVisibleCount(3);
+      else setVisibleCount(4);
     };
     updateVisibleCount();
     window.addEventListener("resize", updateVisibleCount);
