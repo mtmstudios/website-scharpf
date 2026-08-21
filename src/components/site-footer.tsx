@@ -90,7 +90,7 @@ export function SiteFooter() {
                 AGB
               </Link>
               <span aria-hidden>|</span>
-              <Link to="/kontakt" className="hover:underline">
+              <Link to="/kontakt" search={{ anliegen: undefined }} className="hover:underline">
                 Kontakt
               </Link>
             </div>

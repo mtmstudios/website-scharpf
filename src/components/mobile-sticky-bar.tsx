@@ -46,7 +46,7 @@ export function MobileStickyBar() {
         WhatsApp
       </a>
       <Link
-        to="/kontakt"
+        to="/kontakt" search={{ anliegen: undefined }}
         hash="projekt-quiz"
         className="flex items-center justify-center gap-2 bg-primary py-3.5 text-sm font-semibold text-primary-foreground"
       >

@@ -56,7 +56,7 @@ export function FloatingCta() {
     <div className="fixed right-0 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-4 md:flex">
       {/* Primäre CTA – horizontal lesbarer Pill-Button am Rand */}
       <Link
-        to="/kontakt"
+        to="/kontakt" search={{ anliegen: undefined }}
         className="rounded-l-lg bg-primary px-3 py-2.5 text-xs font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90"
       >
         Beratung anfordern

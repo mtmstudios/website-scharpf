@@ -175,7 +175,7 @@ export function SiteHeader() {
               ),
             )}
             <Link
-              to="/kontakt"
+              to="/kontakt" search={{ anliegen: undefined }}
               onClick={() => setMobileOpen(false)}
               className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
             >
