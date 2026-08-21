@@ -123,15 +123,15 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
           {duplicated.map((item, i) => (
             <div
               key={i}
-              className="w-full flex-shrink-0 px-3 md:w-1/2 lg:w-1/3"
+              className="w-full flex-shrink-0 px-2 md:w-1/2 lg:w-1/4"
               style={{ flex: `0 0 ${itemWidthPercent}%` }}
             >
-              <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm">
+              <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
                 <Stars />
-                <blockquote className="mt-6 flex-1 text-base leading-relaxed text-card-foreground">
+                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-card-foreground">
                   {item.zitat}
                 </blockquote>
-                <figcaption className="mt-6 text-sm font-medium text-muted-foreground">
+                <figcaption className="mt-4 text-xs font-medium text-muted-foreground">
                   {item.quelle}
                 </figcaption>
               </figure>
