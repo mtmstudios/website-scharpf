@@ -83,7 +83,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/40 to-black/20" aria-hidden="true" />
         <div className="absolute inset-0 bg-black/5" aria-hidden="true" />
         {/* Inhalt */}
-        <div className="relative z-10 mx-auto flex min-h-[calc((100vw-2.5rem)*0.75)] max-w-seite flex-col justify-center px-5 py-16 lg:min-h-[552px] lg:px-8 lg:py-20">
+        <div className="relative z-10 mx-auto flex min-h-[calc((100vw-2.5rem)*0.75)] max-w-seite flex-col justify-center px-5 py-16 lg:min-h-[calc((min(100vw,1600px)-8rem)/2*0.75)] lg:px-8 lg:py-20">
           <h1 className="max-w-4xl font-display text-[0.9109rem] font-bold leading-[1.1] text-white sm:text-[1.2146rem] lg:text-[1.5181rem]">
             Benötigen Sie eine Restaurierung, Holzbauleistungen oder
             Dachsanierung?
