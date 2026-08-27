@@ -13,6 +13,41 @@ export const CONTACT = {
   hours: "Mo–Do 7:00–17:00 Uhr\nFr 7:00–14:30 Uhr",
 } as const;
 
+/**
+ * Rechtlich verbindliche Angaben für Impressum und Datenschutzerklärung.
+ *
+ * Quelle: das Impressum der alten Seite holzbau-scharpf.de (ausgelesen am
+ * 27.08.2026). Achtung beim Firmennamen: im Handelsregister steht
+ * "E. Scharpf Holzbau GmbH", während die Seite sonst durchgehend die kürzere
+ * Marke "E. Scharpf GmbH" verwendet (CONTACT.company). Im Impressum und als
+ * Verantwortlicher muss der eingetragene Name stehen, deshalb hier getrennt.
+ */
+export const RECHTLICHES = {
+  legalName: "E. Scharpf Holzbau GmbH",
+  handelsregister: "HRB 211043",
+  registergericht: "Stuttgart",
+  geschaeftsfuehrer: ["Eberhard Ernst Scharpf", "Eberhard Emil Hans Scharpf"],
+  ustId: "DE145344779",
+  kammer: {
+    name: "Handwerkskammer Region Stuttgart",
+    strasse: "Heilbronner Str. 43",
+    ort: "70191 Stuttgart",
+    url: "https://www.hwk-stuttgart.de/",
+  },
+  haftpflicht: {
+    versicherer: "Allianz Deutschland AG",
+    strasse: "Königinstraße 28",
+    ort: "80802 München",
+    geltungsraum: "Deutschland",
+  },
+  schlichtungsstelle: {
+    name: "Universalschlichtungsstelle des Zentrums für Schlichtung e.V.",
+    strasse: "Straßburger Straße 8",
+    ort: "77694 Kehl am Rhein",
+    url: "https://www.verbraucher-schlichter.de",
+  },
+} as const;
+
 export const PRIMARY_CTA = "Kostenlose Beratung Anfordern";
 
 /**
