@@ -20,6 +20,12 @@ export const Route = createFileRoute("/")({
         content:
           "Zimmerer & Dachdecker aus Esslingen. Restaurierung, Holzbau, Dach und Fassade – zuverlässig, nachhaltig, seit über 80 Jahren. Jetzt Beratung anfordern.",
       },
+      { property: "og:title", content: "E. Scharpf GmbH – Holzbau & Restaurierung Esslingen" },
+      { property: "og:description", content: "Zimmerer & Dachdecker aus Esslingen – Restaurierung, Holzbau, Dach und Fassade seit über 80 Jahren." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: "https://delightful-hero-lab.lovable.app/__l5e/assets-v1/e66ea725-60ba-47b8-a33d-5270b83263fe/scharpf_firmengebaeude.jpg" },
+      { name: "twitter:image", content: "https://delightful-hero-lab.lovable.app/__l5e/assets-v1/e66ea725-60ba-47b8-a33d-5270b83263fe/scharpf_firmengebaeude.jpg" },
     ],
   }),
   component: Index,
