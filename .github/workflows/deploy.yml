@@ -1,0 +1,45 @@
+name: Deploy to IONOS
+
+# Statisches Deployment der TanStack-Start-Seite auf IONOS Webhosting.
+# Build -> Prerender (statisches HTML) -> Upload via SFTP (Passwort-Auth).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-ionos
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build
+
+      - name: Prerender static HTML
+        run: bun scripts/prerender.mjs
+
+      - name: Upload via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.IONOS_SFTP_HOST }}
+          port: 22
+          username: ${{ secrets.IONOS_SFTP_USER }}
+          password: ${{ secrets.IONOS_SFTP_PASS }}
+          local_path: './.output/public/*'
+          remote_path: '/'
+          sftp_only: true
