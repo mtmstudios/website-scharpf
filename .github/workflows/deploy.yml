@@ -41,5 +41,5 @@ jobs:
           username: ${{ secrets.IONOS_SFTP_USER }}
           password: ${{ secrets.IONOS_SFTP_PASS }}
           local_path: './.output/public/*'
-          remote_path: '/'
+          remote_path: '/holzbau-scharpf/'
           sftp_only: true
