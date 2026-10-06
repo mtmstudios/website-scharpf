@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { Section } from "@/components/sections";
 import { CONTACT } from "@/lib/site";
 
@@ -9,20 +10,30 @@ export const Route = createFileRoute("/impressum")({
       {
         name: "description",
         content:
-          "Impressum der E. Scharpf GmbH, Fritz-Müller-Str. 115, 73730 Esslingen am Neckar.",
+          "Impressum der E. Scharpf Holzbau GmbH, Fritz-Müller-Str. 115, 73730 Esslingen am Neckar.",
       },
+      { property: "og:title", content: "Impressum – E. Scharpf GmbH" },
+      {
+        property: "og:description",
+        content: "Impressum der E. Scharpf Holzbau GmbH aus Esslingen.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Impressum,
 });
 
-function PlaceholderNotice({ children }: { children: React.ReactNode }) {
+function Block({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="rounded-lg border-2 border-dashed border-primary/50 bg-secondary p-6 text-sm leading-relaxed text-foreground/80">
-      {children}
-    </div>
+    <section>
+      <h2 className="font-display text-2xl font-bold text-foreground">{title}</h2>
+      <div className="mt-3 text-base leading-relaxed text-muted-foreground">{children}</div>
+    </section>
   );
 }
+
+const link = "text-primary hover:underline";
 
 function Impressum() {
   return (
@@ -33,82 +44,79 @@ function Impressum() {
         </h1>
 
         <div className="mt-8 max-w-3xl space-y-8">
-          <section>
-            <h2 className="font-display text-2xl font-bold text-foreground">
-              Angaben gemäß § 5 TMG
-            </h2>
-            <address className="mt-4 not-italic text-base leading-relaxed text-foreground/90">
-              {CONTACT.company}
+          <Block title="Angaben gemäß § 5 TMG">
+            <address className="not-italic">
+              E. Scharpf Holzbau GmbH
               <br />
               {CONTACT.street}
               <br />
               {CONTACT.city}
             </address>
-            <dl className="mt-6 space-y-2 text-base leading-relaxed">
-              <div className="flex gap-2">
-                <dt className="font-semibold text-foreground">Telefon:</dt>
-                <dd>
-                  <a
-                    href={CONTACT.phoneHref}
-                    className="text-primary hover:underline"
-                  >
-                    {CONTACT.phone}
-                  </a>
-                </dd>
-              </div>
-              <div className="flex gap-2">
-                <dt className="font-semibold text-foreground">Fax:</dt>
-                <dd className="text-muted-foreground">{CONTACT.fax}</dd>
-              </div>
-              <div className="flex gap-2">
-                <dt className="font-semibold text-foreground">E-Mail:</dt>
-                <dd>
-                  <a
-                    href={CONTACT.emailHref}
-                    className="text-primary hover:underline"
-                  >
-                    {CONTACT.email}
-                  </a>
-                </dd>
-              </div>
-            </dl>
-          </section>
+            <p className="mt-4">
+              Handelsregister: HRB 211043
+              <br />
+              Registergericht: Stuttgart
+            </p>
+            <p className="mt-4">
+              <strong className="text-foreground">Vertreten durch:</strong>
+              <br />
+              Eberhard Ernst Scharpf
+              <br />
+              Eberhard Emil Hans Scharpf
+            </p>
+          </Block>
 
-          <section>
-            <h2 className="font-display text-2xl font-bold text-foreground">
-              Weitere Pflichtangaben
-            </h2>
-            <PlaceholderNotice>
-              <span className="font-semibold text-primary">
-                Platzhalter – die folgenden Angaben müssen noch vom Kunden
-                ergänzt und juristisch geprüft werden.
-              </span>
-            </PlaceholderNotice>
-            <dl className="mt-6 space-y-2 text-base leading-relaxed">
-              <div className="flex flex-wrap gap-2">
-                <dt className="font-semibold text-foreground">
-                  Geschäftsführer:
-                </dt>
-                <dd className="text-muted-foreground">[noch zu ergänzen]</dd>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <dt className="font-semibold text-foreground">
-                  Registergericht / HRB:
-                </dt>
-                <dd className="text-muted-foreground">[noch zu ergänzen]</dd>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <dt className="font-semibold text-foreground">USt-IdNr.:</dt>
-                <dd className="text-muted-foreground">[noch zu ergänzen]</dd>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <dt className="font-semibold text-foreground">
-                  Berufshaftpflicht:
-                </dt>
-                <dd className="text-muted-foreground">[noch zu ergänzen]</dd>
-              </div>
-            </dl>
-          </section>
+          <Block title="Kontakt">
+            Telefon: <a href={CONTACT.phoneHref} className={link}>{CONTACT.phone}</a>
+            <br />
+            Fax: {CONTACT.fax}
+            <br />
+            E-Mail: <a href={CONTACT.emailHref} className={link}>{CONTACT.email}</a>
+          </Block>
+
+          <Block title="Umsatzsteuer-ID">
+            Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+            <br />
+            DE145344779
+          </Block>
+
+          <Block title="Aufsichtsbehörde">
+            Handwerkskammer Stuttgart
+            <br />
+            Heilbronner Str. 43
+            <br />
+            70191 Stuttgart
+            <br />
+            <a href="https://www.hwk-stuttgart.de/" target="_blank" rel="noopener noreferrer" className={link}>
+              www.hwk-stuttgart.de
+            </a>
+          </Block>
+
+          <Block title="Angaben zur Berufshaftpflichtversicherung">
+            <strong className="text-foreground">Name und Sitz des Versicherers:</strong>
+            <br />
+            Allianz Deutschland AG
+            <br />
+            Königinstraße 28
+            <br />
+            80802 München
+            <p className="mt-4">
+              <strong className="text-foreground">Geltungsraum der Versicherung:</strong>
+              <br />
+              Deutschland
+            </p>
+          </Block>
+
+          <Block title="Verbraucherstreitbeilegung / Universalschlichtungsstelle">
+            Wir nehmen an einem Streitbeilegungsverfahren vor einer
+            Verbraucherschlichtungsstelle teil. Zuständig ist die
+            Universalschlichtungsstelle des Zentrums für Schlichtung e.V.,
+            Straßburger Straße 8, 77694 Kehl am Rhein (
+            <a href="https://www.verbraucher-schlichter.de" target="_blank" rel="noopener noreferrer" className={link}>
+              www.verbraucher-schlichter.de
+            </a>
+            ).
+          </Block>
         </div>
       </Section>
     </div>
