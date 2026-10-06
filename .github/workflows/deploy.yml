@@ -33,13 +33,18 @@ jobs:
       - name: Prerender static HTML
         run: bun scripts/prerender.mjs
 
-      - name: Upload via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-        with:
-          server: ${{ secrets.IONOS_SFTP_HOST }}
-          port: 22
-          username: ${{ secrets.IONOS_SFTP_USER }}
-          password: ${{ secrets.IONOS_SFTP_PASS }}
-          local_path: './.output/public'
-          remote_path: '/holzbau-scharpf'
-          sftp_only: true
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Upload via SFTP (mirror, überschreibt & löscht verwaiste Dateien)
+        env:
+          IONOS_SFTP_HOST: ${{ secrets.IONOS_SFTP_HOST }}
+          IONOS_SFTP_USER: ${{ secrets.IONOS_SFTP_USER }}
+          IONOS_SFTP_PASS: ${{ secrets.IONOS_SFTP_PASS }}
+        run: |
+          lftp -u "$IONOS_SFTP_USER","$IONOS_SFTP_PASS" sftp://$IONOS_SFTP_HOST -e "
+            set sftp:auto-confirm yes;
+            set mirror:use-pget-n 1;
+            mirror -R --delete --verbose --parallel=2 ./.output/public /holzbau-scharpf;
+            quit
+          "
