@@ -73,6 +73,24 @@ function Klempnerarbeiten() {
         ]}
       />
 
+      <Section>
+        <div className="grid items-center gap-10 sm:grid-cols-[minmax(0,320px)_1fr]">
+          <img
+            src="/__l5e/assets-v1/91807f57-f54e-4364-93ae-846608141f02/scharpf_team_Harald_Radtke.jpg"
+            alt="Klempnermeister Harald Radtke"
+            loading="lazy"
+            className="aspect-[4/5] w-full rounded-lg object-cover"
+          />
+          <div>
+            <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+              Harald Radtke
+            </h2>
+            <span className="mt-4 block h-1 w-24 rounded bg-primary" />
+            <p className="mt-6 text-base text-muted-foreground">Klempnermeister</p>
+          </div>
+        </div>
+      </Section>
+
       <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
     </div>
   );
