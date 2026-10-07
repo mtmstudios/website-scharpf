@@ -69,8 +69,6 @@ function Impressum() {
           <Block title="Kontakt">
             Telefon: <a href={CONTACT.phoneHref} className={link}>{CONTACT.phone}</a>
             <br />
-            Fax: {CONTACT.fax}
-            <br />
             E-Mail: <a href={CONTACT.emailHref} className={link}>{CONTACT.email}</a>
           </Block>
 

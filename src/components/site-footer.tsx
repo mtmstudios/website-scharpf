@@ -70,7 +70,6 @@ export function SiteFooter() {
                   0711-93 18 44 22
                 </a>
               </div>
-              <div>Fax: 0711-93 18 44 50</div>
             </div>
           </div>
 
