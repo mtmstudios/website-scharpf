@@ -158,7 +158,11 @@ export const PARTNERS = ["RESTORA GMBH", "ES TORE"] as const;
  * 4 in der schwebenden CTA-Leiste).
  */
 const ALLE_SOCIAL_LINKS = [
-  { label: "Instagram", href: "", icon: "instagram" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/e.scharpf_holzbau_zimmerei/",
+    icon: "instagram",
+  },
   { label: "Pinterest", href: "", icon: "pinterest" },
   {
     label: "Facebook",
