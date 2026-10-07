@@ -10,7 +10,7 @@ export const CONTACT = {
   email: "anfrage@scharpf-holzbau.de",
   emailHref: "mailto:anfrage@scharpf-holzbau.de",
   whatsappHref: "https://wa.me/4971193184422",
-  hours: "Mo–Do 7:00–17:00 Uhr, Fr 7:00–14:30 Uhr",
+  hours: "Mo–Do 7:00–17:00 Uhr\nFr 7:00–14:30 Uhr",
 } as const;
 
 export const PRIMARY_CTA = "Kostenlose Beratung Anfordern";
