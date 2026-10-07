@@ -136,10 +136,10 @@ function UeberUns() {
       <Section muted>
         <div className="space-y-10">
           <img
-            src="/__l5e/assets-v1/fe74fddb-5aca-4bed-9bb4-77aab95f1ca0/Scharpf_Gruppe_1.jpg"
+            src="/__l5e/assets-v1/fbd3cb41-86df-4339-ac4c-7780ef63f3a6/Scharpf_Gruppe_1_crop.jpg"
             alt="Das Team der E. Scharpf Holzbau GmbH"
             loading="lazy"
-            className="w-full rounded-lg object-cover aspect-[16/9]"
+            className="w-full rounded-lg object-cover aspect-[1920/1035]"
           />
           <div>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
