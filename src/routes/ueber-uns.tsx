@@ -26,12 +26,12 @@ const TEAM = [
   {
     name: "Eberhard Scharpf sen.",
     funktionen: ["Geschäftsführer", "Restaurator"],
-    foto: "/fotos/team/scharpf_Senior.jpg",
+    foto: "/__l5e/assets-v1/30ede298-30d3-4b9b-be36-1d4841362e56/scharpf_team_Senior.jpg",
   },
   {
     name: "Eberhard Scharpf jun.",
     funktionen: ["Geschäftsführer", "Dipl Ing. (FH)"],
-    foto: "/fotos/team/scharpf_Junior.jpg",
+    foto: "/__l5e/assets-v1/567afaab-8b77-44cc-b557-626b6f66bf90/scharpf_team_Junior.jpg",
   },
   {
     name: "Alexander Schwarz",
@@ -41,7 +41,7 @@ const TEAM = [
       "Energieeffizienz - Experte",
       "Zimmerermeister",
     ],
-    foto: "/__l5e/assets-v1/acb8b87e-3e92-4b1e-810e-07547f57fb00/scharpf_Alexander_Schwarz-2.jpg",
+    foto: "/__l5e/assets-v1/4bcd6db1-0bf1-42a3-aa8e-69955c5758ae/scharpf_team_Alexander.jpg",
   },
   {
     name: "Ole Schäfer",
@@ -50,17 +50,17 @@ const TEAM = [
       "Zimmerermeister",
       "Staat. Geprägt. Bautechniker",
     ],
-    foto: "/__l5e/assets-v1/1296445b-3b3a-4ad4-8f69-f5f86fb1b5f2/scharpf_Ole_Schäfer.jpg",
+    foto: "/__l5e/assets-v1/62e8d66b-65c6-40fd-a197-7cfe4c75ca63/scharpf_team_Ole.jpg",
   },
   {
     name: "Stefan Strifler",
     funktionen: ["Projektleiter", "Zimmerermeister"],
-    foto: "/__l5e/assets-v1/03c2f4a6-fd1e-426b-a41f-74f5456160a1/scharpf_stefan_strifler.jpg",
+    foto: "/__l5e/assets-v1/cb5f6c00-7b1d-4091-928b-5b252a0929b0/scharpf_team_Stefan.jpg",
   },
   {
     name: "Max Kaltmaier",
     funktionen: ["Zimmerermeister", "Restaurator"],
-    foto: "/__l5e/assets-v1/aa079ec6-ca9d-42a9-97ee-e5e4a5e1ff65/scharpf_Max_Kaltmaier.jpg",
+    foto: "/__l5e/assets-v1/0ad6673e-4b08-497d-ad49-408161f9074e/scharpf_team_Max.jpg",
   },
 ] as const;
 
