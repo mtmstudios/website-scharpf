@@ -74,7 +74,7 @@ function Klempnerarbeiten() {
       />
 
       <Section>
-        <div className="grid items-center gap-10 sm:grid-cols-[minmax(0,320px)_1fr]">
+        <div className="grid items-center gap-10 sm:grid-cols-[minmax(0,320px)_1fr] lg:grid-cols-[minmax(0,320px)_1fr_minmax(0,320px)]">
           <img
             src="/__l5e/assets-v1/91807f57-f54e-4364-93ae-846608141f02/scharpf_team_Harald_Radtke.jpg"
             alt="Klempnermeister Harald Radtke"
@@ -88,7 +88,14 @@ function Klempnerarbeiten() {
             <span className="mt-4 block h-1 w-24 rounded bg-primary" />
             <p className="mt-6 text-base text-muted-foreground">Klempnermeister</p>
           </div>
+          <img
+            src="/__l5e/assets-v1/2411a340-51c7-4dbe-8b33-8e31f1fadf63/scharpf_klempner_designer.png"
+            alt="Erker mit glänzender Blechhaube aus der Klempnerwerkstatt"
+            loading="lazy"
+            className="aspect-[4/5] w-full rounded-lg object-cover sm:col-span-2 lg:col-span-1"
+          />
         </div>
+          
       </Section>
 
       <CtaBanner title="Wollen Sie ein vergleichbares Projekt anfragen?" />
