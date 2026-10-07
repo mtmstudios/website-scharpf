@@ -88,12 +88,17 @@ function Klempnerarbeiten() {
             <span className="mt-4 block h-1 w-24 rounded bg-primary" />
             <p className="mt-6 text-base text-muted-foreground">Klempnermeister</p>
           </div>
-          <img
-            src="/__l5e/assets-v1/2411a340-51c7-4dbe-8b33-8e31f1fadf63/scharpf_klempner_designer.png"
-            alt="Erker mit glänzender Blechhaube aus der Klempnerwerkstatt"
-            loading="lazy"
-            className="aspect-[4/5] w-full rounded-lg object-cover sm:col-span-2 lg:col-span-1"
-          />
+          <figure className="relative sm:col-span-2 lg:col-span-1">
+            <img
+              src="/__l5e/assets-v1/2411a340-51c7-4dbe-8b33-8e31f1fadf63/scharpf_klempner_designer.png"
+              alt="Erker mit glänzender Blechhaube aus der Klempnerwerkstatt"
+              loading="lazy"
+              className="aspect-[4/5] w-full rounded-lg object-cover"
+            />
+            <figcaption className="absolute left-0 top-full mt-1 text-[10px] text-muted-foreground">
+              Bild mit KI bearbeitet
+            </figcaption>
+          </figure>
         </div>
           
       </Section>
