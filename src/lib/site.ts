@@ -139,7 +139,7 @@ export const GOOGLE_BEWERTUNGEN = [
 export const TRUST_SIGNALE = [
   "80 Jahre Erfahrung – 3 Generationen",
   "Meisterbetrieb – Handwerkskammer Stuttgart",
-  "VELUX-Partner",
+  "VELUX und ROTO -Partner",
   "120+ Referenzprojekte",
 ] as const;
 
