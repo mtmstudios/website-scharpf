@@ -136,7 +136,7 @@ function UeberUns() {
       <Section muted>
         <div className="space-y-10">
           <img
-            src="/__l5e/assets-v1/9e49800e-2c10-402a-bb76-f9dc8e2be5e2/scharpf_gruppenbild-2.jpg"
+            src="/__l5e/assets-v1/fe74fddb-5aca-4bed-9bb4-77aab95f1ca0/Scharpf_Gruppe_1.jpg"
             alt="Das Team der E. Scharpf Holzbau GmbH"
             loading="lazy"
             className="w-full rounded-lg object-cover aspect-[16/9]"
