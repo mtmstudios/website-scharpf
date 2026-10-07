@@ -120,9 +120,6 @@ function Kontakt() {
           <div className="text-base">
             <p className="font-semibold text-foreground">Öffnungszeiten</p>
             <p className="mt-1 text-muted-foreground">{CONTACT.hours}</p>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Fax: {CONTACT.fax}
-            </p>
           </div>
         </div>
         <TrustRow className="mt-10 justify-start" />

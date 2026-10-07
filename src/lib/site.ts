@@ -7,11 +7,10 @@ export const CONTACT = {
   city: "73730 Esslingen",
   phone: "0711 – 93 18 44 22",
   phoneHref: "tel:+4971193184422",
-  fax: "0711 – 93 18 44 50",
   email: "anfrage@scharpf-holzbau.de",
   emailHref: "mailto:anfrage@scharpf-holzbau.de",
   whatsappHref: "https://wa.me/4971193184422",
-  hours: "Mo–Fr 7:00–17:00 Uhr",
+  hours: "Mo–Do 7:00–17:00 Uhr, Fr 7:00–14:30 Uhr",
 } as const;
 
 export const PRIMARY_CTA = "Kostenlose Beratung Anfordern";
