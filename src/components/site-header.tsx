@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
+
+// Nur für das Leistungen-Menü (Startseite & Seiten nutzen weiter LEISTUNGEN).
+const MENU_LEISTUNGEN = [
+  ...LEISTUNGEN.slice(0, 4).map((l) => ({
+    nr: l.nr,
+    to: l.to as string,
+    title: l.to === "/dach" ? "Dach & Dachfenster" : (l.title as string),
+  })),
+  { nr: "05", to: "/dach/klempnerarbeiten", title: "Klempnerarbeiten" },
+  { nr: "06", to: LEISTUNGEN[4].to as string, title: LEISTUNGEN[4].title as string },
+];
 import { MAIN_NAV, LEISTUNGEN, PRIMARY_CTA } from "@/lib/site";
 
 function Wordmark() {
@@ -55,7 +66,7 @@ export function SiteHeader() {
                 </Link>
                 <div className="invisible absolute left-0 top-full w-72 translate-y-1 pt-2 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="overflow-hidden rounded-xl border border-border bg-card shadow-xl">
-                    {LEISTUNGEN.map((l) => (
+                    {MENU_LEISTUNGEN.map((l) => (
                       <Link
                         key={l.to}
                         to={l.to}
@@ -64,7 +75,7 @@ export function SiteHeader() {
                         <span className="font-mono text-sm text-primary">
                           {l.nr}
                         </span>
-                        {l.to === "/dach" ? "Dach & Dachfenster" : l.title}
+                        {l.title}
                       </Link>
                     ))}
                   </div>
@@ -149,14 +160,14 @@ export function SiteHeader() {
                       >
                         Alle Leistungen
                       </Link>
-                      {LEISTUNGEN.map((l) => (
+                      {MENU_LEISTUNGEN.map((l) => (
                         <Link
                           key={l.to}
                           to={l.to}
                           onClick={() => setMobileOpen(false)}
                           className="block py-2 text-base text-foreground/80"
                         >
-                          {l.to === "/dach" ? "Dach & Dachfenster" : l.title}
+                          {l.title}
                         </Link>
                       ))}
                     </div>
