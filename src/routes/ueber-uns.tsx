@@ -62,6 +62,11 @@ const TEAM = [
     funktionen: ["Zimmerermeister", "Restaurator"],
     foto: "/__l5e/assets-v1/0ad6673e-4b08-497d-ad49-408161f9074e/scharpf_team_Max.jpg",
   },
+  {
+    name: "Harald Radtke",
+    funktionen: ["Klempnermeister"],
+    foto: "/__l5e/assets-v1/91807f57-f54e-4364-93ae-846608141f02/scharpf_team_Harald_Radtke.jpg",
+  },
 ] as const;
 
 // Stellenanzeigen – Texte wörtlich aus dem XD.
