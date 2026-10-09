@@ -64,7 +64,7 @@ export function SiteHeader() {
                         <span className="font-mono text-sm text-primary">
                           {l.nr}
                         </span>
-                        {l.title}
+                        {l.to === "/dach" ? "Dach & Dachfenster" : l.title}
                       </Link>
                     ))}
                   </div>
@@ -156,7 +156,7 @@ export function SiteHeader() {
                           onClick={() => setMobileOpen(false)}
                           className="block py-2 text-base text-foreground/80"
                         >
-                          {l.title}
+                          {l.to === "/dach" ? "Dach & Dachfenster" : l.title}
                         </Link>
                       ))}
                     </div>
