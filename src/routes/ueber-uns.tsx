@@ -38,8 +38,8 @@ const TEAM = [
     funktionen: [
       "Betriebsleiter",
       "Fachtechniker Holzbau",
-      "Energieeffizienz - Experte",
-      "Zimmerermeister",
+      "Fachtechniker Holzbau\nZimmerermeister",
+      "\n",
     ],
     foto: "/__l5e/assets-v1/4bcd6db1-0bf1-42a3-aa8e-69955c5758ae/scharpf_team_Alexander.jpg",
   },
