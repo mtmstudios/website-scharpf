@@ -59,7 +59,7 @@ const TEAM = [
   },
   {
     name: "Max Kaltmaier",
-    funktionen: ["Zimmerermeister", "Restaurator"],
+    funktionen: ["Zimmerermeister", "Restaurator\nBachelor of Arts (Bauwirtschaft) "],
     foto: "/__l5e/assets-v1/0ad6673e-4b08-497d-ad49-408161f9074e/scharpf_team_Max.jpg",
   },
   {
