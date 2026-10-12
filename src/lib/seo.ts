@@ -1,4 +1,4 @@
-import { CONTACT, RECHTLICHES, SOCIAL_LINKS } from "@/lib/site";
+import { CONTACT, GOOGLE_PROFIL, RECHTLICHES, SOCIAL_LINKS } from "@/lib/site";
 
 /**
  * Kanonische Domain der Live-Seite. Canonical-Tags, og:url, Strukturdaten,
@@ -62,7 +62,8 @@ export const ORGANISATION_JSON_LD = {
     { "@type": "City", name: "Stuttgart" },
     { "@type": "AdministrativeArea", name: "Landkreis Esslingen" },
   ],
-  sameAs: SOCIAL_LINKS.map((s) => s.href),
+  hasMap: GOOGLE_PROFIL.url,
+  sameAs: [GOOGLE_PROFIL.url, ...SOCIAL_LINKS.map((s) => s.href)],
 };
 
 export const WEBSITE_JSON_LD = {
