@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton } from "@/components/cta-button";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar, CtaBanner } from "@/components/sections";
-import { GOOGLE_BEWERTUNGEN, REFERENZ_KATEGORIEN } from "@/lib/site";
+import { GOOGLE_BEWERTUNGEN, GOOGLE_PROFIL, REFERENZ_KATEGORIEN } from "@/lib/site";
 import zertifikateAsset from "@/assets/scharpf_Zertifikate.jpg.asset.json";
 import carportAsset from "@/assets/carport-line.png.asset.json";
 
@@ -89,11 +89,11 @@ function Referenzen() {
       >
         <div className="relative mx-auto max-w-seite px-5 lg:px-8">
           <h2 className="max-w-3xl font-display text-3xl font-bold text-foreground sm:text-4xl">
-            120+ Projekte im Raum Esslingen, 4,8 Kundenzufriedenheit
+            120+ Projekte im Raum Esslingen, {GOOGLE_PROFIL.sterne} Sterne bei Google
           </h2>
           {GOOGLE_BEWERTUNGEN.length > 0 && (
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {GOOGLE_BEWERTUNGEN.map((b) => (
+            {GOOGLE_BEWERTUNGEN.slice(0, 3).map((b) => (
               <figure
                 key={b.name}
                 className="flex flex-col rounded-2xl border border-border bg-card p-8"
@@ -109,6 +109,17 @@ function Referenzen() {
             ))}
           </div>
           )}
+          <p className="mt-6 text-sm text-muted-foreground">
+            Auszüge aus {GOOGLE_PROFIL.anzahl} Google-Rezensionen.{" "}
+            <a
+              href={GOOGLE_PROFIL.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary hover:underline"
+            >
+              Alle Rezensionen bei Google lesen
+            </a>
+          </p>
         </div>
       </section>
 

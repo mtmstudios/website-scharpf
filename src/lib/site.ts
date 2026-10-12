@@ -151,11 +151,43 @@ export const REFERENZ_KATEGORIEN = [
 export const FORM_ENDPOINT =
   "https://mtmstudios.app.n8n.cloud/webhook/scharpf-formular";
 
-// Google-Bewertungen: bewusst leer. Die früheren Platzhalter-Zitate aus dem
-// B612-Konzept (erfundene Namen) wurden entfernt – erfundene Bewertungen
-// verstoßen gegen Googles Richtlinien und das Wettbewerbsrecht.
-// Echte, kuratierte Google-Rezensionen hier eintragen: { zitat, name }.
-export const GOOGLE_BEWERTUNGEN: readonly { zitat: string; name: string }[] = [];
+// Google-Bewertungen: wörtliche Auszüge aus den öffentlichen Rezensionen des
+// Google-Unternehmensprofils (abgerufen am 12.10.2026: 4,8 Sterne, 59 Rezensionen;
+// ohne Google-Anmeldung sind nur 5 davon abrufbar). Kürzungen sind mit […]
+// markiert, Wortlaut unverändert. Neue Rezensionen einfach ergänzen.
+export const GOOGLE_PROFIL = {
+  sterne: "4,8",
+  anzahl: 59,
+  url: "https://www.google.com/maps?cid=15715710453212760865",
+} as const;
+
+export const GOOGLE_BEWERTUNGEN: readonly { zitat: string; name: string }[] = [
+  {
+    zitat:
+      "„Alle Arbeiten wurden mit großer Sorgfalt, hoher Fachkompetenz und einem bemerkenswerten Qualitätsanspruch umgesetzt. […] Wir bedanken uns herzlich für die hervorragende Arbeit und können die Firma E. Scharpf uneingeschränkt weiterempfehlen.“",
+    name: "Karoline – Dachsanierung, Ausbau und Fassade",
+  },
+  {
+    zitat:
+      "„Wir wurden umfassend beraten und sind von der Holzfaser Aufdachdämmung überzeugt. Auch die Termineinhaltung und die Qualität der Ausführung waren sehr gut.“",
+    name: "Milos Petrovic (Fix & Wertig GmbH) – Dachsanierung",
+  },
+  {
+    zitat:
+      "„Positiv hervorzuheben ist, dass die Handwerker der Fa. Scharpf generell sehr zuverlässig und pünktlich sind, sowie äußerst sauber arbeiten.“",
+    name: "Friedemann Nau – Dachreparatur und VELUX-Dachfenster",
+  },
+  {
+    zitat:
+      "„Die Monteure waren sehr gut und haben ihre Arbeit sehr professionell und sehr sauber gemacht.“",
+    name: "Claudia Lonardoni – Dachfenster-Austausch",
+  },
+  {
+    zitat:
+      "„Pünktlich; sauber, ordentlich. Austausch eines Dachfensters. […] Werden weitere Dachfenster von Scharpf austauschen lassen.“",
+    name: "Bernd Kern – Dachfenster-Austausch",
+  },
+];
 
 // Vertrauenssignale vor CTAs (B612-Konzept, Abschnitt 5).
 export const TRUST_SIGNALE = [
