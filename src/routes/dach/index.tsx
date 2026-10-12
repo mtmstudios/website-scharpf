@@ -11,7 +11,7 @@ import { CtaButton } from "@/components/cta-button";
 export const Route = createFileRoute("/dach/")({
   head: () => ({
     meta: [
-      { title: "Dacharbeiten Esslingen – Sanierung, Gauben, KFW-Förderung" },
+      { title: "Dachdecker Esslingen – Dachsanierung & Dacharbeiten" },
       {
         name: "description",
         content:

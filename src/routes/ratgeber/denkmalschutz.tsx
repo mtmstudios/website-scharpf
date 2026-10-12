@@ -4,7 +4,7 @@ import { RatgeberArtikel } from "@/components/ratgeber-artikel";
 export const Route = createFileRoute("/ratgeber/denkmalschutz")({
   head: () => ({
     meta: [
-      { title: "Denkmalschutz sanieren – Ratgeber für Eigentümer | E. Scharpf" },
+      { title: "Denkmalschutz sanieren – Ratgeber für Eigentümer" },
       {
         name: "description",
         content:

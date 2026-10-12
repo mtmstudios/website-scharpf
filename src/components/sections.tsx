@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 import { CtaButton } from "@/components/cta-button";
 import { BewerbungsButton } from "@/components/bewerbungs-modal";
@@ -50,8 +52,10 @@ export function CategoryBar({
 }) {
   const items = breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : title ? [{ label: title }] : [];
   useRegisterCategory({ breadcrumbs, title, color });
+  const { pathname } = useLocation();
   return (
     <div className="w-full bg-background">
+      {items.length > 0 && <JsonLd data={breadcrumbJsonLd(items, pathname)} />}
       <div className="mx-auto flex min-h-12 max-w-seite items-center px-5 lg:px-8">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-foreground sm:text-base">
@@ -136,8 +140,16 @@ export function PageHero({
   illustrationSrc?: string;
   breadcrumbs?: Crumb[];
 }) {
+  const { pathname } = useLocation();
+  // Leistungs-Unterseiten (z. B. /dach/dachfenster) werden zusätzlich als Service ausgezeichnet.
+  const istLeistung = /^\/(dach|fassade|holzbau|restaurierung|services)\/[^/]+$/.test(pathname);
   return (
     <section className="border-b border-border bg-background">
+      {istLeistung && (
+        <JsonLd
+          data={serviceJsonLd({ name: title, beschreibung: lead, pfad: pathname, bild: imageSrc })}
+        />
+      )}
       <CategoryBar
         breadcrumbs={breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : [{ label: eyebrow || title }]}
         color="#2D635C"

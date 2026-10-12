@@ -19,22 +19,29 @@ import { MobileStickyBar } from "@/components/mobile-sticky-bar";
 import { CookieBanner } from "@/components/cookie-banner";
 import { CategoryProvider } from "@/lib/category-context";
 import { FooterCategoryBar } from "@/components/footer-category-bar";
+import { JsonLd } from "@/components/json-ld";
+import {
+  absUrl,
+  DEFAULT_OG_IMAGE,
+  ORGANISATION_JSON_LD,
+  WEBSITE_JSON_LD,
+} from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Seite nicht gefunden</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          Diese Seite gibt es nicht (mehr) oder sie wurde verschoben.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Zur Startseite
           </Link>
         </div>
       </div>
@@ -53,10 +60,10 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          Diese Seite konnte nicht geladen werden
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Auf unserer Seite ist etwas schiefgelaufen. Bitte laden Sie neu oder gehen Sie zurück zur Startseite.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -66,13 +73,13 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            Erneut versuchen
           </button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
-            Go home
+            Zur Startseite
           </a>
         </div>
       </div>
@@ -81,11 +88,17 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  head: ({ matches }) => {
+    // Pfad der tatsächlich aufgerufenen Seite (innerster Match) für Canonical und og:url.
+    // Nur der Root-Match übrig = unbekannte URL (404): kein Canonical, nicht indexieren.
+    const istNotFound = matches.length <= 1;
+    const pfad = matches[matches.length - 1]?.pathname ?? "/";
+    const canonical = absUrl(pfad);
+    return {
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "E. Scharpf GmbH – Holzbau & Restaurierung Esslingen" },
+      { title: "Holzbau Esslingen – Zimmerei & Dachdecker | E. Scharpf GmbH" },
       {
         name: "description",
         content:
@@ -102,11 +115,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Zimmerer & Dachdecker aus Esslingen. Restaurierung, Holzbau, Dach und Fassade – zuverlässig, nachhaltig, seit über 80 Jahren. Jetzt Beratung anfordern.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "de_DE" },
+      { property: "og:site_name", content: "E. Scharpf GmbH" },
+      ...(istNotFound
+        ? [{ name: "robots", content: "noindex" }]
+        : [{ property: "og:url", content: canonical }]),
+      { property: "og:image", content: DEFAULT_OG_IMAGE },
+      { name: "twitter:image", content: DEFAULT_OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "E. Scharpf GmbH – Holzbau & Restaurierung Esslingen" },
       { name: "twitter:description", content: "Zimmerer & Dachdecker aus Esslingen. Restaurierung, Holzbau, Dach und Fassade – zuverlässig, nachhaltig, seit über 80 Jahren. Jetzt Beratung anfordern." },
     ],
     links: [
+      ...(istNotFound ? [] : [{ rel: "canonical", href: canonical }]),
       {
         rel: "stylesheet",
         href: appCss,
@@ -124,7 +145,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;0,800;1,400&display=swap",
       },
     ],
-  }),
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -138,6 +160,8 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <JsonLd data={ORGANISATION_JSON_LD} />
+        <JsonLd data={WEBSITE_JSON_LD} />
         {children}
         <Scripts />
       </body>

@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/dach/dachdaemmung")({
   head: () => ({
     meta: [
-      { title: "Dachdämmung & KFW-Förderung Esslingen | E. Scharpf" },
+      { title: "Dachdämmung Esslingen – Holzfaser & KFW-Förderung" },
       {
         name: "description",
         content:

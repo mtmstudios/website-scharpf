@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/holzbau/aufstockungen")({
   head: () => ({
     meta: [
-      { title: "Aufstockung in Holzbauweise Esslingen | E. Scharpf" },
+      { title: "Haus aufstocken Esslingen – Aufstockung in Holz" },
       {
         name: "description",
         content:

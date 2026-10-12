@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/restaurierung/denkmalschutz")({
   head: () => ({
     meta: [
-      { title: "Denkmalschutz Sanierung Esslingen – E. Scharpf GmbH" },
+      { title: "Denkmalschutz Sanierung Esslingen – denkmalgerecht" },
       {
         name: "description",
         content:

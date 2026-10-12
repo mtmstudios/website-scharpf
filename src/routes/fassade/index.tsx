@@ -13,7 +13,7 @@ import fassade02Asset from "@/assets/scharpf_fassade_02.jpg.asset.json";
 export const Route = createFileRoute("/fassade/")({
   head: () => ({
     meta: [
-      { title: "Holzfassaden & Terrassen Esslingen – E. Scharpf GmbH" },
+      { title: "Holzfassade Esslingen – Fassaden & Terrassen" },
       {
         name: "description",
         content:

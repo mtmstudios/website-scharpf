@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/restaurierung/fachwerksanierung")({
   head: () => ({
     meta: [
-      { title: "Fachwerksanierung Esslingen – denkmalgerecht | E. Scharpf" },
+      { title: "Fachwerkhaus sanieren Esslingen – denkmalgerecht" },
       {
         name: "description",
         content:

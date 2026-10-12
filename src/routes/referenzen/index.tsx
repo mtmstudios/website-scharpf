@@ -53,6 +53,7 @@ function Referenzen() {
   return (
     <div>
       <CategoryBar breadcrumbs={[{ label: "Referenzen" }]} color="#8F2B2A" />
+      <h1 className="sr-only">Referenzen: Projekte von E. Scharpf in Esslingen und Stuttgart</h1>
 
       {/* Kategorie-Kacheln (2×2 im XD) */}
       <Section className="pt-6 lg:pt-6">
@@ -90,6 +91,7 @@ function Referenzen() {
           <h2 className="max-w-3xl font-display text-3xl font-bold text-foreground sm:text-4xl">
             120+ Projekte im Raum Esslingen, 4,8 Kundenzufriedenheit
           </h2>
+          {GOOGLE_BEWERTUNGEN.length > 0 && (
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {GOOGLE_BEWERTUNGEN.map((b) => (
               <figure
@@ -106,6 +108,7 @@ function Referenzen() {
               </figure>
             ))}
           </div>
+          )}
         </div>
       </section>
 

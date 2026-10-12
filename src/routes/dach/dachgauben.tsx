@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/dach/dachgauben")({
   head: () => ({
     meta: [
-      { title: "Dachgauben Esslingen – mehr Wohnraum & Licht | E. Scharpf" },
+      { title: "Dachgauben Esslingen – nachträglich einbauen" },
       {
         name: "description",
         content:

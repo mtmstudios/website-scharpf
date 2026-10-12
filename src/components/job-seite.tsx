@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
+import { JsonLd } from "@/components/json-ld";
+import { jobPostingJsonLd } from "@/lib/seo";
 import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CtaBanner } from "@/components/sections";
@@ -61,8 +63,18 @@ export function JobSeite({
   imageSrc?: string;
   imageNote: string;
 }) {
+  const { pathname } = useLocation();
   return (
     <div>
+      <JsonLd
+        data={jobPostingJsonLd({
+          titel: titel,
+          beschreibung,
+          anforderungen,
+          pfad: pathname,
+          art: /ausbildung/i.test(titel) ? "OTHER" : "FULL_TIME",
+        })}
+      />
       <Section>
         <Link
           to="/karriere"

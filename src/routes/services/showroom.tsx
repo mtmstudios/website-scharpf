@@ -10,7 +10,7 @@ import { CONTACT } from "@/lib/site";
 export const Route = createFileRoute("/services/showroom")({
   head: () => ({
     meta: [
-      { title: "Dachfenster Ausstellung Esslingen – 330 qm Showroom | E. Scharpf" },
+      { title: "Dachfenster Ausstellung Esslingen – 330 qm Showroom" },
       {
         name: "description",
         content:

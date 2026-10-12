@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
+import { JsonLd } from "@/components/json-ld";
+import { articleJsonLd } from "@/lib/seo";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CtaBanner } from "@/components/sections";
 
@@ -23,8 +25,10 @@ export function RatgeberArtikel({
   ctaLabel?: string;
   children: React.ReactNode;
 }) {
+  const { pathname } = useLocation();
   return (
     <div>
+      <JsonLd data={articleJsonLd({ titel, beschreibung: teaser, pfad: pathname, bild: imageSrc })} />
       <Section>
         <Link
           to="/ratgeber"
@@ -37,6 +41,9 @@ export function RatgeberArtikel({
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           {teaser}
+        </p>
+        <p className="mt-4 text-sm text-muted-foreground">
+          Von der E. Scharpf GmbH, Esslingen · Veröffentlicht im Juli 2026
         </p>
         <div className="mt-10">
           <PlaceholderImage note={imageNote} src={imageSrc} ratio="wide" />

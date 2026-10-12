@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/fassade/holzfassade")({
   head: () => ({
     meta: [
-      { title: "Holzfassade anbringen Esslingen – E. Scharpf GmbH" },
+      { title: "Holzfassade anbringen Esslingen – vorgehängt & Trespa" },
       {
         name: "description",
         content:

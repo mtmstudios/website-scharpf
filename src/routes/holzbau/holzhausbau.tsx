@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/holzbau/holzhausbau")({
   head: () => ({
     meta: [
-      { title: "Holzhaus bauen Esslingen – Holzrahmenbau | E. Scharpf" },
+      { title: "Holzhaus bauen Esslingen – Holzrahmenbau" },
       {
         name: "description",
         content:
