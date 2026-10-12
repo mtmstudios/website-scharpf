@@ -62,6 +62,20 @@ function Klempnerarbeiten() {
           Wir sind PREFA Verarbeiter
         </h2>
         <span className="mt-4 block h-1 w-24 rounded bg-primary" />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <img
+            src="/__l5e/assets-v1/44cebd56-1ab7-47bd-9715-15513975cb77/prefa_solardach.jpg"
+            alt="PREFA Dachplatten mit Solardachplatten"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-lg object-cover"
+          />
+          <img
+            src="/__l5e/assets-v1/3abf9e74-0e82-450d-983a-6803d4552f6e/prefa_einfamilienhaus.jpg"
+            alt="Einfamilienhaus mit PREFA Dachplatten und Fassade"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-lg object-cover"
+          />
+        </div>
       </Section>
 
       <ReferenzTeaser
