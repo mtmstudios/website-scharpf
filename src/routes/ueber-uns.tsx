@@ -48,7 +48,7 @@ const TEAM = [
     funktionen: [
       "Projektleiter",
       "Zimmerermeister",
-      "Staat. Geprägt. Bautechniker",
+      "Staat. gepr. Bautechniker",
     ],
     foto: "/__l5e/assets-v1/62e8d66b-65c6-40fd-a197-7cfe4c75ca63/scharpf_team_Ole.jpg",
   },
