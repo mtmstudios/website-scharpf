@@ -362,12 +362,15 @@ export function ReferenzTeaser({
   imageNotes,
   imageSrcs,
   to = "/referenzen",
+  containIndexes,
 }: {
   title: string;
   intro: string;
   imageNotes: [string, string, string];
   imageSrcs?: [string, string, string];
   to?: string;
+  /** Indizes der Bilder, die vollständig (ohne Beschnitt) gezeigt werden. */
+  containIndexes?: number[];
 }) {
   return (
     <Section muted>
@@ -387,6 +390,7 @@ export function ReferenzTeaser({
             note={note}
             src={imageSrcs?.[i]}
             ratio="landscape"
+            className={containIndexes?.includes(i) ? "object-contain" : undefined}
           />
         ))}
       </div>

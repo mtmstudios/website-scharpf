@@ -61,6 +61,7 @@ function Klempnerarbeiten() {
         title="Referenzen im Bereich Dach"
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – Projekte aus dem Großraum Esslingen und Stuttgart."
         to="/referenzen/dach"
+        containIndexes={[1]}
         imageNotes={[
           "Gaube mit Blechverkleidung",
           "Neu eingedecktes Dach",
