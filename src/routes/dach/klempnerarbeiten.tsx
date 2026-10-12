@@ -68,7 +68,7 @@ function Klempnerarbeiten() {
         ]}
         imageSrcs={[
           "/fotos/scharpf_dachgaube_flaschner.jpg",
-          "/fotos/scharpf_dachdecken.jpg",
+          "/__l5e/assets-v1/5038dc71-d603-413b-8443-27ff7f90a727/scharpf_klempner_referenz.jpg",
           "/fotos/scharpf_Dacharbeiten.jpg",
         ]}
       />
