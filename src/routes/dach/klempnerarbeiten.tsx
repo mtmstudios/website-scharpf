@@ -63,12 +63,20 @@ function Klempnerarbeiten() {
         </h2>
         <span className="mt-4 block h-1 w-24 rounded bg-primary" />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          <img
-            src="/__l5e/assets-v1/44cebd56-1ab7-47bd-9715-15513975cb77/prefa_solardach.jpg"
-            alt="PREFA Dachplatten mit Solardachplatten"
-            loading="lazy"
-            className="aspect-[4/3] w-full rounded-lg object-cover"
-          />
+          <figure>
+            <img
+              src="/__l5e/assets-v1/44cebd56-1ab7-47bd-9715-15513975cb77/prefa_solardach.jpg"
+              alt="PREFA Dachplatten mit Solardachplatten"
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-lg object-cover"
+            />
+            <figcaption className="mt-4">
+              <h3 className="font-display text-xl font-bold text-foreground">Solardachplatte</h3>
+              <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                Dächer und Fassaden mit integrierter Photovoltaikanlage: Die PREFA Solardachplatte schützt Ihr Haus und produziert gleichzeitig Strom.
+              </p>
+            </figcaption>
+          </figure>
           <img
             src="/__l5e/assets-v1/3abf9e74-0e82-450d-983a-6803d4552f6e/prefa_einfamilienhaus.jpg"
             alt="Einfamilienhaus mit PREFA Dachplatten und Fassade"
