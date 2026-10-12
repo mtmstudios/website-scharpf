@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/holzbau/")({
   head: () => ({
     meta: [
-      { title: "Holzbau & Konstruktion – Vorfertigung aus eigener Werkhalle" },
+      { title: "Holzbau Esslingen – Zimmerei mit eigener Werkhalle" },
       {
         name: "description",
         content:

@@ -11,7 +11,7 @@ import { VeluxKonfigurator } from "@/components/velux-konfigurator";
 export const Route = createFileRoute("/dach/dachfenster")({
   head: () => ({
     meta: [
-      { title: "Dachfenster Esslingen – Einbau, Austausch & Beratung | Scharpf" },
+      { title: "Dachfenster einbauen Esslingen – Austausch & Beratung" },
       {
         name: "description",
         content:

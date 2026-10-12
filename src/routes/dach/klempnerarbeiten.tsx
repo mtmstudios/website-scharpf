@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/dach/klempnerarbeiten")({
   head: () => ({
     meta: [
-      { title: "Klempner Dach Esslingen – eigene Werkstatt | E. Scharpf" },
+      { title: "Klempner Dach Esslingen – Dachrinnen & Blecharbeiten" },
       {
         name: "description",
         content:

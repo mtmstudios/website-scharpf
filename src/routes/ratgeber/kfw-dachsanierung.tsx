@@ -4,7 +4,7 @@ import { RatgeberArtikel } from "@/components/ratgeber-artikel";
 export const Route = createFileRoute("/ratgeber/kfw-dachsanierung")({
   head: () => ({
     meta: [
-      { title: "KFW-Förderung Dachsanierung – Zuschüsse & Antrag | E. Scharpf" },
+      { title: "KFW-Förderung Dachsanierung – Zuschüsse & Antrag" },
       {
         name: "description",
         content:

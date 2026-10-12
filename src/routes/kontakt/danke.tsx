@@ -7,6 +7,7 @@ export const Route = createFileRoute("/kontakt/danke")({
   head: () => ({
     meta: [
       { title: "Vielen Dank – E. Scharpf GmbH" },
+      { name: "robots", content: "noindex, follow" },
       {
         name: "description",
         content:

@@ -30,7 +30,7 @@ const FOCUS: Record<string, { x: number; y: number; zoom: number }> = {
 // Sichtbare Hotspot-Punkte auf dem Haus (Services = Gesamt, kein Punkt).
 const HOTSPOTS: { to: string; x: number; y: number; label: string }[] = [
   { to: "/holzbau", x: 20, y: 56, label: "Holzbau & Konstruktion" },
-  { to: "/fassade", x: 77, y: 68, label: "Fassade & Aussenbereiche" },
+  { to: "/fassade", x: 77, y: 68, label: "Fassade & Außenbereiche" },
   { to: "/dach", x: 63, y: 19, label: "Dach" },
   { to: "/restaurierung", x: 28, y: 15, label: "Restaurierung & Sanierung" },
 ];

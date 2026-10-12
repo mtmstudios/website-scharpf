@@ -93,11 +93,11 @@ export const LEISTUNGEN = [
   },
   {
     nr: "02",
-    title: "Fassade & Aussenbereiche",
+    title: "Fassade & Außenbereiche",
     to: "/fassade",
     bullets: ["Fassaden (Holz/Trespa)", "Terrassen"],
     teaser:
-      "Holzfassaden schuetzen, isolieren und gestalten. Langlebig, ökologisch, individuell.",
+      "Holzfassaden schützen, isolieren und gestalten. Langlebig, ökologisch, individuell.",
   },
   {
     nr: "03",
@@ -125,7 +125,7 @@ export const LEISTUNGEN = [
     to: "/services",
     bullets: ["Ladekran mieten", "Ausstellung/Showroom"],
     teaser:
-      "Beratung, Planung und Kleinaufträge: Wir finden eine Lösung, egal wie gross oder klein das Vorhaben ist.",
+      "Beratung, Planung und Kleinaufträge: Wir finden eine Lösung, egal wie groß oder klein das Vorhaben ist.",
   },
 ] as const;
 
@@ -151,24 +151,11 @@ export const REFERENZ_KATEGORIEN = [
 export const FORM_ENDPOINT =
   "https://mtmstudios.app.n8n.cloud/webhook/scharpf-formular";
 
-// Google-Bewertungen – Platzhalter-Zitate aus dem B612-Konzept.
-// TODO: durch echte, kuratierte Google-Rezensionen ersetzen.
-export const GOOGLE_BEWERTUNGEN = [
-  {
-    zitat:
-      "„Professionelle Ausführung, perfekte Kommunikation – wir sind sehr zufrieden.“",
-    name: "Michael R., Esslingen",
-  },
-  {
-    zitat:
-      "„Für die Restaurierung unseres Fachwerkhauses genau der richtige Partner.“",
-    name: "Sabine K., Stuttgart",
-  },
-  {
-    zitat: "„Termingerecht, sauber und top Qualität. Klare Empfehlung!“",
-    name: "Thomas M., Nürtingen",
-  },
-] as const;
+// Google-Bewertungen: bewusst leer. Die früheren Platzhalter-Zitate aus dem
+// B612-Konzept (erfundene Namen) wurden entfernt – erfundene Bewertungen
+// verstoßen gegen Googles Richtlinien und das Wettbewerbsrecht.
+// Echte, kuratierte Google-Rezensionen hier eintragen: { zitat, name }.
+export const GOOGLE_BEWERTUNGEN: readonly { zitat: string; name: string }[] = [];
 
 // Vertrauenssignale vor CTAs (B612-Konzept, Abschnitt 5).
 export const TRUST_SIGNALE = [

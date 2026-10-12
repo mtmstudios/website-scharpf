@@ -10,7 +10,7 @@ import {
 export const Route = createFileRoute("/dach/dachsanierung")({
   head: () => ({
     meta: [
-      { title: "Dachsanierung Esslingen – energetisch & KFW-gefördert | Scharpf" },
+      { title: "Dachsanierung Esslingen & Stuttgart – KFW-gefördert" },
       {
         name: "description",
         content:

@@ -81,10 +81,6 @@ function Impressum() {
                 </dd>
               </div>
               <div className="flex flex-wrap gap-2">
-                <dt className="font-semibold text-foreground">Fax:</dt>
-                <dd>{CONTACT.fax}</dd>
-              </div>
-              <div className="flex flex-wrap gap-2">
                 <dt className="font-semibold text-foreground">E-Mail:</dt>
                 <dd>
                   <a href={CONTACT.emailHref} className="text-primary hover:underline">
