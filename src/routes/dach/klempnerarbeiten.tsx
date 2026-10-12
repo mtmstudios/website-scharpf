@@ -57,6 +57,13 @@ function Klempnerarbeiten() {
         />
       </Section>
 
+      <Section>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Wir sind PREFA Verarbeiter
+        </h2>
+        <span className="mt-4 block h-1 w-24 rounded bg-primary" />
+      </Section>
+
       <ReferenzTeaser
         title="Referenzen im Bereich Dach"
         intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – Projekte aus dem Großraum Esslingen und Stuttgart."
