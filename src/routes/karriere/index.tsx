@@ -78,7 +78,21 @@ function Karriere() {
 
         {/* Job-Selektor als Kachel-Clickthrough */}
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {STELLEN.map((s) => (
+          {STELLEN.map((s) =>
+            s.to === "/karriere/dachdecker-ausbildung" ? (
+              <div
+                key={s.to}
+                aria-disabled="true"
+                className="flex cursor-not-allowed items-center justify-between rounded-lg border border-border bg-muted p-6 opacity-60"
+              >
+                <span className="font-display text-lg font-bold text-muted-foreground">
+                  {s.label}
+                  <span className="mt-1 block text-sm font-normal">
+                    Aktuell keine Ausbildung
+                  </span>
+                </span>
+              </div>
+            ) : (
             <Link
               key={s.to}
               to={s.to}
@@ -104,7 +118,8 @@ function Karriere() {
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </Link>
-          ))}
+            ),
+          )}
         </div>
 
         <div className="mt-12">
