@@ -4,6 +4,7 @@ import { ArrowRight, BriefcaseBusiness, Check, GraduationCap, Home, X } from "lu
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { submitLead } from "@/lib/submit-lead";
+import { Honeypot } from "@/components/honeypot";
 import { cn } from "@/lib/utils";
 
 const STELLEN = [
@@ -197,6 +198,7 @@ export function BewerbungsButton({
             </div>
           ) : (
             <form onSubmit={submitApplication} noValidate>
+              <Honeypot />
               <div className="pl-8">
                 <div className="flex items-center justify-between gap-4">
                   <DialogPrimitive.Title className="font-display text-2xl font-bold text-foreground">

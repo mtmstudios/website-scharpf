@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { submitLead } from "@/lib/submit-lead";
+import { Honeypot } from "@/components/honeypot";
 
 /**
  * 4-Step Projekt-Quiz (B612-Konzept, Abschnitt 5): geführte Auswahl statt
@@ -149,6 +150,7 @@ export function ProjektQuiz() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="mt-6">
+          <Honeypot />
           <h3 className="font-display text-2xl font-bold text-foreground">
             Wie erreichen wir Sie?
           </h3>
