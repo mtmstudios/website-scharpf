@@ -5,6 +5,7 @@ import { ProjektQuiz } from "@/components/projekt-quiz";
 import { TerminKarte, hatTermine } from "@/components/termin-buttons";
 import { CONTACT } from "@/lib/site";
 import { submitLead } from "@/lib/submit-lead";
+import { Honeypot } from "@/components/honeypot";
 import { cn } from "@/lib/utils";
 import fachwerkhausAsset from "@/assets/fachwerkhaus.png.asset.json";
 
@@ -174,6 +175,7 @@ function Kontakt() {
           onSubmit={handleSubmit}
           className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-10"
         >
+          <Honeypot />
           <div className="space-y-5">
             <input
               type="text"

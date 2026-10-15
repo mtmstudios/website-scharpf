@@ -1,7 +1,15 @@
+import { HONEYPOT_FELD } from "@/components/honeypot";
 import { FORM_ENDPOINT } from "@/lib/site";
 
 /** Quellen, die der n8n-Workflow unterscheidet. */
 export type LeadQuelle = "kontaktformular" | "projekt-quiz" | "bewerbung";
+
+/** Wert des unsichtbaren Spam-Felds (leer bei echten Besuchern). */
+function honeypotWert(): string {
+  if (typeof document === "undefined") return "";
+  const felder = document.querySelectorAll<HTMLInputElement>(`input[name="${HONEYPOT_FELD}"]`);
+  return Array.from(felder).find((f) => f.value)?.value ?? "";
+}
 
 /** UTM-Parameter aus der aktuellen URL, falls vorhanden. */
 function utmParameter(): Record<string, string> {
@@ -48,6 +56,7 @@ export async function submitLead(
       quelle,
       ...data,
       ...utmParameter(),
+      [HONEYPOT_FELD]: honeypotWert(),
       seite: typeof window !== "undefined" ? window.location.href : "",
       gesendet: new Date().toISOString(),
     }),
