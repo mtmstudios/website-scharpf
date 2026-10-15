@@ -13,9 +13,14 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/fotos/scharpf_firmengebaeude.jpg`;
 /** Datum, an dem Ratgeber und Stellenanzeigen veröffentlicht wurden. */
 export const INHALT_VEROEFFENTLICHT = "2026-07-20";
 
+/**
+ * Absolute URL im Format, in dem Apache die Seite tatsächlich ausliefert:
+ * mit abschließendem Slash (/dach/). Ohne Slash leitet der Server per 301
+ * weiter – ein Canonical auf die Slash-lose Variante wäre ein Widerspruch.
+ */
 export function absUrl(path: string): string {
-  const sauber = path === "/" ? "" : path.replace(/\/+$/, "");
-  return `${SITE_URL}${sauber}`;
+  const sauber = path.replace(/^\/+|\/+$/g, "");
+  return sauber === "" ? `${SITE_URL}/` : `${SITE_URL}/${sauber}/`;
 }
 
 const ADRESSE = {

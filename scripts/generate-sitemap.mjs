@@ -33,7 +33,7 @@ function prioritaet(p) {
 const eintraege = routen
   .map(
     (p) =>
-      `  <url>\n    <loc>${SITE_URL}${p === "/" ? "/" : p}</loc>\n    <priority>${prioritaet(p)}</priority>\n  </url>`,
+      `  <url>\n    <loc>${SITE_URL}${p === "/" ? "/" : `${p}/`}</loc>\n    <priority>${prioritaet(p)}</priority>\n  </url>`,
   )
   .join("\n");
 
