@@ -1,0 +1,29 @@
+# Weiterleitungen für den Umzug von der alten WordPress-Seite.
+# Quelle der alten URLs: Search Console, Export "Nicht gefunden (404)" vom 15.10.2026.
+# Wird per Deploy (SFTP-Mirror) mit ausgeliefert – nicht manuell auf dem Server ändern.
+
+RewriteEngine On
+
+# www -> ohne www (eine einzige Host-Variante, passend zu den Canonicals)
+RewriteCond %{HTTP_HOST} ^www\.holzbau-scharpf\.de$ [NC]
+RewriteRule ^(.*)$ https://holzbau-scharpf.de/$1 [R=301,L]
+
+# Alte URLs -> neue Seiten
+RewriteRule ^category/altbau-esslingen(/.*)?$ /referenzen/restaurierung/ [R=301,L]
+RewriteRule ^altbau-esslingen/.+$ /referenzen/restaurierung/ [R=301,L]
+RewriteRule ^altbau-stuttgart-und-weinstadt/.+$ /referenzen/restaurierung/ [R=301,L]
+RewriteRule ^carport/?$ /holzbau/carport/ [R=301,L]
+RewriteRule ^dachgauben/?$ /dach/dachgauben/ [R=301,L]
+RewriteRule ^dachfenster/.+$ /dach/dachfenster/ [R=301,L]
+RewriteRule ^news/die-alternativ-zur-dachgaube-velux-panorama/?$ /dach/dachgauben/ [R=301,L]
+RewriteRule ^news(\.html|/.*)?$ /ratgeber/ [R=301,L]
+RewriteRule ^neubau/fassaden/?$ /fassade/ [R=301,L]
+RewriteRule ^fassaden-holz/?$ /fassade/holzfassade/ [R=301,L]
+RewriteRule ^neubau/laercheschalung-esslingen/?$ /fassade/holzfassade/ [R=301,L]
+RewriteRule ^die-e-scharpf-gmbh/jobs(/.*)?$ /karriere/ [R=301,L]
+RewriteRule ^die-e-scharpf-gmbh(/.*)?$ /ueber-uns/ [R=301,L]
+RewriteRule ^bewerbung-lehrling/?$ /karriere/zimmermann-ausbildung/ [R=301,L]
+RewriteRule ^bewerben-bei-e-scharpf-holzbau-als-klempner(/.*)?$ /karriere/klempner/ [R=301,L]
+RewriteRule ^bewerben-bei-e-scharpf-holzbau(/.*)?$ /karriere/ [R=301,L]
+RewriteRule ^ausstellung(/.*)?$ /services/showroom/ [R=301,L]
+RewriteRule ^kran-lkw-ladekran-leihen-im-raum-esslingen-und-stuttgart(/.*)?$ /services/ladekran/ [R=301,L]
