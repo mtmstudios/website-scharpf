@@ -3,6 +3,7 @@ import {
   ReferenzKategorieSeite,
   type ReferenzProjekt,
 } from "@/components/referenz-kategorie";
+import { Section } from "@/components/sections";
 
 export const Route = createFileRoute("/referenzen/restaurierung")({
   head: () => ({
@@ -59,6 +60,25 @@ function Page() {
       einleitung="Jedes Projekt hat seine eigene Geschichte – und sein eigenes Material. Sehen Sie, wie wir historische Gebäude mit handwerklichem Fingerspitzengefühl und Respekt vor dem Original neu zum Leben erweckt haben."
       projekte={PROJEKTE}
       illustrationSrc="/illustrationen/fachwerkhaus-weiss.png"
+      nachProjekten={
+        <Section className="py-14 lg:py-20">
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+            Vor der Sanierung – Nach der Sanierung
+          </h2>
+          <span className="mt-4 block h-1 w-24 rounded bg-primary" />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {[
+              ["/__l5e/assets-v1/6e82fd8f-7fee-4937-8bc6-3e0b33267be7/scharpf_sanierung_DSCF4305.jpg", "Vor der Sanierung", "Historisches Stadthaus vor der Sanierung"],
+              ["/__l5e/assets-v1/7ad026e3-3a7d-45fc-9013-8af5456bb2c4/scharpf_sanierung_DSCF4704.jpg", "Nach der Sanierung", "Historisches Stadthaus nach der Sanierung"],
+            ].map(([src, label, alt]) => (
+              <figure key={label}>
+                <img src={src} alt={alt} loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover" />
+                <figcaption className="mt-3 font-display text-lg font-bold text-foreground">{label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </Section>
+      }
     />
   );
 }
