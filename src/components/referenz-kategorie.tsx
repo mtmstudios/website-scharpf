@@ -24,12 +24,14 @@ export function ReferenzKategorieSeite({
   einleitung,
   projekte,
   illustrationSrc,
+  nachProjekten,
 }: {
   aktiv: string;
   titel: string;
   einleitung: string;
   projekte: ReferenzProjekt[];
   illustrationSrc?: string;
+  nachProjekten?: React.ReactNode;
 }) {
   const aktivTitel =
     REFERENZ_KATEGORIEN.find((k) => k.to === aktiv)?.title ?? titel;
@@ -97,6 +99,8 @@ export function ReferenzKategorieSeite({
           </div>
         </Section>
       ))}
+
+      {nachProjekten}
 
       <CtaBanner
         tone="wood"
