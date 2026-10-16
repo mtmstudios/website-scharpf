@@ -39,7 +39,7 @@ const PROJEKTE: ReferenzProjekt[] = [
     titel: "Denkmalgerechte Dachstuhl-Restaurierung",
     tag: "Restaurierung & Sanierung",
     text: "Der historische Dachstuhl wurde Balken für Balken geprüft, geschädigte Hölzer wurden in traditioneller Zimmermannstechnik ersetzt und die tragende Konstruktion für die nächsten Generationen ertüchtigt.",
-    imageSrc: "/fotos/scharpf_restaurierung_08.jpg",
+    imageSrc: "/__l5e/assets-v1/a6ffe870-e2ca-452c-b687-e3b5432a321c/scharpf_restaurierung_ki.png",
     imageNote: "Restaurierter historischer Dachstuhl",
   },
   {
