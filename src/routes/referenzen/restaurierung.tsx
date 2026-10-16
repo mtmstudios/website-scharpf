@@ -70,6 +70,8 @@ function Page() {
             {[
               ["/__l5e/assets-v1/6e82fd8f-7fee-4937-8bc6-3e0b33267be7/scharpf_sanierung_DSCF4305.jpg", "Vor der Sanierung", "Historisches Stadthaus vor der Sanierung"],
               ["/__l5e/assets-v1/7ad026e3-3a7d-45fc-9013-8af5456bb2c4/scharpf_sanierung_DSCF4704.jpg", "Nach der Sanierung", "Historisches Stadthaus nach der Sanierung"],
+              ["/__l5e/assets-v1/a142d29d-f3f9-4c0e-9966-61c99f61af7c/scharpf_sanierung_Marktplatz_1.jpg", "Vor der Sanierung ", "Häuser am Esslinger Marktplatz vor der Sanierung"],
+              ["/__l5e/assets-v1/09d1d475-2c8b-4398-b056-b9fc5bb2687a/scharpf_sanierung_DSC_0418.jpg", "Nach der Sanierung ", "Häuser am Esslinger Marktplatz nach der Sanierung"],
             ].map(([src, label, alt]) => (
               <figure key={label}>
                 <img src={src} alt={alt} loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover" />
