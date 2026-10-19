@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
-
-const STORAGE_KEY = "scharpf-cookie-consent";
+import { getConsent, OPEN_SETTINGS_EVENT, setConsent, type ConsentChoice } from "@/lib/consent";
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
+    if (!getConsent()) setVisible(true);
+    // Footer-Link „Cookie-Einstellungen“ öffnet den Banner erneut
+    const open = () => setVisible(true);
+    window.addEventListener(OPEN_SETTINGS_EVENT, open);
+    return () => window.removeEventListener(OPEN_SETTINGS_EVENT, open);
   }, []);
 
-  function decide(choice: "all" | "necessary") {
-    localStorage.setItem(STORAGE_KEY, choice);
+  function decide(choice: ConsentChoice) {
+    setConsent(choice);
     setVisible(false);
   }
 
@@ -20,8 +23,9 @@ export function CookieBanner() {
     <div className="fixed inset-x-0 bottom-16 z-50 px-4 md:bottom-4">
       <div className="mx-auto flex max-w-3xl flex-col gap-4 rounded-xl border border-border bg-card p-5 shadow-2xl sm:flex-row sm:items-center">
         <p className="text-sm leading-relaxed text-muted-foreground">
-          Diese Website verwendet Cookies, um Ihr Nutzungserlebnis zu verbessern.
-          Sie können Ihre Einstellungen jederzeit anpassen.
+          Wir möchten mit Google Analytics anonymisiert auswerten, wie die Website
+          genutzt wird. Das geschieht nur mit Ihrer Einwilligung. Sie können sie
+          jederzeit über „Cookie-Einstellungen“ im Seitenfuß widerrufen.
         </p>
         <div className="flex shrink-0 flex-wrap gap-2">
           <button

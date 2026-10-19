@@ -37,11 +37,11 @@ Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgend
 
 Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
 
-### All-Inkl
+### IONOS
 
-Anbieter ist die ALL-INKL.COM – Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf (nachfolgend All-Inkl). Details entnehmen Sie der Datenschutzerklärung von All-Inkl: [https://all-inkl.com/datenschutzinformationen/](https://all-inkl.com/datenschutzinformationen/).
+Anbieter ist die IONOS SE, Elgendorfer Str. 57, 56410 Montabaur (nachfolgend IONOS). Details entnehmen Sie der Datenschutzerklärung von IONOS: [https://www.ionos.de/terms-gtc/datenschutzerklaerung/](https://www.ionos.de/terms-gtc/datenschutzerklaerung/).
 
-Die Verwendung von All-Inkl erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+Die Verwendung von IONOS erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
 
 #### Auftragsverarbeitung
 
@@ -164,15 +164,13 @@ Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies i
 
 Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen.
 
-### Einwilligung mit Borlabs Cookie
+### Einwilligung über unseren Cookie-Hinweis
 
-Unsere Website nutzt die Consent-Technologie von Borlabs Cookie, um Ihre Einwilligung zur Speicherung bestimmter Cookies in Ihrem Browser oder zum Einsatz bestimmter Technologien einzuholen und diese datenschutzkonform zu dokumentieren. Anbieter dieser Technologie ist die Borlabs GmbH, Rübenkamp 32, 22305 Hamburg (im Folgenden Borlabs).
+Beim ersten Besuch fragen wir Sie in einem Hinweis, ob Sie der Auswertung der Websitenutzung mit Google Analytics zustimmen („Alle akzeptieren“) oder nur technisch notwendige Funktionen zulassen („Nur notwendige“). Ihre Auswahl speichern wir ausschließlich im lokalen Speicher Ihres Browsers (Schlüssel „scharpf-cookie-consent“); sie wird nicht an uns oder Dritte übertragen. Ohne Ihre Zustimmung wird Google Analytics nicht geladen.
 
-Wenn Sie unsere Website betreten, wird ein Borlabs-Cookie in Ihrem Browser gespeichert, in dem die von Ihnen erteilten Einwilligungen oder der Widerruf dieser Einwilligungen gespeichert werden. Diese Daten werden nicht an den Anbieter von Borlabs Cookie weitergegeben.
+Sie können Ihre Auswahl jederzeit über den Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen. Beim Widerruf stoppen wir die Messung und löschen die Google-Analytics-Cookies in Ihrem Browser.
 
-Die erfassten Daten werden gespeichert, bis Sie uns zur Löschung auffordern bzw. das Borlabs-Cookie selbst löschen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Aufbewahrungsfristen bleiben unberührt. Details zur Datenverarbeitung von Borlabs Cookie finden Sie unter [https://de.borlabs.io/kb/welche-daten-speichert-borlabs-cookie/](https://de.borlabs.io/kb/welche-daten-speichert-borlabs-cookie/).
-
-Der Einsatz der Borlabs-Cookie-Consent-Technologie erfolgt, um die gesetzlich vorgeschriebenen Einwilligungen für den Einsatz von Cookies einzuholen. Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. c DSGVO.
+Rechtsgrundlage für die Speicherung Ihrer Auswahl ist Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit § 25 Abs. 2 Nr. 2 TDDDG.
 
 ### Kontaktformular
 
@@ -226,15 +224,11 @@ Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben ge
 
 ## 5\. Analyse-Tools und Werbung
 
-### Google Tag Manager
+### Google-Tag (gtag.js)
 
-Wir setzen den Google Tag Manager ein. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
+Wir binden Google Analytics direkt über das Google-Tag (gtag.js) der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, ein. Das Skript wird erst nach Ihrer Einwilligung vom Server von Google geladen. Dabei erhält Google Ihre IP-Adresse; diese kann auch an das Mutterunternehmen in den Vereinigten Staaten übertragen werden. Wir setzen den Google Tag Manager nicht ein.
 
-Der Google Tag Manager ist ein Tool, mit dessen Hilfe wir Tracking- oder Statistik-Tools und andere Technologien auf unserer Website einbinden können. Der Google Tag Manager selbst erstellt keine Nutzerprofile, speichert keine Cookies und nimmt keine eigenständigen Analysen vor. Er dient lediglich der Verwaltung und Ausspielung der über ihn eingebundenen Tools. Der Google Tag Manager erfasst jedoch Ihre IP-Adresse, die auch an das Mutterunternehmen von Google in die Vereinigten Staaten übertragen werden kann.
-
-Der Einsatz des Google Tag Managers erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an einer schnellen und unkomplizierten Einbindung und Verwaltung verschiedener Tools auf seiner Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-
-Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF). Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: [https://www.dataprivacyframework.gov/participant/5780](https://www.dataprivacyframework.gov/participant/5780).
+Die Verarbeitung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar.
 
 ### Google Analytics
 
@@ -252,9 +246,13 @@ Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Ko
 
 Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF). Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: [https://www.dataprivacyframework.gov/participant/5780](https://www.dataprivacyframework.gov/participant/5780).
 
-#### IP Anonymisierung
+#### IP-Adressen
 
-Die Google Analytics IP-Anonymisierung ist aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.
+Bei Google Analytics 4 werden IP-Adressen nach Angaben von Google nicht protokolliert oder gespeichert. Die Daten werden für die Auswertung Ihrem Endgerät, nicht Ihrer Person zugeordnet.
+
+#### Welche Ereignisse wir messen
+
+Wir messen Seitenaufrufe sowie Klicks auf Telefonnummer, E-Mail-Adresse, WhatsApp und Terminbuchung und das erfolgreiche Absenden unserer Formulare. Der Inhalt Ihrer Eingaben in Formulare wird nicht an Google Analytics übertragen.
 
 #### Browser Plugin
 

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CONTACT, PARTNERS, SOCIAL_LINKS } from "@/lib/site";
+import { openCookieSettings } from "@/lib/consent";
 
 const SOCIAL_ICONS: Record<string, React.ReactNode> = {
   instagram: (
@@ -84,6 +85,10 @@ export function SiteFooter() {
               <Link to="/impressum" className="hover:underline">
                 Impressum
               </Link>
+              <span aria-hidden>|</span>
+              <button type="button" onClick={openCookieSettings} className="hover:underline">
+                Cookie-Einstellungen
+              </button>
               <span aria-hidden>|</span>
               <Link to="/agb" className="hover:underline">
                 AGB

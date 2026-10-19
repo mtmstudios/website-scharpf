@@ -1,4 +1,5 @@
 import { HONEYPOT_FELD } from "@/components/honeypot";
+import { trackEvent } from "@/lib/analytics";
 import { FORM_ENDPOINT } from "@/lib/site";
 
 /** Quellen, die der n8n-Workflow unterscheidet. */
@@ -61,5 +62,6 @@ export async function submitLead(
       gesendet: new Date().toISOString(),
     }),
   });
+  if (res.ok) trackEvent("generate_lead", { form: quelle });
   return res.ok;
 }

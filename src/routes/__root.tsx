@@ -17,6 +17,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { FloatingCta } from "@/components/floating-cta";
 import { MobileStickyBar } from "@/components/mobile-sticky-bar";
 import { CookieBanner } from "@/components/cookie-banner";
+import { AnalyticsTracker } from "@/components/analytics-tracker";
 import { CategoryProvider } from "@/lib/category-context";
 import { FooterCategoryBar } from "@/components/footer-category-bar";
 import { JsonLd } from "@/components/json-ld";
@@ -187,6 +188,7 @@ function RootComponent() {
         <FloatingCta />
         <MobileStickyBar />
         <CookieBanner />
+        <AnalyticsTracker />
       </CategoryProvider>
     </QueryClientProvider>
   );
