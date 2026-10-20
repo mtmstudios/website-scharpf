@@ -36,7 +36,7 @@ const TEAM = [
   {
     name: "Alexander Schwarz",
     funktionen: [
-      "Betriebsleiter",
+      "Betriebsleiter\nZimmermeister",
       "Fachtechniker Holzbau",
       "\n",
       "\n",
