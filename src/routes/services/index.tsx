@@ -87,7 +87,7 @@ function Services() {
             "Anfrage direkt über Kontaktformular oder Telefon",
           ]}
           imageNote="Ladekran von E. Scharpf im Einsatz"
-          imageSrc="/fotos/scharpf_ladekran.jpg"
+          imageSrc="/__l5e/assets-v1/8eaa6d33-3880-43a1-9eac-3bb3a3474b7b/scharpf_ladekran_ki.png"
         />
       </Section>
 
