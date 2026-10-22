@@ -58,7 +58,7 @@ function Dachfenster() {
             "Fachgerechter Anschluss, dauerhaft dicht",
           ]}
           imageNote="Neu eingebautes VELUX Dachfenster"
-          imageSrc="/fotos/scharpf_velux_01.jpg"
+          imageSrc="/__l5e/assets-v1/7f88c457-f2da-467e-ae77-5b2b5871185f/scharpf_velux_neu.jpg"
         />
       </Section>
 
