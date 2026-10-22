@@ -52,7 +52,7 @@ function Ladekran() {
             "Anfrage direkt über Kontaktformular oder Telefon",
           ]}
           imageNote="Ladekran hebt ein vorgefertigtes Dachelement über das Haus"
-          imageSrc="/fotos/scharpf_ladekran_einsatz.jpg"
+          imageSrc="/__l5e/assets-v1/ee9fa452-24f7-44ce-9396-259f618ffa0d/scharpf_ladekran_1.png"
         />
         <p className="mt-8 text-base text-muted-foreground">
           Direkt anfragen: Telefon{" "}
