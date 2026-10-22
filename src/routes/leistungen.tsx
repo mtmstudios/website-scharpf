@@ -41,6 +41,11 @@ const KATEGORIEN = [
     to: "/services",
     bild: "/__l5e/assets-v1/daedcf03-1d68-46fb-ad0d-6074977bb52c/scharpf_leistungen_ladekran.png",
   },
+  {
+    title: "Klempnerarbeiten",
+    to: "/dach/klempnerarbeiten",
+    bild: "/__l5e/assets-v1/0cace228-0a9f-4149-a7c2-db7e5b2e39fd/scharpf_klempner_referenz_3.jpg",
+  },
 ] as const;
 
 // Referenzen-Kategorien wie im XD (Abschnitt "Referenzen" auf der Leistungen-Seite).
