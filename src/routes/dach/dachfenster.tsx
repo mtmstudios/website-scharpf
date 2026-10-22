@@ -102,7 +102,7 @@ function Dachfenster() {
           "Heller Wohnraum mit Dachfenster",
         ]}
         imageSrcs={[
-          "/fotos/scharpf_velux.jpg",
+          "/__l5e/assets-v1/f652a0e6-b6cb-43bc-a8cf-f14a186df95a/scharpf_velux_integra_io.jpg",
           "/fotos/scharpf_velux_04.jpg",
           "/fotos/scharpf_velux_Integra.jpg",
         ]}
