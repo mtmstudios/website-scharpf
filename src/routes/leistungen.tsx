@@ -34,7 +34,7 @@ const KATEGORIEN = [
   {
     title: "Fassade & Außenbereiche",
     to: "/fassade",
-    bild: "/fotos/scharpf_fassade.jpg",
+    bild: "/__l5e/assets-v1/314900a0-fa9b-4e15-95b5-9b260f00a7d3/scharpf_leistungen_fassade.jpg",
   },
   {
     title: "Service & Sonstige Leistungen",
