@@ -39,7 +39,7 @@ const KATEGORIEN = [
   {
     title: "Service & Sonstige Leistungen",
     to: "/services",
-    bild: "/fotos/scharpf_ladekran.jpg",
+    bild: "/__l5e/assets-v1/daedcf03-1d68-46fb-ad0d-6074977bb52c/scharpf_leistungen_ladekran.png",
   },
 ] as const;
 
