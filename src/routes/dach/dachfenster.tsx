@@ -80,7 +80,7 @@ function Dachfenster() {
       <Section>
         <LeistungBlock
           title="Beratung in unserem 330 qm Showroom"
-          text="In unserer Ausstellung auf 330 qm können Sie zahlreiche Dachfenster live besichtigen, Mechaniken selbst ausprobieren und Materialien auswählen. So sehen Sie vorab, welches System zu Ihrem Dach und Ihrem Raum passt. Kommen Sie vorbei – wir beraten Sie persönlich."
+          text="In unserer Ausstellung auf 330 qm können Sie zahlreiche Dachfenster live besichtigen, Mechaniken selbst ausprobieren und Materialien auswählen. So sehen Sie vorab, welches System zu Ihrem Dach und Ihrem Raum passt. Kommen Sie vorbei – wir beraten Sie persönlich.\nSo haben wir die neuesten Lösungen wie das VELUX Panorama oder das elektrische Fenster GPU Integra bei uns in der Ausstellung. \nWir zeigen auch aufgekeilte Dachfenster und den VELUX Dachbalkon haben wir ebenfalls ausgestellt. "
           ctaLabel="Termin vereinbaren"
           bullets={[
             "Dachfenster live erleben und Mechaniken ausprobieren",
