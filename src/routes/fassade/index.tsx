@@ -56,7 +56,7 @@ function Fassade() {
             "Holzschalung (klassisch, individuell, ökologisch)",
           ]}
           imageNote="Holz- bzw. Trespa-Fassade im Detail"
-          imageSrc="/fotos/scharpf_fassade_01.jpg"
+          imageSrc="/__l5e/assets-v1/554da3dc-d923-45a8-803e-2f4dcf9785f2/scharpf_fassade.jpg"
         />
       </Section>
 
