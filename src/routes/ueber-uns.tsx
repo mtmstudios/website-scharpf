@@ -25,7 +25,7 @@ export const Route = createFileRoute("/ueber-uns")({
 const TEAM = [
   {
     name: "Eberhard Scharpf sen.",
-    funktionen: ["Geschäftsführer \nstaatl. gepr. Bautechniker \nRestaurator ", "\n"],
+    funktionen: ["Geschäftsführer \nstaatl. gepr. Bautechniker\nRestaurator ", "\n"],
     foto: "/__l5e/assets-v1/30ede298-30d3-4b9b-be36-1d4841362e56/scharpf_team_Senior.jpg",
   },
   {
@@ -36,7 +36,7 @@ const TEAM = [
   {
     name: "Alexander Schwarz",
     funktionen: [
-      "Betriebsleiter \nZimmermeister",
+      "Betriebsleiter  \nZimmerermeister",
       "Fachtechniker Holzbau",
       "\n",
       "\n",
