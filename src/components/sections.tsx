@@ -375,6 +375,7 @@ export function ReferenzTeaser({
   imageSrcs,
   to = "/referenzen",
   containIndexes,
+  extraRow,
 }: {
   title: string;
   intro: string;
@@ -383,6 +384,8 @@ export function ReferenzTeaser({
   to?: string;
   /** Indizes der Bilder, die vollständig (ohne Beschnitt) gezeigt werden. */
   containIndexes?: number[];
+  /** Optionale zweite Reihe: ein breites Bild (2 Spalten) + ein normales. */
+  extraRow?: { wide: { src: string; note: string }; normal: { src: string; note: string } };
 }) {
   return (
     <Section muted>
@@ -405,6 +408,19 @@ export function ReferenzTeaser({
             className={containIndexes?.includes(i) ? "object-contain" : undefined}
           />
         ))}
+        {extraRow && (
+          <>
+            <div className="relative aspect-[16/9] sm:col-span-2 sm:aspect-auto">
+              <img
+                src={extraRow.wide.src}
+                alt={extraRow.wide.note}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full rounded-lg object-cover"
+              />
+            </div>
+            <PlaceholderImage note={extraRow.normal.note} src={extraRow.normal.src} ratio="landscape" />
+          </>
+        )}
       </div>
     </Section>
   );
