@@ -90,7 +90,7 @@ function Kontakt() {
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           {istBewerbung
             ? "Schick uns deine Bewerbung – formlos per E-Mail oder über das Formular unten. Wir melden uns innerhalb von 24 Stunden."
-            : "Rufen Sie uns an, schreiben Sie uns – oder nutzen Sie einfach das Formular. Wir melden uns innerhalb von 24 Stunden."}
+            : "Rufen Sie uns an, schreiben Sie uns – oder nutzen Sie einfach das Formular. Wir melden uns kurzfristig zurück."}
         </p>
         <div className="mt-10 grid gap-8 sm:grid-cols-3 lg:max-w-4xl">
           <div className="text-base text-muted-foreground">
