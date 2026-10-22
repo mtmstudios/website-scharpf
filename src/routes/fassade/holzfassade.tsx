@@ -67,7 +67,7 @@ function Holzfassade() {
           moreTo="/fassade/waermedaemmung"
           moreLabel="Mehr zur Wärmedämmung →"
           imageNote="Fassade mit neuer Dämmung"
-          imageSrc="/fotos/scharpf_fassade_03.jpg"
+          imageSrc="/__l5e/assets-v1/a1bf71ac-e8cc-432a-95ec-9107404bd89f/scharpf_holzfassade_3.jpg"
         />
       </Section>
 
