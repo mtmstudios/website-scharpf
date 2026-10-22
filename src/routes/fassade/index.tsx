@@ -105,7 +105,7 @@ function Fassade() {
           "Fertige Holzterrasse",
         ]}
         imageSrcs={[
-          "/fotos/scharpf_fassade_01.jpg",
+          "/__l5e/assets-v1/81d9d641-45a8-4254-845f-298664ee6857/scharpf_fassade_referenz_1.jpg",
           fassade02Asset.url,
           "/fotos/scharpf_terrasse.jpg",
         ]}
