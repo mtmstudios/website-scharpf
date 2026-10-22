@@ -52,6 +52,7 @@ function Holzfassade() {
             "Hinterlüfteter Aufbau – dauerhaft und wartungsarm",
             "Lasuren und Oberflächenbehandlungen nach Kundenwunsch",
             "Kombination mit Wärmedämmung (Holzfaser, Mineralwolle)",
+            "Trespa und Eternit Fassaden",
           ]}
           imageNote="Fassadensystem im Detail"
           imageSrc="/__l5e/assets-v1/43a10fec-5c0a-4076-b28c-117f49d8f18a/scharpf_holzfassade_4.jpg"
