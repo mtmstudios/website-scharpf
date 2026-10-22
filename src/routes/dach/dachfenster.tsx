@@ -56,6 +56,7 @@ function Dachfenster() {
             "Einbau und Austausch aller gängigen Dachfenster-Systeme",
             "Dachliegefenster und Lichtbänder",
             "Fachgerechter Anschluss, dauerhaft dicht\n",
+            "Rauch- und Wärmeabzugsfenster (RWA) und Notausstiegsfenster",
           ]}
           imageNote="Neu eingebautes VELUX Dachfenster"
           imageSrc="/__l5e/assets-v1/7f88c457-f2da-467e-ae77-5b2b5871185f/scharpf_velux_neu.jpg"
