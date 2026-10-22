@@ -54,7 +54,7 @@ function Holzfassade() {
             "Kombination mit Wärmedämmung (Holzfaser, Mineralwolle)",
           ]}
           imageNote="Fassadensystem im Detail"
-          imageSrc="/fotos/scharpf_fassade_02.jpg"
+          imageSrc="/__l5e/assets-v1/43a10fec-5c0a-4076-b28c-117f49d8f18a/scharpf_holzfassade_4.jpg"
         />
       </Section>
 
