@@ -388,7 +388,7 @@ export function ReferenzTeaser({
   /** Indizes der Bilder, die vollständig (ohne Beschnitt) gezeigt werden. */
   containIndexes?: number[];
   /** Optionale zweite Reihe: ein breites Bild (2 Spalten) + ein normales. */
-  extraRow?: { wide: { src: string; note: string }; normal: { src: string; note: string } };
+  extraRow?: { wide: { src: string; note: string }; normal: { src: string; note: string; caption?: string } };
   additionalImages?: { src: string; note: string }[];
 }) {
   return (
@@ -428,7 +428,14 @@ export function ReferenzTeaser({
                 className="absolute inset-0 h-full w-full rounded-lg object-cover"
               />
             </div>
-            <PlaceholderImage note={extraRow.normal.note} src={extraRow.normal.src} ratio="landscape" />
+            <figure>
+              <PlaceholderImage note={extraRow.normal.note} src={extraRow.normal.src} ratio="landscape" />
+              {extraRow.normal.caption && (
+                <figcaption className="mt-2 text-sm text-muted-foreground">
+                  {extraRow.normal.caption}
+                </figcaption>
+              )}
+            </figure>
           </>
         )}
         {additionalImages?.map((image) => (
