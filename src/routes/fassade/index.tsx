@@ -106,6 +106,7 @@ function Fassade() {
         title="Referenzen im Bereich Fassade & Außenbereiche"
         intro="Ausgewählte Fassaden- und Terrassenprojekte aus der Region Esslingen – Qualität und Langlebigkeit im Detail."
         to="/referenzen/fassade"
+        imageCaptions={["Lärche Fassade Netto Winterbach"]}
         imageNotes={[
           "Hinterlüftete Holzfassade",
           "Fassade in der Gesamtansicht",
