@@ -68,6 +68,9 @@ function Page() {
       illustrationSrc="/illustrationen/dachstuhl-weiss.png"
       nachProjekten={
         <Section className="py-14 lg:py-20">
+          <h2 className="mb-8 font-display text-2xl font-bold text-foreground sm:text-3xl">
+            Neubau von 2 Besucherunterständen in der Wilhelma und Verkleidung Amour Tiger Käfig mit Holzstämmen
+          </h2>
           <div className="grid items-start gap-6 sm:grid-cols-2">
             <img
               src={rundholzGesamtAsset.url}
