@@ -388,7 +388,7 @@ export function ReferenzTeaser({
   /** Indizes der Bilder, die vollständig (ohne Beschnitt) gezeigt werden. */
   containIndexes?: number[];
   /** Optionale zweite Reihe: ein breites Bild (2 Spalten) + ein normales. */
-  extraRow?: { wide: { src: string; note: string }; normal: { src: string; note: string; caption?: string } };
+  extraRow?: { wide: { src: string; note: string; caption?: string }; normal: { src: string; note: string; caption?: string } };
   additionalImages?: { src: string; note: string }[];
 }) {
   return (
@@ -420,14 +420,21 @@ export function ReferenzTeaser({
         ))}
         {extraRow && (
           <>
-            <div className="relative aspect-[16/9] sm:col-span-2 sm:aspect-auto">
-              <img
-                src={extraRow.wide.src}
-                alt={extraRow.wide.note}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full rounded-lg object-cover"
-              />
-            </div>
+            <figure className="flex flex-col sm:col-span-2">
+              <div className="relative aspect-[16/9] sm:flex-1 sm:aspect-auto">
+                <img
+                  src={extraRow.wide.src}
+                  alt={extraRow.wide.note}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full rounded-lg object-cover"
+                />
+              </div>
+              {extraRow.wide.caption && (
+                <figcaption className="mt-2 text-sm text-muted-foreground">
+                  {extraRow.wide.caption}
+                </figcaption>
+              )}
+            </figure>
             <figure>
               <PlaceholderImage note={extraRow.normal.note} src={extraRow.normal.src} ratio="landscape" />
               {extraRow.normal.caption && (

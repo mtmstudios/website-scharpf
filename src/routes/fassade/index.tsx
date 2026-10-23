@@ -118,7 +118,7 @@ function Fassade() {
           "/fotos/scharpf_terrasse.jpg",
         ]}
         extraRow={{
-          wide: { src: "/__l5e/assets-v1/57784dcb-0701-4c36-8f04-393738ec374d/scharpf_fassade_referenz_breit.jpg", note: "Fassade in der Panorama-Ansicht" },
+          wide: { src: "/__l5e/assets-v1/57784dcb-0701-4c36-8f04-393738ec374d/scharpf_fassade_referenz_breit.jpg", note: "Fassade in der Panorama-Ansicht", caption: "Holzterrasse Esslingen" },
           normal: { src: "/__l5e/assets-v1/965dc69d-63ac-4c18-bdda-f7042e970d1a/scharpf_fassade_weingaertner.jpg", note: "Fassadenprojekt in Esslingen", caption: "Terrasse Weingärtner Teamwerk Esslingen" },
         }}
         additionalImages={[
