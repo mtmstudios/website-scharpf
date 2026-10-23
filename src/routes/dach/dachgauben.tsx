@@ -30,6 +30,8 @@ function Dachgauben() {
         title="Dachgauben – mehr Licht und Wohnraum unter dem Dach"
         lead="Mehr Raum unter der Dachschräge – Gauben können nachträglich eingebaut werden, meist beim Dachausbau oder im Zuge einer Sanierung. Gauben verbessern das Wohnerlebnis, hellen dunkle Räume auf und steigern den Immobilienwert."
         ctaLabel="Gauben-Beratung vereinbaren"
+        secondaryCtaLabel="Video zum Einbau einer Fertiggaube"
+        secondaryCtaTo="https://youtu.be/6R81BD5MFd8"
         imageNote="Wohnhaus mit fertiger Gaube und Blechverkleidung"
         imageSrc="/fotos/scharpf__dachgauben.jpg"
         breadcrumbs={[
