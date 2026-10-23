@@ -88,7 +88,7 @@ function Page() {
               src={rundholzMontageAsset.url}
               alt="Montage der Holzkonstruktion mit dem Firmen-Ladekran"
               loading="lazy"
-              className="h-auto w-full rounded-lg sm:col-span-2"
+              className="h-auto w-full rounded-lg"
             />
           </div>
         </Section>
