@@ -53,8 +53,8 @@ function Dachfenster() {
           text="Ob Neubau, Dachausbau oder Austausch eines undichten Altfensters – wir bauen alle gängigen Dachfenster-Systeme ein und tauschen bestehende Fenster fachgerecht aus. Dachliegefenster, Lichtbänder oder eine ganze Fensterreihe: Wir planen die Belichtung so, dass Ihr Raum optimal ausgeleuchtet wird."
           ctaLabel="Dachfenster anfragen"
           bullets={[
-            "Einbau und Austausch aller gängigen Dachfenster-Systeme",
-            "Dachliegefenster und Lichtbänder",
+            "Einbau und Austausch aller gängigen Dachfenster (VELUX, ROTO und LIDEKO)\u00a0",
+            "Dachbalkon, aufgekeilte Dachfenster und VELUX Lichtband",
             "Fachgerechter Anschluss, dauerhaft dicht\n",
             "Rauch- und Wärmeabzugsfenster (RWA) und Notausstiegsfenster",
           ]}
