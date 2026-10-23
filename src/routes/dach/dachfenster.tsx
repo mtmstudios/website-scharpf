@@ -95,7 +95,7 @@ function Dachfenster() {
 
       <ReferenzTeaser
         title="Referenzen im Bereich Dachfenster"
-        intro="Von der energetischen Dachsanierung bis zur Gaube mit Blechverkleidung – sehen Sie unsere abgeschlossenen Projekte im Großraum Esslingen und Stuttgart."
+        intro={"Wird sind VELUX Fachbetrieb und ROTO Profi Partner\nVom Austausch und Neu Einbau von Dachfenstern bis hin zu aufgekeilten Dachfenstern oder dem VELUX Panorama - wir sind Ihr Partner für Dachfenster in Esslingen und Stuttgart."}
         to="/referenzen"
         imageNotes={[
           "Dachausbau mit neuen Dachfenstern",
