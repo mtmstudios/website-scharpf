@@ -3,11 +3,19 @@ import {
   ReferenzKategorieSeite,
   type ReferenzProjekt,
 } from "@/components/referenz-kategorie";
+import { Section } from "@/components/sections";
+import rundholzGesamtAsset from "@/assets/scharpf_holzbau_rundholz_gesamt.jpeg.asset.json";
+import rundholzEingangAsset from "@/assets/scharpf_holzbau_rundholz_eingang.jpeg.asset.json";
+import rundholzMontageAsset from "@/assets/scharpf_holzbau_rundholz_montage.jpeg.asset.json";
 
 export const Route = createFileRoute("/referenzen/holzbau")({
   head: () => ({
     meta: [
       { title: "Referenzen Holzbau & Konstruktion – E. Scharpf GmbH" },
+      { property: "og:title", content: "Referenzen Holzbau & Konstruktion – E. Scharpf GmbH" },
+      { property: "og:description", content: "Aufstockungen, Holzhäuser und Carports im Großraum Esslingen und Stuttgart – Holzbau-Referenzprojekte der E. Scharpf GmbH." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "description",
         content:
@@ -58,6 +66,30 @@ function Page() {
       einleitung="Von der Aufstockung in Esslingen bis zum schlüsselfertigen Holzhaus im Großraum Stuttgart – sehen Sie, was aus unserer Zusammenarbeit entstehen kann."
       projekte={PROJEKTE}
       illustrationSrc="/illustrationen/dachstuhl-weiss.png"
+      nachProjekten={
+        <Section className="py-14 lg:py-20">
+          <div className="grid items-start gap-6 sm:grid-cols-2">
+            <img
+              src={rundholzGesamtAsset.url}
+              alt="Gesamtansicht einer Fassade aus senkrechten Rundhölzern"
+              loading="lazy"
+              className="h-auto w-full rounded-lg"
+            />
+            <img
+              src={rundholzEingangAsset.url}
+              alt="Eingangsbereich mit natürlicher Rundholzverkleidung"
+              loading="lazy"
+              className="h-auto w-full rounded-lg"
+            />
+            <img
+              src={rundholzMontageAsset.url}
+              alt="Montage der Holzkonstruktion mit dem Firmen-Ladekran"
+              loading="lazy"
+              className="h-auto w-full rounded-lg sm:col-span-2"
+            />
+          </div>
+        </Section>
+      }
     />
   );
 }
