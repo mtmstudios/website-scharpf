@@ -122,7 +122,7 @@ function Fassade() {
           normal: { src: "/__l5e/assets-v1/965dc69d-63ac-4c18-bdda-f7042e970d1a/scharpf_fassade_weingaertner.jpg", note: "Fassadenprojekt in Esslingen", caption: "Terrasse Weingärtner Teamwerk Esslingen" },
         }}
         additionalImages={[
-          { src: fassadeGesamtAsset.url, note: "Dunkle Holzfassade mit Terrasse in der Gesamtansicht" },
+          { src: fassadeGesamtAsset.url, note: "Dunkle Holzfassade mit Terrasse in der Gesamtansicht", caption: "Komplettsanierung Wohnhaus Aichwald - Dach und Fassade" },
           { src: fassadeDetailAsset.url, note: "Dunkle Holzfassade mit großen Fensterflächen im Detail" },
           { src: fassadeGaubeAsset.url, note: "Dachgaube mit Metallverkleidung über dunkler Holzfassade" },
         ]}
