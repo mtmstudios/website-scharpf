@@ -373,6 +373,7 @@ export function ReferenzTeaser({
   intro,
   imageNotes,
   imageSrcs,
+  imageCaptions,
   to = "/referenzen",
   containIndexes,
   extraRow,
@@ -382,6 +383,7 @@ export function ReferenzTeaser({
   intro: string;
   imageNotes: [string, string, string];
   imageSrcs?: [string, string, string];
+  imageCaptions?: [string?, string?, string?];
   to?: string;
   /** Indizes der Bilder, die vollständig (ohne Beschnitt) gezeigt werden. */
   containIndexes?: number[];
@@ -402,13 +404,19 @@ export function ReferenzTeaser({
       </div>
       <div className="mt-10 grid gap-6 sm:grid-cols-3">
         {imageNotes.map((note, i) => (
-          <PlaceholderImage
-            key={i}
-            note={note}
-            src={imageSrcs?.[i]}
-            ratio="landscape"
-            className={containIndexes?.includes(i) ? "object-contain" : undefined}
-          />
+          <figure key={i}>
+            <PlaceholderImage
+              note={note}
+              src={imageSrcs?.[i]}
+              ratio="landscape"
+              className={containIndexes?.includes(i) ? "object-contain" : undefined}
+            />
+            {imageCaptions?.[i] && (
+              <figcaption className="mt-2 text-sm text-muted-foreground">
+                {imageCaptions[i]}
+              </figcaption>
+            )}
+          </figure>
         ))}
         {extraRow && (
           <>
