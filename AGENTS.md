@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep reference-gallery image data in the page and pass extra images to ReferenzTeaser so other pages retain their existing galleries.

@@ -376,6 +376,7 @@ export function ReferenzTeaser({
   to = "/referenzen",
   containIndexes,
   extraRow,
+  additionalImages,
 }: {
   title: string;
   intro: string;
@@ -386,6 +387,7 @@ export function ReferenzTeaser({
   containIndexes?: number[];
   /** Optionale zweite Reihe: ein breites Bild (2 Spalten) + ein normales. */
   extraRow?: { wide: { src: string; note: string }; normal: { src: string; note: string } };
+  additionalImages?: { src: string; note: string }[];
 }) {
   return (
     <Section muted>
@@ -421,6 +423,9 @@ export function ReferenzTeaser({
             <PlaceholderImage note={extraRow.normal.note} src={extraRow.normal.src} ratio="landscape" />
           </>
         )}
+        {additionalImages?.map((image) => (
+          <PlaceholderImage key={image.src} note={image.note} src={image.src} ratio="landscape" />
+        ))}
       </div>
     </Section>
   );

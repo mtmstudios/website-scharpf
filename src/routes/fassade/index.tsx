@@ -9,11 +9,18 @@ import {
 import fassadeHeroAsset from "@/assets/scharpf_fassade_03.jpg.asset.json";
 import vorfertigungAsset from "@/assets/scharpf_vorfertigung.jpg.asset.json";
 import fassade02Asset from "@/assets/scharpf_fassade_02.jpg.asset.json";
+import fassadeGesamtAsset from "@/assets/scharpf_fassade_dunkel_gesamt.jpeg.asset.json";
+import fassadeDetailAsset from "@/assets/scharpf_fassade_dunkel_detail.jpeg.asset.json";
+import fassadeGaubeAsset from "@/assets/scharpf_fassade_dunkel_gaube.jpeg.asset.json";
 
 export const Route = createFileRoute("/fassade/")({
   head: () => ({
     meta: [
       { title: "Holzfassade Esslingen – Fassaden & Terrassen" },
+      { property: "og:title", content: "Holzfassade Esslingen – Fassaden & Terrassen" },
+      { property: "og:description", content: "Holzfassaden, Wärmedämmung und Terrassenbau von E. Scharpf im Großraum Esslingen und Stuttgart." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "description",
         content:
@@ -113,6 +120,11 @@ function Fassade() {
           wide: { src: "/__l5e/assets-v1/57784dcb-0701-4c36-8f04-393738ec374d/scharpf_fassade_referenz_breit.jpg", note: "Fassade in der Panorama-Ansicht" },
           normal: { src: "/__l5e/assets-v1/965dc69d-63ac-4c18-bdda-f7042e970d1a/scharpf_fassade_weingaertner.jpg", note: "Fassadenprojekt in Esslingen" },
         }}
+        additionalImages={[
+          { src: fassadeGesamtAsset.url, note: "Dunkle Holzfassade mit Terrasse in der Gesamtansicht" },
+          { src: fassadeDetailAsset.url, note: "Dunkle Holzfassade mit großen Fensterflächen im Detail" },
+          { src: fassadeGaubeAsset.url, note: "Dachgaube mit Metallverkleidung über dunkler Holzfassade" },
+        ]}
       />
 
       <CtaBanner
