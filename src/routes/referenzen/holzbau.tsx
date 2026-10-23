@@ -7,6 +7,7 @@ import { Section } from "@/components/sections";
 import rundholzGesamtAsset from "@/assets/scharpf_holzbau_rundholz_gesamt.jpeg.asset.json";
 import rundholzEingangAsset from "@/assets/scharpf_holzbau_rundholz_eingang.jpeg.asset.json";
 import rundholzMontageAsset from "@/assets/scharpf_holzbau_rundholz_montage.jpeg.asset.json";
+import neubauAsset from "@/assets/scharpf_holzbau_neubau_dach2.jpg.asset.json";
 
 export const Route = createFileRoute("/referenzen/holzbau")({
   head: () => ({
@@ -39,7 +40,7 @@ const PROJEKTE: ReferenzProjekt[] = [
     titel: "Neubau mit vorgefertigten Holzelementen",
     tag: "Holzbau & Konstruktion",
     text: "Wand- und Dachelemente inklusive Dämmung und Lattung kamen komplett vorgefertigt aus unserer Werkhalle in Esslingen – präzise auf den Millimeter und witterungsunabhängig montiert.",
-    imageSrc: "/fotos/scharpf_neubau.jpg",
+    imageSrc: neubauAsset.url,
     imageNote: "Neubau in Holzbauweise",
   },
   {
