@@ -23,7 +23,7 @@ export const CONTACT = {
  * Verantwortlicher muss der eingetragene Name stehen, deshalb hier getrennt.
  */
 export const RECHTLICHES = {
-  legalName: "E. Scharpf Zimmergeschäft GmbH",
+  legalName: "E. Scharpf GmbH Zimmergeschäft ",
   handelsregister: "HRB 211043",
   registergericht: "Stuttgart",
   geschaeftsfuehrer: ["Eberhard Ernst Scharpf", "Eberhard Emil Hans Scharpf"],
