@@ -9,7 +9,7 @@ export const CONTACT = {
   phoneHref: "tel:+4971193184422",
   email: "anfrage@scharpf-holzbau.de",
   emailHref: "mailto:anfrage@scharpf-holzbau.de",
-  whatsappHref: "https://wa.me/4971193184422",
+  whatsappHref: "https://wa.me/491785327435",
   hours: "Mo–Do 7:00–17:00 Uhr\nFr 7:00–14:30 Uhr",
 } as const;
 
