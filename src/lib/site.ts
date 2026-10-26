@@ -224,6 +224,11 @@ const ALLE_SOCIAL_LINKS = [
     icon: "facebook",
   },
   { label: "Houzz", href: "", icon: "houzz" },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/channel/UCxm5MK1GZ28o4MdUOoXvfZg",
+    icon: "youtube",
+  },
 ] as const;
 
 export const SOCIAL_LINKS = ALLE_SOCIAL_LINKS.filter((s) => s.href.length > 0);
