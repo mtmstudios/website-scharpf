@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Download all referenced Lovable media for IONOS
+        run: bun scripts/fetch-lovable-assets.mjs https://delightful-hero-lab.lovable.app
+
       - name: Build
         run: bun run build
 
@@ -48,3 +51,10 @@ jobs:
             mirror -R --delete --verbose --parallel=2 ./.output/public /holzbau-scharpf;
             quit
           "
+
+      - name: Verify service tile images on IONOS
+        run: |
+          curl --fail --retry 5 --retry-all-errors --retry-delay 10 --output /tmp/fassade.jpg "https://holzbau-scharpf.de/__l5e/assets-v1/314900a0-fa9b-4e15-95b5-9b260f00a7d3/scharpf_leistungen_fassade.jpg"
+          curl --fail --retry 5 --retry-all-errors --retry-delay 10 --output /tmp/ladekran.png "https://holzbau-scharpf.de/__l5e/assets-v1/daedcf03-1d68-46fb-ad0d-6074977bb52c/scharpf_leistungen_ladekran.png"
+          file --mime-type /tmp/fassade.jpg | grep 'image/jpeg'
+          file --mime-type /tmp/ladekran.png | grep 'image/png'

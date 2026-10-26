@@ -1,0 +1,2 @@
+- [x] Include literal service-tile image URLs in the IONOS media download and deployment checks.
+- [ ] Verify both images on IONOS after deployment (requires execution of the GitHub workflow; no IONOS credentials available here).
