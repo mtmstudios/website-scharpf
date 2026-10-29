@@ -60,7 +60,7 @@ const STELLEN = [
 function Karriere() {
   return (
     <div>
-      <CategoryBar breadcrumbs={[{ label: "Karriere" }]} color="#E6DCC4" />
+      <CategoryBar breadcrumbs={[{ label: "01 HERO\nKarriere bei E. Scharpf Holzbau Restaurierung\u00a0" }]} color="#E6DCC4" />
 
       {/* Deine Wunschstelle bei uns */}
       <Section className="pt-6 lg:pt-6">
