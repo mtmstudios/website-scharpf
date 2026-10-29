@@ -73,7 +73,7 @@ function Karriere() {
       </Section>
 
       {/* Deine Wunschstelle bei uns */}
-      <Section className="pt-6 lg:pt-6">
+      <Section className="!pt-4 lg:!pt-4">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           Werde Teil unseres Teams
         </h1>
