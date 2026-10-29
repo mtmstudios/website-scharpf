@@ -62,7 +62,7 @@ function Karriere() {
     <div>
       <CategoryBar breadcrumbs={[{ label: "01 HERO\nKarriere bei E. Scharpf Holzbau Restaurierung" }]} color="#E6DCC4" />
 
-      <Section className="pt-8 pb-0 lg:pt-10 lg:pb-0">
+      <Section className="!pt-4 pb-0 lg:!pt-4 lg:pb-0">
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
           Handwerk mit Anspruch. Karriere mit Perspektive.
         </h2>
