@@ -132,7 +132,7 @@ function Karriere() {
           )}
         </div>
 
-        <div className="mt-12">
+        <div className="mx-auto mt-12 max-w-3xl">
           <PlaceholderImage
             note="Team von E. Scharpf"
             src={gruppenbildAsset.url}
