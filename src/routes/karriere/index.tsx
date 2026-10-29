@@ -62,6 +62,16 @@ function Karriere() {
     <div>
       <CategoryBar breadcrumbs={[{ label: "01 HERO\nKarriere bei E. Scharpf Holzbau Restaurierung\u00a0" }]} color="#E6DCC4" />
 
+      <Section className="pt-8 pb-0 lg:pt-10 lg:pb-0">
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Handwerk mit Anspruch. Karriere mit Perspektive.
+        </h2>
+        <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          80 Jahre Erfahrung, drei Generationen und rund 40 Mitarbeitende. Bei E. Scharpf Holzbau in Esslingen vereinen wir drei Gewerke unter einem Dach: Zimmerer, Dachdecker und Klempner. Hier lernst du von erfahrenen Profis, arbeitest an außergewöhnlichen Projekten und hast beste Möglichkeiten, dich beruflich weiterzuentwickeln.
+        </p>
+      </Section>
+
       {/* Deine Wunschstelle bei uns */}
       <Section className="pt-6 lg:pt-6">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
