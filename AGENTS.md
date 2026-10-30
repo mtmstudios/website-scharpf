@@ -10,4 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Keep reference-gallery image data in the page and pass extra images to ReferenzTeaser so other pages retain their existing galleries.
+- Keep career workday station data separate from its interactive presentation so each trade's schedule remains independently maintainable.
 - IONOS deployment must download both asset-pointer URLs and literal Lovable media URLs before building, then verify the affected live image URLs after SFTP upload; static hosting cannot serve Lovable's asset proxy itself.

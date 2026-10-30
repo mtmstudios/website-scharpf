@@ -3,11 +3,16 @@ import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
 import gruppenbildAsset from "@/assets/scharpf_gruppenbild_hochzeit.jpg.asset.json";
+import { KarriereArbeitstag } from "@/components/karriere-arbeitstag";
 
 export const Route = createFileRoute("/karriere/")({
   head: () => ({
     meta: [
       { title: "Zimmerer & Dachdecker Jobs Esslingen – E. Scharpf GmbH" },
+      { property: "og:title", content: "Karriere und Handwerk bei E. Scharpf in Esslingen" },
+      { property: "og:description", content: "Entdecke unsere drei Gewerke, einen typischen Arbeitstag und deine beruflichen Möglichkeiten bei E. Scharpf." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "description",
         content:
@@ -199,6 +204,7 @@ function Karriere() {
           ))}
         </div>
 
+        <KarriereArbeitstag />
 
         <div className="mx-auto mt-12 max-w-3xl">
           <PlaceholderImage
