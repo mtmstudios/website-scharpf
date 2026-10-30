@@ -79,8 +79,7 @@ function Karriere() {
         </h1>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Ob Zimmerer, Dachdecker, Klempner oder Bauhelfer: Wir suchen Menschen,
-          die mit Leidenschaft bauen – und bieten dafür mehr als andere.
+          {`Ob Zimmerer, Dachdecker, Klempner oder Bauhelfer: Wir suchen Menschen,\ndie mit Leidenschaft bauen – und bieten dafür mehr als andere.`}
         </p>
         <div className="mt-8">
           <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
