@@ -73,7 +73,7 @@ function Karriere() {
         {/* Job-Selektor als Kachel-Clickthrough */}
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {STELLEN.map((s) =>
-            s.to === "/karriere/dachdecker-ausbildung" ? (
+            s.to === "/karriere/dachdecker-ausbildung" || s.to === "/karriere/bauhelfer" ? (
               <div
                 key={s.to}
                 aria-disabled="true"
@@ -82,7 +82,7 @@ function Karriere() {
                 <span className="font-display text-lg font-bold text-muted-foreground">
                   {s.label}
                   <span className="mt-1 block text-sm font-normal">
-                    Aktuell keine Ausbildung
+                    {s.to === "/karriere/bauhelfer" ? "Aktuell keine offene Stelle" : "Aktuell keine Ausbildung"}
                   </span>
                 </span>
               </div>
