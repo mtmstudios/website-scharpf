@@ -242,38 +242,6 @@ function Karriere() {
         </div>
       </Section>
 
-      {/* Deine Vorteile bei uns */}
-      <Section>
-        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Deine Vorteile bei uns
-        </h2>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2">
-          {VORTEILE.map((v) => (
-            <div key={v.title} className="flex gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mt-1 shrink-0 text-primary"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <div>
-                <h3 className="font-display text-lg font-bold text-foreground">
-                  {v.title}
-                </h3>
-                <p className="mt-1 text-base text-muted-foreground">{v.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
 
       {/* Das musst du mitbringen */}
       <Section muted>
