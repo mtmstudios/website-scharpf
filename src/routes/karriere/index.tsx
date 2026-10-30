@@ -172,6 +172,34 @@ function Karriere() {
           ))}
         </div>
 
+        <h2 className="mt-16 font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Darauf kannst du dich bei uns freuen
+        </h2>
+        <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
+        <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          {[
+            ["4,5 Tage arbeiten. Freitag früher Schluss.", "Bei uns startet dein Wochenende freitags bereits um 12:30 Uhr."],
+            ["Ein Team, das auch nach Feierabend zusammenkommt.", "Ob Go-Kart-Rennen, Wanderwochenende in den Bergen oder gemeinsames Grillen – wir unternehmen auch außerhalb der Arbeit etwas zusammen."],
+            ["Weiterbildung, die dich weiterbringt.", "Von Produktschulungen bei VELUX bis zu individuellen Weiterbildungen unterstützen wir deine fachliche Entwicklung."],
+            ["Gut ausgestattet für gute Arbeit.", "Hochwertige Werkzeuge, moderne Arbeitsmittel und Arbeitskleidung stellen wir dir kostenfrei zur Verfügung."],
+            ["Ein moderner Fuhrpark.", "Mit unseren gut ausgestatteten Fahrzeugen bist du für die Einsätze auf der Baustelle gerüstet."],
+            ["Mobilität, die zu dir passt.", "Wähle zwischen JobRad und Deutschlandticket."],
+            ["Heute schon an morgen denken.", "Mit einer betrieblichen Altersvorsorge unterstützen wir deine zusätzliche Absicherung."],
+            ["Kaffee am Morgen. Wasser für den Tag.", "Bei uns kannst du dich morgens mit Kaffee versorgen und bekommst kostenlos Wasser gestellt."],
+          ].map(([title, text]) => (
+            <div key={title} className="flex gap-3">
+              <svg viewBox="0 0 24 24" className="mt-1 h-6 w-6 shrink-0 text-primary" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              <div>
+                <h3 className="font-display text-xl font-bold text-foreground">{title}</h3>
+                <p className="mt-2 text-muted-foreground">{text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
         <div className="mx-auto mt-12 max-w-3xl">
           <PlaceholderImage
             note="Team von E. Scharpf"
