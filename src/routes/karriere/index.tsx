@@ -131,7 +131,11 @@ function Karriere() {
           )}
         </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2">
+        <h2 className="mt-12 font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Vorteile vom Handwerk
+        </h2>
+        <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
+        <div className="mt-8 grid gap-8 sm:grid-cols-2">
           {[
             ["KI kann viel. Bauen bleibt Handwerk.", "KI verändert viele Berufe. Aber ein Dach decken, einen Dachstuhl bauen oder ein historisches Gebäude restaurieren? Dafür braucht es auch in Zukunft Menschen, die ihr Handwerk verstehen und selbst anpacken."],
             ["Zusammen arbeiten. Zusammen weiterkommen.", "Bei uns arbeiten erfahrene Fachkräfte, junge Gesellen und Azubis Seite an Seite. Man lernt voneinander, hilft sich gegenseitig – und der Humor kommt bei uns auch nicht zu kurz."],
