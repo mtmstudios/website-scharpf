@@ -131,6 +131,22 @@ function Karriere() {
           )}
         </div>
 
+        <div className="mt-12 grid gap-8 sm:grid-cols-2">
+          {[
+            ["KI kann viel. Bauen bleibt Handwerk.", "KI verändert viele Berufe. Aber ein Dach decken, einen Dachstuhl bauen oder ein historisches Gebäude restaurieren? Dafür braucht es auch in Zukunft Menschen, die ihr Handwerk verstehen und selbst anpacken."],
+            ["Zusammen arbeiten. Zusammen weiterkommen.", "Bei uns arbeiten erfahrene Fachkräfte, junge Gesellen und Azubis Seite an Seite. Man lernt voneinander, hilft sich gegenseitig – und der Humor kommt bei uns auch nicht zu kurz."],
+            ["Eigenes Geld. Sichere Perspektiven.", "Du verdienst schon während deiner Ausbildung dein eigenes Geld und legst mit deinem handwerklichen Können den Grundstein für eine berufliche und finanziell attraktive Zukunft."],
+            ["Abends sehen, was man geschafft hat.", "Du packst mit an, arbeitest im Team und kannst am Ende des Tages stolz auf das sein, was wir gemeinsam geschaffen haben."],
+            ["Eine Ausbildung. Viele Karrierewege.", "Mit einer Ausbildung im Handwerk stehen dir viele Türen offen. Du kannst dich vom Gesellen zum Vorarbeiter oder Meister entwickeln. Und auch darüber hinaus gibt es viele Möglichkeiten – vom Techniker über ein Studium bis hin zum eigenen Betrieb."],
+            ["Bau mit Holz. Gestalte Zukunft.", "Mit Holz arbeitest du mit einem nachwachsenden Rohstoff und kannst dazu beitragen, Gebäude ressourcenbewusst und langlebig zu gestalten."],
+          ].map(([title, text]) => (
+            <div key={title}>
+              <h3 className="font-display text-xl font-bold text-foreground">{title}</h3>
+              <p className="mt-2 text-muted-foreground">{text}</p>
+            </div>
+          ))}
+        </div>
+
         <div className="mx-auto mt-12 max-w-3xl">
           <PlaceholderImage
             note="Team von E. Scharpf"
