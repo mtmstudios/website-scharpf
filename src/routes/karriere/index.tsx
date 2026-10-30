@@ -37,8 +37,7 @@ const STELLEN = [
   { label: "Zimmerer (m/w/d)", to: "/karriere/zimmerer" },
   { label: "Dachdecker (m/w/d)", to: "/karriere/dachdecker" },
   { label: "Klempner / Flaschner (m/w/d)", to: "/karriere/klempner" },
-  { label: "Ausbildung Zimmerer", to: "/karriere/zimmermann-ausbildung" },
-  { label: "Ausbildung Klempner", to: "/karriere/klempner-ausbildung" },
+  { label: "Ausbildung Zimmermann", to: "/karriere/zimmermann-ausbildung" },
   { label: "Ausbildung Dachdecker", to: "/karriere/dachdecker-ausbildung" },
   { label: "Bauhelfer (m/w/d)", to: "/karriere/bauhelfer" },
 ] as const;

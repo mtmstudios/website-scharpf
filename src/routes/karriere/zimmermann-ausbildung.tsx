@@ -18,7 +18,7 @@ export const Route = createFileRoute("/karriere/zimmermann-ausbildung")({
 function Page() {
   return (
     <JobSeite
-      titel="Ausbildung Zimmerer (m/w/d)"
+      titel="Ausbildung Zimmermann (m/w/d)"
       lead="Du bist motiviert und suchst einen Ausbildungsplatz zum Zimmermann? Dann bewirb dich bei uns!"
       beschreibung={[
         "Wir haben ein tolles Team aus innovativen, jungen Mitarbeitern und erfahrenen „alten Hasen“. Wir sind in den Bereichen Altbausanierung, Restauration und Neubau tätig – du lernst bei uns also das komplette Spektrum des Zimmererhandwerks kennen.",

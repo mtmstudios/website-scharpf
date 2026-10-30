@@ -35,7 +35,6 @@ import { Route as KarriereBauhelferRouteImport } from './routes/karriere/bauhelf
 import { Route as KarriereDachdeckerRouteImport } from './routes/karriere/dachdecker'
 import { Route as KarriereDachdeckerAusbildungRouteImport } from './routes/karriere/dachdecker-ausbildung'
 import { Route as KarriereKlempnerRouteImport } from './routes/karriere/klempner'
-import { Route as KarriereKlempnerAusbildungRouteImport } from './routes/karriere/klempner-ausbildung'
 import { Route as KarriereZimmererRouteImport } from './routes/karriere/zimmerer'
 import { Route as KarriereZimmermannAusbildungRouteImport } from './routes/karriere/zimmermann-ausbildung'
 import { Route as KontaktIndexRouteImport } from './routes/kontakt/index'
@@ -191,12 +190,6 @@ const KarriereKlempnerRoute = KarriereKlempnerRouteImport.update({
   path: '/karriere/klempner',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KarriereKlempnerAusbildungRoute =
-  KarriereKlempnerAusbildungRouteImport.update({
-    id: '/karriere/klempner-ausbildung',
-    path: '/karriere/klempner-ausbildung',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const KarriereZimmererRoute = KarriereZimmererRouteImport.update({
   id: '/karriere/zimmerer',
   path: '/karriere/zimmerer',
@@ -342,7 +335,6 @@ export interface FileRoutesByFullPath {
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
-  '/karriere/klempner-ausbildung': typeof KarriereKlempnerAusbildungRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
   '/karriere/zimmermann-ausbildung': typeof KarriereZimmermannAusbildungRoute
   '/kontakt/danke': typeof KontaktDankeRoute
@@ -394,7 +386,6 @@ export interface FileRoutesByTo {
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
-  '/karriere/klempner-ausbildung': typeof KarriereKlempnerAusbildungRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
   '/karriere/zimmermann-ausbildung': typeof KarriereZimmermannAusbildungRoute
   '/kontakt/danke': typeof KontaktDankeRoute
@@ -447,7 +438,6 @@ export interface FileRoutesById {
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
-  '/karriere/klempner-ausbildung': typeof KarriereKlempnerAusbildungRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
   '/karriere/zimmermann-ausbildung': typeof KarriereZimmermannAusbildungRoute
   '/kontakt/danke': typeof KontaktDankeRoute
@@ -501,7 +491,6 @@ export interface FileRouteTypes {
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
     | '/karriere/klempner'
-    | '/karriere/klempner-ausbildung'
     | '/karriere/zimmerer'
     | '/karriere/zimmermann-ausbildung'
     | '/kontakt/danke'
@@ -553,7 +542,6 @@ export interface FileRouteTypes {
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
     | '/karriere/klempner'
-    | '/karriere/klempner-ausbildung'
     | '/karriere/zimmerer'
     | '/karriere/zimmermann-ausbildung'
     | '/kontakt/danke'
@@ -605,7 +593,6 @@ export interface FileRouteTypes {
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
     | '/karriere/klempner'
-    | '/karriere/klempner-ausbildung'
     | '/karriere/zimmerer'
     | '/karriere/zimmermann-ausbildung'
     | '/kontakt/danke'
@@ -658,7 +645,6 @@ export interface RootRouteChildren {
   KarriereDachdeckerRoute: typeof KarriereDachdeckerRoute
   KarriereDachdeckerAusbildungRoute: typeof KarriereDachdeckerAusbildungRoute
   KarriereKlempnerRoute: typeof KarriereKlempnerRoute
-  KarriereKlempnerAusbildungRoute: typeof KarriereKlempnerAusbildungRoute
   KarriereZimmererRoute: typeof KarriereZimmererRoute
   KarriereZimmermannAusbildungRoute: typeof KarriereZimmermannAusbildungRoute
   KontaktDankeRoute: typeof KontaktDankeRoute
@@ -872,13 +858,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KarriereKlempnerRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/karriere/klempner-ausbildung': {
-      id: '/karriere/klempner-ausbildung'
-      path: '/karriere/klempner-ausbildung'
-      fullPath: '/karriere/klempner-ausbildung'
-      preLoaderRoute: typeof KarriereKlempnerAusbildungRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/karriere/zimmerer': {
       id: '/karriere/zimmerer'
       path: '/karriere/zimmerer'
@@ -1066,7 +1045,6 @@ const rootRouteChildren: RootRouteChildren = {
   KarriereDachdeckerRoute: KarriereDachdeckerRoute,
   KarriereDachdeckerAusbildungRoute: KarriereDachdeckerAusbildungRoute,
   KarriereKlempnerRoute: KarriereKlempnerRoute,
-  KarriereKlempnerAusbildungRoute: KarriereKlempnerAusbildungRoute,
   KarriereZimmererRoute: KarriereZimmererRoute,
   KarriereZimmermannAusbildungRoute: KarriereZimmermannAusbildungRoute,
   KontaktDankeRoute: KontaktDankeRoute,
