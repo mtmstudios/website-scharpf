@@ -2,9 +2,10 @@ import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ARBEITSTAG } from "./karriere-arbeitstag.data";
+import morgenbesprechung from "@/assets/morgenbesprechung.png.asset.json";
 
 const FOTOS: Record<string, { src: string; alt: string }> = {
-  Zimmerer: { src: "/fotos/scharpf_karriere_zimmerer.jpg", alt: "Zimmerer bei der Arbeit am Dach" },
+  Zimmerer: { src: morgenbesprechung.url, alt: "Morgenbesprechung bei E. Scharpf" },
   Dachdecker: { src: "/fotos/scharpf_dachdecken_01.jpg", alt: "Dachaufbau mit Dämmung und Lattung" },
   Klempner: { src: "/__l5e/assets-v1/0cace228-0a9f-4149-a7c2-db7e5b2e39fd/scharpf_klempner_referenz_3.jpg", alt: "Klempnerarbeiten am Dach im Detail" },
 };
