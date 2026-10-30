@@ -23,26 +23,6 @@ export const Route = createFileRoute("/karriere/")({
   component: Karriere,
 });
 
-// „Deine Vorteile bei uns" – Paare wörtlich aus dem XD.
-const VORTEILE = [
-  {
-    title: "Freiraum & Flexibilität",
-    text: "4,5-Tage-Woche für mehr Freizeit.",
-  },
-  {
-    title: "Entwicklung & Sicherheit",
-    text: "Weiterbildungsmöglichkeiten & betriebliche Altersvorsorge.",
-  },
-  {
-    title: "Spaß & Zusammenhalt",
-    text: "Firmenevents, Ausflüge, Grillabende.",
-  },
-  {
-    title: "Vorteile & Top-Ausstattung",
-    text: "Jobrad-Leasing, Einkaufsvorteile & modernste Werkzeuge.",
-  },
-] as const;
-
 // „Das musst du mitbringen" – Punkte wörtlich aus dem XD.
 const ANFORDERUNGEN = [
   "Du hast eine abgeschlossene Ausbildung als Zimmerer oder Dachdecker oder bringst vergleichbare handwerkliche Erfahrung mit.",
@@ -239,39 +219,6 @@ function Karriere() {
             arbeitest du mit ökologisch unbedenklichen Materialien, unterstützt
             von einem starken Team, das Qualität und Präzision großschreibt.
           </p>
-        </div>
-      </Section>
-
-      {/* Deine Vorteile bei uns */}
-      <Section>
-        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Deine Vorteile bei uns
-        </h2>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2">
-          {VORTEILE.map((v) => (
-            <div key={v.title} className="flex gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mt-1 shrink-0 text-primary"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <div>
-                <h3 className="font-display text-lg font-bold text-foreground">
-                  {v.title}
-                </h3>
-                <p className="mt-1 text-base text-muted-foreground">{v.text}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </Section>
 
