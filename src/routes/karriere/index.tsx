@@ -23,26 +23,6 @@ export const Route = createFileRoute("/karriere/")({
   component: Karriere,
 });
 
-// „Deine Vorteile bei uns" – Paare wörtlich aus dem XD.
-const VORTEILE = [
-  {
-    title: "Freiraum & Flexibilität",
-    text: "4,5-Tage-Woche für mehr Freizeit.",
-  },
-  {
-    title: "Entwicklung & Sicherheit",
-    text: "Weiterbildungsmöglichkeiten & betriebliche Altersvorsorge.",
-  },
-  {
-    title: "Spaß & Zusammenhalt",
-    text: "Firmenevents, Ausflüge, Grillabende.",
-  },
-  {
-    title: "Vorteile & Top-Ausstattung",
-    text: "Jobrad-Leasing, Einkaufsvorteile & modernste Werkzeuge.",
-  },
-] as const;
-
 // „Das musst du mitbringen" – Punkte wörtlich aus dem XD.
 const ANFORDERUNGEN = [
   "Du hast eine abgeschlossene Ausbildung als Zimmerer oder Dachdecker oder bringst vergleichbare handwerkliche Erfahrung mit.",
