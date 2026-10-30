@@ -1,3 +1,4 @@
 - [x] Include literal service-tile image URLs in the IONOS media download and deployment checks.
 - [x] Add the official YouTube channel beside Instagram and Facebook.
+- [x] Add and verify the three-trade workday section below the career benefits.
 - [ ] Verify both images on IONOS after deployment (requires execution of the GitHub workflow; no IONOS credentials available here).
