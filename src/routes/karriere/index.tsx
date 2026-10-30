@@ -151,6 +151,27 @@ function Karriere() {
           ))}
         </div>
 
+        <h2 className="mt-16 font-display text-3xl font-bold text-foreground sm:text-4xl">
+          Warum E. Scharpf?
+        </h2>
+        <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
+        <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          {[
+            ["Traditionelles Handwerk. Moderne Arbeitsweisen.", "Seit drei Generationen verbinden wir Erfahrung mit moderner Technik und arbeiten gemeinsam an spannenden Bauprojekten. Wir schreiben gemeinsam Geschichte und deine Arbeit ist Jahrhunderte später noch sichtbar."],
+            ["Drei Gewerke, viele Möglichkeiten.", "Zimmerer, Dachdecker und Klempner arbeiten bei uns unter einem Dach – und lernen dabei auch die Arbeit der anderen Gewerke kennen."],
+            ["Projekte, die nicht alltäglich sind.", "Vom modernen Holzbau bis zur Restaurierung historisch bedeutsamer Gebäude (Burgen, Schlösser, Kirchen etc.) erwarten dich abwechslungsreiche und anspruchsvolle Aufgaben."],
+            ["Moderne Fertigung trifft echtes Handwerk.", "Mit unserer eigenen Vorfertigung verbinden wir präzise Arbeit in der Werkhalle mit handwerklichem Können auf der Baustelle."],
+            ["Von Profis lernen. Teil einer Gemeinschaft sein.", "Bei uns lernst du von erfahrenen Handwerkern in unterschiedlichen Teams und auf verschiedenen Baustellen. Ein eigener Ausbildungsleiter begleitet dich durch deine Ausbildung – und mit bis zu acht Azubis bist du Teil einer Gemeinschaft, in der ihr euch gegenseitig unterstützt und voneinander lernt."],
+            ["Gemeinsam planen. Eigenständig umsetzen.", "Bei unseren Azubiprojekten übernehmt ihr selbst das Ruder: Ihr plant, organisiert und setzt eure Projekte eigenständig um – vom ersten Entwurf bis zum fertigen Ergebnis. So lernt ihr früh, Verantwortung zu übernehmen und eigene Lösungen zu entwickeln."],
+            ["Nachwuchs fördern. Zukunft gestalten.", "Mit unserer Bildungspartnerschaft und innovativen Berufsorientierung zeigen wir jungen Menschen, was im Handwerk steckt. Für dieses Engagement wurden wir 2025 mit dem SCHULEWIRTSCHAFT-Preis ausgezeichnet."],
+          ].map(([title, text]) => (
+            <div key={title}>
+              <h3 className="font-display text-xl font-bold text-foreground">{title}</h3>
+              <p className="mt-2 text-muted-foreground">{text}</p>
+            </div>
+          ))}
+        </div>
+
         <div className="mx-auto mt-12 max-w-3xl">
           <PlaceholderImage
             note="Team von E. Scharpf"
