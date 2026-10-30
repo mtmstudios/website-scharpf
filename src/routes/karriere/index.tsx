@@ -53,7 +53,7 @@ function Karriere() {
         </h2>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          {`80 Jahre Erfahrung, drei Generationen und rund 40 Mitarbeitende. Bei E. Scharpf Holzbau in Esslingen vereinen wir drei Gewerke unter einem Dach: Zimmerer, Dachdecker und Klempner. Hier lernst du von erfahrenen Profis, arbeitest an außergewöhnlichen Projekten und hast beste Möglichkeiten, dich beruflich weiterzuentwickeln.\n\n`}
+          80 Jahre Erfahrung, drei Generationen und rund 40 Mitarbeitende. Bei E. Scharpf Holzbau Restaurierung in Esslingen vereinen wir drei Gewerke unter einem Dach: Zimmerer, Dachdecker und Klempner. Hier lernst du von erfahrenen Profis, arbeitest an außergewöhnlichen Projekten und hast beste Möglichkeiten, dich beruflich weiterzuentwickeln.
         </p>
       </Section>
 
@@ -163,7 +163,7 @@ function Karriere() {
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
         <div className="mt-8 grid gap-8 sm:grid-cols-2">
           {[
-            ["4,5 Tage arbeiten. Freitag früher Schluss.", "Bei uns startet dein Wochenende freitags bereits um 12:30 Uhr."],
+            ["4,5 Tage arbeiten. Freitag früher Schluss.", "Bei uns startet dein Wochenende Freitags bereits um 12:30 Uhr."],
             ["Ein Team, das auch nach Feierabend zusammenkommt.", "Ob Go-Kart-Rennen, Wanderwochenende in den Bergen oder gemeinsames Grillen – wir unternehmen auch außerhalb der Arbeit etwas zusammen."],
             ["Weiterbildung, die dich weiterbringt.", "Von Produktschulungen bei VELUX bis zu individuellen Weiterbildungen unterstützen wir deine fachliche Entwicklung."],
             ["Gut ausgestattet für gute Arbeit.", "Hochwertige Werkzeuge, moderne Arbeitsmittel und Arbeitskleidung stellen wir dir kostenfrei zur Verfügung."],
