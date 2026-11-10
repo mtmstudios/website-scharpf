@@ -18,6 +18,7 @@ export const Route = createFileRoute("/karriere/zimmermann-ausbildung")({
 function Page() {
   return (
     <JobSeite
+      nurBild
       titel="Ausbildung Zimmermann (m/w/d)"
       lead="Du bist motiviert und suchst einen Ausbildungsplatz zum Zimmermann? Dann bewirb dich bei uns!"
       beschreibung={[
