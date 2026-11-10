@@ -57,6 +57,7 @@ export function JobSeite({
   imageSrc,
   imageNote,
   zusatz,
+  bildKlein,
 }: {
   titel: string;
   lead: string;
@@ -65,6 +66,7 @@ export function JobSeite({
   imageSrc?: string;
   imageNote: string;
   zusatz?: ReactNode;
+  bildKlein?: boolean;
 }) {
   const { pathname } = useLocation();
   return (
@@ -94,7 +96,7 @@ export function JobSeite({
         <div className="mt-8">
           <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
         </div>
-        <div className="mt-12">
+        <div className={bildKlein ? "mt-12 max-w-2xl" : "mt-12"}>
           <PlaceholderImage note={imageNote} src={imageSrc} ratio="wide" />
         </div>
       </Section>
