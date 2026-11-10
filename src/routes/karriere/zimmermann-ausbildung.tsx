@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { JobSeite } from "@/components/job-seite";
 
 export const Route = createFileRoute("/karriere/zimmermann-ausbildung")({
@@ -31,6 +31,46 @@ function Page() {
         "Schwindelfreiheit von Vorteil",
       ]}
       imageSrc="/fotos/scharpf_karriere_zimmermann_ausbildung.jpg"
+      zusatz={
+        <div className="mt-8 max-w-3xl space-y-10 text-base leading-relaxed text-muted-foreground">
+          <ul className="list-disc space-y-3 pl-6">
+            <li><strong className="text-foreground">Dauer:</strong> 3 Jahre. Auch mit Abitur wünschen wir uns, dass du drei volle Ausbildungsjahre durchläufst. Denn gutes Handwerk braucht Zeit, Erfahrung und Übung – und wir möchten, dass du alle Bereiche kennenlernst und eine fundierte Grundlage für deine berufliche Zukunft schaffst.</li>
+            <li><strong className="text-foreground">Abschluss:</strong> Zimmerergeselle (m/w/d)</li>
+          </ul>
+          <div>
+            <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Das lernst du bei uns</h2>
+            <span className="mt-4 block h-1 w-24 bg-primary" />
+            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+              {[
+                ["Holzbau von Grund auf.", "Du lernst, Holzkonstruktionen zu planen, zuzuschneiden und fachgerecht zusammenzubauen."],
+                ["Moderne Vorfertigung.", "In unserer Werkhalle fertigst du Dach- und Wandelemente, die später auf der Baustelle montiert werden."],
+                ["Arbeiten auf der Baustelle.", "Du baust Dachstühle, bringst Dämmungen an und arbeitest an Holzhäusern, Aufstockungen und Fassaden mit."],
+                ["Handwerk mit Geschichte.", "Bei der Sanierung und Restaurierung historischer Fachwerkgebäude lernst du traditionelle Handwerkstechniken kennen."],
+              ].map(([t, x]) => (
+                <div key={t}>
+                  <h3 className="font-display text-lg font-bold text-foreground">{t}</h3>
+                  <p className="mt-1">{x}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="font-display text-2xl font-bold text-foreground">Drei Jahre, in denen du viel lernst.</h3>
+            <p className="mt-2">Vom Umgang mit Werkzeugen und Materialien über die Arbeit an unterschiedlichen Bauprojekten bis zur eigenständigen Ausführung anspruchsvollerer Aufgaben – wir machen dich Schritt für Schritt fit für deinen Beruf.</p>
+          </div>
+          <div>
+            <h3 className="font-display text-2xl font-bold text-foreground">Und nach der Ausbildung?</h3>
+            <p className="mt-2">Ob Geselle, Vorarbeiter, Meister, Techniker oder irgendwann dein eigener Betrieb – mit deinem Abschluss stehen dir viele Wege offen.</p>
+          </div>
+          <div>
+            <h3 className="font-display text-2xl font-bold text-foreground">Du weißt noch nicht, welches Handwerk zu dir passt?</h3>
+            <p className="mt-2">Lerne unsere drei Gewerke bei einem Praktikum kennen und finde heraus, was dir am meisten liegt.</p>
+            <Link to="/kontakt" search={{ anliegen: undefined }} className="mt-6 inline-flex items-center rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">
+              3 Gewerke, 1 Betrieb | Praktikum anfragen
+            </Link>
+          </div>
+        </div>
+      }
       imageNote="Auszubildender beim Anreißen eines Sparrens"
     />
   );

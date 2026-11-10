@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { JsonLd } from "@/components/json-ld";
 import { jobPostingJsonLd } from "@/lib/seo";
@@ -55,6 +56,7 @@ export function JobSeite({
   anforderungen,
   imageSrc,
   imageNote,
+  zusatz,
 }: {
   titel: string;
   lead: string;
@@ -62,6 +64,7 @@ export function JobSeite({
   anforderungen: string[];
   imageSrc?: string;
   imageNote: string;
+  zusatz?: ReactNode;
 }) {
   const { pathname } = useLocation();
   return (
@@ -105,6 +108,7 @@ export function JobSeite({
             <p key={p.slice(0, 40)}>{p}</p>
           ))}
         </div>
+        {zusatz}
       </Section>
 
       <Section>
