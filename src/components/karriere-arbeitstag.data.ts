@@ -29,5 +29,6 @@ export const ARBEITSTAG: Record<string, Station[]> = {
     { time: "12:30", title: "Gemeinsame Mittagspause – Freitags ist jetzt Feierabend", text: "Zeit für eine Pause mit dem Team." },
     { time: "13:00", title: "Bauteile verlöten", text: "Wir verlöten Bauteile für passende Verbindungen." },
     { time: "15:00", title: "Rinne an der Terrasse montieren", text: "Wir montieren die Dachrinne an der Terrasse." },
+    { time: "16:00", title: "Einlaufblech montieren", text: "Wir montieren das Einlaufblech für einen sauberen Wasserablauf." },
     { time: "17:00", title: "Feierabend auf Baustelle", text: "Der Arbeitstag ist geschafft." }, end],
 };
