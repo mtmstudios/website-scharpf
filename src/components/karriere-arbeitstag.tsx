@@ -10,6 +10,7 @@ import loetFoto from "@/assets/loeten_kupferrinne.png.asset.json";
 import stadtFoto from "@/assets/dacharbeiten_ueber_der_stadt.png.asset.json";
 import teamFoto from "@/assets/dachdecker_team_dachsanierung.png.asset.json";
 import sichernFoto from "@/assets/baustelle_sichern_dachplane.png.asset.json";
+import abschlussFoto from "@/assets/gemeinsam_ueber_den_daechern.png.asset.json";
 import fahrt from "@/assets/handwerkerfahrt_zur_baustelle.png.asset.json";
 import bleche from "@/assets/metallhandwerk_werkstatt.png.asset.json";
 import dach8 from "@/assets/dachsanierung_holzfaser_dachfenster.png.asset.json";
@@ -30,7 +31,7 @@ export function KarriereArbeitstag() {
     const t = setTimeout(() => setIndex((i) => (i + 1) % stations.length), 4000);
     return () => clearTimeout(t);
   }, [index, gewerk, stations.length]);
-  const foto = station?.time === "16:45" ? { src: sichernFoto.url, alt: "Dachdecker sichern eine weiße Dachplane" } : station?.time === "16:00" ? { src: teamFoto.url, alt: "Dachdecker-Team bei der Dachsanierung" } : station?.time === "15:00" ? { src: stadtFoto.url, alt: "Dacharbeiten über der Stadt" } : station?.time === "13:00" ? { src: loetFoto.url, alt: "Dachhandwerker beim Löten der Kupferrinne" } : station?.time === "12:30" ? { src: mittagFoto.url, alt: "Gemeinsame Mittagspause auf der Baustelle" } : station?.time === "09:30" ? { src: gaubeFoto.url, alt: "Dachsanierung am Gaubenfenster" } : station?.time === "09:00" ? { src: pauseFoto.url, alt: "Pause der Dacharbeiter über der Stadt" } : station?.time === "08:00" && gewerk !== "Klempner" ? { src: dach8.url, alt: "Dachsanierung mit Holzfaserdämmung und Dachfenster" } : station?.title === "Bleche vorbereiten" ? { src: bleche.url, alt: "Bleche vorbereiten in der Werkstatt" } : station?.time === "06:40" ? FOTOS.Zimmerer : station?.title === "Fahrt zur Baustelle" ? { src: fahrt.url, alt: "Gemeinsame Fahrt zur Baustelle" } : FOTOS[gewerk];
+  const foto = station?.time === "Abschluss" ? { src: abschlussFoto.url, alt: "Gemeinsam über den Dächern der Stadt" } : station?.time === "16:45" ? { src: sichernFoto.url, alt: "Dachdecker sichern eine weiße Dachplane" } : station?.time === "16:00" ? { src: teamFoto.url, alt: "Dachdecker-Team bei der Dachsanierung" } : station?.time === "15:00" ? { src: stadtFoto.url, alt: "Dacharbeiten über der Stadt" } : station?.time === "13:00" ? { src: loetFoto.url, alt: "Dachhandwerker beim Löten der Kupferrinne" } : station?.time === "12:30" ? { src: mittagFoto.url, alt: "Gemeinsame Mittagspause auf der Baustelle" } : station?.time === "09:30" ? { src: gaubeFoto.url, alt: "Dachsanierung am Gaubenfenster" } : station?.time === "09:00" ? { src: pauseFoto.url, alt: "Pause der Dacharbeiter über der Stadt" } : station?.time === "08:00" && gewerk !== "Klempner" ? { src: dach8.url, alt: "Dachsanierung mit Holzfaserdämmung und Dachfenster" } : station?.title === "Bleche vorbereiten" ? { src: bleche.url, alt: "Bleche vorbereiten in der Werkstatt" } : station?.time === "06:40" ? FOTOS.Zimmerer : station?.title === "Fahrt zur Baustelle" ? { src: fahrt.url, alt: "Gemeinsame Fahrt zur Baustelle" } : FOTOS[gewerk];
   if (!station || !foto) return null;
 
   return (
