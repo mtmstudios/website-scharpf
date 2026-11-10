@@ -183,7 +183,7 @@ function UeberUns() {
               </h3>
               <div className="mt-1 text-sm text-muted-foreground">
                 {person.funktionen.map((f) => (
-                  <p key={f}>{f}</p>
+                  <p key={f} className="whitespace-pre-line">{f}</p>
                 ))}
               </div>
             </div>
