@@ -12,7 +12,7 @@ export const ARBEITSTAG: Record<string, Station[]> = {
     { time: "15:00", title: "Dachlattung montieren", text: "Wir montieren die Dachlatten für die spätere Dacheindeckung." },
     { time: "16:00", title: "Zimmerer und Dachdecker decken gemeinsam das Dach ein", text: "Hand in Hand decken wir das Dach mit Ziegeln ein." },
     { time: "16:30", title: "Rückfahrt zum Betriebshof", text: "Wir fahren zurück zum Betrieb." },
-    { time: "16:45", title: "Für morgen vorbereiten", text: "Wir rüsten das Fahrzeug und richten das Material für den nächsten Tag." },
+    { time: "16:45", title: "Wir sichern gemeinsam die Baustelle", text: "Bevor wir Feierabend machen, sichern wir Dach und Baustelle für die Nacht." },
     { time: "17:00", title: "Feierabend", text: "Der Arbeitstag ist geschafft." }, end],
   Dachdecker: [start, drive,
     { time: "08:00", title: "Dachflächenfenster einbauen", text: "Wir setzen Dachflächenfenster in die Dachfläche ein." }, pause,
@@ -20,6 +20,7 @@ export const ARBEITSTAG: Record<string, Station[]> = {
     { time: "13:00", title: "Konterlattung montieren", text: "Wir befestigen die Konterlattung als nächsten Schritt im Dachaufbau." },
     { time: "15:00", title: "Bitumen Bahn schweissen", text: "Wir verschweißen die Bitumenbahn für eine dichte Abdichtung." },
     { time: "16:00", title: "Zimmerer und Dachdecker decken gemeinsam das Dach ein", text: "Hand in Hand decken wir das Dach mit Ziegeln ein." },
+    { time: "16:45", title: "Wir sichern gemeinsam die Baustelle", text: "Bevor wir Feierabend machen, sichern wir Dach und Baustelle für die Nacht." },
     { time: "17:00", title: "Rückfahrt zum Betriebshof", text: "Wir machen uns auf den Rückweg." },
     { time: "17:15", title: "Feierabend auf Baustelle", text: "Der Arbeitstag ist geschafft." }, end],
   Klempner: [start,
@@ -30,5 +31,6 @@ export const ARBEITSTAG: Record<string, Station[]> = {
     { time: "13:00", title: "Bauteile verlöten", text: "Wir verlöten Bauteile für passende Verbindungen." },
     { time: "15:00", title: "Rinne an der Terrasse montieren", text: "Wir montieren die Dachrinne an der Terrasse." },
     { time: "16:00", title: "Einlaufblech montieren", text: "Wir montieren das Einlaufblech für einen sauberen Wasserablauf." },
+    { time: "16:45", title: "Wir sichern gemeinsam die Baustelle", text: "Bevor wir Feierabend machen, sichern wir Dach und Baustelle für die Nacht." },
     { time: "17:00", title: "Feierabend auf Baustelle", text: "Der Arbeitstag ist geschafft." }, end],
 };
