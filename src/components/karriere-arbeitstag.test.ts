@@ -2,9 +2,9 @@ import { test } from "node:test";
 import { strict as assert } from "node:assert";
 import { ARBEITSTAG } from "./karriere-arbeitstag.data";
 
-test("all trades start together at 06:45", () => {
+test("all trades start together at 06:40", () => {
   for (const trade of ["Zimmerer", "Dachdecker", "Klempner"]) {
-    assert.equal(ARBEITSTAG[trade]?.[0]?.time, "06:45");
+    assert.equal(ARBEITSTAG[trade]?.[0]?.time, "06:40");
   }
 });
 test("Zimmerer finish at 17:00", () => {
