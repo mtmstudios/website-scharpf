@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ARBEITSTAG } from "./karriere-arbeitstag.data";
 import morgenbesprechung from "@/assets/morgenbesprechung.png.asset.json";
+import fahrt from "@/assets/handwerkerfahrt_zur_baustelle.png.asset.json";
 
 const FOTOS: Record<string, { src: string; alt: string }> = {
   Zimmerer: { src: morgenbesprechung.url, alt: "Morgenbesprechung bei E. Scharpf" },
@@ -15,7 +16,7 @@ export function KarriereArbeitstag() {
   const [index, setIndex] = useState(0);
   const stations = ARBEITSTAG[gewerk] ?? [];
   const station = stations[index];
-  const foto = station?.time === "06:45" ? FOTOS.Zimmerer : FOTOS[gewerk];
+  const foto = station?.time === "06:45" ? FOTOS.Zimmerer : station?.time === "07:00" && gewerk !== "Klempner" ? { src: fahrt.url, alt: "Gemeinsame Fahrt zur Baustelle" } : FOTOS[gewerk];
   if (!station || !foto) return null;
 
   return (
