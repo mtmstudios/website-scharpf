@@ -18,7 +18,7 @@ export const ARBEITSTAG: Record<string, Station[]> = {
     { time: "08:00", title: "Dachflächenfenster einbauen", text: "Wir setzen Dachflächenfenster in die Dachfläche ein." }, pause,
     { time: "09:30", title: "Bleche und Dachrinne montieren", text: "Wir bringen Blechteile und Dachrinnen an." }, lunch,
     { time: "13:00", title: "Konterlattung montieren", text: "Wir befestigen die Konterlattung als nächsten Schritt im Dachaufbau." },
-    { time: "15:00", title: "Biberschwanzziegel zuschneiden", text: "Wir schneiden Ziegel für die passenden Dachdetails zu." },
+    { time: "15:00", title: "Bitumen Bahn schweissen", text: "Wir verschweißen die Bitumenbahn für eine dichte Abdichtung." },
     { time: "16:00", title: "Abdichtung mit Bitumen", text: "Wir führen die vorgesehenen Abdichtungsarbeiten mit Bitumen aus." },
     { time: "17:00", title: "Rückfahrt zum Betriebshof", text: "Wir machen uns auf den Rückweg." },
     { time: "17:15", title: "Feierabend auf Baustelle", text: "Der Arbeitstag ist geschafft." }, end],
