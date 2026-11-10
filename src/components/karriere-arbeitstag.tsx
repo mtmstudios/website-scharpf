@@ -15,7 +15,7 @@ export function KarriereArbeitstag() {
   const [index, setIndex] = useState(0);
   const stations = ARBEITSTAG[gewerk] ?? [];
   const station = stations[index];
-  const foto = FOTOS[gewerk];
+  const foto = station?.time === "06:45" ? FOTOS.Zimmerer : FOTOS[gewerk];
   if (!station || !foto) return null;
 
   return (
