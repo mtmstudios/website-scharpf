@@ -18,7 +18,7 @@ export function KarriereArbeitstag() {
   const [index, setIndex] = useState(0);
   const stations = ARBEITSTAG[gewerk] ?? [];
   const station = stations[index];
-  const foto = station?.time === "08:00" && gewerk !== "Klempner" ? { src: dach8.url, alt: "Dachsanierung mit Holzfaserdämmung und Dachfenster" } : station?.title === "Bleche vorbereiten" ? { src: bleche.url, alt: "Bleche vorbereiten in der Werkstatt" } : station?.time === "06:45" ? FOTOS.Zimmerer : station?.time === "07:00" && gewerk !== "Klempner" ? { src: fahrt.url, alt: "Gemeinsame Fahrt zur Baustelle" } : FOTOS[gewerk];
+  const foto = station?.time === "08:00" && gewerk !== "Klempner" ? { src: dach8.url, alt: "Dachsanierung mit Holzfaserdämmung und Dachfenster" } : station?.title === "Bleche vorbereiten" ? { src: bleche.url, alt: "Bleche vorbereiten in der Werkstatt" } : station?.time === "06:45" ? FOTOS.Zimmerer : station?.title === "Fahrt zur Baustelle" ? { src: fahrt.url, alt: "Gemeinsame Fahrt zur Baustelle" } : FOTOS[gewerk];
   if (!station || !foto) return null;
 
   return (
