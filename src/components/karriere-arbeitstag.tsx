@@ -48,7 +48,7 @@ export function KarriereArbeitstag() {
           <div role="status" aria-live="polite" aria-atomic="true" className="min-h-48">
             <p className="font-display text-2xl font-bold text-primary">{station.time}{station.time !== "Abschluss" && " Uhr"}</p>
             <h4 className="mt-4 font-display text-2xl font-bold text-foreground">{station.title}</h4>
-            <p className="mt-3 leading-relaxed text-muted-foreground">{station.text}</p>
+            <p className="mt-3 whitespace-pre-line leading-relaxed text-muted-foreground">{station.text}</p>
           </div>
           <div className="mt-6 flex items-center justify-between gap-3 border-t border-border pt-4">
             <Button variant="outline" size="icon" aria-label="Vorherige Station" title="Vorherige Station" disabled={index === 0} onClick={() => setIndex((value) => value - 1)}><ArrowLeft /></Button>
