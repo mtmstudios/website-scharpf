@@ -35,6 +35,7 @@ function Page() {
         <div className="mt-8 max-w-3xl space-y-10 text-base leading-relaxed text-muted-foreground">
           <ul className="list-disc space-y-3 pl-6">
             <li><strong className="text-foreground">Dauer:</strong> 3 Jahre. Auch mit Abitur wünschen wir uns, dass du drei volle Ausbildungsjahre durchläufst. Denn gutes Handwerk braucht Zeit, Erfahrung und Übung – und wir möchten, dass du alle Bereiche kennenlernst und eine fundierte Grundlage für deine berufliche Zukunft schaffst.</li>
+            <li><strong className="text-foreground">Vergütung:</strong> 1. Lehrjahr ca. 600 Euro, 2. Lehrjahr 1.351 Euro, 3. Lehrjahr 1.610 Euro</li>
             <li><strong className="text-foreground">Abschluss:</strong> Zimmerergeselle (m/w/d)</li>
           </ul>
           <div>
