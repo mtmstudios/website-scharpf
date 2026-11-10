@@ -1,7 +1,7 @@
 export type Station = { time: string; title: string; text: string };
 const start: Station = { time: "06:40", title: "Alle Gewerke · Start auf dem Betriebshof", text: "Wir treffen uns auf dem Betriebshof, holen uns einen Kaffee und stimmen im Team ab, was heute ansteht." };
 const end: Station = { time: "Abschluss", title: "Ein Projekt. Drei Gewerke.", text: "Zimmerer, Dachdecker und Klempner bringen unterschiedliche Fähigkeiten ein – und am Ende entsteht gemeinsam ein fertiges Bauteil oder Bauprojekt." };
-const drive: Station = { time: "07:00", title: "Fahrt zur Baustelle", text: "Gemeinsam fahren wir zur Baustelle und bereiten die Arbeiten vor." };
+const drive: Station = { time: "06:50", title: "Fahrt zur Baustelle", text: "Gemeinsam fahren wir zur Baustelle und bereiten die Arbeiten vor." };
 const pause: Station = { time: "09:00", title: "Gemeinsame Frühstückspause", text: "Zeit für eine kurze Stärkung." };
 const lunch: Station = { time: "12:30", title: "Gemeinsame Mittagspause – Freitags ist jetzt Feierabend", text: "Zeit für eine Pause mit dem Team." };
 export const ARBEITSTAG: Record<string, Station[]> = {
