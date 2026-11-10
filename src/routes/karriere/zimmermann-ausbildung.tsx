@@ -65,7 +65,7 @@ function Page() {
           <div>
             <h3 className="font-display text-2xl font-bold text-foreground">Du weißt noch nicht, welches Handwerk zu dir passt?</h3>
             <p className="mt-2">Lerne unsere drei Gewerke bei einem Praktikum kennen und finde heraus, was dir am meisten liegt.</p>
-            <Link to="/kontakt" className="mt-6 inline-flex items-center rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">
+            <Link to="/kontakt" search={{ anliegen: undefined }} className="mt-6 inline-flex items-center rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90">
               3 Gewerke, 1 Betrieb | Praktikum anfragen
             </Link>
           </div>
