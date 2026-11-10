@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ARBEITSTAG } from "./karriere-arbeitstag.data";
@@ -20,6 +20,11 @@ export function KarriereArbeitstag() {
   const [index, setIndex] = useState(0);
   const stations = ARBEITSTAG[gewerk] ?? [];
   const station = stations[index];
+  useEffect(() => {
+    if (stations.length < 2) return;
+    const t = setTimeout(() => setIndex((i) => (i + 1) % stations.length), 4000);
+    return () => clearTimeout(t);
+  }, [index, gewerk, stations.length]);
   const foto = station?.time === "09:30" ? { src: gaubeFoto.url, alt: "Dachsanierung am Gaubenfenster" } : station?.time === "09:00" ? { src: pauseFoto.url, alt: "Pause der Dacharbeiter über der Stadt" } : station?.time === "08:00" && gewerk !== "Klempner" ? { src: dach8.url, alt: "Dachsanierung mit Holzfaserdämmung und Dachfenster" } : station?.title === "Bleche vorbereiten" ? { src: bleche.url, alt: "Bleche vorbereiten in der Werkstatt" } : station?.time === "06:45" ? FOTOS.Zimmerer : station?.title === "Fahrt zur Baustelle" ? { src: fahrt.url, alt: "Gemeinsame Fahrt zur Baustelle" } : FOTOS[gewerk];
   if (!station || !foto) return null;
 
