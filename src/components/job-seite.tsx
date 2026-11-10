@@ -55,7 +55,6 @@ export function JobSeite({
   anforderungen,
   imageSrc,
   imageNote,
-  nurBild = false,
 }: {
   titel: string;
   lead: string;
@@ -63,7 +62,6 @@ export function JobSeite({
   anforderungen: string[];
   imageSrc?: string;
   imageNote: string;
-  nurBild?: boolean;
 }) {
   const { pathname } = useLocation();
   return (
@@ -87,9 +85,9 @@ export function JobSeite({
         <h1 className="mt-4 font-display text-4xl font-bold text-foreground sm:text-5xl">
           {titel}
         </h1>
-        {!nurBild && (<p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           {lead}
-        </p>)}
+        </p>
         <div className="mt-8">
           <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
         </div>
@@ -98,7 +96,6 @@ export function JobSeite({
         </div>
       </Section>
 
-      {!nurBild && (<>
       <Section muted className="pt-0">
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
           Beschreibung deiner Stelle:
@@ -152,7 +149,6 @@ export function JobSeite({
         ctaLabel="Jetzt bewerben"
         ctaSearch={{ anliegen: "bewerbung" }}
       />
-      </>)}
     </div>
   );
 }
