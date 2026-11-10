@@ -13,6 +13,7 @@ const STELLEN = [
   { label: "Ausbildung Zimmerer", icon: GraduationCap },
   { label: "Ausbildung Dachdecker", icon: GraduationCap },
   { label: "Bauhelfer (m/w/d)", icon: BriefcaseBusiness },
+  { label: "Praktikum", icon: GraduationCap },
 ] as const;
 
 const applicationSchema = z.object({
