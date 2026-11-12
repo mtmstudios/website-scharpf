@@ -5,11 +5,16 @@ import { Section, CategoryBar, CtaBanner } from "@/components/sections";
 import { GOOGLE_BEWERTUNGEN, GOOGLE_PROFIL, REFERENZ_KATEGORIEN } from "@/lib/site";
 import zertifikateAsset from "@/assets/scharpf_Zertifikate.jpg.asset.json";
 import carportAsset from "@/assets/carport-line.png.asset.json";
+import restaurierungAsset from "@/assets/restaurierung-dachstuhl-nachher.png.asset.json";
 
 export const Route = createFileRoute("/referenzen/")({
   head: () => ({
     meta: [
       { title: "Referenzen – Holzbau & Restaurierung | E. Scharpf GmbH" },
+      { property: "og:title", content: "Referenzen – Holzbau & Restaurierung | E. Scharpf GmbH" },
+      { property: "og:description", content: "Abgeschlossene Projekte im Großraum Esslingen und Stuttgart: Restaurierungen, Dachsanierungen, Aufstockungen und mehr. Jetzt Projekte ansehen." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "description",
         content:
@@ -42,7 +47,7 @@ function Stars() {
 
 // Repräsentatives Foto je Referenzkategorie.
 const KATEGORIE_BILD: Record<string, string> = {
-  "/referenzen/restaurierung": "/fotos/scharpf_restaurierung_01.jpg",
+  "/referenzen/restaurierung": restaurierungAsset.url,
   "/referenzen/holzbau": "/fotos/scharpf_aufstockung_02.jpg",
   "/referenzen/dach": "/fotos/scharpf_dachsanierung.jpg",
   "/referenzen/fassade": "/fotos/scharpf_fassade_03.jpg",
