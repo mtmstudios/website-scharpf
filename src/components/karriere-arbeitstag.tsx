@@ -10,7 +10,7 @@ import loetFoto from "@/assets/loeten_kupferrinne.png.asset.json";
 import stadtFoto from "@/assets/dacharbeiten_ueber_der_stadt.png.asset.json";
 import teamFoto from "@/assets/dachdecker_team_dachsanierung.png.asset.json";
 import sichernFoto from "@/assets/baustelle_sichern_dachplane.png.asset.json";
-import abschlussFoto from "@/assets/gemeinsam_ueber_den_daechern.png.asset.json";
+import abschlussFoto from "@/assets/gemeinsam-abschluss-abends.jpg.asset.json";
 import bauwagenFoto from "@/assets/gemeinsames_lachen_bauwagen.png.asset.json";
 import fahrt from "@/assets/handwerkerfahrt_zur_baustelle.png.asset.json";
 import bleche from "@/assets/metallhandwerk_werkstatt.png.asset.json";
