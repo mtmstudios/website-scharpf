@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ARBEITSTAG } from "./karriere-arbeitstag.data";
 import morgenbesprechung from "@/assets/morgenbesprechung-betriebshof.jpg.asset.json";
 import pauseFoto from "@/assets/dacharbeiter_pause.png.asset.json";
-import gaubeFoto from "@/assets/dachsanierung_gaubenfenster.png.asset.json";
+import gaubeFoto from "@/assets/dachsanierung-am-gaubenfenster.jpg.asset.json";
 import mittagFoto from "@/assets/mittagspause_baustelle.png.asset.json";
 import loetFoto from "@/assets/loeten_kupferrinne.png.asset.json";
 import stadtFoto from "@/assets/dacharbeiten_ueber_der_stadt.png.asset.json";
