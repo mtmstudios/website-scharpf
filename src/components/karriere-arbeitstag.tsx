@@ -50,7 +50,7 @@ export function KarriereArbeitstag() {
       </div>
 
       <div className="mt-6 grid gap-6 sm:grid-cols-2 sm:gap-8">
-        <img src={foto.src} alt={foto.alt} loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover" />
+        <img src={foto.src} alt={foto.alt} loading="lazy" className={`aspect-[4/3] w-full rounded-lg ${station.time === "06:40" ? "object-contain" : "object-cover"}`} />
         <div className="flex min-w-0 flex-col justify-between">
           <div role="status" aria-live="polite" aria-atomic="true" className="min-h-48">
             <p className="font-display text-2xl font-bold text-primary">{station.time}{station.time !== "Abschluss" && " Uhr"}</p>
