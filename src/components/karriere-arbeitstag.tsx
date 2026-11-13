@@ -14,7 +14,7 @@ import abschlussFoto from "@/assets/gemeinsam_ueber_den_daechern.png.asset.json"
 import bauwagenFoto from "@/assets/gemeinsames_lachen_bauwagen.png.asset.json";
 import fahrt from "@/assets/handwerkerfahrt_zur_baustelle.png.asset.json";
 import bleche from "@/assets/metallhandwerk_werkstatt.png.asset.json";
-import dach8 from "@/assets/dachsanierung_holzfaser_dachfenster.png.asset.json";
+import dach8 from "@/assets/dachsanierung-holzfaser-dachfenster.jpg.asset.json";
 
 const FOTOS: Record<string, { src: string; alt: string }> = {
   Zimmerer: { src: morgenbesprechung.url, alt: "Morgenbesprechung bei E. Scharpf" },
