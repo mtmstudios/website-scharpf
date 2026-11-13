@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ARBEITSTAG } from "./karriere-arbeitstag.data";
-import morgenbesprechung from "@/assets/morgenbesprechung.png.asset.json";
+import morgenbesprechung from "@/assets/morgenbesprechung-betriebshof.png.asset.json";
 import pauseFoto from "@/assets/dacharbeiter_pause.png.asset.json";
 import gaubeFoto from "@/assets/dachsanierung_gaubenfenster.png.asset.json";
 import mittagFoto from "@/assets/mittagspause_baustelle.png.asset.json";
