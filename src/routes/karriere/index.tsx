@@ -4,6 +4,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
 import gruppenbildAsset from "@/assets/scharpf_gruppenbild_hochzeit.jpg.asset.json";
 import { KarriereArbeitstag } from "@/components/karriere-arbeitstag";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/karriere/")({
   head: () => ({
@@ -59,6 +60,14 @@ function Karriere() {
 
       {/* Deine Wunschstelle bei uns */}
       <Section className="!pt-0 lg:!pt-0">
+        <div className="mb-8 flex flex-wrap gap-3">
+          <Button asChild size="lg">
+            <a href="#betrieb-kennenlernen">Betrieb kennenlernen</a>
+          </Button>
+          <Button asChild size="lg">
+            <a href="#offene-stellen">Offene Stellen</a>
+          </Button>
+        </div>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
           {"\n\nWerde Teil unseres Teams"}
         </h1>
@@ -71,7 +80,7 @@ function Karriere() {
         </div>
 
         {/* Job-Selektor als Kachel-Clickthrough */}
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div id="offene-stellen" className="mt-12 grid scroll-mt-32 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {STELLEN.map((s) =>
             s.to === "/karriere/dachdecker-ausbildung" || s.to === "/karriere/bauhelfer" ? (
               <div
@@ -116,7 +125,7 @@ function Karriere() {
           )}
         </div>
 
-        <h2 className="mt-12 font-display text-3xl font-bold text-foreground sm:text-4xl">
+        <h2 id="betrieb-kennenlernen" className="mt-12 scroll-mt-32 font-display text-3xl font-bold text-foreground sm:text-4xl">
           Vorteile vom Handwerk
         </h2>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
