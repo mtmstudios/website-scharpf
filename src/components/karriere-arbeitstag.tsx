@@ -43,9 +43,9 @@ export function KarriereArbeitstag() {
 
       <h3 className="mt-10 font-display text-2xl font-bold text-foreground">Ein Tag bei E. Scharpf</h3>
       <p className="mt-3 max-w-3xl text-muted-foreground">Vom ersten Kaffee bis zum Feierabend nehmen wir dich mit durch einen typischen Arbeitstag unserer Zimmerer, Dachdecker und Klempner.</p>
-      <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Gewerk auswählen">
+      <div className="mx-auto mt-6 flex w-full max-w-md justify-center gap-0" role="group" aria-label="Gewerk auswählen">
         {Object.keys(ARBEITSTAG).map((name) => (
-          <Button key={name} variant={name === gewerk ? "default" : "outline"} aria-pressed={name === gewerk} onClick={() => { const next = ARBEITSTAG[name] ?? []; const same = next.findIndex((s) => s.time === station.time); setGewerk(name); setIndex(same >= 0 ? same : Math.min(index, Math.max(next.length - 1, 0))); }}>{name}</Button>
+          <Button key={name} className="h-12 min-w-0 flex-1 rounded-none px-3 text-base first:rounded-l-md last:rounded-r-md" variant={name === gewerk ? "default" : "outline"} aria-pressed={name === gewerk} onClick={() => { const next = ARBEITSTAG[name] ?? []; const same = next.findIndex((s) => s.time === station.time); setGewerk(name); setIndex(same >= 0 ? same : Math.min(index, Math.max(next.length - 1, 0))); }}>{name}</Button>
         ))}
       </div>
 
