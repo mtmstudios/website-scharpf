@@ -3,3 +3,4 @@
 - [x] Add and verify the three-trade workday section below the career benefits.
 - [x] Place the uploaded Google verification file at its original verification filename and verify its public response.
 - [ ] Verify both images on IONOS after deployment (requires execution of the GitHub workflow; no IONOS credentials available here).
+- [x] Center and enlarge the two career navigation buttons.

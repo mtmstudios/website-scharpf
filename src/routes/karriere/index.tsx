@@ -60,11 +60,11 @@ function Karriere() {
 
       {/* Deine Wunschstelle bei uns */}
       <Section className="!pt-0 lg:!pt-0">
-        <div className="mb-8 flex flex-wrap gap-3">
-          <Button asChild size="lg">
+        <div className="mb-8 flex flex-wrap justify-center gap-3">
+          <Button asChild size="lg" className="h-14 w-full px-8 text-lg sm:w-auto sm:min-w-64">
             <a href="#betrieb-kennenlernen">Betrieb kennenlernen</a>
           </Button>
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="h-14 w-full px-8 text-lg sm:w-auto sm:min-w-64">
             <a href="#offene-stellen">Offene Stellen</a>
           </Button>
         </div>
