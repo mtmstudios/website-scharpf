@@ -41,33 +41,35 @@ export function KarriereArbeitstag() {
       <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
       <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">Ob Holz, Dachziegel oder Blech: Entdecke, wie unsere drei Gewerke arbeiten, was sie unterscheidet und wie sie gemeinsam ein Bauprojekt voranbringen.</p>
 
-      <h3 className="mt-10 font-display text-2xl font-bold text-foreground">Ein Tag bei E. Scharpf</h3>
-      <p className="mt-3 max-w-3xl text-muted-foreground">Vom ersten Kaffee bis zum Feierabend nehmen wir dich mit durch einen typischen Arbeitstag unserer Zimmerer, Dachdecker und Klempner.</p>
+      <h3 className="mt-10 text-center font-display text-2xl font-bold text-foreground">Ein Tag bei E. Scharpf</h3>
+      <p className="mx-auto mt-3 max-w-3xl text-center text-muted-foreground">Vom ersten Kaffee bis zum Feierabend nehmen wir dich mit durch einen typischen Arbeitstag unserer Zimmerer, Dachdecker und Klempner.</p>
+
+      <div role="status" aria-live="polite" aria-atomic="true" className="mt-8 grid min-h-44 grid-cols-[minmax(0,1fr)_auto] items-start gap-4 sm:min-h-32 sm:gap-8">
+        <div className="min-w-0">
+          <h4 className="font-display text-xl font-bold text-foreground sm:text-2xl">{station.title}</h4>
+          <p className="mt-3 whitespace-pre-line leading-relaxed text-muted-foreground">{station.text}</p>
+        </div>
+        <p className="text-right font-display text-xl font-bold text-primary sm:text-3xl">{station.time}{station.time !== "Abschluss" && <span className="block sm:inline"> Uhr</span>}</p>
+      </div>
+
       <div className="mx-auto mt-6 flex w-full max-w-md justify-center gap-0" role="group" aria-label="Gewerk auswählen">
         {Object.keys(ARBEITSTAG).map((name) => (
           <Button key={name} className="h-12 min-w-0 flex-1 rounded-none px-3 text-base first:rounded-l-md last:rounded-r-md" variant={name === gewerk ? "default" : "outline"} aria-pressed={name === gewerk} onClick={() => { const next = ARBEITSTAG[name] ?? []; const same = next.findIndex((s) => s.time === station.time); setGewerk(name); setIndex(same >= 0 ? same : Math.min(index, Math.max(next.length - 1, 0))); }}>{name}</Button>
         ))}
       </div>
 
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 sm:gap-8">
+      <div className="mx-auto mt-6 w-full max-w-5xl">
         <figure className="flex aspect-[4/3] w-full items-center">
           <div className={`relative w-full overflow-hidden rounded-lg ${station.time === "06:40" ? "aspect-[3/2]" : "aspect-[4/3]"}`}>
             <img src={foto.src} alt={foto.alt} loading="lazy" className={`block h-full w-full ${station.time === "06:40" ? "object-contain" : "object-cover"}`} />
             <figcaption className="absolute bottom-2 left-2 bg-background px-2 py-1 text-sm font-medium leading-normal text-foreground">Mit KI erstellt</figcaption>
           </div>
         </figure>
-        <div className="flex min-w-0 flex-col justify-between">
-          <div role="status" aria-live="polite" aria-atomic="true" className="min-h-48">
-            <p className="font-display text-2xl font-bold text-primary">{station.time}{station.time !== "Abschluss" && " Uhr"}</p>
-            <h4 className="mt-4 font-display text-2xl font-bold text-foreground">{station.title}</h4>
-            <p className="mt-3 whitespace-pre-line leading-relaxed text-muted-foreground">{station.text}</p>
-          </div>
           <div className="mt-6 flex items-center justify-between gap-3 border-t border-border pt-4">
             <Button variant="outline" size="icon" aria-label="Vorherige Station" title="Vorherige Station" disabled={index === 0} onClick={() => setIndex((value) => value - 1)}><ArrowLeft /></Button>
             <span className="text-sm text-muted-foreground">{index + 1} / {stations.length}</span>
             <Button variant="outline" size="icon" aria-label="Nächste Station" title="Nächste Station" disabled={index === stations.length - 1} onClick={() => setIndex((value) => value + 1)}><ArrowRight /></Button>
           </div>
-        </div>
       </div>
 
       <h3 className="mt-10 font-display text-2xl font-bold text-foreground">Welches Handwerk passt zu dir?</h3>
