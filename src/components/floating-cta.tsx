@@ -1,11 +1,10 @@
-import { Link } from "@tanstack/react-router";
+import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { SOCIAL_LINKS } from "@/lib/site";
 
 /**
  * Rechter Bildschirmrand, ab Tablet sichtbar – auf dem Smartphone übernimmt
  * die MobileStickyBar. Zwei Elemente:
- * 1. Floating-CTA "Kostenlose Projektberatung Anfordern" (B612-Konzept:
- *    primäre CTA, immer sichtbar, führt zum Kontaktformular)
+ * 1. Floating-CTA "Jetzt bewerben", öffnet das gemeinsame Bewerbungsformular.
  * 2. Vertikale Social-Icon-Leiste (wie XD-Entwurf): Instagram · Pinterest ·
  *    Facebook · Houzz.
  */
@@ -61,12 +60,11 @@ export function FloatingCta() {
     // mit darunter angeordneten Social-Icons in einer Reihe.
     <div className="fixed right-0 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-4 md:flex">
       {/* Primäre CTA – horizontal lesbarer Pill-Button am Rand */}
-      <Link
-        to="/kontakt" search={{ anliegen: undefined }}
-        className="rounded-l-lg bg-primary px-3 py-2.5 text-xs font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90"
+      <BewerbungsButton
+        className="min-h-0 rounded-l-lg rounded-r-none px-3 py-2.5 text-xs shadow-lg"
       >
-        Beratung anfordern
-      </Link>
+        Jetzt bewerben
+      </BewerbungsButton>
 
       {/* Social-Icon-Leiste – horizontal */}
       <div className="flex flex-row items-center gap-4 pr-3">
