@@ -3,6 +3,12 @@ import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { Section, CategoryBar } from "@/components/sections";
 import gruppenbildAsset from "@/assets/scharpf_gruppenbild_hochzeit.jpg.asset.json";
+import vorteilHandwerk from "@/assets/vorteil-handwerk.jpg";
+import vorteilTeam from "@/assets/vorteil-team.jpg";
+import vorteilGeld from "@/assets/vorteil-geld.jpg";
+import vorteilGeschafft from "@/assets/vorteil-geschafft.jpg";
+import vorteilKarriere from "@/assets/vorteil-karriere.jpg";
+import vorteilHolz from "@/assets/vorteil-holz.jpg";
 import { KarriereArbeitstag } from "@/components/karriere-arbeitstag";
 import { Button } from "@/components/ui/button";
 
@@ -129,18 +135,36 @@ function Karriere() {
           Vorteile vom Handwerk
         </h2>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
-        <div className="mt-8 grid gap-8 sm:grid-cols-2">
-          {[
-            ["KI kann viel. Bauen bleibt Handwerk.", "KI verändert viele Berufe. Aber ein Dach decken, einen Dachstuhl bauen oder ein historisches Gebäude restaurieren? Dafür braucht es auch in Zukunft Menschen, die ihr Handwerk verstehen und selbst anpacken."],
-            ["Zusammen arbeiten. Zusammen weiterkommen.", "Bei uns arbeiten erfahrene Fachkräfte, junge Gesellen und Azubis Seite an Seite. Man lernt voneinander, hilft sich gegenseitig – und der Humor kommt bei uns auch nicht zu kurz."],
-            ["Eigenes Geld. Sichere Perspektiven.", "Du verdienst schon während deiner Ausbildung dein eigenes Geld und legst mit deinem handwerklichen Können den Grundstein für eine berufliche und finanziell attraktive Zukunft."],
-            ["Abends sehen, was man geschafft hat.", "Du packst mit an, arbeitest im Team und kannst am Ende des Tages stolz auf das sein, was wir gemeinsam geschaffen haben."],
-            ["Eine Ausbildung. Viele Karrierewege.", "Mit einer Ausbildung im Handwerk stehen dir viele Türen offen. Du kannst dich vom Gesellen zum Vorarbeiter oder Meister entwickeln. Und auch darüber hinaus gibt es viele Möglichkeiten – vom Techniker über ein Studium bis hin zum eigenen Betrieb."],
-            ["Bau mit Holz. Gestalte Zukunft.", "Mit Holz arbeitest du mit einem nachwachsenden Rohstoff und kannst dazu beitragen, Gebäude ressourcenbewusst und langlebig zu gestalten."],
-          ].map(([title, text]) => (
-            <div key={title}>
-              <h3 className="font-display text-xl font-bold text-foreground">{title}</h3>
-              <p className="mt-2 text-muted-foreground">{text}</p>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {([
+            ["KI kann viel. Bauen bleibt Handwerk.", "KI verändert viele Berufe. Aber ein Dach decken, einen Dachstuhl bauen oder ein historisches Gebäude restaurieren? Dafür braucht es auch in Zukunft Menschen, die ihr Handwerk verstehen und selbst anpacken.", vorteilHandwerk],
+            ["Zusammen arbeiten. Zusammen weiterkommen.", "Bei uns arbeiten erfahrene Fachkräfte, junge Gesellen und Azubis Seite an Seite. Man lernt voneinander, hilft sich gegenseitig – und der Humor kommt bei uns auch nicht zu kurz.", vorteilTeam],
+            ["Eigenes Geld. Sichere Perspektiven.", "Du verdienst schon während deiner Ausbildung dein eigenes Geld und legst mit deinem handwerklichen Können den Grundstein für eine berufliche und finanziell attraktive Zukunft.", vorteilGeld],
+            ["Abends sehen, was man geschafft hat.", "Du packst mit an, arbeitest im Team und kannst am Ende des Tages stolz auf das sein, was wir gemeinsam geschaffen haben.", vorteilGeschafft],
+            ["Eine Ausbildung. Viele Karrierewege.", "Mit einer Ausbildung im Handwerk stehen dir viele Türen offen. Du kannst dich vom Gesellen zum Vorarbeiter oder Meister entwickeln. Und auch darüber hinaus gibt es viele Möglichkeiten – vom Techniker über ein Studium bis hin zum eigenen Betrieb.", vorteilKarriere],
+            ["Bau mit Holz. Gestalte Zukunft.", "Mit Holz arbeitest du mit einem nachwachsenden Rohstoff und kannst dazu beitragen, Gebäude ressourcenbewusst und langlebig zu gestalten.", vorteilHolz],
+          ] as const).map(([title, text, img], i) => (
+            <div
+              key={title}
+              tabIndex={0}
+              className="group relative min-h-72 overflow-hidden rounded-lg border border-border bg-card p-6 shadow-sm outline-none transition-shadow hover:shadow-xl focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <img
+                src={img}
+                alt=""
+                loading="lazy"
+                width={1024}
+                height={768}
+                className="absolute inset-0 h-full w-full scale-105 object-cover opacity-0 transition-all duration-500 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/60 to-foreground/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus:opacity-100" aria-hidden="true" />
+              <span className="absolute bottom-2 left-2 rounded bg-foreground/70 px-2 py-0.5 text-[10px] font-medium text-background opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus:opacity-100">Mit KI erstellt</span>
+              <div className="relative flex h-full flex-col">
+                <span className="font-display text-4xl font-bold text-primary">{String(i + 1).padStart(2, "0")}</span>
+                <span className="mt-3 block h-1 w-10 bg-primary transition-all duration-500 group-hover:w-20" aria-hidden="true" />
+                <h3 className="mt-4 font-display text-xl font-bold text-foreground transition-colors group-hover:text-background group-focus:text-background">{title}</h3>
+                <p className="mt-2 text-muted-foreground transition-colors group-hover:text-background/90 group-focus:text-background/90">{text}</p>
+              </div>
             </div>
           ))}
         </div>
