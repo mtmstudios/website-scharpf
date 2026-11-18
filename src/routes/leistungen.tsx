@@ -8,6 +8,10 @@ export const Route = createFileRoute("/leistungen")({
   head: () => ({
     meta: [
       { title: "Leistungen – E. Scharpf GmbH | Holzbau Esslingen" },
+      { property: "og:title", content: "Leistungen – E. Scharpf GmbH | Holzbau Esslingen" },
+      { property: "og:description", content: "Zimmererarbeiten, Dachdeckerarbeiten, Klempnerarbeiten und Kranservice von E. Scharpf im Großraum Esslingen und Stuttgart." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "description",
         content:
@@ -81,8 +85,7 @@ const FRAGEN = [
 function Leistungen() {
   return (
     <div>
-      <CategoryBar breadcrumbs={[{ label: "Zimmererarbeiten - Dachdeckerarbeiten - Klempnerarbeiten - Kranservice" }]} color="#2D635C" />
-      <h1 className="sr-only">Leistungen von E. Scharpf in Esslingen und Stuttgart</h1>
+      <CategoryBar heading breadcrumbs={[{ label: "Zimmererarbeiten - Dachdeckerarbeiten - Klempnerarbeiten - Kranservice" }]} color="#2D635C" />
 
       {/* Leistungen auf einen Blick – 5 Kategorie-Kacheln */}
       <Section className="pt-6 lg:pt-6">

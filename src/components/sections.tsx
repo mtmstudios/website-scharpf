@@ -45,10 +45,12 @@ export function CategoryBar({
   title,
   breadcrumbs,
   color,
+  heading = false,
 }: {
   title?: string;
   breadcrumbs?: Crumb[];
   color: string;
+  heading?: boolean;
 }) {
   const items = breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs : title ? [{ label: title }] : [];
   useRegisterCategory({ breadcrumbs, title, color });
@@ -61,6 +63,7 @@ export function CategoryBar({
           <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-foreground sm:text-base">
             {items.map((item, index) => {
               const isLast = index === items.length - 1;
+              const Label = isLast && heading ? "h1" : "span";
               return (
                 <li key={`${item.label}-${index}`} className="flex items-center gap-2">
                   {index > 0 && (
@@ -81,14 +84,14 @@ export function CategoryBar({
                     </svg>
                   )}
                   {isLast || !item.to ? (
-                    <span
+                    <Label
                       className={cn(
                         "font-display font-bold tracking-tight text-foreground",
                         isLast && "text-base sm:text-lg"
                       )}
                     >
                       {item.label}
-                    </span>
+                    </Label>
                   ) : (
                     <Link
                       to={item.to}
