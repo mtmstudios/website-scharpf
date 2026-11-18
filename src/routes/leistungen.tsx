@@ -81,7 +81,7 @@ const FRAGEN = [
 function Leistungen() {
   return (
     <div>
-      <CategoryBar breadcrumbs={[{ label: "Leistungen" }]} color="#2D635C" />
+      <CategoryBar breadcrumbs={[{ label: "Zimmererarbeiten - Dachdeckerarbeiten - Klempnerarbeiten - Kranservice" }]} color="#2D635C" />
       <h1 className="sr-only">Leistungen von E. Scharpf in Esslingen und Stuttgart</h1>
 
       {/* Leistungen auf einen Blick – 5 Kategorie-Kacheln */}
