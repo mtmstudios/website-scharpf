@@ -169,23 +169,22 @@ function Karriere() {
           ))}
         </div>
 
-        <h2 className="mt-16 font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Warum E. Scharpf?
-        </h2>
-        <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
-        <div className="mt-8 grid items-start gap-10 lg:grid-cols-[2fr_3fr]">
-          <div className="lg:sticky lg:top-28">
-            <div className="relative">
-              <span className="absolute -bottom-3 -left-3 h-full w-full rounded-lg bg-primary/20" aria-hidden="true" />
-              <img
-                src={gruppenbildAsset.url}
-                alt="Team von E. Scharpf"
-                loading="lazy"
-                className="relative aspect-[4/5] w-full rounded-lg object-cover shadow-xl"
-              />
-            </div>
-          </div>
-          <ul className="relative space-y-6 border-l-2 border-primary/30 pl-8">
+      </Section>
+
+      <section aria-labelledby="warum-scharpf" className="relative isolate overflow-hidden">
+        <img
+          src={gruppenbildAsset.url}
+          alt="Team von E. Scharpf"
+          loading="lazy"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-foreground/80" aria-hidden="true" />
+        <div className="mx-auto max-w-seite px-5 py-12 lg:px-8 lg:py-16">
+          <h2 id="warum-scharpf" className="font-display text-3xl font-bold text-primary-foreground sm:text-4xl">
+            Warum E. Scharpf?
+          </h2>
+          <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
+          <ul className="mt-10 grid gap-x-12 gap-y-8 lg:grid-cols-2">
             {([
               ["Traditionelles Handwerk. Moderne Arbeitsweisen.", "Seit drei Generationen verbinden wir Erfahrung mit moderner Technik und arbeiten gemeinsam an spannenden Bauprojekten. Wir schreiben gemeinsam Geschichte und deine Arbeit ist Jahrhunderte später noch sichtbar.", History],
               ["Drei Gewerke, viele Möglichkeiten.", "Zimmerer, Dachdecker und Klempner arbeiten bei uns unter einem Dach – und lernen dabei auch die Arbeit der anderen Gewerke kennen.", Layers],
@@ -195,18 +194,22 @@ function Karriere() {
               ["Gemeinsam planen. Eigenständig umsetzen.", "Bei unseren Azubiprojekten übernehmt ihr selbst das Ruder: Ihr plant, organisiert und setzt eure Projekte eigenständig um – vom ersten Entwurf bis zum fertigen Ergebnis. So lernt ihr früh, Verantwortung zu übernehmen und eigene Lösungen zu entwickeln.", ClipboardList],
               ["Nachwuchs fördern. Zukunft gestalten.", "Mit unserer Bildungspartnerschaft und innovativen Berufsorientierung zeigen wir jungen Menschen, was im Handwerk steckt. Für dieses Engagement wurden wir 2025 mit dem SCHULEWIRTSCHAFT-Preis ausgezeichnet.", Award],
             ] as const).map(([title, text, Icon]) => (
-              <li key={title} className="group relative">
-                <span className="absolute -left-[3.15rem] top-0 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary shadow-sm transition-colors group-hover:bg-primary group-hover:text-primary-foreground" aria-hidden="true">
+              <li key={title} className="flex items-start gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-primary text-primary" aria-hidden="true">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="font-display text-xl font-bold text-foreground">{title}</h3>
-                <p className="mt-2 text-muted-foreground">{text}</p>
+                <div>
+                  <h3 className="font-display text-xl font-bold text-primary-foreground">{title}</h3>
+                  <p className="mt-2 text-primary-foreground/90">{text}</p>
+                </div>
               </li>
             ))}
           </ul>
         </div>
+      </section>
 
-        <h2 className="mt-16 font-display text-3xl font-bold text-foreground sm:text-4xl">
+      <Section>
+        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
           Darauf kannst du dich bei uns freuen
         </h2>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
