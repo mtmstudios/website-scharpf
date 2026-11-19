@@ -85,15 +85,15 @@ function Karriere() {
           {"\n\nWerde Teil unseres Teams"}
         </h1>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/90">
+          {`Ob Zimmerer, Dachdecker, Klempner oder Bauhelfer: Wir suchen Menschen,\ndie mit Leidenschaft bauen – und bieten dafür mehr als andere.`}
+        </p>
         </div>
       </section>
 
       {/* Deine Wunschstelle bei uns */}
       <Section className="!pt-6 lg:!pt-6">
-        <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          {`Ob Zimmerer, Dachdecker, Klempner oder Bauhelfer: Wir suchen Menschen,\ndie mit Leidenschaft bauen – und bieten dafür mehr als andere.`}
-        </p>
-        <div className="mt-8">
+        <div>
           <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
         </div>
 
