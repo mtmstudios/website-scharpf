@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { Section, CategoryBar } from "@/components/sections";
-import handwerkHintergrundAsset from "@/assets/scharpf-handwerker-dach.jpg.asset.json";
+import handwerkHintergrundAsset from "@/assets/scharpf-handwerk-baustelle.jpg.asset.json";
 import vorteilHandwerk from "@/assets/vorteil-handwerk.jpg";
 import vorteilTeam from "@/assets/vorteil-team.jpg";
 import vorteilGeld from "@/assets/vorteil-geld.jpg";
