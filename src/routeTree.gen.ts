@@ -34,8 +34,12 @@ import { Route as KarriereIndexRouteImport } from './routes/karriere/index'
 import { Route as KarriereBauhelferRouteImport } from './routes/karriere/bauhelfer'
 import { Route as KarriereDachdeckerRouteImport } from './routes/karriere/dachdecker'
 import { Route as KarriereDachdeckerAusbildungRouteImport } from './routes/karriere/dachdecker-ausbildung'
+import { Route as KarriereDachdeckerVorarbeiterRouteImport } from './routes/karriere/dachdecker-vorarbeiter'
+import { Route as KarriereDachdeckermeisterRouteImport } from './routes/karriere/dachdeckermeister'
 import { Route as KarriereKlempnerRouteImport } from './routes/karriere/klempner'
 import { Route as KarriereZimmererRouteImport } from './routes/karriere/zimmerer'
+import { Route as KarriereZimmererVorarbeiterRouteImport } from './routes/karriere/zimmerer-vorarbeiter'
+import { Route as KarriereZimmerermeisterRouteImport } from './routes/karriere/zimmerermeister'
 import { Route as KarriereZimmermannAusbildungRouteImport } from './routes/karriere/zimmermann-ausbildung'
 import { Route as KontaktIndexRouteImport } from './routes/kontakt/index'
 import { Route as KontaktDankeRouteImport } from './routes/kontakt/danke'
@@ -185,6 +189,18 @@ const KarriereDachdeckerAusbildungRoute =
     path: '/karriere/dachdecker-ausbildung',
     getParentRoute: () => rootRouteImport,
   } as any)
+const KarriereDachdeckerVorarbeiterRoute =
+  KarriereDachdeckerVorarbeiterRouteImport.update({
+    id: '/karriere/dachdecker-vorarbeiter',
+    path: '/karriere/dachdecker-vorarbeiter',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KarriereDachdeckermeisterRoute =
+  KarriereDachdeckermeisterRouteImport.update({
+    id: '/karriere/dachdeckermeister',
+    path: '/karriere/dachdeckermeister',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const KarriereKlempnerRoute = KarriereKlempnerRouteImport.update({
   id: '/karriere/klempner',
   path: '/karriere/klempner',
@@ -193,6 +209,17 @@ const KarriereKlempnerRoute = KarriereKlempnerRouteImport.update({
 const KarriereZimmererRoute = KarriereZimmererRouteImport.update({
   id: '/karriere/zimmerer',
   path: '/karriere/zimmerer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KarriereZimmererVorarbeiterRoute =
+  KarriereZimmererVorarbeiterRouteImport.update({
+    id: '/karriere/zimmerer-vorarbeiter',
+    path: '/karriere/zimmerer-vorarbeiter',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KarriereZimmerermeisterRoute = KarriereZimmerermeisterRouteImport.update({
+  id: '/karriere/zimmerermeister',
+  path: '/karriere/zimmerermeister',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KarriereZimmermannAusbildungRoute =
@@ -334,8 +361,12 @@ export interface FileRoutesByFullPath {
   '/karriere/bauhelfer': typeof KarriereBauhelferRoute
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
+  '/karriere/dachdecker-vorarbeiter': typeof KarriereDachdeckerVorarbeiterRoute
+  '/karriere/dachdeckermeister': typeof KarriereDachdeckermeisterRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
+  '/karriere/zimmerer-vorarbeiter': typeof KarriereZimmererVorarbeiterRoute
+  '/karriere/zimmerermeister': typeof KarriereZimmerermeisterRoute
   '/karriere/zimmermann-ausbildung': typeof KarriereZimmermannAusbildungRoute
   '/kontakt/danke': typeof KontaktDankeRoute
   '/ratgeber/dachgauben-einbauen': typeof RatgeberDachgaubenEinbauenRoute
@@ -385,8 +416,12 @@ export interface FileRoutesByTo {
   '/karriere/bauhelfer': typeof KarriereBauhelferRoute
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
+  '/karriere/dachdecker-vorarbeiter': typeof KarriereDachdeckerVorarbeiterRoute
+  '/karriere/dachdeckermeister': typeof KarriereDachdeckermeisterRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
+  '/karriere/zimmerer-vorarbeiter': typeof KarriereZimmererVorarbeiterRoute
+  '/karriere/zimmerermeister': typeof KarriereZimmerermeisterRoute
   '/karriere/zimmermann-ausbildung': typeof KarriereZimmermannAusbildungRoute
   '/kontakt/danke': typeof KontaktDankeRoute
   '/ratgeber/dachgauben-einbauen': typeof RatgeberDachgaubenEinbauenRoute
@@ -437,8 +472,12 @@ export interface FileRoutesById {
   '/karriere/bauhelfer': typeof KarriereBauhelferRoute
   '/karriere/dachdecker': typeof KarriereDachdeckerRoute
   '/karriere/dachdecker-ausbildung': typeof KarriereDachdeckerAusbildungRoute
+  '/karriere/dachdecker-vorarbeiter': typeof KarriereDachdeckerVorarbeiterRoute
+  '/karriere/dachdeckermeister': typeof KarriereDachdeckermeisterRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
+  '/karriere/zimmerer-vorarbeiter': typeof KarriereZimmererVorarbeiterRoute
+  '/karriere/zimmerermeister': typeof KarriereZimmerermeisterRoute
   '/karriere/zimmermann-ausbildung': typeof KarriereZimmermannAusbildungRoute
   '/kontakt/danke': typeof KontaktDankeRoute
   '/ratgeber/dachgauben-einbauen': typeof RatgeberDachgaubenEinbauenRoute
@@ -490,8 +529,12 @@ export interface FileRouteTypes {
     | '/karriere/bauhelfer'
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
+    | '/karriere/dachdecker-vorarbeiter'
+    | '/karriere/dachdeckermeister'
     | '/karriere/klempner'
     | '/karriere/zimmerer'
+    | '/karriere/zimmerer-vorarbeiter'
+    | '/karriere/zimmerermeister'
     | '/karriere/zimmermann-ausbildung'
     | '/kontakt/danke'
     | '/ratgeber/dachgauben-einbauen'
@@ -541,8 +584,12 @@ export interface FileRouteTypes {
     | '/karriere/bauhelfer'
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
+    | '/karriere/dachdecker-vorarbeiter'
+    | '/karriere/dachdeckermeister'
     | '/karriere/klempner'
     | '/karriere/zimmerer'
+    | '/karriere/zimmerer-vorarbeiter'
+    | '/karriere/zimmerermeister'
     | '/karriere/zimmermann-ausbildung'
     | '/kontakt/danke'
     | '/ratgeber/dachgauben-einbauen'
@@ -592,8 +639,12 @@ export interface FileRouteTypes {
     | '/karriere/bauhelfer'
     | '/karriere/dachdecker'
     | '/karriere/dachdecker-ausbildung'
+    | '/karriere/dachdecker-vorarbeiter'
+    | '/karriere/dachdeckermeister'
     | '/karriere/klempner'
     | '/karriere/zimmerer'
+    | '/karriere/zimmerer-vorarbeiter'
+    | '/karriere/zimmerermeister'
     | '/karriere/zimmermann-ausbildung'
     | '/kontakt/danke'
     | '/ratgeber/dachgauben-einbauen'
@@ -644,8 +695,12 @@ export interface RootRouteChildren {
   KarriereBauhelferRoute: typeof KarriereBauhelferRoute
   KarriereDachdeckerRoute: typeof KarriereDachdeckerRoute
   KarriereDachdeckerAusbildungRoute: typeof KarriereDachdeckerAusbildungRoute
+  KarriereDachdeckerVorarbeiterRoute: typeof KarriereDachdeckerVorarbeiterRoute
+  KarriereDachdeckermeisterRoute: typeof KarriereDachdeckermeisterRoute
   KarriereKlempnerRoute: typeof KarriereKlempnerRoute
   KarriereZimmererRoute: typeof KarriereZimmererRoute
+  KarriereZimmererVorarbeiterRoute: typeof KarriereZimmererVorarbeiterRoute
+  KarriereZimmerermeisterRoute: typeof KarriereZimmerermeisterRoute
   KarriereZimmermannAusbildungRoute: typeof KarriereZimmermannAusbildungRoute
   KontaktDankeRoute: typeof KontaktDankeRoute
   RatgeberDachgaubenEinbauenRoute: typeof RatgeberDachgaubenEinbauenRoute
@@ -851,6 +906,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KarriereDachdeckerAusbildungRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/karriere/dachdecker-vorarbeiter': {
+      id: '/karriere/dachdecker-vorarbeiter'
+      path: '/karriere/dachdecker-vorarbeiter'
+      fullPath: '/karriere/dachdecker-vorarbeiter'
+      preLoaderRoute: typeof KarriereDachdeckerVorarbeiterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/karriere/dachdeckermeister': {
+      id: '/karriere/dachdeckermeister'
+      path: '/karriere/dachdeckermeister'
+      fullPath: '/karriere/dachdeckermeister'
+      preLoaderRoute: typeof KarriereDachdeckermeisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/karriere/klempner': {
       id: '/karriere/klempner'
       path: '/karriere/klempner'
@@ -863,6 +932,20 @@ declare module '@tanstack/react-router' {
       path: '/karriere/zimmerer'
       fullPath: '/karriere/zimmerer'
       preLoaderRoute: typeof KarriereZimmererRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/karriere/zimmerer-vorarbeiter': {
+      id: '/karriere/zimmerer-vorarbeiter'
+      path: '/karriere/zimmerer-vorarbeiter'
+      fullPath: '/karriere/zimmerer-vorarbeiter'
+      preLoaderRoute: typeof KarriereZimmererVorarbeiterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/karriere/zimmerermeister': {
+      id: '/karriere/zimmerermeister'
+      path: '/karriere/zimmerermeister'
+      fullPath: '/karriere/zimmerermeister'
+      preLoaderRoute: typeof KarriereZimmerermeisterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/karriere/zimmermann-ausbildung': {
@@ -1044,8 +1127,12 @@ const rootRouteChildren: RootRouteChildren = {
   KarriereBauhelferRoute: KarriereBauhelferRoute,
   KarriereDachdeckerRoute: KarriereDachdeckerRoute,
   KarriereDachdeckerAusbildungRoute: KarriereDachdeckerAusbildungRoute,
+  KarriereDachdeckerVorarbeiterRoute: KarriereDachdeckerVorarbeiterRoute,
+  KarriereDachdeckermeisterRoute: KarriereDachdeckermeisterRoute,
   KarriereKlempnerRoute: KarriereKlempnerRoute,
   KarriereZimmererRoute: KarriereZimmererRoute,
+  KarriereZimmererVorarbeiterRoute: KarriereZimmererVorarbeiterRoute,
+  KarriereZimmerermeisterRoute: KarriereZimmerermeisterRoute,
   KarriereZimmermannAusbildungRoute: KarriereZimmermannAusbildungRoute,
   KontaktDankeRoute: KontaktDankeRoute,
   RatgeberDachgaubenEinbauenRoute: RatgeberDachgaubenEinbauenRoute,
