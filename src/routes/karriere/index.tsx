@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { Section, CategoryBar } from "@/components/sections";
 import handwerkHintergrundAsset from "@/assets/scharpf-handwerk-baustelle.jpg.asset.json";
+import karriereEinstiegAsset from "@/assets/karriere-handwerk-einstieg.jpg.asset.json";
 import vorteilHandwerk from "@/assets/vorteil-handwerk.jpg";
 import vorteilTeam from "@/assets/vorteil-team.jpg";
 import vorteilGeld from "@/assets/vorteil-geld.jpg";
@@ -54,18 +55,27 @@ function Karriere() {
     <div>
       <CategoryBar breadcrumbs={[{ label: "Karriere bei E. Scharpf Holzbau Restaurierung" }]} color="#E6DCC4" />
 
-      <Section className="!pt-4 pb-0 lg:!pt-4 lg:pb-0">
-        <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+      <section aria-labelledby="karriere-einstieg" className="relative isolate overflow-hidden">
+        <img
+          src={karriereEinstiegAsset.url}
+          alt="Zwei Handwerker bei E. Scharpf arbeiten gemeinsam an einer Dachkonstruktion"
+          fetchPriority="high"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-foreground/65" aria-hidden="true" />
+        <div className="mx-auto flex min-h-96 max-w-seite flex-col justify-center px-5 py-12 lg:min-h-[28rem] lg:px-8 lg:py-16">
+        <h2 id="karriere-einstieg" className="max-w-3xl font-display text-3xl font-bold text-primary-foreground sm:text-4xl">
           Handwerk mit Anspruch. Karriere mit Perspektive.
         </h2>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
-        <p className="mt-6 mb-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-primary-foreground/90">
           {`80 Jahre Erfahrung, drei Generationen und rund 40 Mitarbeitende. Bei E. Scharpf Holzbau Restaurierung in Esslingen vereinen wir drei Gewerke unter einem Dach: Zimmerer, Dachdecker und Klempner. Hier lernst du von erfahrenen Profis, arbeitest an außergewöhnlichen Projekten und hast beste Möglichkeiten, dich beruflich weiterzuentwickeln.\n\n`}
         </p>
-      </Section>
+        </div>
+      </section>
 
       {/* Deine Wunschstelle bei uns */}
-      <Section className="!pt-0 lg:!pt-0">
+      <Section>
         <div className="mb-8 flex flex-wrap justify-center gap-3">
           <Button asChild size="lg" className="h-14 w-full px-8 text-lg sm:w-auto sm:min-w-64">
             <a href="#betrieb-kennenlernen">Betrieb kennenlernen</a>
