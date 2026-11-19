@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BewerbungsButton } from "@/components/bewerbungs-modal";
 import { Section, CategoryBar } from "@/components/sections";
-import gruppenbildAsset from "@/assets/scharpf_gruppenbild_hochzeit.jpg.asset.json";
+import handwerkHintergrundAsset from "@/assets/scharpf-handwerk-baustelle.jpg.asset.json";
 import vorteilHandwerk from "@/assets/vorteil-handwerk.jpg";
 import vorteilTeam from "@/assets/vorteil-team.jpg";
 import vorteilGeld from "@/assets/vorteil-geld.jpg";
@@ -173,8 +173,8 @@ function Karriere() {
 
       <section aria-labelledby="warum-scharpf" className="relative isolate overflow-hidden">
         <img
-          src={gruppenbildAsset.url}
-          alt="Team von E. Scharpf"
+          src={handwerkHintergrundAsset.url}
+          alt="Zwei Handwerker von E. Scharpf bei der Arbeit auf einer Baustelle"
           loading="lazy"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
         />
