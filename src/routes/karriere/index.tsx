@@ -72,10 +72,7 @@ function Karriere() {
           {`80 Jahre Erfahrung, drei Generationen und rund 40 Mitarbeitende. Bei E. Scharpf Holzbau Restaurierung in Esslingen vereinen wir drei Gewerke unter einem Dach: Zimmerer, Dachdecker und Klempner. Hier lernst du von erfahrenen Profis, arbeitest an außergewöhnlichen Projekten und hast beste Möglichkeiten, dich beruflich weiterzuentwickeln.\n\n`}
         </p>
         </div>
-      </section>
-
-      {/* Deine Wunschstelle bei uns */}
-      <Section>
+        <div className="mx-auto max-w-seite px-5 pb-8 lg:px-8">
         <div className="mb-8 flex flex-wrap justify-center gap-3">
           <Button asChild size="lg" className="h-14 w-full px-8 text-lg sm:w-auto sm:min-w-64">
             <a href="#betrieb-kennenlernen">Betrieb kennenlernen</a>
@@ -84,11 +81,16 @@ function Karriere() {
             <a href="#offene-stellen">Offene Stellen</a>
           </Button>
         </div>
-        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+        <h1 className="font-display text-4xl font-bold text-primary-foreground sm:text-5xl">
           {"\n\nWerde Teil unseres Teams"}
         </h1>
         <span className="mt-4 block h-1 w-24 bg-primary" aria-hidden="true" />
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        </div>
+      </section>
+
+      {/* Deine Wunschstelle bei uns */}
+      <Section className="!pt-6 lg:!pt-6">
+        <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
           {`Ob Zimmerer, Dachdecker, Klempner oder Bauhelfer: Wir suchen Menschen,\ndie mit Leidenschaft bauen – und bieten dafür mehr als andere.`}
         </p>
         <div className="mt-8">
