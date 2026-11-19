@@ -5,4 +5,5 @@
 - [ ] Verify both images on IONOS after deployment (requires execution of the GitHub workflow; no IONOS credentials available here).
 - [x] Center and enlarge the two career navigation buttons.
 - [x] Extend the career background behind the entire introduction through “mehr als andere”.
+- [x] Add the nine-position section at the bottom of the career page using the Kralemann reference layout.
 - [ ] Reorganize the workday with centered trade controls, activities left, times right, and larger centered photos below.- [x] Vorteile vom Handwerk als Bildkacheln (KI-Bilder)

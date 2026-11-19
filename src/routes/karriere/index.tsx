@@ -10,8 +10,9 @@ import vorteilGeschafft from "@/assets/vorteil-geschafft.jpg";
 import vorteilKarriere from "@/assets/vorteil-karriere.jpg";
 import vorteilHolz from "@/assets/vorteil-holz.jpg";
 import { KarriereArbeitstag } from "@/components/karriere-arbeitstag";
+import { KARRIERE_STELLENGRUPPEN } from "@/lib/karriere-stellen";
 import { Button } from "@/components/ui/button";
-import { History, Layers, Castle, Factory, GraduationCap, ClipboardList, Award } from "lucide-react";
+import { History, Layers, Castle, Factory, GraduationCap, ClipboardList, Award, ArrowRight, House, Hammer } from "lucide-react";
 
 export const Route = createFileRoute("/karriere/")({
   head: () => ({
@@ -98,7 +99,7 @@ function Karriere() {
         </div>
 
         {/* Job-Selektor als Kachel-Clickthrough */}
-        <div id="offene-stellen" className="mt-12 grid scroll-mt-32 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {STELLEN.map((s) =>
             s.to === "/karriere/dachdecker-ausbildung" || s.to === "/karriere/bauhelfer" ? (
               <div
@@ -308,6 +309,40 @@ function Karriere() {
         </ul>
         <div className="mt-10">
           <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
+        </div>
+      </Section>
+      <Section id="offene-stellen" className="scroll-mt-32">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-bold uppercase text-primary">Offene Stellen</p>
+          <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Neun Wege, bei uns anzufangen</h2>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Vom Einstieg als Bauhelfer über die Ausbildung bis zur Meisterstelle – im Dachdecker- und im Zimmererhandwerk. Jede Stelle hat ihre eigene Seite mit allen Details.</p>
+        </div>
+        <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
+          {KARRIERE_STELLENGRUPPEN.map((gruppe, index) => {
+            const Icon = index === 0 ? House : index === 1 ? Hammer : GraduationCap;
+            return (
+              <div key={gruppe.titel} className="space-y-4">
+                <div className="relative isolate flex min-h-24 items-center gap-3 overflow-hidden rounded-lg border-l-4 border-primary px-5 py-4">
+                  <img src={gruppe.bild} alt="" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
+                  <div className="absolute inset-0 -z-10 bg-foreground/65" aria-hidden="true" />
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground"><Icon className="h-5 w-5" /></span>
+                  <h3 className="font-display text-lg font-bold text-primary-foreground">{gruppe.titel}</h3>
+                </div>
+                {gruppe.stellen.map(stelle => (
+                  <article key={stelle.to} className={`flex min-h-52 flex-col rounded-lg border border-border bg-card p-5 shadow-sm ${stelle.verfuegbar ? "" : "opacity-60"}`}>
+                    <h4 className="font-display text-lg font-bold text-foreground">{stelle.titel}</h4>
+                    <span className="mt-3 h-0.5 w-8 bg-primary" aria-hidden="true" />
+                    <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{stelle.text}</p>
+                    {stelle.verfuegbar ? (
+                      <Button asChild variant="link" className="mt-4 h-auto justify-between p-0">
+                        <Link to={stelle.to} aria-label={`Stelle ansehen: ${stelle.titel}`}>Stelle ansehen<ArrowRight className="h-4 w-4" /></Link>
+                      </Button>
+                    ) : <p className="mt-4 text-sm font-semibold text-muted-foreground">{stelle.to === "/karriere/bauhelfer" ? "Aktuell keine offene Stelle" : "Aktuell keine Ausbildung"}</p>}
+                  </article>
+                ))}
+              </div>
+            );
+          })}
         </div>
       </Section>
     </div>

@@ -103,7 +103,7 @@ export function JobSeite({
 
       <Section muted className="pt-0">
         <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Deine Ausbildung auf einen Blick 
+          {/ausbildung/i.test(titel) ? "Deine Ausbildung auf einen Blick" : "Deine Stelle auf einen Blick"}
         </h2>
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
           {beschreibung.map((p) => (
