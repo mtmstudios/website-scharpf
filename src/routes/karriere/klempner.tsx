@@ -5,6 +5,10 @@ export const Route = createFileRoute("/karriere/klempner")({
   head: () => ({
     meta: [
       { title: "Klempner / Flaschner Job Esslingen (m/w/d) – E. Scharpf GmbH" },
+      { property: "og:title", content: "Klempner / Flaschner (m/w/d) – E. Scharpf" },
+      { property: "og:description", content: "Arbeite als Klempner / Flaschner in unserer eigenen Werkstatt und auf der Baustelle in Esslingen." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "description",
         content:

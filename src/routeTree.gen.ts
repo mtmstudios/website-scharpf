@@ -37,6 +37,8 @@ import { Route as KarriereDachdeckerAusbildungRouteImport } from './routes/karri
 import { Route as KarriereDachdeckerVorarbeiterRouteImport } from './routes/karriere/dachdecker-vorarbeiter'
 import { Route as KarriereDachdeckermeisterRouteImport } from './routes/karriere/dachdeckermeister'
 import { Route as KarriereKlempnerRouteImport } from './routes/karriere/klempner'
+import { Route as KarriereKlempnerVorarbeiterRouteImport } from './routes/karriere/klempner-vorarbeiter'
+import { Route as KarriereKlempnermeisterRouteImport } from './routes/karriere/klempnermeister'
 import { Route as KarriereZimmererRouteImport } from './routes/karriere/zimmerer'
 import { Route as KarriereZimmererVorarbeiterRouteImport } from './routes/karriere/zimmerer-vorarbeiter'
 import { Route as KarriereZimmerermeisterRouteImport } from './routes/karriere/zimmerermeister'
@@ -206,6 +208,17 @@ const KarriereKlempnerRoute = KarriereKlempnerRouteImport.update({
   path: '/karriere/klempner',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KarriereKlempnerVorarbeiterRoute =
+  KarriereKlempnerVorarbeiterRouteImport.update({
+    id: '/karriere/klempner-vorarbeiter',
+    path: '/karriere/klempner-vorarbeiter',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KarriereKlempnermeisterRoute = KarriereKlempnermeisterRouteImport.update({
+  id: '/karriere/klempnermeister',
+  path: '/karriere/klempnermeister',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KarriereZimmererRoute = KarriereZimmererRouteImport.update({
   id: '/karriere/zimmerer',
   path: '/karriere/zimmerer',
@@ -364,6 +377,8 @@ export interface FileRoutesByFullPath {
   '/karriere/dachdecker-vorarbeiter': typeof KarriereDachdeckerVorarbeiterRoute
   '/karriere/dachdeckermeister': typeof KarriereDachdeckermeisterRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
+  '/karriere/klempner-vorarbeiter': typeof KarriereKlempnerVorarbeiterRoute
+  '/karriere/klempnermeister': typeof KarriereKlempnermeisterRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
   '/karriere/zimmerer-vorarbeiter': typeof KarriereZimmererVorarbeiterRoute
   '/karriere/zimmerermeister': typeof KarriereZimmerermeisterRoute
@@ -419,6 +434,8 @@ export interface FileRoutesByTo {
   '/karriere/dachdecker-vorarbeiter': typeof KarriereDachdeckerVorarbeiterRoute
   '/karriere/dachdeckermeister': typeof KarriereDachdeckermeisterRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
+  '/karriere/klempner-vorarbeiter': typeof KarriereKlempnerVorarbeiterRoute
+  '/karriere/klempnermeister': typeof KarriereKlempnermeisterRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
   '/karriere/zimmerer-vorarbeiter': typeof KarriereZimmererVorarbeiterRoute
   '/karriere/zimmerermeister': typeof KarriereZimmerermeisterRoute
@@ -475,6 +492,8 @@ export interface FileRoutesById {
   '/karriere/dachdecker-vorarbeiter': typeof KarriereDachdeckerVorarbeiterRoute
   '/karriere/dachdeckermeister': typeof KarriereDachdeckermeisterRoute
   '/karriere/klempner': typeof KarriereKlempnerRoute
+  '/karriere/klempner-vorarbeiter': typeof KarriereKlempnerVorarbeiterRoute
+  '/karriere/klempnermeister': typeof KarriereKlempnermeisterRoute
   '/karriere/zimmerer': typeof KarriereZimmererRoute
   '/karriere/zimmerer-vorarbeiter': typeof KarriereZimmererVorarbeiterRoute
   '/karriere/zimmerermeister': typeof KarriereZimmerermeisterRoute
@@ -532,6 +551,8 @@ export interface FileRouteTypes {
     | '/karriere/dachdecker-vorarbeiter'
     | '/karriere/dachdeckermeister'
     | '/karriere/klempner'
+    | '/karriere/klempner-vorarbeiter'
+    | '/karriere/klempnermeister'
     | '/karriere/zimmerer'
     | '/karriere/zimmerer-vorarbeiter'
     | '/karriere/zimmerermeister'
@@ -587,6 +608,8 @@ export interface FileRouteTypes {
     | '/karriere/dachdecker-vorarbeiter'
     | '/karriere/dachdeckermeister'
     | '/karriere/klempner'
+    | '/karriere/klempner-vorarbeiter'
+    | '/karriere/klempnermeister'
     | '/karriere/zimmerer'
     | '/karriere/zimmerer-vorarbeiter'
     | '/karriere/zimmerermeister'
@@ -642,6 +665,8 @@ export interface FileRouteTypes {
     | '/karriere/dachdecker-vorarbeiter'
     | '/karriere/dachdeckermeister'
     | '/karriere/klempner'
+    | '/karriere/klempner-vorarbeiter'
+    | '/karriere/klempnermeister'
     | '/karriere/zimmerer'
     | '/karriere/zimmerer-vorarbeiter'
     | '/karriere/zimmerermeister'
@@ -698,6 +723,8 @@ export interface RootRouteChildren {
   KarriereDachdeckerVorarbeiterRoute: typeof KarriereDachdeckerVorarbeiterRoute
   KarriereDachdeckermeisterRoute: typeof KarriereDachdeckermeisterRoute
   KarriereKlempnerRoute: typeof KarriereKlempnerRoute
+  KarriereKlempnerVorarbeiterRoute: typeof KarriereKlempnerVorarbeiterRoute
+  KarriereKlempnermeisterRoute: typeof KarriereKlempnermeisterRoute
   KarriereZimmererRoute: typeof KarriereZimmererRoute
   KarriereZimmererVorarbeiterRoute: typeof KarriereZimmererVorarbeiterRoute
   KarriereZimmerermeisterRoute: typeof KarriereZimmerermeisterRoute
@@ -927,6 +954,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KarriereKlempnerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/karriere/klempner-vorarbeiter': {
+      id: '/karriere/klempner-vorarbeiter'
+      path: '/karriere/klempner-vorarbeiter'
+      fullPath: '/karriere/klempner-vorarbeiter'
+      preLoaderRoute: typeof KarriereKlempnerVorarbeiterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/karriere/klempnermeister': {
+      id: '/karriere/klempnermeister'
+      path: '/karriere/klempnermeister'
+      fullPath: '/karriere/klempnermeister'
+      preLoaderRoute: typeof KarriereKlempnermeisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/karriere/zimmerer': {
       id: '/karriere/zimmerer'
       path: '/karriere/zimmerer'
@@ -1130,6 +1171,8 @@ const rootRouteChildren: RootRouteChildren = {
   KarriereDachdeckerVorarbeiterRoute: KarriereDachdeckerVorarbeiterRoute,
   KarriereDachdeckermeisterRoute: KarriereDachdeckermeisterRoute,
   KarriereKlempnerRoute: KarriereKlempnerRoute,
+  KarriereKlempnerVorarbeiterRoute: KarriereKlempnerVorarbeiterRoute,
+  KarriereKlempnermeisterRoute: KarriereKlempnermeisterRoute,
   KarriereZimmererRoute: KarriereZimmererRoute,
   KarriereZimmererVorarbeiterRoute: KarriereZimmererVorarbeiterRoute,
   KarriereZimmerermeisterRoute: KarriereZimmerermeisterRoute,

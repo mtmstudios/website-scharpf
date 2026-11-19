@@ -12,7 +12,7 @@ import vorteilHolz from "@/assets/vorteil-holz.jpg";
 import { KarriereArbeitstag } from "@/components/karriere-arbeitstag";
 import { KARRIERE_STELLENGRUPPEN } from "@/lib/karriere-stellen";
 import { Button } from "@/components/ui/button";
-import { History, Layers, Castle, Factory, GraduationCap, ClipboardList, Award, ArrowRight, House, Hammer } from "lucide-react";
+import { History, Layers, Castle, Factory, GraduationCap, ClipboardList, Award, ArrowRight, House, Hammer, Wrench } from "lucide-react";
 
 export const Route = createFileRoute("/karriere/")({
   head: () => ({
@@ -314,12 +314,12 @@ function Karriere() {
       <Section id="offene-stellen" className="scroll-mt-32">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase text-primary">Offene Stellen</p>
-          <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Neun Wege, bei uns anzufangen</h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Vom Einstieg als Bauhelfer über die Ausbildung bis zur Meisterstelle – im Dachdecker- und im Zimmererhandwerk. Jede Stelle hat ihre eigene Seite mit allen Details.</p>
+          <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Zwölf Wege, bei uns anzufangen</h2>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Vom Einstieg als Bauhelfer über die Ausbildung bis zur Meisterstelle – im Dachdecker-, Zimmerer- und Klempnerhandwerk. Jede Stelle hat ihre eigene Seite mit allen Details.</p>
         </div>
-        <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
-          {KARRIERE_STELLENGRUPPEN.map((gruppe, index) => {
-            const Icon = index === 0 ? House : index === 1 ? Hammer : GraduationCap;
+        <div className="mt-12 grid items-start gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {KARRIERE_STELLENGRUPPEN.map((gruppe) => {
+            const Icon = gruppe.titel === "Dachdecker" ? House : gruppe.titel === "Zimmerer" ? Hammer : gruppe.titel === "Klempner" ? Wrench : GraduationCap;
             return (
               <div key={gruppe.titel} className="space-y-4">
                 <div className="relative isolate flex min-h-24 items-center gap-3 overflow-hidden rounded-lg border-l-4 border-primary px-5 py-4">

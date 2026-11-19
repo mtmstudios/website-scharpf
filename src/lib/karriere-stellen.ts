@@ -16,6 +16,14 @@ export const KARRIERE_STELLENGRUPPEN = [
     ],
   },
   {
+    titel: "Klempner", bild: "/fotos/scharpf_dachgaube_flaschner.jpg",
+    stellen: [
+      { titel: "Klempnermeister (m/w/d)", text: "Du führst fachlich – und bringst Werkstatt, Baustelle und Team voran.", to: "/karriere/klempnermeister", verfuegbar: true },
+      { titel: "Klempner-Vorarbeiter (m/w/d)", text: "Du bringst Blech, Plan und Team zusammen.", to: "/karriere/klempner-vorarbeiter", verfuegbar: true },
+      { titel: "Klempnergeselle (m/w/d)", text: "Du formst Metall – und machst Dächer und Fassaden wetterfest.", to: "/karriere/klempner", verfuegbar: true },
+    ],
+  },
+  {
     titel: "Ausbildung & Einstieg", bild: "/fotos/scharpf_karriere_zimmerer.jpg",
     stellen: [
       { titel: "Ausbildung zum Dachdecker (m/w/d)", text: "Dein Start ins Handwerk? Ganz oben.", to: "/karriere/dachdecker-ausbildung", verfuegbar: false },

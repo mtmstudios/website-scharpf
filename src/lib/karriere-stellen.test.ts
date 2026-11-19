@@ -10,4 +10,13 @@ describe("Verfügbarkeit der Stellen", () => {
   test("Bauhelfer bleibt nicht verfügbar", () => {
     assert.equal(stellen.find(stelle => stelle.to === "/karriere/bauhelfer")?.verfuegbar, false);
   });
+  test("Klempner erhält dieselben drei Stellenstufen wie die anderen Gewerke", () => {
+    const klempner = KARRIERE_STELLENGRUPPEN.find(gruppe => gruppe.titel === "Klempner");
+    assert.deepEqual(klempner?.stellen.map(stelle => stelle.to), [
+      "/karriere/klempnermeister",
+      "/karriere/klempner-vorarbeiter",
+      "/karriere/klempner",
+    ]);
+    assert.equal(klempner?.stellen.length, 3);
+  });
 });
