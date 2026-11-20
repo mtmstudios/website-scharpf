@@ -41,16 +41,6 @@ const ANFORDERUNGEN = [
   "Du arbeitest präzise und mit einem hohen Qualitätsbewusstsein.",
 ] as const;
 
-// Job-Selektor (B612-Konzept 4.11): Kacheln führen zu den Job-Landingpages.
-const STELLEN = [
-  { label: "Zimmerer (m/w/d)", to: "/karriere/zimmerer" },
-  { label: "Dachdecker (m/w/d)", to: "/karriere/dachdecker" },
-  { label: "Klempner / Flaschner (m/w/d)", to: "/karriere/klempner" },
-  { label: "Ausbildung Zimmermann", to: "/karriere/zimmermann-ausbildung" },
-  { label: "Ausbildung Dachdecker", to: "/karriere/dachdecker-ausbildung" },
-  { label: "Bauhelfer (m/w/d)", to: "/karriere/bauhelfer" },
-] as const;
-
 function Karriere() {
   return (
     <div>
@@ -96,52 +86,6 @@ function Karriere() {
       <Section className="!pt-6 lg:!pt-6">
         <div>
           <BewerbungsButton>Jetzt bewerben</BewerbungsButton>
-        </div>
-
-        {/* Job-Selektor als Kachel-Clickthrough */}
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {STELLEN.map((s) =>
-            s.to === "/karriere/dachdecker-ausbildung" || s.to === "/karriere/bauhelfer" ? (
-              <div
-                key={s.to}
-                aria-disabled="true"
-                className="flex cursor-not-allowed items-center justify-between rounded-lg border border-border bg-muted p-6 opacity-60"
-              >
-                <span className="font-display text-lg font-bold text-muted-foreground">
-                  {s.label}
-                  <span className="mt-1 block text-sm font-normal">
-                    {s.to === "/karriere/bauhelfer" ? "Aktuell keine offene Stelle" : "Aktuell keine Ausbildung"}
-                  </span>
-                </span>
-              </div>
-            ) : (
-            <Link
-              key={s.to}
-              to={s.to}
-              className="group flex items-center justify-between rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:border-primary hover:shadow-md"
-            >
-              <span className="font-display text-lg font-bold text-foreground transition-colors group-hover:text-primary">
-                {s.label}
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="shrink-0 text-muted-foreground transition-colors group-hover:text-primary"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </Link>
-            ),
-          )}
         </div>
 
         <h2 id="betrieb-kennenlernen" className="mt-12 scroll-mt-32 font-display text-3xl font-bold text-foreground sm:text-4xl">
