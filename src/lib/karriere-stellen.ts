@@ -1,13 +1,5 @@
 export const KARRIERE_STELLENGRUPPEN = [
   {
-    titel: "Dachdecker", bild: "/fotos/scharpf_Dacharbeiten.jpg",
-    stellen: [
-      { titel: "Dachdeckermeister (m/w/d)", text: "Du führst fachlich – und bringst Baustelle und Team voran.", to: "/karriere/dachdeckermeister", verfuegbar: true },
-      { titel: "Dachdecker-Vorarbeiter (m/w/d)", text: "Du machst aus vielen Aufgaben einen guten Ablauf.", to: "/karriere/dachdecker-vorarbeiter", verfuegbar: true },
-      { titel: "Dachdeckergeselle (m/w/d)", text: "Du machst Dächer dicht – und gute Arbeit sichtbar.", to: "/karriere/dachdecker", verfuegbar: true },
-    ],
-  },
-  {
     titel: "Zimmerer", bild: "/fotos/scharpf_karriere_zimmerer.jpg",
     stellen: [
       { titel: "Zimmerermeister (m/w/d)", text: "Du denkst Konstruktion weiter – und führst sie zum Ergebnis.", to: "/karriere/zimmerermeister", verfuegbar: true },
@@ -21,6 +13,14 @@ export const KARRIERE_STELLENGRUPPEN = [
       { titel: "Klempnermeister (m/w/d)", text: "Du führst fachlich – und bringst Werkstatt, Baustelle und Team voran.", to: "/karriere/klempnermeister", verfuegbar: true },
       { titel: "Klempner-Vorarbeiter (m/w/d)", text: "Du bringst Blech, Plan und Team zusammen.", to: "/karriere/klempner-vorarbeiter", verfuegbar: true },
       { titel: "Klempnergeselle (m/w/d)", text: "Du formst Metall – und machst Dächer und Fassaden wetterfest.", to: "/karriere/klempner", verfuegbar: true },
+    ],
+  },
+  {
+    titel: "Dachdecker", bild: "/fotos/scharpf_Dacharbeiten.jpg",
+    stellen: [
+      { titel: "Dachdeckermeister (m/w/d)", text: "Du führst fachlich – und bringst Baustelle und Team voran.", to: "/karriere/dachdeckermeister", verfuegbar: true },
+      { titel: "Dachdecker-Vorarbeiter (m/w/d)", text: "Du machst aus vielen Aufgaben einen guten Ablauf.", to: "/karriere/dachdecker-vorarbeiter", verfuegbar: true },
+      { titel: "Dachdeckergeselle (m/w/d)", text: "Du machst Dächer dicht – und gute Arbeit sichtbar.", to: "/karriere/dachdecker", verfuegbar: true },
     ],
   },
   {
