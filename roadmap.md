@@ -7,4 +7,5 @@
 - [x] Extend the career background behind the entire introduction through “mehr als andere”.
 - [x] Add the nine-position section at the bottom of the career page using the Kralemann reference layout.
 - [x] Extend the grouped open positions with Klempnermeister, Klempner-Vorarbeiter and Klempnergeselle and their detail pages.
+- [x] Replace the bottom Ausbildung & Einstieg entry with Ausbildung zum Klempner and its own detail page; enable the confirmed available apprenticeship.
 - [ ] Reorganize the workday with centered trade controls, activities left, times right, and larger centered photos below.- [x] Vorteile vom Handwerk als Bildkacheln (KI-Bilder)

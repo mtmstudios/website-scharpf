@@ -28,7 +28,7 @@ export const KARRIERE_STELLENGRUPPEN = [
     stellen: [
       { titel: "Ausbildung zum Dachdecker (m/w/d)", text: "Dein Start ins Handwerk? Ganz oben.", to: "/karriere/dachdecker-ausbildung", verfuegbar: false },
       { titel: "Ausbildung zum Zimmerer (m/w/d)", text: "Bau nicht nur mit. Versteh, wie ein Gebäude entsteht.", to: "/karriere/zimmermann-ausbildung", verfuegbar: true },
-      { titel: "Bauhelfer (m/w/d)", text: "Du packst mit an – und hältst die Baustelle am Laufen.", to: "/karriere/bauhelfer", verfuegbar: false },
+      { titel: "Ausbildung zum Klempner (m/w/d)", text: "Lerne, Metall zu formen – und Dächer und Fassaden zu gestalten.", to: "/karriere/klempner-ausbildung", verfuegbar: true },
     ],
   },
 ] as const;

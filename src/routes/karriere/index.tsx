@@ -315,7 +315,7 @@ function Karriere() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase text-primary">Offene Stellen</p>
           <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Zwölf Wege, bei uns anzufangen</h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Vom Einstieg als Bauhelfer über die Ausbildung bis zur Meisterstelle – im Dachdecker-, Zimmerer- und Klempnerhandwerk. Jede Stelle hat ihre eigene Seite mit allen Details.</p>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Von der Ausbildung über die Gesellen- und Vorarbeiterstelle bis zur Meisterstelle – im Dachdecker-, Zimmerer- und Klempnerhandwerk. Jede Stelle hat ihre eigene Seite mit allen Details.</p>
         </div>
         <div className="mt-12 grid items-start gap-6 md:grid-cols-2 xl:grid-cols-4">
           {KARRIERE_STELLENGRUPPEN.map((gruppe) => {
@@ -337,7 +337,7 @@ function Karriere() {
                       <Button asChild variant="link" className="mt-4 h-auto justify-between p-0">
                         <Link to={stelle.to} aria-label={`Stelle ansehen: ${stelle.titel}`}>Stelle ansehen<ArrowRight className="h-4 w-4" /></Link>
                       </Button>
-                    ) : <p className="mt-4 text-sm font-semibold text-muted-foreground">{stelle.to === "/karriere/bauhelfer" ? "Aktuell keine offene Stelle" : "Aktuell keine Ausbildung"}</p>}
+                    ) : <p className="mt-4 text-sm font-semibold text-muted-foreground">Aktuell keine Ausbildung</p>}
                   </article>
                 ))}
               </div>
