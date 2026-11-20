@@ -41,7 +41,7 @@ export function KarriereArbeitstag() {
     <section className="mt-16" aria-labelledby="drei-handwerke">
       <p className="text-center font-display text-3xl font-bold text-primary sm:text-4xl">Ein Tag auf der Baustelle</p>
       <h2 id="drei-handwerke" className="mx-auto mt-3 max-w-4xl text-center font-display text-3xl font-bold text-foreground sm:text-5xl">Drei Handwerke. <span className="text-primary">Unterschiedliche Aufgaben.</span> Ein gemeinsames Ergebnis.</h2>
-      <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">Vom ersten Kaffee bis zum Feierabend: Entdecke, wie unsere Zimmerer, Dachdecker und Klempner arbeiten, was sie unterscheidet und wie sie gemeinsam ein Bauprojekt voranbringen.</p>
+      <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">Ob Holz, Dachziegel oder Blech: Entdecke, wie unsere drei Gewerke arbeiten, was sie unterscheidet und wie sie gemeinsam ein Bauprojekt voranbringen Vom ersten Kaffee bis zum Feierabend nehmen wir dich mit durch einen typischen Arbeitstag unserer Zimmerer, Dachdecker und Klempner.</p>
 
       <div className="mx-auto mt-8 flex w-full max-w-xl gap-1 rounded-xl border border-border bg-muted p-1" role="group" aria-label="Gewerk auswählen">
         {Object.keys(ARBEITSTAG).map((name) => (
