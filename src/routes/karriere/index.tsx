@@ -180,6 +180,8 @@ function Karriere() {
             ["Mobilität, die zu dir passt.", "Wähle zwischen JobRad und Deutschlandticket."],
             ["Heute schon an morgen denken.", "Mit einer betrieblichen Altersvorsorge unterstützen wir deine zusätzliche Absicherung."],
             ["Kaffee am Morgen. Wasser für den Tag.", "Bei uns kannst du dich morgens mit Kaffee versorgen und bekommst kostenlos Wasser gestellt."],
+            ["Spannende Projekte:", "Du arbeitest an einzigartigen Gebäuden, die im Stadtbild sichtbar sind, und gestaltest das Stadtbild mit."],
+            ["Wir sind im Großraum Esslingen sehr aktiv, mit Baustellen aus der Region.", "Deine Werke siehst du auch in Zukunft in deinem Alltag."],
           ].map(([title, text]) => (
             <div key={title} className="flex gap-3">
               <svg viewBox="0 0 24 24" className="mt-1 h-6 w-6 shrink-0 text-primary" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
