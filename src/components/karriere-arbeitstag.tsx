@@ -39,7 +39,7 @@ export function KarriereArbeitstag() {
 
   return (
     <section className="mt-16" aria-labelledby="drei-handwerke">
-      <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-primary">Ein Tag auf der Baustelle</p>
+      <p className="text-center font-display text-3xl font-bold text-primary sm:text-4xl">Ein Tag auf der Baustelle</p>
       <h2 id="drei-handwerke" className="mx-auto mt-3 max-w-4xl text-center font-display text-3xl font-bold text-foreground sm:text-5xl">Drei Handwerke. <span className="text-primary">Unterschiedliche Aufgaben.</span> Ein gemeinsames Ergebnis.</h2>
       <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">Vom ersten Kaffee bis zum Feierabend: Entdecke, wie unsere Zimmerer, Dachdecker und Klempner arbeiten, was sie unterscheidet und wie sie gemeinsam ein Bauprojekt voranbringen.</p>
 
